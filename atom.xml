@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://gitee.com/wbgithub</id>
+    <id>https://github.com/wangbin-blog</id>
     <title>Think.Blog</title>
-    <link href="https://gitee.com/wbgithub" />
+    <link href="https://github.com/wangbin-blog" />
     <updated>2024-05-18T12:31:13.000Z</updated>
     <category term="Hexo" />
     <entry>
-        <id>https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</id>
+        <id>https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</id>
         <title>Hexo主题安装</title>
-        <link rel="alternate" href="https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/"/>
+        <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/"/>
         <content type="html">&lt;h1 id=&#34;一-butterfly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-butterfly&#34;&gt;#&lt;/a&gt; 一、Butterfly&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&#34;&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&#34; alt=&#34;Butterfly&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -193,9 +193,9 @@
         <updated>2024-05-18T12:31:13.000Z</updated>
     </entry>
     <entry>
-        <id>https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+        <id>https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
         <title>Hexo基本使用</title>
-        <link rel="alternate" href="https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;h1 id=&#34;什么是-hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-hexo&#34;&gt;#&lt;/a&gt; 什么是 Hexo？&lt;/h1&gt;
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=&#34;&gt;Markdown&lt;/span&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
 &lt;h1 id=&#34;开始使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始使用&#34;&gt;#&lt;/a&gt; 开始使用&lt;/h1&gt;

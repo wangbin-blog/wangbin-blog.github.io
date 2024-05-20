@@ -2,16 +2,16 @@
 <rss version="2.0">
     <channel>
         <title>Think.Blog</title>
-        <link>https://gitee.com/wbgithub</link>
+        <link>https://github.com/wangbin-blog</link>
         <description>一个上了年纪的猿人</description>
         <language>zh-CN</language>
         <pubDate>Sat, 18 May 2024 20:31:13 +0800</pubDate>
         <lastBuildDate>Sat, 18 May 2024 20:31:13 +0800</lastBuildDate>
         <category>Hexo</category>
         <item>
-            <guid isPermalink="true">https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</guid>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</guid>
             <title>Hexo主题安装</title>
-            <link>https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</link>
+            <link>https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</link>
             <category>Hexo</category>
             <pubDate>Sat, 18 May 2024 20:31:13 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-butterfly&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-butterfly&#34;&gt;#&lt;/a&gt; 一、Butterfly&lt;/h1&gt;
@@ -196,9 +196,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
             <title>Hexo基本使用</title>
-            <link>https://gitee.com/wbgithub/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+            <link>https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
             <category>Hexo</category>
             <pubDate>Sat, 18 May 2024 20:01:13 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;什么是-hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-hexo&#34;&gt;#&lt;/a&gt; 什么是 Hexo？&lt;/h1&gt;
