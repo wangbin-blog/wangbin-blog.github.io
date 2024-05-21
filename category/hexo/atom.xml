@@ -5,6 +5,7 @@
     <link href="https://github.com/wangbin-blog" />
     <updated>2024-05-18T12:31:13.000Z</updated>
     <category term="Hexo" />
+    <category term="Linux" />
     <entry>
         <id>https://github.com/wangbin-blog/2024/05/18/Hexo/Hexo%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/</id>
         <title>Hexo主题安装</title>
@@ -21,7 +22,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;魔改教程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9idXR0ZXJmbHkuemhoZW8uY29tL2RvY3Mv&#34;&gt;人人都可以去自定义 | Butterfly 主题美化教程 (zhheo.com)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2plcnJ5YzEyNy9oZXhvLXRoZW1lLWJ1dHRlcmZseQ==&#34;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;a href=&#34;https://github.com/jerryc127/hexo-theme-butterfly&#34;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;使用文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9idXR0ZXJmbHkuanMub3JnLw==&#34;&gt;Butterfly - A Simple and Card UI Design theme for Hexo&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;推荐值：⭐⭐⭐⭐⭐&lt;/li&gt;
 &lt;/ul&gt;
@@ -29,8 +30,8 @@
 &lt;p&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&#34;&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&#34; alt=&#34;yun&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在线演示：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVueW91anVuLmNuLw==&#34;&gt;云游君的小站 (yunyoujun.cn)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4=&#34;&gt;valaxy/packages/valaxy-theme-yun at main · YunYouJun/valaxy · GitHub&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;使用文档：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4vZG9jcy96aC1DTg==&#34;&gt;valaxy/packages/valaxy-theme-yun/docs/zh-CN at main · YunYouJun/valaxy · GitHub&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;a href=&#34;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun&#34;&gt;valaxy/packages/valaxy-theme-yun at main · YunYouJun/valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用文档：&lt;a href=&#34;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun/docs/zh-CN&#34;&gt;valaxy/packages/valaxy-theme-yun/docs/zh-CN at main · YunYouJun/valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;推荐值：⭐⭐⭐⭐&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;三-fluid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-fluid&#34;&gt;#&lt;/a&gt; 三、Fluid&lt;/h2&gt;
@@ -44,7 +45,7 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;四-shoka&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-shoka&#34;&gt;#&lt;/a&gt; 四、shoka&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Github 地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYS5naXQ=&#34;&gt;https://github.com/amehime/hexo-theme-shoka.git&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Github 地址：&lt;a href=&#34;https://github.com/amehime/hexo-theme-shoka.git&#34;&gt;https://github.com/amehime/hexo-theme-shoka.git&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;在线演示：&lt;strong&gt;本站使用这个主题&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul&gt;
@@ -200,7 +201,7 @@
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=&#34;&gt;Markdown&lt;/span&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
 &lt;h1 id=&#34;开始使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始使用&#34;&gt;#&lt;/a&gt; 开始使用&lt;/h1&gt;
 &lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
-&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;提交问题&lt;/span&gt;，我们会尽力解决您的问题。&lt;/p&gt;
+&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;提交问题&lt;/a&gt;，我们会尽力解决您的问题。&lt;/p&gt;
 &lt;h3 id=&#34;安装前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装前提&#34;&gt;#&lt;/a&gt; 安装前提&lt;/h3&gt;
 &lt;p&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
 &lt;ul&gt;
@@ -228,9 +229,9 @@
 &lt;p&gt;Node.js 为大多数平台提供了官方的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuL2Rvd25sb2FkLw==&#34;&gt;安装程序&lt;/span&gt;。对于中国大陆地区用户，可以前往 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ucG1taXJyb3IuY29tL21pcnJvcnMvbm9kZS8=&#34;&gt;淘宝 Node.js 镜像&lt;/span&gt; 下载。&lt;/p&gt;
 &lt;p&gt;其它的安装方法：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Windows：通过 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2phc29uZ2luL252cy8=&#34;&gt;nvs&lt;/span&gt;（推荐）或者 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL252bS1zaC9udm0=&#34;&gt;nvm&lt;/span&gt; 安装。&lt;/li&gt;
+&lt;li&gt;Windows：通过 &lt;a href=&#34;https://github.com/jasongin/nvs/&#34;&gt;nvs&lt;/a&gt;（推荐）或者 &lt;a href=&#34;https://github.com/nvm-sh/nvm&#34;&gt;nvm&lt;/a&gt; 安装。&lt;/li&gt;
 &lt;li&gt;Mac：使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9icmV3LnNoLw==&#34;&gt;Homebrew&lt;/span&gt; 或 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5tYWNwb3J0cy5vcmcv&#34;&gt;MacPorts&lt;/span&gt; 安装。&lt;/li&gt;
-&lt;li&gt;Linux（DEB/RPM-based）：从 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25vZGVzb3VyY2UvZGlzdHJpYnV0aW9ucw==&#34;&gt;NodeSource&lt;/span&gt; 安装。&lt;/li&gt;
+&lt;li&gt;Linux（DEB/RPM-based）：从 &lt;a href=&#34;https://github.com/nodesource/distributions&#34;&gt;NodeSource&lt;/a&gt; 安装。&lt;/li&gt;
 &lt;li&gt;其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkL3BhY2thZ2UtbWFuYWdlci8=&#34;&gt;指导&lt;/span&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。&lt;/p&gt;
@@ -520,7 +521,7 @@ pretty_urls:
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;skip_render&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到  &lt;code&gt;public&lt;/code&gt;  目录中。您可使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21pY3JvbWF0Y2gvbWljcm9tYXRjaCNleHRlbmRlZC1nbG9iYmluZw==&#34;&gt;glob 表达式&lt;/span&gt;来匹配路径。&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到  &lt;code&gt;public&lt;/code&gt;  目录中。您可使用 &lt;a href=&#34;https://github.com/micromatch/micromatch#extended-globbing&#34;&gt;glob 表达式&lt;/a&gt;来匹配路径。&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -754,7 +755,7 @@ pagination_dir: &#39;awesome-page&#39;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h4 id=&#34;包括或不包括目录和文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#包括或不包括目录和文件&#34;&gt;#&lt;/a&gt; 包括或不包括目录和文件&lt;/h4&gt;
-&lt;p&gt;在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2lzYWFjcy9taW5pbWF0Y2g=&#34;&gt;glob 表达式&lt;/span&gt; 对目录和文件进行匹配。&lt;/p&gt;
+&lt;p&gt;在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 &lt;a href=&#34;https://github.com/isaacs/minimatch&#34;&gt;glob 表达式&lt;/a&gt; 对目录和文件进行匹配。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;include&lt;/code&gt;  和  &lt;code&gt;exclude&lt;/code&gt;  选项只会应用到  &lt;code&gt;source/&lt;/code&gt;  ，而  &lt;code&gt;ignore&lt;/code&gt;  选项会应用到所有文件夹.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -895,7 +896,7 @@ logo: &amp;quot;a-cool-image.png&amp;quot;
 &lt;p&gt;新建一个网站。如果没有设置  &lt;code&gt;folder&lt;/code&gt;  ，Hexo 默认在目前的文件夹建立网站。&lt;/p&gt;
 &lt;p&gt;本命令相当于执行了以下几步：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Git clone &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXN0YXJ0ZXI=&#34;&gt;hexo-starter&lt;/span&gt; 和 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRoZW1lLWxhbmRzY2FwZQ==&#34;&gt;hexo-theme-landscape&lt;/span&gt; 主题到当前目录或指定目录。&lt;/li&gt;
+&lt;li&gt;Git clone &lt;a href=&#34;https://github.com/hexojs/hexo-starter&#34;&gt;hexo-starter&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/hexojs/hexo-theme-landscape&#34;&gt;hexo-theme-landscape&lt;/a&gt; 主题到当前目录或指定目录。&lt;/li&gt;
 &lt;li&gt;使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbGFzc2ljLnlhcm5wa2cuY29tL2xhbmcvZW4v&#34;&gt;Yarn 1&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wbnBtLmlvL3poLw==&#34;&gt;pnpm&lt;/span&gt; 或 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm5wbWpzLmNvbS9jbGkvaW5zdGFsbA==&#34;&gt;npm&lt;/span&gt; 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvaW5kZXguaHRtbCMlRTUlQUUlODklRTglQTMlODUtTm9kZS1qcw==&#34;&gt;Node.js&lt;/span&gt; 安装。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;new&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#new&#34;&gt;#&lt;/a&gt; new&lt;/h3&gt;
@@ -1069,7 +1070,7 @@ logo: &amp;quot;a-cool-image.png&amp;quot;
 &lt;h4 id=&#34;调试模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#调试模式&#34;&gt;#&lt;/a&gt; 调试模式&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$ hexo --debug
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在终端中显示调试信息并记录到  &lt;code&gt;debug.log&lt;/code&gt; 。当您碰到问题时，可以尝试用调试模式重新执行一次，并 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcy9uZXc/YXNzaWduZWVzPSZhbXA7bGFiZWxzPSZhbXA7cHJvamVjdHM9JmFtcDt0ZW1wbGF0ZT1idWdfcmVwb3J0LnltbA==&#34;&gt;提交调试信息到 GitHub&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;在终端中显示调试信息并记录到  &lt;code&gt;debug.log&lt;/code&gt; 。当您碰到问题时，可以尝试用调试模式重新执行一次，并 &lt;a href=&#34;https://github.com/hexojs/hexo/issues/new?assignees=&amp;amp;labels=&amp;amp;projects=&amp;amp;template=bug_report.yml&#34;&gt;提交调试信息到 GitHub&lt;/a&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;简洁模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简洁模式&#34;&gt;#&lt;/a&gt; 简洁模式&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$ hexo --silent
 &lt;/code&gt;&lt;/pre&gt;
@@ -1284,7 +1285,7 @@ date: 2013/7/13 20:46:25
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;布局&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#布局&#34;&gt;#&lt;/a&gt; 布局&lt;/h3&gt;
-&lt;p&gt;根据  &lt;code&gt;_config.yml&lt;/code&gt;  中 &lt;a href=&#34;https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0&#34;&gt; &lt;code&gt;default_layout&lt;/code&gt; &lt;/a&gt; 的设置，默认布局是  &lt;code&gt;post&lt;/code&gt;  。当文章中的布局被禁用 ( &lt;code&gt;layout: false&lt;/code&gt; )，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXJlbmRlcmVyLW1hcmtlZA==&#34;&gt;hexo-renderer-marked&lt;/span&gt;)，它将被渲染成 HTML。&lt;/p&gt;
+&lt;p&gt;根据  &lt;code&gt;_config.yml&lt;/code&gt;  中 &lt;a href=&#34;https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0&#34;&gt; &lt;code&gt;default_layout&lt;/code&gt; &lt;/a&gt; 的设置，默认布局是  &lt;code&gt;post&lt;/code&gt;  。当文章中的布局被禁用 ( &lt;code&gt;layout: false&lt;/code&gt; )，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 &lt;a href=&#34;https://github.com/hexojs/hexo-renderer-marked&#34;&gt;hexo-renderer-marked&lt;/a&gt;)，它将被渲染成 HTML。&lt;/p&gt;
 &lt;p&gt;除非通过  &lt;code&gt;disableNunjucks&lt;/code&gt;  设置或 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2FwaS9yZW5kZXJlciMlRTclQTYlODElRTclOTQlQTgtTnVuanVja3MtJUU2JUEwJTg3JUU3JUFEJUJF&#34;&gt;渲染引擎&lt;/span&gt; 禁用，否则无论布局如何，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvdGFnLXBsdWdpbnM=&#34;&gt;标签插件&lt;/span&gt; 总是被处理。&lt;/p&gt;
 &lt;h3 id=&#34;分类和标签&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类和标签&#34;&gt;#&lt;/a&gt; 分类和标签&lt;/h3&gt;
 &lt;p&gt;只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说  &lt;code&gt;Foo, Bar&lt;/code&gt;  不等于  &lt;code&gt;Bar, Foo&lt;/code&gt; ；而标签没有顺序和层次。&lt;/p&gt;
@@ -1450,14 +1451,14 @@ content
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;jsfiddle-v700-中被移除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jsfiddle-v700-中被移除&#34;&gt;#&lt;/a&gt; jsFiddle ( &lt;code&gt;v7.0.0&lt;/code&gt;  中被移除)&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRhZy1lbWJlZA==&#34;&gt;hexo-tag-embed&lt;/span&gt; 替代。&lt;/p&gt;
+&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;a href=&#34;https://github.com/hexojs/hexo-tag-embed&#34;&gt;hexo-tag-embed&lt;/a&gt; 替代。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在文章中嵌入 jsFiddle。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;gist-v700-中被移除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#gist-v700-中被移除&#34;&gt;#&lt;/a&gt; Gist ( &lt;code&gt;v7.0.0&lt;/code&gt;  中被移除)&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRhZy1lbWJlZA==&#34;&gt;hexo-tag-embed&lt;/span&gt; 替代。&lt;/p&gt;
+&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;a href=&#34;https://github.com/hexojs/hexo-tag-embed&#34;&gt;hexo-tag-embed&lt;/a&gt; 替代。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在文章中嵌入 Gist。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#123;% gist gist_id [filename] %&amp;#125;
@@ -1496,7 +1497,7 @@ content
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;youtube-v700-中被移除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#youtube-v700-中被移除&#34;&gt;#&lt;/a&gt; Youtube ( &lt;code&gt;v7.0.0&lt;/code&gt;  中被移除)&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRhZy1lbWJlZA==&#34;&gt;hexo-tag-embed&lt;/span&gt; 替代。&lt;/p&gt;
+&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;a href=&#34;https://github.com/hexojs/hexo-tag-embed&#34;&gt;hexo-tag-embed&lt;/a&gt; 替代。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在文章中插入 Youtube 视频。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#123;% youtube video_id [type] [cookie] %&amp;#125;
@@ -1515,7 +1516,7 @@ content
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;vimeo-v700-中被移除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vimeo-v700-中被移除&#34;&gt;#&lt;/a&gt; Vimeo ( &lt;code&gt;v7.0.0&lt;/code&gt;  中被移除)&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXRhZy1lbWJlZA==&#34;&gt;hexo-tag-embed&lt;/span&gt; 替代。&lt;/p&gt;
+&lt;p&gt;如果你正在使用  &lt;code&gt;v7.0.0+&lt;/code&gt; ，请使用 &lt;a href=&#34;https://github.com/hexojs/hexo-tag-embed&#34;&gt;hexo-tag-embed&lt;/a&gt; 替代。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在文章中插入 Vimeo 视频。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;#123;% vimeo video_id %&amp;#125;
@@ -1645,7 +1646,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;通过这种方式，图片将会同时出现在文章和主页以及归档页中。&lt;/p&gt;
 &lt;h3 id=&#34;使用-markdown-嵌入图片&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用-markdown-嵌入图片&#34;&gt;#&lt;/a&gt; 使用 Markdown 嵌入图片&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXJlbmRlcmVyLW1hcmtlZA==&#34;&gt;hexo-renderer-marked&lt;/span&gt; 3.1.0 引入了一个新的选项，其允许你无需使用  &lt;code&gt;asset_img&lt;/code&gt;  标签插件就可以在 markdown 中嵌入图片&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hexojs/hexo-renderer-marked&#34;&gt;hexo-renderer-marked&lt;/a&gt; 3.1.0 引入了一个新的选项，其允许你无需使用  &lt;code&gt;asset_img&lt;/code&gt;  标签插件就可以在 markdown 中嵌入图片&lt;/p&gt;
 &lt;p&gt;如需启用：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;_config.ymlpost_asset_folder: true
 marked:
@@ -1672,8 +1673,8 @@ Archives: /archives/
 &amp;lt;a href=&amp;quot;/archives/&amp;quot;&amp;gt; Archives &amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器&#34;&gt;#&lt;/a&gt; 服务器&lt;/h2&gt;
-&lt;h3 id=&#34;hexo-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-server&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXNlcnZlcg==&#34;&gt;hexo-server&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;Hexo 3.0 把服务器独立成了个别模块，您必须先安装 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXNlcnZlcg==&#34;&gt;hexo-server&lt;/span&gt; 才能使用。&lt;/p&gt;
+&lt;h3 id=&#34;hexo-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-server&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://github.com/hexojs/hexo-server&#34;&gt;hexo-server&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Hexo 3.0 把服务器独立成了个别模块，您必须先安装 &lt;a href=&#34;https://github.com/hexojs/hexo-server&#34;&gt;hexo-server&lt;/a&gt; 才能使用。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ npm install hexo-server --save
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;安装完成后，输入以下命令以启动服务器，您的网站会在  &lt;code&gt;http://localhost:4000&lt;/code&gt;  下启动。在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。&lt;/p&gt;
