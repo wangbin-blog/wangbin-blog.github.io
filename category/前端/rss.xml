@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Think.Blog • Posts by &#34;前端&#34; category</title>
+        <link>https://github.com/wangbin-blog</link>
+        <description>一个上了年纪的猿人</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 22 May 2024 18:31:13 +0800</pubDate>
+        <lastBuildDate>Wed, 22 May 2024 18:31:13 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>Linux</category>
+        <category>前端</category>
+        <item>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/</guid>
+            <title>【前端】高颜值登录页面（一键复制）</title>
+            <link>https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/</link>
+            <category>前端</category>
+            <pubDate>Wed, 22 May 2024 18:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;登录页面是每一个项目不可缺少的页面，是一个应用的门面，首次进入看见的可能就是登录界面，做了这么久的前端，发现登录界面其实都大同小异，有时候没必要从头写，我写了几个自认为比较好看的 uniapp 登录界面记录一下，下次用到的话，可以直接复制过来，修改下就行了。只有静态页面，并未做逻辑上的东西，这样便于在此基础上做调整。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先看效果：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221359689.png&#34; alt=&#34;图片&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实际应用效果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221400909.webp&#34; alt=&#34;图片&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;源码&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;粉色登录界面（图一）：&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;view class=&amp;quot;content&amp;quot;&amp;gt;
+    &amp;lt;view class=&amp;quot;loginBox&amp;quot;&amp;gt;
+      &amp;lt;h3&amp;gt;登录&amp;lt;/h3&amp;gt;
+      &amp;lt;view class=&amp;quot;inputBox&amp;quot;&amp;gt;
+        &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;contact&amp;quot; size=&amp;quot;24&amp;quot; color=&amp;quot;rgb(247,120,172)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入账号&amp;quot;/&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;eye&amp;quot; size=&amp;quot;24&amp;quot; color=&amp;quot;rgb(247,120,172)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;input type=&amp;quot;passsword&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入密码&amp;quot;/&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;forgetPwd&amp;quot;&amp;gt;
+          &amp;lt;span&amp;gt;忘记密码&amp;lt;/span&amp;gt;
+          &amp;lt;span&amp;gt;没有账号，去注册&amp;lt;/span&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;button&amp;gt;登录&amp;lt;/button&amp;gt;
+      &amp;lt;/view&amp;gt;
+      &amp;lt;view class=&amp;quot;tipbox&amp;quot;&amp;gt;
+        &amp;lt;view class=&amp;quot;txt&amp;quot;&amp;gt;
+          —— 其他账号登录 ——
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;otherUser&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;qq&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;weixin&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(2,187,17)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+        &amp;lt;/view&amp;gt;
+      &amp;lt;/view&amp;gt;
+    &amp;lt;/view&amp;gt;
+    
+    &amp;lt;view class=&amp;quot;tip&amp;quot;&amp;gt;
+      某某应用 2024
+    &amp;lt;/view&amp;gt;
+  &amp;lt;/view&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+  export default &amp;#123;
+    data() &amp;#123;
+      return &amp;#123;
+        
+      &amp;#125;
+    &amp;#125;,
+    onLoad() &amp;#123;
+
+    &amp;#125;,
+    methods: &amp;#123;
+
+    &amp;#125;
+  &amp;#125;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;style scoped&amp;gt;
+  .content&amp;#123;
+    height: 100vh;
+    background: url(&amp;quot;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202005%2F10%2F20200510005139_JR8fL.jpeg&amp;amp;refer=http%3A%2F%2Fc-ssl.duitang.com&amp;amp;app=2002&amp;amp;size=f9999,10000&amp;amp;q=a80&amp;amp;n=0&amp;amp;g=0n&amp;amp;fmt=auto?sec=1714820289&amp;amp;t=e835cde99a094cbd98f9c318f25160ec&amp;quot;) no-repeat;
+    background-size: 100% 100%;
+  &amp;#125;
+  .loginBox&amp;#123;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 60rpx;
+    box-sizing: border-box;
+  &amp;#125;
+  h3&amp;#123;
+    color: rgb(247,120,172);
+    font-size: 40rpx;
+    letter-spacing: 10rpx;
+    margin-bottom: 40rpx;
+  &amp;#125;
+  .inputBox&amp;#123;
+    
+  &amp;#125;
+  .ipt&amp;#123;
+    height: 86rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20rpx;
+    background-color: #f5f5f5;
+    border-radius: 10rpx;
+    padding-left: 10rpx;
+  &amp;#125;
+  .ipt input&amp;#123;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+  &amp;#125;
+  .ipt input&amp;#123;
+    margin-left: 20rpx;
+  &amp;#125;
+  .forgetPwd&amp;#123;
+    font-size: 26rpx;
+    color: #b5b5b5;
+    text-align: end;
+    padding:0 10rpx;
+    display: flex;
+    justify-content: space-between;
+  &amp;#125;
+  button&amp;#123;
+    margin-top: 20rpx;
+    line-height: 85rpx;
+    text-align: center;
+    background: linear-gradient(to right,rgb(255, 170, 127),rgb(247,120,172));
+    border-radius: 40rpx;
+    color: #fff;
+    margin-top: 40rpx;
+  &amp;#125;
+  
+  .tip&amp;#123;
+    text-align: center;
+    font-size: 28rpx;
+    position: fixed;
+    bottom: 50rpx;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #f4f4f4;
+  &amp;#125;
+  .tipbox &amp;#123;
+    text-align: center;
+    margin-top: 100rpx;
+  &amp;#125;
+  
+  .otherUser &amp;#123;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+  &amp;#125;
+  
+  .txt &amp;#123;
+    font-size: 28rpx;
+    color: #cbcbcb;
+  &amp;#125;
+  
+  .otherUser .uni-icons &amp;#123;
+    margin-left: 20rpx;
+  &amp;#125;
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;白色登录界面（图二）：&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;view class=&amp;quot;content&amp;quot;&amp;gt;
+    &amp;lt;svg version=&amp;quot;1.1&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot; xmlns:xlink=&amp;quot;http://www.w3.org/1999/xlink&amp;quot; x=&amp;quot;0px&amp;quot; y=&amp;quot;0px&amp;quot;
+      width=&amp;quot;100%&amp;quot; height=&amp;quot;100%&amp;quot; viewBox=&amp;quot;0 0 1600 900&amp;quot; preserveAspectRatio=&amp;quot;xMidYMax slice&amp;quot;&amp;gt;
+      &amp;lt;defs&amp;gt;
+        &amp;lt;linearGradient id=&amp;quot;bg&amp;quot;&amp;gt;
+          &amp;lt;stop offset=&amp;quot;0%&amp;quot; style=&amp;quot;stop-color:rgba(130, 158, 249, 0.06)&amp;quot;&amp;gt;&amp;lt;/stop&amp;gt;
+          &amp;lt;stop offset=&amp;quot;50%&amp;quot; style=&amp;quot;stop-color:rgba(76, 190, 255, 0.6)&amp;quot;&amp;gt;&amp;lt;/stop&amp;gt;
+          &amp;lt;stop offset=&amp;quot;100%&amp;quot; style=&amp;quot;stop-color:rgba(115, 209, 72, 0.2)&amp;quot;&amp;gt;&amp;lt;/stop&amp;gt;
+        &amp;lt;/linearGradient&amp;gt;
+        &amp;lt;path id=&amp;quot;wave&amp;quot; fill=&amp;quot;url(#bg)&amp;quot;
+          d=&amp;quot;M-363.852,502.589c0,0,236.988-41.997,505.475,0
+          s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z&amp;quot; /&amp;gt;
+      &amp;lt;/defs&amp;gt;
+      &amp;lt;g&amp;gt;
+        &amp;lt;use xlink:href=&#39;#wave&#39; opacity=&amp;quot;.3&amp;quot;&amp;gt;
+          &amp;lt;animateTransform attributeName=&amp;quot;transform&amp;quot; attributeType=&amp;quot;XML&amp;quot; type=&amp;quot;translate&amp;quot; dur=&amp;quot;10s&amp;quot;
+            calcMode=&amp;quot;spline&amp;quot; values=&amp;quot;270 230; -334 180; 270 230&amp;quot; keyTimes=&amp;quot;0; .5; 1&amp;quot;
+            keySplines=&amp;quot;0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0&amp;quot; repeatCount=&amp;quot;indefinite&amp;quot; /&amp;gt;
+        &amp;lt;/use&amp;gt;
+        &amp;lt;use xlink:href=&#39;#wave&#39; opacity=&amp;quot;.6&amp;quot;&amp;gt;
+          &amp;lt;animateTransform attributeName=&amp;quot;transform&amp;quot; attributeType=&amp;quot;XML&amp;quot; type=&amp;quot;translate&amp;quot; dur=&amp;quot;8s&amp;quot;
+            calcMode=&amp;quot;spline&amp;quot; values=&amp;quot;-270 230;243 220;-270 230&amp;quot; keyTimes=&amp;quot;0; .6; 1&amp;quot;
+            keySplines=&amp;quot;0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0&amp;quot; repeatCount=&amp;quot;indefinite&amp;quot; /&amp;gt;
+        &amp;lt;/use&amp;gt;
+        &amp;lt;use xlink:href=&#39;#wave&#39; opacty=&amp;quot;.9&amp;quot;&amp;gt;
+          &amp;lt;animateTransform attributeName=&amp;quot;transform&amp;quot; attributeType=&amp;quot;XML&amp;quot; type=&amp;quot;translate&amp;quot; dur=&amp;quot;6s&amp;quot;
+            calcMode=&amp;quot;spline&amp;quot; values=&amp;quot;0 230;-140 200;0 230&amp;quot; keyTimes=&amp;quot;0; .4; 1&amp;quot;
+            keySplines=&amp;quot;0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0&amp;quot; repeatCount=&amp;quot;indefinite&amp;quot; /&amp;gt;
+        &amp;lt;/use&amp;gt;
+      &amp;lt;/g&amp;gt;
+    &amp;lt;/svg&amp;gt;
+    
+    &amp;lt;view class=&amp;quot;loginBox&amp;quot;&amp;gt;
+      &amp;lt;h3 style=&amp;quot;text-align: center;margin-bottom:120rpx;&amp;quot;&amp;gt;欢迎登录&amp;lt;/h3&amp;gt;
+      &amp;lt;view class=&amp;quot;inputBox&amp;quot;&amp;gt;
+        &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;contact&amp;quot; size=&amp;quot;24&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入账号&amp;quot;/&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;eye&amp;quot; size=&amp;quot;24&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;input type=&amp;quot;passsword&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入密码&amp;quot;/&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;checkmarkempty&amp;quot; size=&amp;quot;24&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入验证码&amp;quot;/&amp;gt;
+          &amp;lt;view class=&amp;quot;yzm&amp;quot;&amp;gt;
+            验证码
+          &amp;lt;/view&amp;gt;
+        &amp;lt;/view&amp;gt;
+        &amp;lt;button&amp;gt;登录&amp;lt;/button&amp;gt;
+        &amp;lt;view class=&amp;quot;forgetPwd&amp;quot;&amp;gt;
+          &amp;lt;span&amp;gt;忘记密码&amp;lt;/span&amp;gt;
+          &amp;lt;span&amp;gt;没有账号，去注册&amp;lt;/span&amp;gt;
+        &amp;lt;/view&amp;gt;
+      &amp;lt;/view&amp;gt;
+      &amp;lt;view class=&amp;quot;tipbox&amp;quot;&amp;gt;
+        &amp;lt;view class=&amp;quot;txt&amp;quot;&amp;gt;
+          —— 其他账号登录 ——
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;otherUser&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;qq&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;weixin&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(2,187,17)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+        &amp;lt;/view&amp;gt;
+      &amp;lt;/view&amp;gt;
+    &amp;lt;/view&amp;gt;
+  &amp;lt;/view&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+  export default &amp;#123;
+    data() &amp;#123;
+      return &amp;#123;
+
+      &amp;#125;
+    &amp;#125;,
+    methods: &amp;#123;
+
+    &amp;#125;
+  &amp;#125;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;style scoped&amp;gt;
+  svg &amp;#123;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:40%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #ffffff;
+  &amp;#125;
+  
+  .loginBox&amp;#123;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    width: 90%;
+    border-radius: 20rpx;
+    padding: 60rpx;
+    box-sizing: border-box;
+  &amp;#125;
+  h3&amp;#123;
+    color:rgb(66,157,250);
+    font-size: 40rpx;
+    letter-spacing: 10rpx;
+    margin-bottom: 40rpx;
+  &amp;#125;
+  .inputBox&amp;#123;
+    
+  &amp;#125;
+  .ipt&amp;#123;
+    height: 86rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40rpx;
+    background-color: #f5f5f5;
+    border-radius: 10rpx;
+    padding-left: 10rpx;
+  &amp;#125;
+  .ipt input&amp;#123;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+  &amp;#125;
+  .ipt input&amp;#123;
+    margin-left: 20rpx;
+  &amp;#125;
+  .forgetPwd&amp;#123;
+    margin-top: 30rpx;
+    font-size: 26rpx;
+    color: #b5b5b5;
+    text-align: end;
+    padding:0 10rpx;
+    display: flex;
+    justify-content: space-between;
+  &amp;#125;
+  button&amp;#123;
+    margin-top: 20rpx;
+    line-height: 85rpx;
+    text-align: center;
+    background: rgb(66,157,250);
+    border-radius: 40rpx;
+    color: #fff;
+    margin-top: 40rpx;
+  &amp;#125;
+  
+  .tip&amp;#123;
+    text-align: center;
+    font-size: 28rpx;
+    position: fixed;
+    bottom: 50rpx;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #f4f4f4;
+  &amp;#125;
+  .tipbox &amp;#123;
+    text-align: center;
+    margin-top: 100rpx;
+  &amp;#125;
+  
+  .otherUser &amp;#123;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+  &amp;#125;
+  
+  .txt &amp;#123;
+    font-size: 28rpx;
+    color: #cbcbcb;
+  &amp;#125;
+  
+  .otherUser .uni-icons &amp;#123;
+    margin-left: 20rpx;
+  &amp;#125;
+  .yzm&amp;#123;
+    text-align: end;
+    font-size: 24rpx;
+    background: linear-gradient(to right,rgb(66,157,250),rgb(0, 170, 127));
+    height: 60rpx;
+    width: 150rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    color: #fff;
+  &amp;#125;
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;蓝色登录界面（图三）：&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;template&amp;gt;
+  &amp;lt;view class=&amp;quot;content&amp;quot;&amp;gt;
+    &amp;lt;view class=&amp;quot;topBox&amp;quot;&amp;gt;
+      &amp;lt;h3&amp;gt;WELCOME&amp;lt;/h3&amp;gt;
+      &amp;lt;h3&amp;gt;欢迎使用某某应用&amp;lt;/h3&amp;gt;
+    &amp;lt;/view&amp;gt;
+    &amp;lt;view class=&amp;quot;inputBox&amp;quot;&amp;gt;
+      &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+        &amp;lt;h4&amp;gt;手机号&amp;lt;/h4&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入手机号码&amp;quot; /&amp;gt;
+      &amp;lt;/view&amp;gt;
+      &amp;lt;view class=&amp;quot;ipt&amp;quot;&amp;gt;
+        &amp;lt;h4&amp;gt;密码&amp;lt;/h4&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; placeholder=&amp;quot;请输入密码&amp;quot; /&amp;gt;
+      &amp;lt;/view&amp;gt;
+      &amp;lt;button class=&amp;quot;loginBtn&amp;quot;&amp;gt;登录&amp;lt;/button&amp;gt;
+      &amp;lt;button class=&amp;quot;registerBtn&amp;quot;&amp;gt;注册&amp;lt;/button&amp;gt;
+
+      &amp;lt;view class=&amp;quot;tipbox&amp;quot;&amp;gt;
+        &amp;lt;view class=&amp;quot;txt&amp;quot;&amp;gt;
+          —— 其他账号登录 ——
+        &amp;lt;/view&amp;gt;
+        &amp;lt;view class=&amp;quot;otherUser&amp;quot;&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;qq&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(66,157,250)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+          &amp;lt;uni-icons type=&amp;quot;weixin&amp;quot; size=&amp;quot;40&amp;quot; color=&amp;quot;rgb(2,187,17)&amp;quot;&amp;gt;&amp;lt;/uni-icons&amp;gt;
+        &amp;lt;/view&amp;gt;
+      &amp;lt;/view&amp;gt;
+    &amp;lt;/view&amp;gt;
+  &amp;lt;/view&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+  export default &amp;#123;
+    data() &amp;#123;
+      return &amp;#123;
+
+      &amp;#125;
+    &amp;#125;,
+    methods: &amp;#123;
+
+    &amp;#125;
+  &amp;#125;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;style scoped&amp;gt;
+  .content &amp;#123;
+    height: 100vh;
+    background-color: aquamarine;
+    background: url(&amp;quot;https://www.galaxyclub.cn/Upload/IMAGES/15/0615/38af439784544e95b7c64cad64a14157_650x650.jpg&amp;quot;) no-repeat;
+    background-size: cover;
+  &amp;#125;
+
+  .topBox &amp;#123;
+    font-size: 34rpx;
+    color: #fff;
+    padding: 80rpx 50rpx;
+  &amp;#125;
+
+  h3 &amp;#123;
+    margin-bottom: 10rpx;
+  &amp;#125;
+
+  .inputBox &amp;#123;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 750rpx;
+    height: 85vh;
+    background-color: #fff;
+    border-top-left-radius: 40rpx;
+    border-top-right-radius: 40rpx;
+    padding: 60rpx;
+    box-sizing: border-box;
+  &amp;#125;
+
+  .ipt &amp;#123;
+    margin-bottom: 50rpx;
+  &amp;#125;
+
+  .ipt h4 &amp;#123;
+    margin-bottom: 20rpx;
+    font-size: 36rpx;
+    color: #333;
+  &amp;#125;
+
+  .ipt input &amp;#123;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20rpx;
+    font-size: 28rpx;
+  &amp;#125;
+
+  .loginBtn &amp;#123;
+    margin-top: 20rpx;
+    line-height: 85rpx;
+    text-align: center;
+    background: linear-gradient(to right, rgb(86, 104, 214), rgb(86, 104, 214));
+    border-radius: 40rpx;
+    color: #fff;
+    margin-top: 50rpx;
+  &amp;#125;
+
+  .registerBtn &amp;#123;
+    margin-top: 20rpx;
+    line-height: 85rpx;
+    text-align: center;
+    border-radius: 40rpx;
+    color: rgb(86, 104, 214);
+    margin-top: 50rpx;
+    border: none;
+  &amp;#125;
+
+  .tipbox &amp;#123;
+    position: fixed;
+    bottom: 120rpx;
+    left: 50%;
+    transform: translate(-50%, -120px);
+  &amp;#125;
+
+  .otherUser &amp;#123;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+  &amp;#125;
+
+  .txt &amp;#123;
+    font-size: 28rpx;
+    color: #969696;
+  &amp;#125;
+
+  .otherUser .uni-icons &amp;#123;
+    margin-left: 20rpx;
+  &amp;#125;
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
