@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Think.Blog • All posts by \"工具\" tag",
+    "description": "一个上了年纪的猿人",
+    "home_page_url": "https://github.com/wangbin-blog",
+    "items": [
+        {
+            "id": "https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/",
+            "url": "https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/",
+            "title": "【工具】Watt Toolkit GitHub加速",
+            "date_published": "2024-05-22T12:31:13.000Z",
+            "content_html": "<p>Steam 必备神器  <code>Watt Toolkit</code> ，也就是  <code>Steam++</code>  自带了 GitHub 加速，但当我们开启 GitHub 加速后，网页是加速了，但 git 命令还不行。如果想让  <code>git clone</code>  等命令也实现加速的话，我们还需要配置一下 git 的代理。</p>\n<p>首先将  <code>Watt Toolkit</code>  的 GitHub  <code>加速模式</code>  选择  <code>系统代理模式</code> ，然后我们可以通过操作系统的  <code>设置 -&gt; 网络和 Internet -&gt; 代理</code>  来查看代理 IP 和端口，例如：127.0.0.1:26501。</p>\n<p>然后，我们通过以下命令来设置 git 的 HTTP 代理，并且还要同时禁用 SSL 证书检查，这样  <code>git clone</code>  等命令也会实现加速效果了。</p>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">git</span> config <span class=\"token parameter variable\">--global</span> http.proxy <span class=\"token number\">127.0</span>.0.1:26501</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token function\">git</span> config <span class=\"token parameter variable\">--global</span> http.sslverify <span class=\"token boolean\">false</span></pre></td></tr></table></figure><p>取消 git 代理的方式如下：</p>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">git</span> config <span class=\"token parameter variable\">--global</span> <span class=\"token parameter variable\">--unset</span> http.proxy</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token function\">git</span> config <span class=\"token parameter variable\">--global</span> <span class=\"token parameter variable\">--unset</span> http.sslverify</pre></td></tr></table></figure>",
+            "tags": [
+                "工具"
+            ]
+        }
+    ]
+}
