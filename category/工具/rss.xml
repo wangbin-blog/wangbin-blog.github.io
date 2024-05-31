@@ -23,5 +23,42 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.proxy &lt;span class=&#34;token number&#34;&gt;127.0&lt;/span&gt;.0.1:26561&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.sslverify &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;取消 git 代理的方式如下：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.sslverify&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
+        <item>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+            <title>【工具】Typora安装使用</title>
+            <link>https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+            <category>工具</category>
+            <pubDate>Wed, 22 May 2024 20:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=&#34;&gt;Typora 下载安装&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;激活&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#激活&#34;&gt;#&lt;/a&gt; 激活&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Typora 手动激活，不用修改时间，不用补丁&lt;/p&gt;
+&lt;p&gt;下面是操作步骤：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载最新版本的 Typora 安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装完后，进入 typora 的安装目录下的  &lt;code&gt;\resources\page-dist\static\js&lt;/code&gt;  目录，找到  &lt;code&gt;LicenseIndex&lt;/code&gt;  开头的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用文本编辑器打开该文件，搜索 &lt;code&gt;hasActivated=&amp;quot;true&amp;quot;==e.hasActivated&lt;/code&gt;  并将其替换为&lt;br /&gt;
+ &lt;code&gt;hasActivated=&amp;quot;true&amp;quot;==&amp;quot;true&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]&lt;/p&gt;
+&lt;p&gt;（修改前，可将该文件备份一下，万一操作失误，可以进行恢复）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开软件尽情使用吧！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405241634156.png&#34; alt=&#34;image-20240524163400032&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
     </channel>
 </rss>

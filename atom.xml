@@ -763,6 +763,43 @@ find / -name httpd.conf 搜索系统根目录下名为httpd.conf的文件
         <updated>2024-05-22T12:31:13.000Z</updated>
     </entry>
     <entry>
+        <id>https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</id>
+        <title>【工具】Typora安装使用</title>
+        <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/"/>
+        <content type="html">&lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=&#34;&gt;Typora 下载安装&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;激活&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#激活&#34;&gt;#&lt;/a&gt; 激活&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Typora 手动激活，不用修改时间，不用补丁&lt;/p&gt;
+&lt;p&gt;下面是操作步骤：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载最新版本的 Typora 安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装完后，进入 typora 的安装目录下的  &lt;code&gt;\resources\page-dist\static\js&lt;/code&gt;  目录，找到  &lt;code&gt;LicenseIndex&lt;/code&gt;  开头的文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用文本编辑器打开该文件，搜索 &lt;code&gt;hasActivated=&amp;quot;true&amp;quot;==e.hasActivated&lt;/code&gt;  并将其替换为&lt;br /&gt;
+ &lt;code&gt;hasActivated=&amp;quot;true&amp;quot;==&amp;quot;true&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]&lt;/p&gt;
+&lt;p&gt;（修改前，可将该文件备份一下，万一操作失误，可以进行恢复）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开软件尽情使用吧！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405241634156.png&#34; alt=&#34;image-20240524163400032&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="工具" />
+        <updated>2024-05-22T12:31:13.000Z</updated>
+    </entry>
+    <entry>
         <id>https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/</id>
         <title>【前端】高颜值登录页面（一键复制）</title>
         <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/"/>

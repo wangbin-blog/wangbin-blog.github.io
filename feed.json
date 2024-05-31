@@ -55,6 +55,16 @@
             ]
         },
         {
+            "id": "https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/",
+            "url": "https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/",
+            "title": "【工具】Typora安装使用",
+            "date_published": "2024-05-22T12:31:13.000Z",
+            "content_html": "<h2 id=\"准备\"><a class=\"anchor\" href=\"#准备\">#</a> 准备</h2>\n<blockquote>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=\">Typora 下载安装</span></p>\n</blockquote>\n<h2 id=\"激活\"><a class=\"anchor\" href=\"#激活\">#</a> 激活</h2>\n<blockquote>\n<p>Typora 手动激活，不用修改时间，不用补丁</p>\n<p>下面是操作步骤：</p>\n</blockquote>\n<ol>\n<li>\n<p>下载最新版本的 Typora 安装</p>\n</li>\n<li>\n<p>安装完后，进入 typora 的安装目录下的  <code>\\resources\\page-dist\\static\\js</code>  目录，找到  <code>LicenseIndex</code>  开头的文件</p>\n</li>\n<li>\n<p>用文本编辑器打开该文件，搜索 <code>hasActivated=&quot;true&quot;==e.hasActivated</code>  并将其替换为<br />\n <code>hasActivated=&quot;true&quot;==&quot;true&quot;</code></p>\n<blockquote>\n<p>[!IMPORTANT]</p>\n<p>（修改前，可将该文件备份一下，万一操作失误，可以进行恢复）</p>\n</blockquote>\n</li>\n<li>\n<p>打开软件尽情使用吧！</p>\n</li>\n</ol>\n<p><img data-src=\"https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405241634156.png\" alt=\"image-20240524163400032\" /></p>\n",
+            "tags": [
+                "工具"
+            ]
+        },
+        {
             "id": "https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/",
             "url": "https://github.com/wangbin-blog/2024/05/22/%E5%89%8D%E7%AB%AF/%E9%AB%98%E9%A2%9C%E5%80%BC%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%EF%BC%88%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6%EF%BC%89/",
             "title": "【前端】高颜值登录页面（一键复制）",
