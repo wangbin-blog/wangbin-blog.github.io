@@ -7,22 +7,11 @@
         <language>zh-CN</language>
         <pubDate>Wed, 22 May 2024 20:31:13 +0800</pubDate>
         <lastBuildDate>Wed, 22 May 2024 20:31:13 +0800</lastBuildDate>
-        <category>前端</category>
         <category>Linux</category>
-        <category>工具</category>
         <category>Hexo</category>
-        <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/</guid>
-            <title>【工具】Watt Toolkit GitHub加速</title>
-            <link>https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/</link>
-            <category>工具</category>
-            <pubDate>Wed, 22 May 2024 20:31:13 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Steam 必备神器  &lt;code&gt;Watt Toolkit&lt;/code&gt; ，也就是  &lt;code&gt;Steam++&lt;/code&gt;  自带了 GitHub 加速，但当我们开启 GitHub 加速后，网页是加速了，但 git 命令还不行。如果想让  &lt;code&gt;git clone&lt;/code&gt;  等命令也实现加速的话，我们还需要配置一下 git 的代理。&lt;/p&gt;
-&lt;p&gt;首先将  &lt;code&gt;Watt Toolkit&lt;/code&gt;  的 GitHub  &lt;code&gt;加速模式&lt;/code&gt;  选择  &lt;code&gt;系统代理模式&lt;/code&gt; ，然后我们可以通过操作系统的  &lt;code&gt;设置 -&amp;gt; 网络和 Internet -&amp;gt; 代理&lt;/code&gt;  来查看代理 IP 和端口，例如：127.0.0.1:26561。&lt;/p&gt;
-&lt;p&gt;然后，我们通过以下命令来设置 git 的 HTTP 代理，并且还要同时禁用 SSL 证书检查，这样  &lt;code&gt;git clone&lt;/code&gt;  等命令也会实现加速效果了。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.proxy &lt;span class=&#34;token number&#34;&gt;127.0&lt;/span&gt;.0.1:26561&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.sslverify &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;取消 git 代理的方式如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.sslverify&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
+        <category>工具</category>
+        <category>前端</category>
+        <category>DotNet</category>
         <item>
             <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Typora%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
             <title>【工具】Typora安装使用</title>
@@ -59,6 +48,18 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405241634156.png&#34; alt=&#34;image-20240524163400032&#34; /&gt;&lt;/p&gt;
  ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/</guid>
+            <title>【工具】Watt Toolkit GitHub加速</title>
+            <link>https://github.com/wangbin-blog/2024/05/22/%E5%B7%A5%E5%85%B7/Watt%20Toolkit/</link>
+            <category>工具</category>
+            <pubDate>Wed, 22 May 2024 20:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Steam 必备神器  &lt;code&gt;Watt Toolkit&lt;/code&gt; ，也就是  &lt;code&gt;Steam++&lt;/code&gt;  自带了 GitHub 加速，但当我们开启 GitHub 加速后，网页是加速了，但 git 命令还不行。如果想让  &lt;code&gt;git clone&lt;/code&gt;  等命令也实现加速的话，我们还需要配置一下 git 的代理。&lt;/p&gt;
+&lt;p&gt;首先将  &lt;code&gt;Watt Toolkit&lt;/code&gt;  的 GitHub  &lt;code&gt;加速模式&lt;/code&gt;  选择  &lt;code&gt;系统代理模式&lt;/code&gt; ，然后我们可以通过操作系统的  &lt;code&gt;设置 -&amp;gt; 网络和 Internet -&amp;gt; 代理&lt;/code&gt;  来查看代理 IP 和端口，例如：127.0.0.1:26561。&lt;/p&gt;
+&lt;p&gt;然后，我们通过以下命令来设置 git 的 HTTP 代理，并且还要同时禁用 SSL 证书检查，这样  &lt;code&gt;git clone&lt;/code&gt;  等命令也会实现加速效果了。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.proxy &lt;span class=&#34;token number&#34;&gt;127.0&lt;/span&gt;.0.1:26561&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; http.sslverify &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;取消 git 代理的方式如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--unset&lt;/span&gt; http.sslverify&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
     </channel>
 </rss>

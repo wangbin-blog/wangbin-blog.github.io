@@ -4,10 +4,11 @@
     <title>Think.Blog • Posts by &#34;linux&#34; category</title>
     <link href="https://github.com/wangbin-blog" />
     <updated>2024-05-25T00:31:13.000Z</updated>
-    <category term="前端" />
     <category term="Linux" />
-    <category term="工具" />
     <category term="Hexo" />
+    <category term="工具" />
+    <category term="前端" />
+    <category term="DotNet" />
     <entry>
         <id>https://github.com/wangbin-blog/2024/05/25/Linux/%E3%80%90Linux%E3%80%91%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
         <title>【Linux】常用命令</title>
@@ -1017,6 +1018,177 @@ rocketmq.config.dataPath=./config
         <updated>2024-05-21T00:31:13.000Z</updated>
     </entry>
     <entry>
+        <id>https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91Vim%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</id>
+        <title>【Linux】Vim命令合集</title>
+        <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91Vim%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
+        <content type="html">&lt;h2 id=&#34;命令历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令历史&#34;&gt;#&lt;/a&gt; 命令历史&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以：和 / 开头的命令都有历史纪录，可以首先键入：或 / 然后按上下箭头来选择某个历史命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启动vim&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动vim&#34;&gt;#&lt;/a&gt; 启动 vim&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在命令行窗口中输入以下命令即可&lt;/p&gt;
+&lt;p&gt;vim 直接启动 vim&lt;/p&gt;
+&lt;p&gt;vim filename 打开 vim 并创建名为 filename 的文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;文件命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件命令&#34;&gt;#&lt;/a&gt; 文件命令&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 打开单个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 同时打开多个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; file1 file2 file3 &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 在 vim 窗口中打开一个新文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:open &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 在新窗口中打开文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:split &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 切换到下一个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:bn&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 切换到上一个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:bp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 查看当前打开的文件列表，当前正在编辑的文件会用 [] 括起来。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:args&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 打开远程文件，比如 ftp 或者 share folder&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:e ftp://192.168.10.76/abc.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:e &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;qadrive&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;test&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;h1 id=&#34;vim的模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vim的模式&#34;&gt;#&lt;/a&gt; vim 的模式&lt;/h1&gt;
+&lt;h2 id=&#34;导航命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导航命令&#34;&gt;#&lt;/a&gt; 导航命令&lt;/h2&gt;
+&lt;p&gt;% 括号匹配&lt;/p&gt;
+&lt;h2 id=&#34;插入命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#插入命令&#34;&gt;#&lt;/a&gt; 插入命令&lt;/h2&gt;
+&lt;p&gt;i 在当前位置生前插入&lt;/p&gt;
+&lt;p&gt;I 在当前行首插入&lt;/p&gt;
+&lt;p&gt;a 在当前位置后插入&lt;/p&gt;
+&lt;p&gt;A 在当前行尾插入&lt;/p&gt;
+&lt;p&gt;o 在当前行之后插入一行&lt;/p&gt;
+&lt;p&gt;O 在当前行之前插入一行&lt;/p&gt;
+&lt;h2 id=&#34;查找命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查找命令&#34;&gt;#&lt;/a&gt; 查找命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt; /text　　&lt;/code&gt; 查找 text，按 n 健查找下一个，按 N 健查找前一个。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; ?text　&lt;/code&gt; 　查找 text，反向查找，按 n 健查找下一个，按 N 健查找前一个。&lt;/p&gt;
+&lt;p&gt;vim 中有一些特殊字符在查找时需要转义　　.*[]^%/?~$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :set ignorecase&lt;/code&gt; 　　忽略大小写的查找&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :set noignorecase&lt;/code&gt; 　　不忽略大小写的查找&lt;/p&gt;
+&lt;p&gt;查找很长的词，如果一个词很长，键入麻烦，可以将光标移动到该词上，按 * 或 #键即可以该单词进行搜索，相当于 / 搜索。而 #命令相当于？搜索。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:set hlsearch&lt;/code&gt; 　　高亮搜索结果，所有结果都高亮显示，而不是只显示一个匹配。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :set nohlsearch&lt;/code&gt; 　关闭高亮搜索显示&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :nohlsearch&lt;/code&gt; 　　关闭当前的高亮显示，如果再次搜索或者按下 n 或 N 键，则会再次高亮。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :set incsearch&lt;/code&gt; 　　逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; :set wrapscan&lt;/code&gt; 　　重新搜索，在搜索到文件头或尾时，返回继续搜索，默认开启。&lt;/p&gt;
+&lt;h2 id=&#34;替换命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#替换命令&#34;&gt;#&lt;/a&gt; 替换命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt; ra&lt;/code&gt;  将当前字符替换为 a，当期字符即光标所在字符。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; s/old/new/&lt;/code&gt;  用 old 替换 new，替换当前行的第一个匹配&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;s/old/new/g&lt;/code&gt;  用 old 替换 new，替换当前行的所有匹配&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; %s/old/new/&lt;/code&gt;  用 old 替换 new，替换所有行的第一个匹配&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;%s/old/new/g&lt;/code&gt;  用 old 替换 new，替换整个文件的所有匹配&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:10,20 s/^/  /g&lt;/code&gt;  在第 10 行知第 20 行每行前面加四个空格，用于缩进。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ddp&lt;/code&gt;  交换光标所在行和其下紧邻的一行。&lt;/p&gt;
+&lt;h2 id=&#34;移动命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动命令&#34;&gt;#&lt;/a&gt; 移动命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;h&lt;/code&gt;  左移一个字符&lt;br /&gt;
+ l 右移一个字符，这个命令很少用，一般用 w 代替。&lt;br /&gt;
+ &lt;code&gt;k&lt;/code&gt;  上移一个字符&lt;br /&gt;
+ &lt;code&gt;j&lt;/code&gt;  下移一个字符&lt;br /&gt;
+以上四个命令可以配合数字使用，比如 20j 就是向下移动 20 行，5h 就是向左移动 5 个字符，在 Vim 中，很多命令都可以配合数字使用，比如删除 10 个字符 10x，在当前位置后插入 3 个！，3a！&amp;lt;Esc&amp;gt;，这里的 Esc 是必须的，否则命令不生效。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;w&lt;/code&gt;  向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以代替 l 命令。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;b&lt;/code&gt;  向后移动一个单词 2b 向后移动 2 个单词&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;e&lt;/code&gt; ，同 w，只不过是光标停在单词尾部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ge&lt;/code&gt; ，同 b，光标停在单词尾部。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt;  移动到本行第一个非空白字符上。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;0&lt;/code&gt; （数字 0）移动到本行第一个字符上，&lt;/p&gt;
+&lt;p&gt;&amp;lt;HOME&amp;gt; 移动到本行第一个字符。同 0 健。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ 移动到行尾 3$&lt;/code&gt;  移动到下面 3 行的行尾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gg&lt;/code&gt;  移动到文件头。 = [[&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;G&lt;/code&gt; （shift + g） 移动到文件尾。 = ]]&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;f（find）&lt;/code&gt; 命令也可以用于移动，fx 将找到光标后第一个为 x 的字符，3fd 将找到第三个为 d 的字符。&lt;/p&gt;
+&lt;p&gt;F 同 f，反向查找。&lt;/p&gt;
+&lt;p&gt;跳到指定行，冒号 + 行号，回车，比如跳到 240 行就是 :240 回车。另一个方法是行号 + G，比如 230G 跳到 230 行。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + e&lt;/code&gt;  向下滚动一行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + y&lt;/code&gt;  向上滚动一行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + d&lt;/code&gt;  向下滚动半屏&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + u&lt;/code&gt;  向上滚动半屏&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + f&lt;/code&gt;  向下滚动一屏&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl + b&lt;/code&gt;  向上滚动一屏&lt;/p&gt;
+&lt;h2 id=&#34;撤销和重做&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#撤销和重做&#34;&gt;#&lt;/a&gt; 撤销和重做&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;u&lt;/code&gt;  撤销（Undo）&lt;br /&gt;
+ &lt;code&gt;U&lt;/code&gt;  撤销对整行的操作&lt;br /&gt;
+ &lt;code&gt;Ctrl + r&lt;/code&gt;  重做（Redo），即撤销的撤销。&lt;/p&gt;
+&lt;h2 id=&#34;删除命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#删除命令&#34;&gt;#&lt;/a&gt; 删除命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;x&lt;/code&gt;  删除当前字符&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;3x&lt;/code&gt;  删除当前光标开始向后三个字符&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;X&lt;/code&gt;  删除当前字符的前一个字符。X=dh&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dl&lt;/code&gt;  删除当前字符， dl=x&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dh&lt;/code&gt;  删除前一个字符&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dd&lt;/code&gt;  删除当前行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dj&lt;/code&gt;  删除上一行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dk&lt;/code&gt;  删除下一行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;10d&lt;/code&gt;  删除当前行开始的 10 行。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;D&lt;/code&gt;  删除当前字符至行尾。D=d$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;d&lt;/code&gt; $ 删除当前字符之后的所有字符（本行）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kdgg&lt;/code&gt;  删除当前行之前所有行（不包括当前行）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;jdG&lt;/code&gt; （jd shift + g）  删除当前行之后所有行（不包括当前行）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,10d&lt;/code&gt;  删除 1-10 行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:11,\$d&lt;/code&gt;  删除 11 行及以后所有的行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,\$d&lt;/code&gt;  删除所有行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;J(shift + j)&lt;/code&gt; 　　删除两行之间的空行，实际上是合并两行。&lt;/p&gt;
+&lt;h2 id=&#34;拷贝和粘贴&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拷贝和粘贴&#34;&gt;#&lt;/a&gt; 拷贝和粘贴&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;yy&lt;/code&gt;  拷贝当前行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nyy&lt;/code&gt;  拷贝当前后开始的 n 行，比如 2yy 拷贝当前行及其下一行。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;p&lt;/code&gt;  在当前光标后粘贴，如果之前使用了 yy 命令来复制一行，那么就在当前行的下一行粘贴。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;shift+p&lt;/code&gt;  在当前行前粘贴&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,10 co 20&lt;/code&gt;  将 1-10 行插入到第 20 行之后。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,$co$&lt;/code&gt;  将整个文件复制一份并添加到文件尾部。&lt;/p&gt;
+&lt;p&gt;正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 y 即可复制&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ddp&lt;/code&gt;  交换当前行和其下一行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xp&lt;/code&gt;  交换当前字符和其后一个字符&lt;/p&gt;
+&lt;h2 id=&#34;剪切命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剪切命令&#34;&gt;#&lt;/a&gt; 剪切命令&lt;/h2&gt;
+&lt;p&gt;正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 d 即可剪切&lt;/p&gt;
+&lt;p&gt;ndd 剪切当前行之后的 n 行。利用 p 命令可以对剪切的内容进行粘贴&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1,10d&lt;/code&gt;  将 1-10 行剪切。利用 p 命令可将剪切后的内容进行粘贴。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:1, 10 m 20&lt;/code&gt;  将第 1-10 行移动到第 20 行之后。&lt;/p&gt;
+&lt;h2 id=&#34;退出命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出命令&#34;&gt;#&lt;/a&gt; 退出命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;:wq&lt;/code&gt;  保存并退出&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ZZ&lt;/code&gt;  保存并退出&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:q!&lt;/code&gt;  强制退出并忽略所有更改&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:e!&lt;/code&gt;  放弃所有修改，并打开原来文件。&lt;/p&gt;
+&lt;h2 id=&#34;窗口命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窗口命令&#34;&gt;#&lt;/a&gt; 窗口命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;:split或new&lt;/code&gt;  打开一个新窗口，光标停在顶层的窗口上&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:split file或\:new file&lt;/code&gt;  用新窗口打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;split&lt;/code&gt;  打开的窗口都是横向的，使用 vsplit 可以纵向打开窗口。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+ww&lt;/code&gt;  移动到下一个窗口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+wj&lt;/code&gt;  移动到下方的窗口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+wk&lt;/code&gt;  移动到上方的窗口&lt;/p&gt;
+&lt;p&gt;关闭窗口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:close&lt;/code&gt;  最后一个窗口不能使用此命令，可以防止意外退出 vim。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:q&lt;/code&gt;  如果是最后一个被关闭的窗口，那么将退出 vim。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ZZ&lt;/code&gt;  保存并退出。&lt;/p&gt;
+&lt;p&gt;关闭所有窗口，只保留当前窗口&lt;/p&gt;
+&lt;p&gt;:only&lt;/p&gt;
+&lt;p&gt;录制宏&lt;/p&gt;
+&lt;p&gt;按 q 键加任意字母开始录制，再按 q 键结束录制（这意味着 vim 中的宏不可嵌套），使用的时候 @加宏名，比如 qa。。。q 录制名为 a 的宏，@a 使用这个宏。&lt;/p&gt;
+&lt;h2 id=&#34;执行shell命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行shell命令&#34;&gt;#&lt;/a&gt; 执行 shell 命令&lt;/h2&gt;
+&lt;p&gt;:!command&lt;/p&gt;
+&lt;p&gt;:!ls 列出当前目录下文件&lt;/p&gt;
+&lt;p&gt;:!perl -c &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NjcmlwdC5wbA==&#34;&gt;script.pl&lt;/span&gt; 检查 perl 脚本语法，可以不用退出 vim，非常方便。&lt;/p&gt;
+&lt;p&gt;:!perl &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NjcmlwdC5wbA==&#34;&gt;script.pl&lt;/span&gt; 执行 perl 脚本，可以不用退出 vim，非常方便。&lt;/p&gt;
+&lt;p&gt;:suspend 或 Ctrl - Z 挂起 vim，回到 shell，按 fg 可以返回 vim。&lt;/p&gt;
+&lt;h2 id=&#34;注释命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注释命令&#34;&gt;#&lt;/a&gt; 注释命令&lt;/h2&gt;
+&lt;p&gt;perl 程序中 #开始的行为注释，所以要注释某些行，只需在行首加入#&lt;/p&gt;
+&lt;p&gt;3,5 s/^/#/g 注释第 3-5 行&lt;/p&gt;
+&lt;p&gt;3,5 s/^#//g 解除 3-5 行的注释&lt;/p&gt;
+&lt;p&gt;1,$ s/^/#/g 注释整个文档。&lt;/p&gt;
+&lt;p&gt;:% s/^/#/g 注释整个文档，此法更快。&lt;/p&gt;
+&lt;h2 id=&#34;帮助命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#帮助命令&#34;&gt;#&lt;/a&gt; 帮助命令&lt;/h2&gt;
+&lt;p&gt;:help or F1 显示整个帮助&lt;br /&gt;
+:help xxx 显示 xxx 的帮助，比如 :help i, :help CTRL-[（即 Ctrl+[的帮助）。&lt;br /&gt;
+:help &#39;number&#39; Vim 选项的帮助用单引号括起&lt;br /&gt;
+:help &amp;lt;Esc&amp;gt; 特殊键的帮助用 &amp;lt;&amp;gt; 扩起&lt;br /&gt;
+:help -t Vim 启动参数的帮助用 -&lt;br /&gt;
+：help i_&amp;lt;Esc&amp;gt; 插入模式下 Esc 的帮助，某个模式下的帮助用模式_主题的模式&lt;br /&gt;
+帮助文件中位于 || 之间的内容是超链接，可以用 Ctrl+] 进入链接，Ctrl+o（Ctrl + t）返回&lt;/p&gt;
+&lt;h2 id=&#34;其他非编辑命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他非编辑命令&#34;&gt;#&lt;/a&gt; 其他非编辑命令&lt;/h2&gt;
+&lt;p&gt;. 重复前一次命令&lt;/p&gt;
+&lt;p&gt;:set ruler?　　查看是否设置了 ruler，在.vimrc 中，使用 set 命令设制的选项都可以通过这个命令查看&lt;/p&gt;
+&lt;p&gt;:scriptnames　　查看 vim 脚本文件的位置，比如.vimrc 文件，语法文件及 plugin 等。&lt;/p&gt;
+&lt;p&gt;:set list 显示非打印字符，如 tab，空格，行尾等。如果 tab 无法显示，请确定用 set lcs=tab:&amp;gt;- 命令设置了.vimrc 文件，并确保你的文件中的确有 tab，如果开启了 expendtab，那么 tab 将被扩展为空格。&lt;/p&gt;
+&lt;p&gt;Vim 教程&lt;br /&gt;
+在 Unix 系统上&lt;br /&gt;
+ $ vimtutor&lt;br /&gt;
+ 在 Windows 系统上&lt;br /&gt;
+:help tutor&lt;/p&gt;
+&lt;p&gt;:syntax 列出已经定义的语法项&lt;br /&gt;
+:syntax clear 清除已定义的语法规则&lt;br /&gt;
+:syntax case match 大小写敏感，int 和 Int 将视为不同的语法元素&lt;br /&gt;
+:syntax case ignore 大小写无关，int 和 Int 将视为相同的语法元素，并使用同样的配色方案&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考文档：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vc29mdHdhcmV0ZXN0aW5nL2FyY2hpdmUvMjAxMS8wNy8xMi8yMTA0NDM1Lmh0bWw=&#34;&gt;Vim 命令合集&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="Linux" />
+        <updated>2024-05-21T00:31:13.000Z</updated>
+    </entry>
+    <entry>
         <id>https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91manjaro%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
         <title>【Linux】manjaro 环境配置</title>
         <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91manjaro%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
@@ -1376,177 +1548,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;h-保存退出后刷新配置或重启xshell窗口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#h-保存退出后刷新配置或重启xshell窗口&#34;&gt;#&lt;/a&gt; h) 保存退出后刷新配置（或重启 Xshell 窗口）：&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@node01 java&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;# source /etc/profile.d/my_env.sh&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;root@node01 ~&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;# java -version&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openjdk version &lt;span class=&#34;token string&#34;&gt;&#34;1.8.0_41&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;OpenJDK Runtime Environment &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;build &lt;span class=&#34;token number&#34;&gt;1.8&lt;/span&gt;.0_41-b04&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;OpenJDK &lt;span class=&#34;token number&#34;&gt;64&lt;/span&gt;-Bit Server VM &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;build &lt;span class=&#34;token number&#34;&gt;25.40&lt;/span&gt;-b25, mixed mode&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="Linux" />
-        <updated>2024-05-21T00:31:13.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91Vim%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</id>
-        <title>【Linux】Vim命令合集</title>
-        <link rel="alternate" href="https://github.com/wangbin-blog/2024/05/21/Linux/%E3%80%90Linux%E3%80%91Vim%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
-        <content type="html">&lt;h2 id=&#34;命令历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命令历史&#34;&gt;#&lt;/a&gt; 命令历史&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以：和 / 开头的命令都有历史纪录，可以首先键入：或 / 然后按上下箭头来选择某个历史命令。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;启动vim&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动vim&#34;&gt;#&lt;/a&gt; 启动 vim&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在命令行窗口中输入以下命令即可&lt;/p&gt;
-&lt;p&gt;vim 直接启动 vim&lt;/p&gt;
-&lt;p&gt;vim filename 打开 vim 并创建名为 filename 的文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;文件命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件命令&#34;&gt;#&lt;/a&gt; 文件命令&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 打开单个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 同时打开多个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; file1 file2 file3 &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 在 vim 窗口中打开一个新文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:open &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 在新窗口中打开文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:split &lt;span class=&#34;token function&#34;&gt;file&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 切换到下一个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:bn&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 切换到上一个文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:bp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 查看当前打开的文件列表，当前正在编辑的文件会用 [] 括起来。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:args&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 打开远程文件，比如 ftp 或者 share folder&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:e ftp://192.168.10.76/abc.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:e &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;qadrive&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;test&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
-&lt;h1 id=&#34;vim的模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vim的模式&#34;&gt;#&lt;/a&gt; vim 的模式&lt;/h1&gt;
-&lt;h2 id=&#34;导航命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导航命令&#34;&gt;#&lt;/a&gt; 导航命令&lt;/h2&gt;
-&lt;p&gt;% 括号匹配&lt;/p&gt;
-&lt;h2 id=&#34;插入命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#插入命令&#34;&gt;#&lt;/a&gt; 插入命令&lt;/h2&gt;
-&lt;p&gt;i 在当前位置生前插入&lt;/p&gt;
-&lt;p&gt;I 在当前行首插入&lt;/p&gt;
-&lt;p&gt;a 在当前位置后插入&lt;/p&gt;
-&lt;p&gt;A 在当前行尾插入&lt;/p&gt;
-&lt;p&gt;o 在当前行之后插入一行&lt;/p&gt;
-&lt;p&gt;O 在当前行之前插入一行&lt;/p&gt;
-&lt;h2 id=&#34;查找命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查找命令&#34;&gt;#&lt;/a&gt; 查找命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt; /text　　&lt;/code&gt; 查找 text，按 n 健查找下一个，按 N 健查找前一个。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; ?text　&lt;/code&gt; 　查找 text，反向查找，按 n 健查找下一个，按 N 健查找前一个。&lt;/p&gt;
-&lt;p&gt;vim 中有一些特殊字符在查找时需要转义　　.*[]^%/?~$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :set ignorecase&lt;/code&gt; 　　忽略大小写的查找&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :set noignorecase&lt;/code&gt; 　　不忽略大小写的查找&lt;/p&gt;
-&lt;p&gt;查找很长的词，如果一个词很长，键入麻烦，可以将光标移动到该词上，按 * 或 #键即可以该单词进行搜索，相当于 / 搜索。而 #命令相当于？搜索。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:set hlsearch&lt;/code&gt; 　　高亮搜索结果，所有结果都高亮显示，而不是只显示一个匹配。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :set nohlsearch&lt;/code&gt; 　关闭高亮搜索显示&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :nohlsearch&lt;/code&gt; 　　关闭当前的高亮显示，如果再次搜索或者按下 n 或 N 键，则会再次高亮。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :set incsearch&lt;/code&gt; 　　逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; :set wrapscan&lt;/code&gt; 　　重新搜索，在搜索到文件头或尾时，返回继续搜索，默认开启。&lt;/p&gt;
-&lt;h2 id=&#34;替换命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#替换命令&#34;&gt;#&lt;/a&gt; 替换命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt; ra&lt;/code&gt;  将当前字符替换为 a，当期字符即光标所在字符。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; s/old/new/&lt;/code&gt;  用 old 替换 new，替换当前行的第一个匹配&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;s/old/new/g&lt;/code&gt;  用 old 替换 new，替换当前行的所有匹配&lt;/p&gt;
-&lt;p&gt;&lt;code&gt; %s/old/new/&lt;/code&gt;  用 old 替换 new，替换所有行的第一个匹配&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;%s/old/new/g&lt;/code&gt;  用 old 替换 new，替换整个文件的所有匹配&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:10,20 s/^/  /g&lt;/code&gt;  在第 10 行知第 20 行每行前面加四个空格，用于缩进。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ddp&lt;/code&gt;  交换光标所在行和其下紧邻的一行。&lt;/p&gt;
-&lt;h2 id=&#34;移动命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动命令&#34;&gt;#&lt;/a&gt; 移动命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;h&lt;/code&gt;  左移一个字符&lt;br /&gt;
- l 右移一个字符，这个命令很少用，一般用 w 代替。&lt;br /&gt;
- &lt;code&gt;k&lt;/code&gt;  上移一个字符&lt;br /&gt;
- &lt;code&gt;j&lt;/code&gt;  下移一个字符&lt;br /&gt;
-以上四个命令可以配合数字使用，比如 20j 就是向下移动 20 行，5h 就是向左移动 5 个字符，在 Vim 中，很多命令都可以配合数字使用，比如删除 10 个字符 10x，在当前位置后插入 3 个！，3a！&amp;lt;Esc&amp;gt;，这里的 Esc 是必须的，否则命令不生效。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;w&lt;/code&gt;  向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以代替 l 命令。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;b&lt;/code&gt;  向后移动一个单词 2b 向后移动 2 个单词&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;e&lt;/code&gt; ，同 w，只不过是光标停在单词尾部&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ge&lt;/code&gt; ，同 b，光标停在单词尾部。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;^&lt;/code&gt;  移动到本行第一个非空白字符上。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;0&lt;/code&gt; （数字 0）移动到本行第一个字符上，&lt;/p&gt;
-&lt;p&gt;&amp;lt;HOME&amp;gt; 移动到本行第一个字符。同 0 健。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ 移动到行尾 3$&lt;/code&gt;  移动到下面 3 行的行尾&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;gg&lt;/code&gt;  移动到文件头。 = [[&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;G&lt;/code&gt; （shift + g） 移动到文件尾。 = ]]&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;f（find）&lt;/code&gt; 命令也可以用于移动，fx 将找到光标后第一个为 x 的字符，3fd 将找到第三个为 d 的字符。&lt;/p&gt;
-&lt;p&gt;F 同 f，反向查找。&lt;/p&gt;
-&lt;p&gt;跳到指定行，冒号 + 行号，回车，比如跳到 240 行就是 :240 回车。另一个方法是行号 + G，比如 230G 跳到 230 行。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + e&lt;/code&gt;  向下滚动一行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + y&lt;/code&gt;  向上滚动一行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + d&lt;/code&gt;  向下滚动半屏&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + u&lt;/code&gt;  向上滚动半屏&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + f&lt;/code&gt;  向下滚动一屏&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl + b&lt;/code&gt;  向上滚动一屏&lt;/p&gt;
-&lt;h2 id=&#34;撤销和重做&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#撤销和重做&#34;&gt;#&lt;/a&gt; 撤销和重做&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;u&lt;/code&gt;  撤销（Undo）&lt;br /&gt;
- &lt;code&gt;U&lt;/code&gt;  撤销对整行的操作&lt;br /&gt;
- &lt;code&gt;Ctrl + r&lt;/code&gt;  重做（Redo），即撤销的撤销。&lt;/p&gt;
-&lt;h2 id=&#34;删除命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#删除命令&#34;&gt;#&lt;/a&gt; 删除命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;x&lt;/code&gt;  删除当前字符&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;3x&lt;/code&gt;  删除当前光标开始向后三个字符&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;X&lt;/code&gt;  删除当前字符的前一个字符。X=dh&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dl&lt;/code&gt;  删除当前字符， dl=x&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dh&lt;/code&gt;  删除前一个字符&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dd&lt;/code&gt;  删除当前行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dj&lt;/code&gt;  删除上一行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dk&lt;/code&gt;  删除下一行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;10d&lt;/code&gt;  删除当前行开始的 10 行。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;D&lt;/code&gt;  删除当前字符至行尾。D=d$&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;d&lt;/code&gt; $ 删除当前字符之后的所有字符（本行）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;kdgg&lt;/code&gt;  删除当前行之前所有行（不包括当前行）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;jdG&lt;/code&gt; （jd shift + g）  删除当前行之后所有行（不包括当前行）&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,10d&lt;/code&gt;  删除 1-10 行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:11,\$d&lt;/code&gt;  删除 11 行及以后所有的行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,\$d&lt;/code&gt;  删除所有行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;J(shift + j)&lt;/code&gt; 　　删除两行之间的空行，实际上是合并两行。&lt;/p&gt;
-&lt;h2 id=&#34;拷贝和粘贴&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拷贝和粘贴&#34;&gt;#&lt;/a&gt; 拷贝和粘贴&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;yy&lt;/code&gt;  拷贝当前行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;nyy&lt;/code&gt;  拷贝当前后开始的 n 行，比如 2yy 拷贝当前行及其下一行。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;p&lt;/code&gt;  在当前光标后粘贴，如果之前使用了 yy 命令来复制一行，那么就在当前行的下一行粘贴。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;shift+p&lt;/code&gt;  在当前行前粘贴&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,10 co 20&lt;/code&gt;  将 1-10 行插入到第 20 行之后。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,$co$&lt;/code&gt;  将整个文件复制一份并添加到文件尾部。&lt;/p&gt;
-&lt;p&gt;正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 y 即可复制&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ddp&lt;/code&gt;  交换当前行和其下一行&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;xp&lt;/code&gt;  交换当前字符和其后一个字符&lt;/p&gt;
-&lt;h2 id=&#34;剪切命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剪切命令&#34;&gt;#&lt;/a&gt; 剪切命令&lt;/h2&gt;
-&lt;p&gt;正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 d 即可剪切&lt;/p&gt;
-&lt;p&gt;ndd 剪切当前行之后的 n 行。利用 p 命令可以对剪切的内容进行粘贴&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1,10d&lt;/code&gt;  将 1-10 行剪切。利用 p 命令可将剪切后的内容进行粘贴。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:1, 10 m 20&lt;/code&gt;  将第 1-10 行移动到第 20 行之后。&lt;/p&gt;
-&lt;h2 id=&#34;退出命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出命令&#34;&gt;#&lt;/a&gt; 退出命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;:wq&lt;/code&gt;  保存并退出&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ZZ&lt;/code&gt;  保存并退出&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:q!&lt;/code&gt;  强制退出并忽略所有更改&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:e!&lt;/code&gt;  放弃所有修改，并打开原来文件。&lt;/p&gt;
-&lt;h2 id=&#34;窗口命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窗口命令&#34;&gt;#&lt;/a&gt; 窗口命令&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;:split或new&lt;/code&gt;  打开一个新窗口，光标停在顶层的窗口上&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:split file或\:new file&lt;/code&gt;  用新窗口打开文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;split&lt;/code&gt;  打开的窗口都是横向的，使用 vsplit 可以纵向打开窗口。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl+ww&lt;/code&gt;  移动到下一个窗口&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl+wj&lt;/code&gt;  移动到下方的窗口&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Ctrl+wk&lt;/code&gt;  移动到上方的窗口&lt;/p&gt;
-&lt;p&gt;关闭窗口&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:close&lt;/code&gt;  最后一个窗口不能使用此命令，可以防止意外退出 vim。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:q&lt;/code&gt;  如果是最后一个被关闭的窗口，那么将退出 vim。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ZZ&lt;/code&gt;  保存并退出。&lt;/p&gt;
-&lt;p&gt;关闭所有窗口，只保留当前窗口&lt;/p&gt;
-&lt;p&gt;:only&lt;/p&gt;
-&lt;p&gt;录制宏&lt;/p&gt;
-&lt;p&gt;按 q 键加任意字母开始录制，再按 q 键结束录制（这意味着 vim 中的宏不可嵌套），使用的时候 @加宏名，比如 qa。。。q 录制名为 a 的宏，@a 使用这个宏。&lt;/p&gt;
-&lt;h2 id=&#34;执行shell命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行shell命令&#34;&gt;#&lt;/a&gt; 执行 shell 命令&lt;/h2&gt;
-&lt;p&gt;:!command&lt;/p&gt;
-&lt;p&gt;:!ls 列出当前目录下文件&lt;/p&gt;
-&lt;p&gt;:!perl -c &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NjcmlwdC5wbA==&#34;&gt;script.pl&lt;/span&gt; 检查 perl 脚本语法，可以不用退出 vim，非常方便。&lt;/p&gt;
-&lt;p&gt;:!perl &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NjcmlwdC5wbA==&#34;&gt;script.pl&lt;/span&gt; 执行 perl 脚本，可以不用退出 vim，非常方便。&lt;/p&gt;
-&lt;p&gt;:suspend 或 Ctrl - Z 挂起 vim，回到 shell，按 fg 可以返回 vim。&lt;/p&gt;
-&lt;h2 id=&#34;注释命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注释命令&#34;&gt;#&lt;/a&gt; 注释命令&lt;/h2&gt;
-&lt;p&gt;perl 程序中 #开始的行为注释，所以要注释某些行，只需在行首加入#&lt;/p&gt;
-&lt;p&gt;3,5 s/^/#/g 注释第 3-5 行&lt;/p&gt;
-&lt;p&gt;3,5 s/^#//g 解除 3-5 行的注释&lt;/p&gt;
-&lt;p&gt;1,$ s/^/#/g 注释整个文档。&lt;/p&gt;
-&lt;p&gt;:% s/^/#/g 注释整个文档，此法更快。&lt;/p&gt;
-&lt;h2 id=&#34;帮助命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#帮助命令&#34;&gt;#&lt;/a&gt; 帮助命令&lt;/h2&gt;
-&lt;p&gt;:help or F1 显示整个帮助&lt;br /&gt;
-:help xxx 显示 xxx 的帮助，比如 :help i, :help CTRL-[（即 Ctrl+[的帮助）。&lt;br /&gt;
-:help &#39;number&#39; Vim 选项的帮助用单引号括起&lt;br /&gt;
-:help &amp;lt;Esc&amp;gt; 特殊键的帮助用 &amp;lt;&amp;gt; 扩起&lt;br /&gt;
-:help -t Vim 启动参数的帮助用 -&lt;br /&gt;
-：help i_&amp;lt;Esc&amp;gt; 插入模式下 Esc 的帮助，某个模式下的帮助用模式_主题的模式&lt;br /&gt;
-帮助文件中位于 || 之间的内容是超链接，可以用 Ctrl+] 进入链接，Ctrl+o（Ctrl + t）返回&lt;/p&gt;
-&lt;h2 id=&#34;其他非编辑命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他非编辑命令&#34;&gt;#&lt;/a&gt; 其他非编辑命令&lt;/h2&gt;
-&lt;p&gt;. 重复前一次命令&lt;/p&gt;
-&lt;p&gt;:set ruler?　　查看是否设置了 ruler，在.vimrc 中，使用 set 命令设制的选项都可以通过这个命令查看&lt;/p&gt;
-&lt;p&gt;:scriptnames　　查看 vim 脚本文件的位置，比如.vimrc 文件，语法文件及 plugin 等。&lt;/p&gt;
-&lt;p&gt;:set list 显示非打印字符，如 tab，空格，行尾等。如果 tab 无法显示，请确定用 set lcs=tab:&amp;gt;- 命令设置了.vimrc 文件，并确保你的文件中的确有 tab，如果开启了 expendtab，那么 tab 将被扩展为空格。&lt;/p&gt;
-&lt;p&gt;Vim 教程&lt;br /&gt;
-在 Unix 系统上&lt;br /&gt;
- $ vimtutor&lt;br /&gt;
- 在 Windows 系统上&lt;br /&gt;
-:help tutor&lt;/p&gt;
-&lt;p&gt;:syntax 列出已经定义的语法项&lt;br /&gt;
-:syntax clear 清除已定义的语法规则&lt;br /&gt;
-:syntax case match 大小写敏感，int 和 Int 将视为不同的语法元素&lt;br /&gt;
-:syntax case ignore 大小写无关，int 和 Int 将视为相同的语法元素，并使用同样的配色方案&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;参考文档：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vc29mdHdhcmV0ZXN0aW5nL2FyY2hpdmUvMjAxMS8wNy8xMi8yMTA0NDM1Lmh0bWw=&#34;&gt;Vim 命令合集&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
         <category term="Linux" />
         <updated>2024-05-21T00:31:13.000Z</updated>
     </entry>
