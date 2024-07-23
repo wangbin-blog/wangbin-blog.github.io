@@ -5,13 +5,83 @@
         <link>https://github.com/wangbin-blog</link>
         <description>一个上了年纪的猿人</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 19 Jun 2024 20:31:13 +0800</pubDate>
-        <lastBuildDate>Wed, 19 Jun 2024 20:31:13 +0800</lastBuildDate>
+        <pubDate>Fri, 19 Jul 2024 20:31:13 +0800</pubDate>
+        <lastBuildDate>Fri, 19 Jul 2024 20:31:13 +0800</lastBuildDate>
         <category>Hexo</category>
         <category>Linux</category>
         <category>前端</category>
         <category>工具</category>
         <category>DotNet</category>
+        <item>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</guid>
+            <title>【工具】GitHub访问设置</title>
+            <link>https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</link>
+            <category>工具</category>
+            <pubDate>Fri, 19 Jul 2024 20:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;访问 GitHub 的速度和稳定性可以通过修改 hosts 文件来提高。‌&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，‌获取 github.com 的 IP 地址是关键的一步。‌&lt;/p&gt;
+&lt;p&gt;你可以通过在线 DNS 解析网站，‌如&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pcDMzLmNvbS9kbnMuaHRtbA==&#34;&gt; ip33&lt;/span&gt;，‌输入 &lt;code&gt;github.com&lt;/code&gt;  域名，‌获取 A 记录的 IP 地址。‌然后将这个 IP 地址赋值到 &lt;code&gt;hosts&lt;/code&gt;  文件（‌文件路径为 &lt;code&gt;C:\Windows\System32\drivers\etc&lt;/code&gt; ）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将 hosts 文件 copy 到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌&lt;/p&gt;
+&lt;p&gt;此外，‌还有一些特定的 IP 地址可以帮助加速访问 GitHub 的特定服务，‌&lt;/p&gt;
+&lt;p&gt;例如 &lt;a href=&#34;avatars.githubusercontent.com&#34;&gt;avatars.githubusercontent.com&lt;/a&gt;、‌&lt;a href=&#34;codeload.github.com&#34;&gt;codeload.github.com&lt;/a&gt; 等，‌这些服务通常用于加载图片、‌代码等资源。‌通过将这些服务与特定的 IP 地址关联，‌可以进一步提高访问速度和稳定性。‌&lt;/p&gt;
+&lt;p&gt;需要注意的是，‌这种方法虽然可以提高访问速度和稳定性，‌但并不保证能够完全解决所有访问问题，‌因为 GitHub 的服务可能会在不同的时间和地点使用不同的 IP 地址。‌因此，‌如果遇到访问问题，‌可能需要重新通过 DNS 解析获取最新的可用 IP 地址。‌&lt;/p&gt;
+&lt;p&gt;最后，‌还有一些工具和服务提供更新的 hosts 文件，‌这些文件包含了最新的 GitHub 域名和 IP 地址映射，‌使用这些工具和服务可以简化手动更新 hosts 文件的步骤，‌同时也能保证使用的是最新的、‌有效的 IP 地址&lt;/p&gt;
+&lt;p&gt;如果设置 host 后依旧不能访问，可以尝试修改 dns 来试试～&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;DNS&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;IP 地址&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;官网&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;百度 DNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;180.76.76.76&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2R1ZG5zLmJhaWR1LmNvbS8=&#34;&gt;http://dudns.baidu.com/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;阿里 DNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;223.5.5.5 223.6.6.6&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5hbGlkbnMuY29tLw==&#34;&gt;http://www.alidns.com/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DNSPod&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;119.29.29.29&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZG5zcG9kLmNuL1Byb2R1Y3RzL1B1YmxpYy5ETlM=&#34;&gt;https://www.dnspod.cn/Products/Public.DNS&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;腾讯旗下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;114 DNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;114.114.114.114 114.114.115.115&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy4xMTRkbnMuY29tLw==&#34;&gt;http://www.114dns.com/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;电信合作商&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Google DNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;8.8.8.8 8.8.4.4&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcHVibGljLWRucy8=&#34;&gt;https://developers.google.com/speed/public-dns/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;纯净无污染，注意墙&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;SDNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1.2.4.8 210.2.4.8&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zZG5zLmNuLw==&#34;&gt;http://www.sdns.cn/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;中国互联网络信息中心提供&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;OpenDNS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;208.67.220.220 208.67.222.222&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vcGVuZG5zLmNvbS8=&#34;&gt;http://www.opendns.com/&lt;/span&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;资深、专业的公众 DNS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://github.com/wangbin-blog/2024/06/19/%E5%B7%A5%E5%85%B7/%E5%88%86%E4%BA%AB%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%AB%99/</guid>
             <title>【工具】分享超级好用的在线网站</title>
@@ -407,6 +477,7 @@
             <description><![CDATA[ &lt;h2 id=&#34;准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备&#34;&gt;#&lt;/a&gt; 准备&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=&#34;&gt;Typora 下载安装&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;版本：1.8.10&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;激活&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#激活&#34;&gt;#&lt;/a&gt; 激活&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -433,6 +504,20 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405241634156.png&#34; alt=&#34;image-20240524163400032&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;关闭软件每次启动时的已激活弹窗&lt;/p&gt;
+&lt;p&gt;继续在安装路径下找到 &lt;code&gt;resources\page-dist\license.html&lt;/code&gt;  文件，依旧 ctrl+F 定位到： &lt;code&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt; &lt;strong&gt; 替换为&lt;/strong&gt;  &lt;code&gt;&amp;lt;/body&amp;gt;&amp;lt;script&amp;gt;window.οnlοad=function()&amp;#123;setTimeout(()=&amp;gt;&amp;#123;window.close();&amp;#125;,5);&amp;#125;&amp;lt;/script&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/wangbin-blog/pic-resources/main/2024/06/27092659761.png&#34; alt=&#34;image-20240627092659701&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;去除软件左下角 “未激活” 提示&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	按照安装路径，找到  &lt;code&gt;resources\locales\zh-Hans.lproj\Panel.json&lt;/code&gt; , 文件中查找： &lt;code&gt;&amp;quot;UNREGISTERED&amp;quot;:&amp;quot;未激活&amp;quot;&lt;/code&gt; &lt;strong&gt; 替换为：&lt;/strong&gt; &lt;code&gt;&amp;quot;UNREGISTERED&amp;quot;:&amp;quot; &amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;最后，重要提示：把自动更新一定要关闭，能用就不要升级，此方法再之后版本不一定能用，且用切珍惜&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
  ]]></description>
         </item>
         <item>
