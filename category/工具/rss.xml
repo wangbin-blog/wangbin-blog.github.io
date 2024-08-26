@@ -516,6 +516,13 @@
 &lt;li&gt;去除软件左下角 “未激活” 提示&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;​	按照安装路径，找到  &lt;code&gt;resources\locales\zh-Hans.lproj\Panel.json&lt;/code&gt; , 文件中查找： &lt;code&gt;&amp;quot;UNREGISTERED&amp;quot;:&amp;quot;未激活&amp;quot;&lt;/code&gt; &lt;strong&gt; 替换为：&lt;/strong&gt; &lt;code&gt;&amp;quot;UNREGISTERED&amp;quot;:&amp;quot; &amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;安装自定义样式
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/imageslr/mweb-themes&#34;&gt;从 Github 下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;最后，重要提示：把自动更新一定要关闭，能用就不要升级，此方法再之后版本不一定能用，且用切珍惜&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
