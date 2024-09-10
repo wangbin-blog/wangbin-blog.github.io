@@ -10,34 +10,47 @@
         </author>
         <description>一个上了年纪的猿人</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
-        <lastBuildDate>Thu, 05 Sep 2024 20:31:13 +0800</lastBuildDate>
+        <pubDate>Mon, 09 Sep 2024 20:31:13 +0800</pubDate>
+        <lastBuildDate>Mon, 09 Sep 2024 20:31:13 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%A5%BD%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90%E7%AB%99/</guid>
-            <title>【工具】好用的在线网站</title>
-            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%A5%BD%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90%E7%AB%99/</link>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/09/%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/PicList/</guid>
+            <title>PicList-轻松管理你的图片库，让美好瞬间触手可及</title>
+            <link>https://github.com/wangbin-blog/2024/09/09/%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/PicList/</link>
             <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
             <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
-            <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;软件下载&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/软件下载合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
-        &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;/2024/09/05/工具/软件下载合集/&#34; class=&#34;title&#34;&gt;软件下载&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;PC/移动软件下载站集合&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;系统工具&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/系统工具合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
-        &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;/2024/09/05/工具/系统工具合集/&#34; class=&#34;title&#34;&gt;系统工具&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;好用的系统工具集合&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;开发工具&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/开发工具合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
-        &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;/2024/09/05/工具/开发工具合集/&#34; class=&#34;title&#34;&gt;开发工具&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;开发者必备的工具&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+            <pubDate>Mon, 09 Sep 2024 20:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;发现-piclist超越-picgo-的图片管理新星&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#发现-piclist超越-picgo-的图片管理新星&#34;&gt;#&lt;/a&gt; 🚀 发现 PicList：超越 PicGo 的图片管理新星！&lt;/h1&gt;
+&lt;p&gt;在日常工作中，我们经常需要上传、管理和分享图片。无论是开发者还是普通用户，找到一个好用的工具来辅助这项任务都是至关重要的。今天，我要向大家推荐一个在  &lt;code&gt;PicGo&lt;/code&gt;  基础上进行了深度二次开发的图片管理工具 —— &lt;code&gt;PicList&lt;/code&gt; 。它不仅继承了  &lt;code&gt;PicGo&lt;/code&gt;  的所有优秀特性，如支持多种图床服务（如 GitHub、&lt;a href=&#34;http://SM.MS&#34;&gt;SM.MS&lt;/a&gt; 等），而且还引入了更多高级功能，使其成为图片管理领域的佼佼者。🌈&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择-piclist&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么选择-piclist&#34;&gt;#&lt;/a&gt; 为什么选择  &lt;code&gt;PicList&lt;/code&gt; ？&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;PicList&lt;/code&gt;  是一款高效且易于使用的云存储和图床管理工具。它不仅完美保留了  &lt;code&gt;PicGo&lt;/code&gt;  的所有优点，还增添了许多令人惊喜的新功能。&lt;/p&gt;
+&lt;h3 id=&#34;新增特性一览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#新增特性一览&#34;&gt;#&lt;/a&gt; 新增特性一览&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相册同步&lt;/strong&gt;：支持云端文件的同步删除，确保本地和云端的一致性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多图床支持&lt;/strong&gt;：除了常见的图床选项外， &lt;code&gt;PicList&lt;/code&gt;  还内置了 WebDav、本地图床和 SFTP 等多种图床服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;云存储管理&lt;/strong&gt;：增加了完整的云端存储管理功能，包括目录查看、文件搜索、批量上传下载及删除文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;链接复制&lt;/strong&gt;：能够复制多种格式的文件链接，方便在不同场景下使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览功能&lt;/strong&gt;：支持图片、Markdown 文档、文本和视频的预览，无需离开应用即可查看文件内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;如何开始使用-piclist&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何开始使用-piclist&#34;&gt;#&lt;/a&gt; 如何开始使用  &lt;code&gt;PicList&lt;/code&gt; ？&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h3&gt;
+&lt;p&gt;首先，你需要从官方网站下载适用于你操作系统的  &lt;code&gt;PicList&lt;/code&gt;  版本。安装过程非常直观，只需按照安装向导的指示操作即可完成。&lt;/p&gt;
+&lt;h3 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h3&gt;
+&lt;p&gt;启动  &lt;code&gt;PicList&lt;/code&gt;  后，你需要配置你常用的图床服务。这通常涉及到输入访问凭证或者创建一个新的账户。 &lt;code&gt;PicList&lt;/code&gt;  的用户界面设计友好，每一步都有明确的提示，因此即便是第一次使用也能轻松搞定。&lt;/p&gt;
+&lt;h3 id=&#34;使用技巧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用技巧&#34;&gt;#&lt;/a&gt; 使用技巧&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;批量上传&lt;/strong&gt;：当需要上传大量图片时，可以利用批量上传功能，极大地提高了工作效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;云端同步&lt;/strong&gt;：保持本地文件夹与云端图床的实时同步，确保任何时候都能访问到最新版本的图片。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览功能&lt;/strong&gt;：在上传前，先使用预览功能检查图片是否符合要求，避免不必要的重复上传。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;PicList&lt;/code&gt;  不仅仅是一款工具，更是图片管理领域的一次革新。它不仅简化了图片上传的过程，还通过丰富的功能增强了用户体验。如果你正在寻找一个既强大又灵活的图片管理解决方案，那么  &lt;code&gt;PicList&lt;/code&gt;  绝对值得一试！🚀&lt;/p&gt;
+&lt;p&gt;希望这篇博客能帮助你更好地了解  &lt;code&gt;PicList&lt;/code&gt;  的优势，并鼓励更多的用户尝试使用它。如果你有任何疑问或想要了解更多细节，欢迎访问  &lt;code&gt;PicList&lt;/code&gt;  的官方网站或者加入社区讨论！🤝&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</guid>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</guid>
             <title>【工具】开发工具合集</title>
-            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</link>
+            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</link>
             <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
             <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
             <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
@@ -82,42 +95,31 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</guid>
-            <title>【工具】系统工具合集</title>
-            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</link>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E5%A5%BD%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90%E7%AB%99/</guid>
+            <title>【工具】好用的在线网站</title>
+            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E5%A5%BD%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90%E7%AB%99/</link>
             <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
             <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
             <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;系统下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统下载&#34;&gt;#&lt;/a&gt; 系统下载&lt;/h2&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;我告诉你（老版）&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://msdn.itellyou.cn/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+            <description><![CDATA[ &lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;软件下载&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/软件下载合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
         &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;https://msdn.itellyou.cn/&#34; class=&#34;title&#34;&gt;我告诉你（老版）&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;我告诉你（老版）&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;我告诉你（新版）&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://next.itellyou.cn&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;/2024/09/05/工具/软件下载合集/&#34; class=&#34;title&#34;&gt;软件下载&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;PC/移动软件下载站集合&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;系统工具&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/系统工具合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
         &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;https://next.itellyou.cn&#34; class=&#34;title&#34;&gt;我告诉你（新版）&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;我告诉你（新版）&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;windows激活工具 (蓝奏云资源)&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://pan.lanzoui.com/b0f1t9l0b&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;/2024/09/05/工具/系统工具合集/&#34; class=&#34;title&#34;&gt;系统工具&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;好用的系统工具集合&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;开发工具&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;/2024/09/05/工具/开发工具合集/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
         &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;https://pan.lanzoui.com/b0f1t9l0b&#34; class=&#34;title&#34;&gt;windows激活工具 (蓝奏云资源)&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;windows激活工具 (蓝奏云资源)&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
-&lt;h2 id=&#34;系统工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统工具&#34;&gt;#&lt;/a&gt; 系统工具&lt;/h2&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;EXTFANS插件资源网&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://extfans.com/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
-        &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;https://extfans.com/&#34; class=&#34;title&#34;&gt;EXTFANS插件资源网&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;EXTFANS插件资源网&lt;/p&gt;
-        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;极简插件&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://chrome.zzzmh.cn/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
-        &lt;div class=&#34;info&#34;&gt;
-        &lt;a href=&#34;https://chrome.zzzmh.cn/&#34; class=&#34;title&#34;&gt;极简插件&lt;/a&gt;
-        &lt;p class=&#34;desc&#34;&gt;极简插件&lt;/p&gt;
+        &lt;a href=&#34;/2024/09/05/工具/开发工具合集/&#34; class=&#34;title&#34;&gt;开发工具&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;开发者必备的工具&lt;/p&gt;
         &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%90%88%E9%9B%86/</guid>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%90%88%E9%9B%86/</guid>
             <title>【工具】软件下载合集</title>
-            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%90%88%E9%9B%86/</link>
+            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%90%88%E9%9B%86/</link>
             <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
             <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
             <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
@@ -237,6 +239,39 @@
         &lt;div class=&#34;info&#34;&gt;
         &lt;a href=&#34;https://www.macxin.com/&#34; class=&#34;title&#34;&gt;MAC 萌新网&lt;/a&gt;
         &lt;p class=&#34;desc&#34;&gt;MAC 萌新网&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</guid>
+            <title>【工具】系统工具合集</title>
+            <link>https://github.com/wangbin-blog/2024/09/05/%E5%B7%A5%E5%85%B7/%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/</link>
+            <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
+            <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
+            <pubDate>Thu, 05 Sep 2024 20:31:13 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;系统下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统下载&#34;&gt;#&lt;/a&gt; 系统下载&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;我告诉你（老版）&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://msdn.itellyou.cn/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;div class=&#34;info&#34;&gt;
+        &lt;a href=&#34;https://msdn.itellyou.cn/&#34; class=&#34;title&#34;&gt;我告诉你（老版）&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;我告诉你（老版）&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;我告诉你（新版）&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://next.itellyou.cn&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;div class=&#34;info&#34;&gt;
+        &lt;a href=&#34;https://next.itellyou.cn&#34; class=&#34;title&#34;&gt;我告诉你（新版）&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;我告诉你（新版）&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;windows激活工具 (蓝奏云资源)&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://pan.lanzoui.com/b0f1t9l0b&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;div class=&#34;info&#34;&gt;
+        &lt;a href=&#34;https://pan.lanzoui.com/b0f1t9l0b&#34; class=&#34;title&#34;&gt;windows激活工具 (蓝奏云资源)&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;windows激活工具 (蓝奏云资源)&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统工具&#34;&gt;#&lt;/a&gt; 系统工具&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;EXTFANS插件资源网&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://extfans.com/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;div class=&#34;info&#34;&gt;
+        &lt;a href=&#34;https://extfans.com/&#34; class=&#34;title&#34;&gt;EXTFANS插件资源网&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;EXTFANS插件资源网&lt;/p&gt;
+        &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;极简插件&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://chrome.zzzmh.cn/&#34; class=&#34;image&#34; data-background-image=&#34;/assets/avatar.jpg&#34;&gt;&lt;/a&gt;
+        &lt;div class=&#34;info&#34;&gt;
+        &lt;a href=&#34;https://chrome.zzzmh.cn/&#34; class=&#34;title&#34;&gt;极简插件&lt;/a&gt;
+        &lt;p class=&#34;desc&#34;&gt;极简插件&lt;/p&gt;
         &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
  ]]></description>
         </item>
@@ -600,9 +635,9 @@ internal class SubstituteParameterVisitor : ExpressionVisitor
 &lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</guid>
+            <guid isPermalink="true">https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</guid>
             <title>【工具】GitHub访问设置</title>
-            <link>https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</link>
+            <link>https://github.com/wangbin-blog/2024/07/19/%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/GitHub%E8%AE%BF%E9%97%AE%E8%AE%BE%E7%BD%AE/</link>
             <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
             <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
             <pubDate>Fri, 19 Jul 2024 20:31:13 +0800</pubDate>
@@ -709,378 +744,6 @@ internal class SubstituteParameterVisitor : ExpressionVisitor
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; zxf libgdiplus.tar.gz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; libgdiplus&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rpm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-Uvh&lt;/span&gt; *.rpm &lt;span class=&#34;token parameter variable&#34;&gt;--nodeps&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--force&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;附件：&lt;/p&gt;
 &lt;p&gt;这是做好的一个包  &lt;a href=&#34;https://raw.githubusercontent.com/wangbin-blog/pic-resources/main/2024/07/01215410360.gz&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/wangbin-blog/2024/06/19/%E5%B7%A5%E5%85%B7/%E5%88%86%E4%BA%AB%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%AB%99/</guid>
-            <title>【工具】分享超级好用的在线网站</title>
-            <link>https://github.com/wangbin-blog/2024/06/19/%E5%B7%A5%E5%85%B7/%E5%88%86%E4%BA%AB%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%AB%99/</link>
-            <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/" />
-            <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/" />
-            <pubDate>Wed, 19 Jun 2024 20:31:13 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;软件下载站&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件下载站&#34;&gt;#&lt;/a&gt; 软件下载站&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;地址&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;我爱分享&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.zhanshaoyi.com/&#34;&gt;http://www.zhanshaoyi.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;黑域基地&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.hybase.com/&#34;&gt;https://www.hybase.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;423&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.423down.com/&#34;&gt;https://www.423down.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;熊猫畔&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.xmpan.com/&#34;&gt;https://www.xmpan.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;落尘之木&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.luochenzhimu.com/&#34;&gt;https://www.luochenzhimu.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;6&lt;/td&gt;
-&lt;td&gt;果核剥壳&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.ghxi.com/&#34;&gt;https://www.ghxi.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;易破解&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.ypojie.com/&#34;&gt;https://www.ypojie.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;小笨分享站&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://zhouxiaoben.info/&#34;&gt;https://zhouxiaoben.info/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;i3 综合社区&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.i3zh.com/&#34;&gt;https://www.i3zh.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;绿盟市场&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.xdowns.com/&#34;&gt;https://www.xdowns.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;11&lt;/td&gt;
-&lt;td&gt;小众技术导航 (软件下载专区)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.xiaozhongjishu.com/&#34;&gt;https://www.xiaozhongjishu.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;佛系软件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://foxirj.com/&#34;&gt;https://foxirj.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;13&lt;/td&gt;
-&lt;td&gt;绿软下载站&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.itmop.com/&#34;&gt;https://www.itmop.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;14&lt;/td&gt;
-&lt;td&gt;异次元&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.iplaysoft.com/&#34;&gt;https://www.iplaysoft.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;15&lt;/td&gt;
-&lt;td&gt;爱资源&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.iwyu.com/&#34;&gt;https://www.iwyu.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;td&gt;西部落 (软件搜索)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.xibuluo.com/&#34;&gt;https://www.xibuluo.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;17&lt;/td&gt;
-&lt;td&gt;淮推软件搜索 (软件搜索)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.huaitui.com/&#34;&gt;https://www.huaitui.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;18&lt;/td&gt;
-&lt;td&gt;探索兔 (软件搜索)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.tansuotu.com/&#34;&gt;https://www.tansuotu.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;19&lt;/td&gt;
-&lt;td&gt;搜软 (软件搜索)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.souruan.org/&#34;&gt;https://www.souruan.org/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;20&lt;/td&gt;
-&lt;td&gt;软猫下载&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.softmall.net/&#34;&gt;https://www.softmall.net/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;21&lt;/td&gt;
-&lt;td&gt;极客下载&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.geekdload.com/&#34;&gt;https://www.geekdload.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;22&lt;/td&gt;
-&lt;td&gt;木风软件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.mfrjz.com/&#34;&gt;https://www.mfrjz.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;23&lt;/td&gt;
-&lt;td&gt;真下载&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.zhenxz.com/index.html&#34;&gt;https://www.zhenxz.com/index.html&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;24&lt;/td&gt;
-&lt;td&gt;求资源网&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.qiuziyuan.net/&#34;&gt;https://www.qiuziyuan.net/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;25&lt;/td&gt;
-&lt;td&gt;哇哦菌&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.waodown.com/&#34;&gt;https://www.waodown.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;26&lt;/td&gt;
-&lt;td&gt;阿酷杂货铺&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.coolexe.com/&#34;&gt;https://www.coolexe.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;27&lt;/td&gt;
-&lt;td&gt;爱达杂货铺&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://adzhp.xyz/&#34;&gt;https://adzhp.xyz/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;28&lt;/td&gt;
-&lt;td&gt;图欧&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://tuostudy.upnb.top/&#34;&gt;https://tuostudy.upnb.top/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;29&lt;/td&gt;
-&lt;td&gt;windows 激活工具 (蓝奏云资源)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://pan.lanzoui.com/b0f1t9l0b&#34;&gt;https://pan.lanzoui.com/b0f1t9l0b&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;30&lt;/td&gt;
-&lt;td&gt;无忧启动 (类似吾爱破解)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://bbs.wuyou.net/&#34;&gt;http://bbs.wuyou.net/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;31&lt;/td&gt;
-&lt;td&gt;MSDN (windows 系统资源)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://msdn.itellyou.cn/&#34;&gt;https://msdn.itellyou.cn/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;32&lt;/td&gt;
-&lt;td&gt;mefcl （纯净破解 App、软件资源）&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.mefcl.com/&#34;&gt;https://www.mefcl.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;33&lt;/td&gt;
-&lt;td&gt;反斗软件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.apprcn.com/&#34;&gt;https://www.apprcn.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;34&lt;/td&gt;
-&lt;td&gt;大眼仔 (软件资源)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.dayanzai.me/&#34;&gt;http://www.dayanzai.me/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;35&lt;/td&gt;
-&lt;td&gt;小众软件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.appinn.com/&#34;&gt;https://www.appinn.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;36&lt;/td&gt;
-&lt;td&gt;小众软件 love&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://love.appinn.com/&#34;&gt;https://love.appinn.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;37&lt;/td&gt;
-&lt;td&gt;精品软件分享论坛&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://bbs.leyuxyz.com/f/ruanjian&#34;&gt;https://bbs.leyuxyz.com/f/ruanjian&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;38&lt;/td&gt;
-&lt;td&gt;MT 论坛&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://bbs.binmt.cc/&#34;&gt;https://bbs.binmt.cc/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;42&lt;/td&gt;
-&lt;td&gt;马可波罗&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.macbl.com/&#34;&gt;https://www.macbl.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;43&lt;/td&gt;
-&lt;td&gt;MAC 软件之家&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.macapp.so/&#34;&gt;https://www.macapp.so/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;44&lt;/td&gt;
-&lt;td&gt;MAC 萌新网&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.macxin.com/&#34;&gt;https://www.macxin.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;45&lt;/td&gt;
-&lt;td&gt;懒得勤快（需要科学上网）&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://masuit.com/&#34;&gt;https://masuit.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;chrome插件下载区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#chrome插件下载区&#34;&gt;#&lt;/a&gt; Chrome 插件下载区&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;地址&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;EXTFANS 插件资源网&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://extfans.com/&#34;&gt;https://extfans.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;极简插件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://chrome.zzzmh.cn/&#34;&gt;https://chrome.zzzmh.cn/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;Chrome 插件英雄榜&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://zhaoolee.gitbooks.io/&#34;&gt;https://zhaoolee.gitbooks.io/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;系统下载区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统下载区&#34;&gt;#&lt;/a&gt; 系统下载区&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;地址&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;我告诉你（老版）&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://msdn.itellyou.cn/&#34;&gt;https://msdn.itellyou.cn/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;我告诉你（新版）&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://next.itellyou.cn&#34;&gt;https://next.itellyou.cn&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;编程工具区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编程工具区&#34;&gt;#&lt;/a&gt; 编程工具区&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;地址&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;在线工具&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://tool.lu/&#34;&gt;https://tool.lu/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;程序员工具箱&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://tool.pfan.cn/apitest&#34;&gt;http://tool.pfan.cn/apitest&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;配色&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://webkul.github.io/coolhue/&#34;&gt;https://webkul.github.io/coolhue/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;在线字符串和 16 进制互转&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://kw360.net/ox2str/&#34;&gt;https://kw360.net/ox2str/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;代码美化截图&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://carbon.now.sh/?bg=rgba&#34;&gt;https://carbon.now.sh/?bg=rgba&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;6&lt;/td&gt;
-&lt;td&gt;菜鸟工具&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.jyshare.com/&#34;&gt;https://www.jyshare.com/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;文件格式转换&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://onlineconvertfree.com/zh/convert/&#34;&gt;https://onlineconvertfree.com/zh/convert/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;multiScroll.js&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://alvarotrigo.com/multiScroll/#first&#34;&gt;https://alvarotrigo.com/multiScroll/#first&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;Wot Design Uni - 高颜值、轻量化的 uni-app 组件库&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://wot-design-uni.netlify.app/&#34;&gt;https://wot-design-uni.netlify.app/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;vue**-**element-admin&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://panjiachen.github.io/vue-element-admin-site/zh/guide/&#34;&gt;https://panjiachen.github.io/vue-element-admin-site/zh/guide/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;11&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://Json.cn&#34;&gt;Json.cn&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.json.cn/&#34;&gt;https://www.json.cn/&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
  ]]></description>
         </item>
         <item>
