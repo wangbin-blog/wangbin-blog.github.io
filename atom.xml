@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小王的博客</title>
-  <icon>https://github.com/wangbin-blog/icon.png</icon>
+  <icon>https://github.com/icon.png</icon>
   
-  <link href="https://github.com/wangbin-blog/atom.xml" rel="self"/>
+  <link href="https://github.com/atom.xml" rel="self"/>
   
-  <link href="https://github.com/wangbin-blog/"/>
+  <link href="https://github.com/"/>
   <updated>2024-10-21T08:01:38.836Z</updated>
-  <id>https://github.com/wangbin-blog/</id>
+  <id>https://github.com/</id>
   
   <author>
     <name>Think.Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/wangbin-blog/post/4a17b156.html"/>
-    <id>https://github.com/wangbin-blog/post/4a17b156.html</id>
+    <link href="https://github.com/post/4a17b156.html"/>
+    <id>https://github.com/post/4a17b156.html</id>
     <published>2024-09-25T01:25:19.896Z</published>
     <updated>2024-10-21T08:01:38.836Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>PicList-轻松管理你的图片库，让美好瞬间触手可及</title>
-    <link href="https://github.com/wangbin-blog/post/161c3e54.html"/>
-    <id>https://github.com/wangbin-blog/post/161c3e54.html</id>
+    <link href="https://github.com/post/161c3e54.html"/>
+    <id>https://github.com/post/161c3e54.html</id>
     <published>2024-09-09T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.871Z</updated>
     
@@ -56,17 +56,17 @@
     
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>JSDelivr &amp; NPM CDN 国内加速节点</title>
-    <link href="https://github.com/wangbin-blog/post/3efe8d37.html"/>
-    <id>https://github.com/wangbin-blog/post/3efe8d37.html</id>
+    <link href="https://github.com/post/3efe8d37.html"/>
+    <id>https://github.com/post/3efe8d37.html</id>
     <published>2024-09-08T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.870Z</updated>
     
@@ -118,17 +118,17 @@
     
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>效率提升利器，一个全龄段友好的DotNET万能工具库</title>
-    <link href="https://github.com/wangbin-blog/post/309e6522.html"/>
-    <id>https://github.com/wangbin-blog/post/309e6522.html</id>
+    <link href="https://github.com/post/309e6522.html"/>
+    <id>https://github.com/post/309e6522.html</id>
     <published>2024-09-03T04:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.838Z</updated>
     
@@ -142,17 +142,17 @@
     
     
     
-    <category term="DotNet" scheme="https://github.com/wangbin-blog/categories/DotNet/"/>
+    <category term="DotNet" scheme="https://github.com/categories/DotNet/"/>
     
     
-    <category term="DotNet" scheme="https://github.com/wangbin-blog/tags/DotNet/"/>
+    <category term="DotNet" scheme="https://github.com/tags/DotNet/"/>
     
   </entry>
   
   <entry>
     <title>【uniapp】个人中心页面</title>
-    <link href="https://github.com/wangbin-blog/post/a6b86d8c.html"/>
-    <id>https://github.com/wangbin-blog/post/a6b86d8c.html</id>
+    <link href="https://github.com/post/a6b86d8c.html"/>
+    <id>https://github.com/post/a6b86d8c.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.865Z</updated>
     
@@ -161,17 +161,17 @@
     
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>PC端登录页源码(一键复制)</title>
-    <link href="https://github.com/wangbin-blog/post/f2b42afb.html"/>
-    <id>https://github.com/wangbin-blog/post/f2b42afb.html</id>
+    <link href="https://github.com/post/f2b42afb.html"/>
+    <id>https://github.com/post/f2b42afb.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.867Z</updated>
     
@@ -182,17 +182,17 @@
     
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>【uniapp】小程序滚动tab</title>
-    <link href="https://github.com/wangbin-blog/post/fc344f65.html"/>
-    <id>https://github.com/wangbin-blog/post/fc344f65.html</id>
+    <link href="https://github.com/post/fc344f65.html"/>
+    <id>https://github.com/post/fc344f65.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.866Z</updated>
     
@@ -201,17 +201,17 @@
     
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>分享一个非常好用的loading效果网站</title>
-    <link href="https://github.com/wangbin-blog/post/98cc63b2.html"/>
-    <id>https://github.com/wangbin-blog/post/98cc63b2.html</id>
+    <link href="https://github.com/post/98cc63b2.html"/>
+    <id>https://github.com/post/98cc63b2.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.866Z</updated>
     
@@ -220,17 +220,17 @@
     
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>【MACCMS】docker环境中安装服务</title>
-    <link href="https://github.com/wangbin-blog/post/5f2de2cf.html"/>
-    <id>https://github.com/wangbin-blog/post/5f2de2cf.html</id>
+    <link href="https://github.com/post/5f2de2cf.html"/>
+    <id>https://github.com/post/5f2de2cf.html</id>
     <published>2024-08-01T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.863Z</updated>
     
@@ -252,17 +252,17 @@
     
     
     
-    <category term="MACCMS" scheme="https://github.com/wangbin-blog/categories/MACCMS/"/>
+    <category term="MACCMS" scheme="https://github.com/categories/MACCMS/"/>
     
     
-    <category term="MACCMS" scheme="https://github.com/wangbin-blog/tags/MACCMS/"/>
+    <category term="MACCMS" scheme="https://github.com/tags/MACCMS/"/>
     
   </entry>
   
   <entry>
     <title>【MACCMS】2023年最新可采集CMS视频资源站网址合集</title>
-    <link href="https://github.com/wangbin-blog/post/9791b8ea.html"/>
-    <id>https://github.com/wangbin-blog/post/9791b8ea.html</id>
+    <link href="https://github.com/post/9791b8ea.html"/>
+    <id>https://github.com/post/9791b8ea.html</id>
     <published>2024-07-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.860Z</updated>
     
@@ -287,17 +287,17 @@
     
     
     
-    <category term="MACCMS" scheme="https://github.com/wangbin-blog/categories/MACCMS/"/>
+    <category term="MACCMS" scheme="https://github.com/categories/MACCMS/"/>
     
     
-    <category term="MACCMS" scheme="https://github.com/wangbin-blog/tags/MACCMS/"/>
+    <category term="MACCMS" scheme="https://github.com/tags/MACCMS/"/>
     
   </entry>
   
   <entry>
     <title>【工具】GitHub访问设置</title>
-    <link href="https://github.com/wangbin-blog/post/4fd5a719.html"/>
-    <id>https://github.com/wangbin-blog/post/4fd5a719.html</id>
+    <link href="https://github.com/post/4fd5a719.html"/>
+    <id>https://github.com/post/4fd5a719.html</id>
     <published>2024-07-19T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.869Z</updated>
     
@@ -309,17 +309,17 @@
     
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】DotNet运行命令</title>
-    <link href="https://github.com/wangbin-blog/post/26185413.html"/>
-    <id>https://github.com/wangbin-blog/post/26185413.html</id>
+    <link href="https://github.com/post/26185413.html"/>
+    <id>https://github.com/post/26185413.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.852Z</updated>
     
@@ -328,17 +328,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Libgdiplus安装</title>
-    <link href="https://github.com/wangbin-blog/post/5711187a.html"/>
-    <id>https://github.com/wangbin-blog/post/5711187a.html</id>
+    <link href="https://github.com/post/5711187a.html"/>
+    <id>https://github.com/post/5711187a.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.847Z</updated>
     
@@ -354,17 +354,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Redis 离线安装</title>
-    <link href="https://github.com/wangbin-blog/post/7a6abf49.html"/>
-    <id>https://github.com/wangbin-blog/post/7a6abf49.html</id>
+    <link href="https://github.com/post/7a6abf49.html"/>
+    <id>https://github.com/post/7a6abf49.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.853Z</updated>
     
@@ -381,17 +381,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Nacos 问题</title>
-    <link href="https://github.com/wangbin-blog/post/dfef5267.html"/>
-    <id>https://github.com/wangbin-blog/post/dfef5267.html</id>
+    <link href="https://github.com/post/dfef5267.html"/>
+    <id>https://github.com/post/dfef5267.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.851Z</updated>
     
@@ -406,17 +406,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】nginx 离线安装</title>
-    <link href="https://github.com/wangbin-blog/post/1c39c402.html"/>
-    <id>https://github.com/wangbin-blog/post/1c39c402.html</id>
+    <link href="https://github.com/post/1c39c402.html"/>
+    <id>https://github.com/post/1c39c402.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.859Z</updated>
     
@@ -433,17 +433,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>NET Core 优秀项目和框架精选</title>
-    <link href="https://github.com/wangbin-blog/post/9beaa6c0.html"/>
-    <id>https://github.com/wangbin-blog/post/9beaa6c0.html</id>
+    <link href="https://github.com/post/9beaa6c0.html"/>
+    <id>https://github.com/post/9beaa6c0.html</id>
     <published>2024-06-12T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.862Z</updated>
     
@@ -462,17 +462,17 @@
     
     
     
-    <category term="DotNet" scheme="https://github.com/wangbin-blog/categories/DotNet/"/>
+    <category term="DotNet" scheme="https://github.com/categories/DotNet/"/>
     
     
-    <category term="DotNet" scheme="https://github.com/wangbin-blog/tags/DotNet/"/>
+    <category term="DotNet" scheme="https://github.com/tags/DotNet/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】常用命令</title>
-    <link href="https://github.com/wangbin-blog/post/ec90412d.html"/>
-    <id>https://github.com/wangbin-blog/post/ec90412d.html</id>
+    <link href="https://github.com/post/ec90412d.html"/>
+    <id>https://github.com/post/ec90412d.html</id>
     <published>2024-05-25T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.861Z</updated>
     
@@ -485,17 +485,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Github+picGo+Typora搭建图床</title>
-    <link href="https://github.com/wangbin-blog/post/5901b3f7.html"/>
-    <id>https://github.com/wangbin-blog/post/5901b3f7.html</id>
+    <link href="https://github.com/post/5901b3f7.html"/>
+    <id>https://github.com/post/5901b3f7.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.840Z</updated>
     
@@ -515,17 +515,17 @@
     
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo Shoka 主题本地搜索</title>
-    <link href="https://github.com/wangbin-blog/post/e4550ecb.html"/>
-    <id>https://github.com/wangbin-blog/post/e4550ecb.html</id>
+    <link href="https://github.com/post/e4550ecb.html"/>
+    <id>https://github.com/post/e4550ecb.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.844Z</updated>
     
@@ -537,17 +537,17 @@
     
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo Shoka 文章加密</title>
-    <link href="https://github.com/wangbin-blog/post/6aea9c03.html"/>
-    <id>https://github.com/wangbin-blog/post/6aea9c03.html</id>
+    <link href="https://github.com/post/6aea9c03.html"/>
+    <id>https://github.com/post/6aea9c03.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.843Z</updated>
     
@@ -560,17 +560,17 @@
     
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>【工具】Typora安装使用</title>
-    <link href="https://github.com/wangbin-blog/post/e64ca3b2.html"/>
-    <id>https://github.com/wangbin-blog/post/e64ca3b2.html</id>
+    <link href="https://github.com/post/e64ca3b2.html"/>
+    <id>https://github.com/post/e64ca3b2.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.872Z</updated>
     
@@ -586,17 +586,17 @@
     
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>【工具】Watt Toolkit GitHub加速</title>
-    <link href="https://github.com/wangbin-blog/post/6375ab96.html"/>
-    <id>https://github.com/wangbin-blog/post/6375ab96.html</id>
+    <link href="https://github.com/post/6375ab96.html"/>
+    <id>https://github.com/post/6375ab96.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.874Z</updated>
     
@@ -611,17 +611,17 @@
     
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://github.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>【前端】高颜值登录页面（一键复制）</title>
-    <link href="https://github.com/wangbin-blog/post/506e9c17.html"/>
-    <id>https://github.com/wangbin-blog/post/506e9c17.html</id>
+    <link href="https://github.com/post/506e9c17.html"/>
+    <id>https://github.com/post/506e9c17.html</id>
     <published>2024-05-22T10:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.868Z</updated>
     
@@ -636,17 +636,17 @@
     
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Doris 安装部署</title>
-    <link href="https://github.com/wangbin-blog/post/6632db9d.html"/>
-    <id>https://github.com/wangbin-blog/post/6632db9d.html</id>
+    <link href="https://github.com/post/6632db9d.html"/>
+    <id>https://github.com/post/6632db9d.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.846Z</updated>
     
@@ -664,17 +664,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Linux环境下运行jar包的几种方式</title>
-    <link href="https://github.com/wangbin-blog/post/bf223232.html"/>
-    <id>https://github.com/wangbin-blog/post/bf223232.html</id>
+    <link href="https://github.com/post/bf223232.html"/>
+    <id>https://github.com/post/bf223232.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.849Z</updated>
     
@@ -687,17 +687,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】RocketMQ 部署</title>
-    <link href="https://github.com/wangbin-blog/post/3cdc8223.html"/>
-    <id>https://github.com/wangbin-blog/post/3cdc8223.html</id>
+    <link href="https://github.com/post/3cdc8223.html"/>
+    <id>https://github.com/post/3cdc8223.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.855Z</updated>
     
@@ -712,17 +712,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】Vim命令合集</title>
-    <link href="https://github.com/wangbin-blog/post/bec8364e.html"/>
-    <id>https://github.com/wangbin-blog/post/bec8364e.html</id>
+    <link href="https://github.com/post/bec8364e.html"/>
+    <id>https://github.com/post/bec8364e.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.854Z</updated>
     
@@ -738,17 +738,17 @@
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】manjaro 环境配置</title>
-    <link href="https://github.com/wangbin-blog/post/599fe741.html"/>
-    <id>https://github.com/wangbin-blog/post/599fe741.html</id>
+    <link href="https://github.com/post/599fe741.html"/>
+    <id>https://github.com/post/599fe741.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.857Z</updated>
     
@@ -801,17 +801,17 @@ pacman -c
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>【Linux】安装OpenJDK</title>
-    <link href="https://github.com/wangbin-blog/post/4a0c2abb.html"/>
-    <id>https://github.com/wangbin-blog/post/4a0c2abb.html</id>
+    <link href="https://github.com/post/4a0c2abb.html"/>
+    <id>https://github.com/post/4a0c2abb.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.857Z</updated>
     
@@ -826,17 +826,17 @@ pacman -c
     
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Hexo主题安装</title>
-    <link href="https://github.com/wangbin-blog/post/ec0b08ff.html"/>
-    <id>https://github.com/wangbin-blog/post/ec0b08ff.html</id>
+    <link href="https://github.com/post/ec0b08ff.html"/>
+    <id>https://github.com/post/ec0b08ff.html</id>
     <published>2024-05-18T12:31:13.000Z</published>
     <updated>2024-10-21T08:01:38.841Z</updated>
     
@@ -864,17 +864,17 @@ pacman -c
     
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo基本使用</title>
-    <link href="https://github.com/wangbin-blog/post/c3c198d3.html"/>
-    <id>https://github.com/wangbin-blog/post/c3c198d3.html</id>
+    <link href="https://github.com/post/c3c198d3.html"/>
+    <id>https://github.com/post/c3c198d3.html</id>
     <published>2024-05-18T12:01:13.000Z</published>
     <updated>2024-10-21T08:01:38.850Z</updated>
     
@@ -891,10 +891,10 @@ pacman -c
     
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
     
   </entry>
   
