@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="doris 安装部署一、环境配置1. 服务器环境  centos 7 docker 下载地址 doris 1.0.0 下载地址 doris 官方文档 storrocks 官方文档 学习地址">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux】Doris 安装部署">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/6632db9d.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="doris 安装部署一、环境配置1. 服务器环境  centos 7 docker 下载地址 doris 1.0.0 下载地址 doris 官方文档 storrocks 官方文档 学习地址">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.846Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/6632db9d.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/6632db9d.html","path":"post/6632db9d.html","title":"【Linux】Doris 安装部署"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Linux】Doris 安装部署 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#doris-%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">doris 安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">一、环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">1. 服务器环境</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85docker"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8xftp-%E7%AD%89%E5%B7%A5%E5%85%B7%E4%B8%8A%E4%BC%A0docker-%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%B0linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 使用xftp 等工具上传docker 安装包到linux服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A7%A3%E5%8E%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A4%8D%E5%88%B6%E5%8E%8B%E7%BC%A9%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 复制压缩后的文件到指定文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%B3%A8%E5%86%8C%E7%BC%96%E8%BE%91docker%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 注册编辑docker服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%B7%BB%E5%8A%A0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. 添加可执行权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E4%B8%80%E9%94%AE%E4%B8%89%E8%BF%9E"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. 一键三连</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-docker%E5%8D%B8%E8%BD%BD"><span class="nav-number">1.2.7.</span> <span class="nav-text">7. docker卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85Doris"><span class="nav-number">1.3.</span> <span class="nav-text">三、安装Doris</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E7%BC%96%E8%AF%91"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、编译</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E3%80%90doris%E3%80%91%E6%BA%90%E7%A0%81%EF%BC%8C%E9%9C%80%E8%A6%81%E7%BC%96%E8%AF%91%EF%BC%8C%E8%BF%99%E9%87%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%89%A9%E7%90%86%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">1). 使用【doris】源码，需要编译，这里直接使用物理机编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E3%80%81%E4%BD%BF%E7%94%A8%E3%80%90starrocks%E3%80%91%E6%97%A0%E9%9C%80%E7%BC%96%E8%AF%91%EF%BC%8C%E7%9B%B4%E6%8E%A5%E9%83%A8%E7%BD%B2%E5%8D%B3%E5%8F%AF%EF%BC%8C%E4%BD%86CPU%E9%9C%80%E6%94%AF%E6%8C%81%E3%80%90avx2%E3%80%91%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、部署环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8C%85"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">1. 下载二进制包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%A7%A3%E5%8E%8B-1"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">2. 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%88%86%E5%8F%91%E9%83%A8%E7%BD%B2%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3. 分发部署文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E9%83%A8%E7%BD%B2fe"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">4. 部署fe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E9%83%A8%E7%BD%B2BE%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">5. 部署BE实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E9%83%A8%E7%BD%B2Broker"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">6. 部署Broker</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.4.</span> <span class="nav-text">4、简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BF%AE%E6%94%B9root%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">1. 修改root账户密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BB%BA%E5%BA%93%E5%BB%BA%E8%A1%A8"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">2. 建库建表</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/6632db9d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Linux】Doris 安装部署 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Linux】Doris 安装部署
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-21 08:31:13" itemprop="dateCreated datePublished" datetime="2024-05-21T08:31:13+08:00">2024-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>18 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="doris-安装部署"><a href="#doris-安装部署" class="headerlink" title="doris 安装部署"></a><strong>doris 安装部署</strong></h1><h2 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h2><h4 id="1-服务器环境"><a href="#1-服务器环境" class="headerlink" title="1. 服务器环境"></a>1. 服务器环境</h4><blockquote>
+<ul>
+<li>centos 7</li>
+<li>docker <a target="_blank" rel="noopener" href="https://download.docker.com/linux/static/stable/x86_64/">下载地址</a></li>
+<li>doris 1.0.0 <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81">下载地址</a></li>
+<li>doris <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/installing/compilation.html">官方文档</a></li>
+<li>storrocks <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/quick_start/Deploy">官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ult_me?type=blog">学习地址</a></li>
+</ul>
+</blockquote>
+<span id="more"></span>
+<h2 id="二、安装docker"><a href="#二、安装docker" class="headerlink" title="二、安装docker"></a>二、安装docker</h2><h3 id="1-使用xftp-等工具上传docker-安装包到linux服务器"><a href="#1-使用xftp-等工具上传docker-安装包到linux服务器" class="headerlink" title="1. 使用xftp 等工具上传docker 安装包到linux服务器"></a>1. 使用xftp 等工具上传docker 安装包到linux服务器</h3><h3 id="2-解压"><a href="#2-解压" class="headerlink" title="2. 解压"></a>2. 解压</h3><pre><code>tar -zxvf docekr-xxx.tgz  
+</code></pre>
+<h3 id="3-复制压缩后的文件到指定文件夹"><a href="#3-复制压缩后的文件到指定文件夹" class="headerlink" title="3. 复制压缩后的文件到指定文件夹"></a>3. 复制压缩后的文件到指定文件夹</h3><pre><code>cp docker/* /usr/bin
+</code></pre>
+<h3 id="4-注册编辑docker服务"><a href="#4-注册编辑docker服务" class="headerlink" title="4. 注册编辑docker服务"></a>4. 注册编辑docker服务</h3><blockquote>
+<p><code>vim /etc/systemd/system/docker.service</code></p>
+<p>如果无法使用vim 可以在windows上编辑好文件后上传至linux服务器的此目录内</p>
+</blockquote>
+<blockquote>
+<p>参考docker.service:</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">LimitNOFILE=1048576</span><br><span class="line">LimitNPROC=1048576</span><br><span class="line">LimitCORE=infinity</span><br><span class="line">Type=notify</span><br><span class="line"># the default is not to use systemd for cgroups because the delegate issues still</span><br><span class="line"># exists and systemd currently does not support the cgroup feature set required</span><br><span class="line"># for containers run by docker</span><br><span class="line">#ExecStart=/usr/bin/dockerd --privileged=true --default-ulimit nofile=65536:65536 -H fd:// </span><br><span class="line">ExecStart=/usr/bin/dockerd</span><br><span class="line"></span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line"># Having non-zero Limit*s causes performance problems due to accounting overhead</span><br><span class="line"># in the kernel. We recommend using cgroups to do container-local accounting.</span><br><span class="line"># Uncomment TasksMax if your systemd version supports it.</span><br><span class="line"># Only systemd 226 and above support this version.</span><br><span class="line">#TasksMax=infinity</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line"># set delegate yes so that systemd does not reset the cgroups of docker containers</span><br><span class="line">Delegate=yes</span><br><span class="line"># kill only the docker process, not all processes in the cgroup</span><br><span class="line">KillMode=process</span><br><span class="line"># restart the docker process if it exits prematurely</span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-添加可执行权限"><a href="#5-添加可执行权限" class="headerlink" title="5. 添加可执行权限"></a>5. 添加可执行权限</h3><pre><code>chmod +x /etc/systemd/system/docker.service
+</code></pre>
+<h3 id="6-一键三连"><a href="#6-一键三连" class="headerlink" title="6. 一键三连"></a>6. 一键三连</h3><pre><code> systemctl daemon-reload # 
+ systemctl start docker # 启动服务
+ systemctl enable docker.service # 设置开机自启动
+</code></pre>
+<h3 id="7-docker卸载"><a href="#7-docker卸载" class="headerlink" title="7. docker卸载"></a>7. docker卸载</h3><ol>
+<li>停掉docker服务</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>查看yum安装的docker文件包</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed |grep docker</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>删除所有安装的docker文件包</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y remove docker.x86_64</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>查看rpm包是否还有</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa |grep docker</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>删除docker镜像放置的位置</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /var/lib/docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、安装Doris"><a href="#三、安装Doris" class="headerlink" title="三、安装Doris"></a>三、安装Doris</h2><h3 id="1、编译"><a href="#1、编译" class="headerlink" title="1、编译"></a>1、编译</h3><h4 id="1-使用【doris】源码，需要编译，这里直接使用物理机编译"><a href="#1-使用【doris】源码，需要编译，这里直接使用物理机编译" class="headerlink" title="1). 使用【doris】源码，需要编译，这里直接使用物理机编译"></a>1). 使用【doris】源码，需要编译，这里直接使用物理机编译</h4><ul>
+<li><p>a).  0.14.0版本之前版本依赖如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GCC 7.3+, Oracle JDK 1.8+, Python 2.7+, Apache Maven 3.5+, CMake 3.11+ Bison 3.0+</span><br></pre></td></tr></table></figure>
+
+<p>如果使用Ubuntu 16.04 及以上系统 可以执行以下命令来安装依赖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install build-essential openjdk-8-jdk maven cmake byacc flex automake libtool-bin bison binutils-dev libiberty-dev zip unzip libncurses5-dev curl git ninja-build python autopoint pkg-config</span><br></pre></td></tr></table></figure>
+
+<p>如果是CentOS 可以执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum groupinstall <span class="string">&#x27;Development Tools&#x27;</span> &amp;&amp; <span class="built_in">sudo</span> yum install maven cmake byacc flex automake libtool bison binutils-devel zip unzip ncurses-devel curl git wget python2 glibc-static libstdc++-static java-1.8.0-openjdk</span><br></pre></td></tr></table></figure></li>
+<li><p>b). 在0.14.0 之后版本依赖如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GCC 10+, Oracle JDK 1.8+, Python 2.7+, Apache Maven 3.5+, CMake 3.19.2+ Bison 3.0+</span><br></pre></td></tr></table></figure>
+
+<p>如果使用Ubuntu 16.04 及以上系统 可以执行以下命令来安装依赖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install build-essential openjdk-8-jdk maven cmake byacc flex automake libtool-bin bison binutils-dev libiberty-dev zip unzip libncurses5-dev curl git ninja-build python</span><br><span class="line"><span class="built_in">sudo</span> add-apt-repository ppa:ubuntu-toolchain-r/ppa</span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install gcc-10 g++-10 </span><br><span class="line"><span class="built_in">sudo</span> apt-get install autoconf automake libtool autopoint</span><br></pre></td></tr></table></figure>
+
+<p>如果是CentOS 可以执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum groupinstall <span class="string">&#x27;Development Tools&#x27;</span> &amp;&amp; <span class="built_in">sudo</span> yum install maven cmake byacc flex automake libtool bison binutils-devel zip unzip ncurses-devel curl git wget python2 glibc-static libstdc++-static java-1.8.0-openjdk</span><br><span class="line"><span class="built_in">sudo</span> yum install centos-release-scl</span><br><span class="line"><span class="built_in">sudo</span> yum install devtoolset-10</span><br><span class="line">scl <span class="built_in">enable</span> devtoolset-10 bash</span><br></pre></td></tr></table></figure>
+
+<p>**安装完成后，自行设置环境变量 PATH, JAVA_HOME 等。(可以通过alternatives –list命令找到jdk的安装目录) 注意： Doris 0.14.0 的版本仍然使用gcc7 的依赖编译，之后的代码将使用gcc10 的依赖 **</p>
+</li>
+<li><p>c). 下载源码</p>
+<p><a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html">官网地址</a></p>
+</li>
+<li><p>d) 编译</p>
+<p>上传源码到服务器后，解压文件，进入文件夹后，执行编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 支持则使用下面命令进行编译</span></span><br><span class="line">$ sh build.sh</span><br><span class="line"><span class="comment"># 如不支持需要加 USE_AVX2=0</span></span><br><span class="line">$ USE_AVX2=0 sh build.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>编译完成后，产出文件在 output&#x2F; 目录中</strong></p>
+</li>
+</ul>
+<h4 id="2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"><a href="#2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集" class="headerlink" title="2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"></a>2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</h4><blockquote>
+<ol>
+<li>下载官方镜像 <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/administration/Build_in_docker">文档</a></li>
+</ol>
+</blockquote>
+<h3 id="2、部署环境准备"><a href="#2、部署环境准备" class="headerlink" title="2、部署环境准备"></a>2、部署环境准备</h3><ul>
+<li><p>Linux 操作系统版本需求</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Linux 系统</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CentOS</td>
+<td>7.1 及以上</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>16.04 及以上</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><p>软件需求</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>1.8+</td>
+</tr>
+<tr>
+<td>GCC</td>
+<td>4.8.2 及以上</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><p>操作系统安装要求<br><code>vi /etc/security/limits.conf</code><br># 在末尾加入配置（表示：所有用户所有组，软限制和硬限制，对文件打开数，设为65535）：<br>* soft nofile 65536<br>    * hard nofile 65536<br># 修改后需要断开远程工具（如Xshell等）后重新连接方可生效，或者，直接再临时修改一次，使用：<br>​    ulimit -n 65535<br># 确认生效：<br>​    ulimit -n</p>
+</li>
+<li><p>CPU检查</p>
+<blockquote>
+<ul>
+<li>使用doris 编译的 可以跳过此检查；</li>
+<li>使用storrocks 下载部署的，需要检查cpu是否支持<code>avx2</code> 指令集</li>
+</ul>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /proc/cpuinfo | grep avx2 </span><br></pre></td></tr></table></figure>
+
+<p>有结果输出即表明CPU支持。如果无输出，则需要更换支持AVX2的机器。部分情况下，我们会在Windows系统下使用虚拟机安装CentOS作为测试环境，此时我们可以使用CPU-Z、AIDA64等工具在Windows下检查宿主机CPU的指令集支持情况。</p>
+</blockquote>
+</li>
+<li><p>操作系统检查</p>
+<blockquote>
+<p>StarRocks要求系统为Linux CentOS 7及以上版本（下文演示使用CentOS 7.6），内核版本建议在3.10以上，查看系统及内核信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@node01 ~]# <span class="built_in">cat</span> /etc/redhat-release</span><br><span class="line">CentOS Linux release 7.6.1810 (Core)</span><br><span class="line">[root@node01 ~]# <span class="built_in">uname</span> -a</span><br><span class="line">Linux node01 3.10.0-1160.25.1.el7.x86_64 <span class="comment">#1 SMP Wed Apr 28 21:49:45 UTC 2021 &gt; x86_64 x86_64 x86_64 GNU/Linux</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>时钟同步</p>
+<blockquote>
+<p>Doris 的元数据要求时间精度要小于5000ms，所以所有集群所有机器要进行时钟同步，避免因为时钟问题引发的元数据不一致导致服务出现异常。</p>
+</blockquote>
+</li>
+<li><p>网络需求</p>
+<blockquote>
+<p>Doris、storrocks 各个实例直接通过网络进行通讯。以下表格展示了所有需要的端口</p>
+<table>
+<thead>
+<tr>
+<th>实例名</th>
+<th>端口名称</th>
+<th>默认端口</th>
+<th>通信方向</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BE</td>
+<td>be_port</td>
+<td>9060</td>
+<td>FE–&gt;BE</td>
+<td>BE 上 thrift server 的端口，用于接收来自 FE 的请求</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>webserver_port</td>
+<td>8040</td>
+<td>BE &lt;–&gt; BE</td>
+<td>BE 上的 http server 的端口</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>heartbeat_service_port</td>
+<td>9050</td>
+<td>FE –&gt; BE</td>
+<td>BE 上心跳服务端口（thrift），用于接收来自 FE 的心跳</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>brpc_port</td>
+<td>8060</td>
+<td>FE &lt;–&gt; BE, BE &lt;–&gt; BE</td>
+<td>BE 上的 brpc 端口，用于 BE 之间通讯</td>
+</tr>
+<tr>
+<td>FE</td>
+<td>http_port</td>
+<td>8030</td>
+<td>FE &lt;–&gt; FE，用户 &lt;–&gt; FE</td>
+<td>FE 上的 http server 端口</td>
+</tr>
+<tr>
+<td>FE</td>
+<td>rpc_port</td>
+<td>9020</td>
+<td>BE –&gt; FE, FE &lt;–&gt; FE</td>
+<td>FE 上的 thrift server 端口，每个fe的配置需要保持一致</td>
+</tr>
+<tr>
+<td>FE</td>
+<td>query_port</td>
+<td>9030</td>
+<td>用户 &lt;–&gt; FE</td>
+<td>FE 上的 mysql server 端口</td>
+</tr>
+<tr>
+<td>FE</td>
+<td>edit_log_port</td>
+<td>9010</td>
+<td>FE &lt;–&gt; FE</td>
+<td>FE 上的 bdbje 之间通信用的端口</td>
+</tr>
+<tr>
+<td>Broker</td>
+<td>broker_ipc_port</td>
+<td>8000</td>
+<td>FE –&gt; Broker, BE –&gt; Broker</td>
+<td>Broker 上的 thrift server，用于接收请求</td>
+</tr>
+</tbody></table>
+</blockquote>
+<blockquote>
+<p><strong>注：</strong></p>
+<ol>
+<li><strong>当部署多个 FE 实例时，要保证 FE 的 http_port 配置相同。</strong></li>
+<li><strong>部署前请确保各个端口在应有方向上的访问权限。</strong></li>
+<li><strong>若上述端口不与服务器中其他服务的端口冲突，通常不建议修改。</strong></li>
+<li>以FE为例，部署前若需修改端口，可在配置文件fe&#x2F;conf&#x2F;fe.conf中修改为需要使用的端口（再次注意集群中FE的http端口需要一致，默认为8030）：</li>
+</ol>
+<!---->
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># store metadata, create it if it is not exist.</span></span><br><span class="line"><span class="comment"># Default value is $&#123;STARROCKS_HOME&#125;/meta</span></span><br><span class="line"><span class="comment"># meta_dir = $&#123;STARROCKS_HOME&#125;/meta</span></span><br><span class="line">http_port = 8030</span><br><span class="line">rpc_port = 9020</span><br><span class="line">query_port = 9030</span><br><span class="line">edit_log_port = 9010</span><br><span class="line">mysql_service_nio_enabled = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>配置防火墙，开放端口</p>
+<blockquote>
+<p>防火墙开放集群实例默认端口命令：</p>
+<pre><code>firewall-cmd --zone=public --add-port=8000/tcp --permanent
+firewall-cmd --zone=public --add-port=8030/tcp --permanent
+firewall-cmd --zone=public --add-port=8040/tcp --permanent
+firewall-cmd --zone=public --add-port=8060/tcp --permanent
+firewall-cmd --zone=public --add-port=9010/tcp --permanent
+firewall-cmd --zone=public --add-port=9020/tcp --permanent
+firewall-cmd --zone=public --add-port=9030/tcp --permanent
+firewall-cmd --zone=public --add-port=9050/tcp --permanent
+firewall-cmd --zone=public --add-port=9060/tcp --permanent
+firewall-cmd --reload
+</code></pre>
+<blockquote>
+<p>查看开放的端口：</p>
+</blockquote>
+<pre><code>[root@node01 ~]# firewall-cmd --list-port
+8030/tcp 8000/tcp 8060/tcp 9010/tcp 9020/tcp 9030/tcp 9050/tcp 9060/tcp 8040/tcp
+</code></pre>
+</blockquote>
+</li>
+<li><p>安装JDK</p>
+<blockquote>
+<p>StarRocks依赖JDK 1.8+环境，Oracle JDK 1.8+或OpenJDK8+均可以使用（下文演示使用OpenJDK 1.8.0_41）：</p>
+<p> [root@node01 ~]# java -version<br> openjdk version “1.8.0_41”<br> OpenJDK Runtime Environment (build 1.8.0_41-b04)<br> OpenJDK 64-Bit Server VM (build 25.40-b25, mixed mode)</p>
+<p>OpenJDK 8的安装操作见:文档：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=6a91052faf8d92c8bb559d030af50173&sub=06660F2C04AC4D259E712C37184AF3BA">【Linux】安装OpenJDK.md</a></p>
+</blockquote>
+</li>
+<li><p>安装Mysql</p>
+<blockquote>
+<p>StarRocks采用MySQL协议进行通信，用户可通过mysql-client连接到StarRocks集群。选 择mysql-client版本时要求采用5.1之后的版本，因为5.1之前不能支持长度超过16个字 符的用户名（下文演示使用mysql -client-5.7.35）。</p>
+</blockquote>
+<blockquote>
+<p>为方便集群部署和运维，我们通常建议在集群服务器中选择一个节点安装mysql-client。当然，我们也可以不安装mysql-client，通过外部的SQLyog、DBeaver、Navicat等图形化工具直接访问StarRocks。</p>
+</blockquote>
+<blockquote>
+<p>mysql 安装操作文档见：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=d5a1fbccd727cefea317f9cf16fe5fcd&sub=7CA727CB637D44AE8CE8C59C0101F31E">【Linux】CentOS7安装mysql5.7</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3、安装部署"><a href="#3、安装部署" class="headerlink" title="3、安装部署"></a>3、安装部署</h3><blockquote>
+<p>严格来说，StarRocks并没有所谓的“Standalone运行模式”，生产环境下更是不建议进行单实例部署。这里将单机部署整理出来，主要是考虑当用户测试环境受限于机器数量或仅希望验证功能，那么也可以在一台机器上简易部署把StarRocks跑起来。</p>
+</blockquote>
+<blockquote>
+<p>以服务器“starrocks（172.18.88.54）”为例，在进行完部署环境的准备工作后，我们开始进行单节点的部署。</p>
+</blockquote>
+<blockquote>
+<p>单节点架构设计如下：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>机器节点</th>
+<th>172.18.88.54（starrocks）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部署服务</td>
+<td>1 FE(Leader) </br>1 BE</br>1 Broker</br>mysql-client</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>部署目录及数据目录设计如下，后续的部署操作严格按照部署设计进行：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>服务</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FE</td>
+<td>部署目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;fe </br> 日志目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;fe&#x2F;log（默认）</br>元数据目录：&#x2F;opt&#x2F;meta</td>
+</tr>
+<tr>
+<td>BE</td>
+<td>部署目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;be </br>日志目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;be&#x2F;log（默认）</br>数据目录：&#x2F;opt&#x2F;storage</td>
+</tr>
+<tr>
+<td>Broker</td>
+<td>部署目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;apache_hdfs_broker</td>
+</tr>
+</tbody></table>
+<h4 id="1-下载二进制包"><a href="#1-下载二进制包" class="headerlink" title="1. 下载二进制包"></a>1. 下载二进制包</h4><p>StarRocks的二进制部署包可在官网下载获取：<a target="_blank" rel="noopener" href="https://www.starrocks.com/zh-CN/download/community">下载地址</a></p>
+<p>doris 使用编译到output文件中的文件<br>这儿是用storrocks 为例,将下载好的部署包上传至 <code>/opt/software</code> 目录下</p>
+<blockquote>
+<pre><code>[root@starrocks ~]# mkdir /opt/software
+[root@starrocks ~]# cd /opt/software/
+[root@starrocks software]# ll
+total 988752
+-rw-r--r-- 1 root root 1012479814 Nov 22 15:46 StarRocks-1.19.2.tar.gz
+</code></pre>
+</blockquote>
+<h4 id="2-解压-1"><a href="#2-解压-1" class="headerlink" title="2. 解压"></a>2. 解压</h4><blockquote>
+<pre><code>[root@starrocks software]# tar xvf StarRocks-1.19.2.tar.gz
+[root@starrocks software]# ll
+total 988752
+drwxrwxr-x 6 1007 1007        100 Nov 20 20:29 StarRocks-1.19.2
+-rw-r--r-- 1 root root 1012479814 Nov 22 15:46 StarRocks-1.19.2.tar.gz
+</code></pre>
+</blockquote>
+<p><strong>starrocks 目录结构：</strong></p>
+<pre><code>StarRocks-1.19.2
+├── apache_hdfs_broker  # Broker目录
+│   ├── bin
+│   │   ├── start_broker.sh  # Broker启动脚本
+│   │   └── stop_broker.sh  # Broker关闭脚本
+│   ├── conf
+│   │   ├── apache_hdfs_broker.conf  # Broker配置文件
+│   │   ├── hdfs-site.xml
+│   │   └── log4j.properties
+│   └── lib
+│       └── *.jar  # Broker依赖的jar包
+├── be  # BE实例目录
+│   ├── bin
+│   │   ├── common.sh
+│   │   ├── show_be_version.sh  # BE版本查看
+│   │   ├── start_be.sh  # BE启动脚本
+│   │   └── stop_be.sh  # BE关闭脚本
+│   ├── conf
+│   │   ├── be.conf  # BE配置文件
+│   │   └── hadoop_env.sh
+│   ├── lib
+│   │   ├── meta_tool  # Tablet元数据离线管理工具 [1.19版本已合并入starrocks_be]
+│   │   └── starrocks_be  # BE可执行文件（小版本升级时替换即可）
+│   └── www  # BE Web页面文件
+├── fe  # FE实例目录
+│   ├── bin
+│   │   ├── common.sh
+│   │   ├── show_fe_version.sh  # FE版本查看
+│   │   ├── start_fe.sh  # FE启动脚本
+│   │   └── stop_fe.sh  # FE关闭脚本
+│   ├── conf
+│   │   ├── fe.conf  # FE配置文件
+│   │   └── hadoop_env.sh
+│   ├── lib
+│   │   ├── starrocks-fe.jar  # FE jar包（小版本升级时替换即可）
+│   │   └── *.jar  # FE依赖的jar包
+│   ├── log
+│   │   └── *.log
+│   └── webroot # FE Web页面文件
+└── udf # 用户自定义函数目录 [重构中，目前不建议使用]
+    ├── include
+    │   ├── uda_test_harness.h
+    │   └── udf.h  # UDF框架头文件
+    └── lib
+        └── libStarRocksUdf.a  # UDF框架静态库文件
+</code></pre>
+<h4 id="3-分发部署文件"><a href="#3-分发部署文件" class="headerlink" title="3. 分发部署文件"></a>3. 分发部署文件</h4><pre><code># 重命名
+[root@starrocks software]# mv /opt/software/StarRocks-1.19.2 /opt/software/starrocks 
+# 移动文件到module目录下
+[root@starrocks software]# mv /opt/software/starrocks /opt/module/starrocks/
+[root@starrocks software]# cd /opt/module/starrocks/
+[root@starrocks starrocks]# ll
+total 0
+drwxr-xr-x. 5 1021 1021 40 Nov 22 14:40 apache_hdfs_broker
+drwxr-xr-x. 6 1021 1021 51 Nov 22 14:40 be
+drwxr-xr-x. 8 1021 1021 83 Nov 22 14:52 fe
+drwxr-xr-x. 4 1021 1021 32 Nov 22 14:40 udf
+</code></pre>
+<h4 id="4-部署fe"><a href="#4-部署fe" class="headerlink" title="4. 部署fe"></a>4. 部署fe</h4><ul>
+<li><p>修改FE配置文件</p>
+<p>StarRocks各服务配置文件的默认配置已经足以启动集群，不建议初尝用户修改较多配置。FE的配置文件在测试环境中我们通常只需要关注以下三点：</p>
+<p>a、注意默认端口，避免端口冲突，正常情况下不需要修改；</p>
+<p>b、绑定IP，避免多网卡情况下服务无法自动匹配到正确的IP。特别注意，绑定ip时，如果不清楚CIDR表示法，可以直接填写完整的ip（不支持别名），例如配置为priority_networks &#x3D; 172.18.88.54&#x2F;24;该地址可以使用 <code>ip addr show</code> 的方式查询</p>
+<p>c、设置元数据目录，默认目录为fe&#x2F;meta，我们建议新建目录并修改配置文件。</p>
+<p>根据部署设计，创建元数据存储目录：</p>
+<pre><code>[root@starrocks starrocks]# mkdir /opt/meta
+</code></pre>
+<p>针对b和c修改配置文件（带#的为注释，红色字体为新增配置）：</p>
+<pre><code>[root@starrocks starrocks]# vi /opt/module/starrocks/fe/conf/fe.conf
+
+# store metadata, create it if it is not exist.
+
+# Default value is $&#123;STARROCKS_HOME&#125;/meta
+
+# meta_dir = $&#123;STARROCKS_HOME&#125;/meta
+
+# 修改此处
+meta_dir = /opt/meta
+
+…………
+
+# Choose one if there are more than one ip except loopback address.
+
+# Note that there should at most one ip match this list.
+
+# If no ip match this rule, will choose one randomly.
+
+# use CIDR format, e.g. 10.10.10.0/24
+
+# Default value is empty.
+
+# priority_networks = 10.10.10.0/24;192.168.0.0/16
+
+# 修改此处
+priority_networks = 192.168.110.98
+</code></pre>
+</li>
+<li><p>配置环境变量</p>
+<pre><code># 配置环境变量
+vim /etc/profile.d/doris.sh
+export DORIS_HOME=Doris根目录 # 例如/opt/doris
+export PATH=$PATH:$DORIS_HOME/fe/bin:$DORIS_HOME/be/bin
+# 保存并source
+source /etc/profile.d/doris.sh
+</code></pre>
+</li>
+<li><p>启动FE</p>
+<pre><code>[root@starrocks starrocks]# cd /opt/module/starrocks/fe/bin/
+# --daemon 后台运行
+[root@starrocks bin]# ./start_fe.sh --daemon
+</code></pre>
+<blockquote>
+<p>补充：关闭FE的脚本是stop_fe.sh，命令：.&#x2F;stop_fe.sh</p>
+</blockquote>
+<p>FE使用Java语言编写，使用jps命令查看java进程，若发现有StarRocksFe进程，即为启动成功：</p>
+<pre><code>[root@starrocks bin]# jps
+5178 Jps
+5164 StarRocksFe
+</code></pre>
+<p><strong>如果进程状态异常可在FE日志目录中查看日志追踪原因，FE的主要日志在fe.log中，所有查询的审计日志在fe.audit.log中。由于是初次启动，如果在操作过程中遇到比较耗时的问题，可以清空FE的元数据目录，再从头开始操作。</strong></p>
+</li>
+<li><p>访问FE</p>
+<p>使用mysql-client访问FE，FE查询端口默认为9030，自带用户root，默认密码为空：</p>
+<pre><code>[root@starrocks bin]# mysql -h172.18.88.54 -P9030 -uroot
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+Your MySQL connection id is 1
+
+Server version: 5.1.0
+
+………………
+
+mysql&gt;
+</code></pre>
+</li>
+<li><p>确认FE状态</p>
+<p>若mysql-client能够正常访问FE，已说明FE状态正常，查询命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">    mysql&gt;  show frontends\G</span><br><span class="line">*************************** 1. row ***************************</span><br><span class="line">             Name: 172.18.88.54_9010_1651209869733</span><br><span class="line">               IP: 172.18.88.54</span><br><span class="line">      EditLogPort: 9010</span><br><span class="line">         HttpPort: 8030</span><br><span class="line">        QueryPort: 9030</span><br><span class="line">          RpcPort: 9020</span><br><span class="line">             Role: FOLLOWER</span><br><span class="line">         IsMaster: true</span><br><span class="line">        ClusterId: 1166088853</span><br><span class="line">             Join: true</span><br><span class="line">            Alive: true</span><br><span class="line">ReplayedJournalId: 803</span><br><span class="line">    LastHeartbeat: 2022-04-29 14:11:57</span><br><span class="line">         IsHelper: true</span><br><span class="line">           ErrMsg: </span><br><span class="line">          Version: 0.14.0-release-Unknown</span><br><span class="line">1 row in set (20.04 sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>Alive为true即说明FE节点状态正常。</strong></p>
+</li>
+<li><p>校验FE启动是否成功</p>
+<blockquote>
+<ol>
+<li>检查是否启动成功, JPS 命令下有没有 PaloFe 进程</li>
+<li>FE 进程启动后，会⾸先加载元数据，根据 FE ⻆⾊的不同，在⽇志中会看到 transfer from UNKNOWN to MASTER&#x2F;FOLLOWER&#x2F;OBSERVER 。最终会看到 thrift server started ⽇志，并且可以通过 mysql 客户端连接到 FE，则 表示 FE 启动成功。</li>
+<li>也可以通过如下连接查看是否启动成功： http:&#x2F;&#x2F;fe_host:fe_http_port&#x2F;api&#x2F;bootstrap 如果返回： {“status”:”OK”,”msg”:”Success”} 则表示启动成功，其余情况，则可能存在问题。</li>
+<li>外⽹环境访问 http:&#x2F;&#x2F;fe_host:fe_http_port 查看是否可以访问WebUI界 ⾯，登录账号默认为root，密码为空</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><strong>注：如果在 fe.log 中查看不到启动失败的信息，也许在 fe.out 中可以看到。</strong></p>
+</blockquote>
+</li>
+<li><p>添加实例进入集群</p>
+<p>我们先将添加BE与Broker实例添加入集群。这里需要说明一下，“启动服务”和“将服务添加入集群”并没有严格的先后顺序，但若先启动服务，在实例未加入集群前，BE的日志中会打印一些提示未加入集群的WARNING信息，例如：Fail to get master client from cache。所以我们可以在FE全部部署完成后，使用mysql-client将集群中其他实例通过SQL添加入集群，然后再逐个部署启动。</p>
+<p>添加BE进入集群，端口使用BE的heartbeat_service_port（默认为9050）：</p>
+<pre><code>mysql&gt; alter system add backend &#39;172.18.88.54:9050&#39;;
+
+Query OK, 0 rows affected (0.10 sec)
+</code></pre>
+<p>若添加实例进入集群时信息输入有误或出现其他异常，我们可以将其删除后重新添加，删除示例：</p>
+<p>从集群中删除BE（当前仅有一个BE实例，故删除时可以直接使用dropp命令删除。删除BE为高风险操作，所以这里的删除命令设计为了dropp）：</p>
+<pre><code>mysql&gt; alter system dropp backend &#39;172.18.88.54:9050&#39;;
+
+Query OK, 0 rows affected (0.09 sec)
+</code></pre>
+<p>添加Broker进入集群时需要给Broker设定名称，比如命名为hdfs_broker，端口使用Broker的broker_ipc_port（默认为8000）：</p>
+<pre><code>mysql&gt; alter system add broker hdfs_broker &#39;172.18.88.54:8000&#39;;
+
+Query OK, 0 rows affected (0.03 sec)
+</code></pre>
+<p>从集群中删除Broker：</p>
+<pre><code>mysql&gt; alter system drop broker hdfs_broker &#39;172.18.88.54:8000&#39;;
+
+Query OK, 0 rows affected (0.04 sec)
+</code></pre>
+</li>
+<li><p>暂时退出StarRocks：<br>mysql&gt; exit<br><br>Bye</p>
+</li>
+</ul>
+<h4 id="5-部署BE实例"><a href="#5-部署BE实例" class="headerlink" title="5. 部署BE实例"></a>5. 部署BE实例</h4><ul>
+<li><p>修改BE配置文件</p>
+<ul>
+<li>BE的配置文件，在测试环境通常也是关注如下三点：</li>
+</ul>
+<blockquote>
+<ol>
+<li>注意默认端口，避免端口冲突，正常情况下不需要修改；</li>
+<li>绑定IP，避免多网卡情况下无法自动找到正确的IP（同样，不清楚CIDR就可以直接填写完整的IP）；</li>
+<li>设置数据存储目录，默认目录为be&#x2F;storage，我们建议新建目录并修改配置文件。</li>
+</ol>
+</blockquote>
+<ul>
+<li>新建BE数据存储目录：</li>
+</ul>
+<!---->
+
+<pre><code>[root@starrocks bin]# mkdir /opt/storage
+</code></pre>
+<ul>
+<li>针对b和c修改配置文件（带#的为注释，红色字体为新增配置）：</li>
+</ul>
+<!---->
+
+<pre><code>[root@starrocks bin]# vi /opt/module/starrocks/be/conf/be.conf
+
+# Choose one if there are more than one ip except loopback address.
+
+# Note that there should at most one ip match this list.
+
+# If no ip match this rule, will choose one randomly.
+
+# use CIDR format, e.g. 10.10.10.0/24
+
+# Default value is empty.
+
+# priority_networks = 10.10.10.0/24;192.168.0.0/16
+# 修改此处
+priority_networks = 172.18.88.54/24
+
+…………
+
+# you also can specify the properties by setting &#39;&lt;property&gt;:&lt;value&gt;&#39;, seperate by &#39;,&#39;
+
+# property &#39;medium&#39; has a higher priority than the extension of path
+
+#
+
+# Default value is $&#123;STARROCKS_HOME&#125;/storage, you should create it by hand.
+
+# storage_root_path = $&#123;STARROCKS_HOME&#125;/storage
+# 修改此处
+storage_root_path = /opt/storage
+</code></pre>
+</li>
+<li><p>启动BE</p>
+<pre><code>[root@starrocks bin]# cd /opt/module/starrocks/be/bin/
+
+[root@starrocks bin]# ./start_be.sh --daemon
+</code></pre>
+<p><strong>补充：关闭BE脚本为stop_be.sh，命令：.&#x2F;stop_be.sh</strong></p>
+<blockquote>
+<p>BE使用C++编写，使用ps命令查看进程，若发现有starrocks_be进程，即为启动成功：</p>
+</blockquote>
+<pre><code>[root@starrocks bin]# ps -ef | grep starrocks_be
+
+root       6670      1  1 19:46 pts/0    00:00:00 /opt/module/starrocks/be/lib/starrocks_be
+</code></pre>
+<p><strong>如果进程状态异常可在BE日志目录中查看日志追踪原因，BE的主要日志在be.INFO中，其他的日志在be.out中。</strong></p>
+</li>
+<li><p>查看BE状态</p>
+<pre><code>[root@starrocks bin]# mysql -h127.0.0.1 -P9030 -uroot
+</code></pre>
+<!---->
+
+<pre><code>mysql&gt; show backends\G
+*************************** 1. row ***************************
+            BackendId: 11001
+              Cluster: default_cluster
+                   IP: 172.18.88.54
+        HeartbeatPort: 9050
+               BePort: 9060
+             HttpPort: 8040
+             BrpcPort: 8060
+        LastStartTime: 2022-04-29 14:01:04
+        LastHeartbeat: 2022-04-29 14:02:11
+                Alive: true
+ SystemDecommissioned: false
+ClusterDecommissioned: false
+            TabletNum: 0
+     DataUsedCapacity: .000 
+        AvailCapacity: 34.793 GB
+        TotalCapacity: 49.976 GB
+              UsedPct: 30.38 %
+       MaxDiskUsedPct: 30.38 %
+               ErrMsg: 
+              Version: 0.14.0-release-Unknown
+               Status: &#123;&quot;lastSuccessReportTabletsTime&quot;:&quot;2022-04-29 14:02:10&quot;&#125;
+1 row in set (20.04 sec)
+</code></pre>
+<p><strong>一般Alive为true即为状态正常，若为false，可根据日志排查问题。同样的，因为当前BE为初次启动，如果出现无法快速定位的问题，可以清空storage数据目录，重新启动服务。</strong></p>
+</li>
+</ul>
+<h4 id="6-部署Broker"><a href="#6-部署Broker" class="headerlink" title="6. 部署Broker"></a>6. 部署Broker</h4><p>在部署完FE与BE后，StarRocks主要服务已经部署完成。Broker是StarRocks与外部HDFS&#x2F;对象存储等外部数据对接的中转服务，若不需要可以不部署。Broker本身是无状态的进程，可以随意启停，不影响集群。</p>
+<ul>
+<li><p>修改Broker配置文件</p>
+<blockquote>
+<p>Broker的配置文件通常不需要修改。与FE实例和BE实例不同，Broker当前没有也不需要priority_networks这个选项。Broker的服务默认绑定在0.0.0.0上，我们只需在前面4.5节 ADD BROKER时，输入正确可访问的BROKER IP即可。</p>
+</blockquote>
+</li>
+<li><p>启动Broker</p>
+<pre><code>[root@starrocks bin]# cd /opt/module/starrocks/apache_hdfs_broker/bin/
+
+[root@starrocks bin]# ./start_broker.sh --daemon
+</code></pre>
+<p><strong>补充：关闭Broker脚本为stop_broker.sh，命令：.&#x2F;stop_broker.sh</strong></p>
+<blockquote>
+<p>查看java进程，若发现有BrokerBootstrap即为启动成功：</p>
+</blockquote>
+<pre><code>[root@starrocks bin]# jps | grep BrokerBootstrap
+
+7594 BrokerBootstrap
+</code></pre>
+<p>Broker日志在apache_hdfs_broker.log中，如果进程状态异常可查看日志追踪原因。</p>
+</li>
+<li><p>查看Broker状态</p>
+<pre><code>[root@starrocks bin]# mysql -h127.0.0.1 -P9030 -uroot
+</code></pre>
+<!---->
+
+<pre><code>mysql&gt; show broker\G
+
+*************************** 1. row ***************************
+
+          Name: hdfs_broker
+
+            IP: 172.18.88.54
+
+          Port: 8000
+
+         Alive: true
+
+ LastStartTime: 2021-11-25 20:19:56
+
+LastUpdateTime: 2021-11-25 20:21:31
+
+        ErrMsg:
+
+1 row in set (0.01 sec)
+</code></pre>
+<p><em>Alive为true即为状态正常，如果状态异常可以根据日志定位问题。</em></p>
+</li>
+</ul>
+<h3 id="4、简单使用"><a href="#4、简单使用" class="headerlink" title="4、简单使用"></a>4、简单使用</h3><h4 id="1-修改root账户密码"><a href="#1-修改root账户密码" class="headerlink" title="1. 修改root账户密码"></a>1. 修改root账户密码</h4><p>例如修改root密码也为root：</p>
+<pre><code>mysql&gt; set password=password(&#39;root&#39;);
+    
+Query OK, 0 rows affected (0.02 sec)
+</code></pre>
+<h4 id="2-建库建表"><a href="#2-建库建表" class="headerlink" title="2. 建库建表"></a>2. 建库建表</h4><p>StarRocks的副本数是不能大于BE节点数的，由于当前仅有一个BE节点，我们建表时<strong>务必注意指定数据为单副本</strong>，示例如下：<br>新建一个starrocks数据库：</p>
+<pre><code>mysql&gt; create database starrocks;
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; use starrocks;
+
+Database changed
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/bf223232.html" rel="prev" title="【Linux】Linux环境下运行jar包的几种方式">
+                  <i class="fa fa-angle-left"></i> 【Linux】Linux环境下运行jar包的几种方式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/506e9c17.html" rel="next" title="【前端】高颜值登录页面（一键复制）">
+                  【前端】高颜值登录页面（一键复制） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e46f4d40f9adff0c2e03bd4ad5ec075e"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

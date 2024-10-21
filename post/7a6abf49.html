@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="下载并解压Redis执行下面的命令下载redis： 1wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2F;redis-6.2.6.tar.gz  解压redis： 1tar xzf redis-6.2.6.tar.gz  移动redis目录，一般都会将redis目录放置到 &#x2F;usr&#x2F;local&#x2F;redis目录： 1mv redis-6.2.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux】Redis 离线安装">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/7a6abf49.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="下载并解压Redis执行下面的命令下载redis： 1wget https:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2F;redis-6.2.6.tar.gz  解压redis： 1tar xzf redis-6.2.6.tar.gz  移动redis目录，一般都会将redis目录放置到 &#x2F;usr&#x2F;local&#x2F;redis目录： 1mv redis-6.2.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144541fff.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144725fff.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144907fff.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/06/17145110.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/06/17145127.png">
+<meta property="article:published_time" content="2024-06-16T00:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.853Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144541fff.png">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/7a6abf49.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/7a6abf49.html","path":"post/7a6abf49.html","title":"【Linux】Redis 离线安装"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Linux】Redis 离线安装 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8BRedis"><span class="nav-number">1.</span> <span class="nav-text">下载并解压Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BDredis%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">执行下面的命令下载redis：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8Bredis%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">解压redis：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8redis%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%B8%80%E8%88%AC%E9%83%BD%E4%BC%9A%E5%B0%86redis%E7%9B%AE%E5%BD%95%E6%94%BE%E7%BD%AE%E5%88%B0-usr-local-redis%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">移动redis目录，一般都会将redis目录放置到 &#x2F;usr&#x2F;local&#x2F;redis目录：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%B9%B6%E5%AE%89%E8%A3%85redis"><span class="nav-number">2.</span> <span class="nav-text">编译并安装redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5redis%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%EF%BC%8C%E6%89%A7%E8%A1%8Cmake%E5%91%BD%E4%BB%A4%E7%BC%96%E8%AF%91redis%EF%BC%9A"><span class="nav-number">2.1.</span> <span class="nav-text">进入redis安装目录，执行make命令编译redis：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85redis%EF%BC%8C%E5%B9%B6%E6%8C%87%E5%AE%9A%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="nav-number">2.2.</span> <span class="nav-text">执行下面命令安装redis，并指定安装目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8redis"><span class="nav-number">2.3.</span> <span class="nav-text">启动redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5redis%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%E5%90%AF%E5%8A%A8redis%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.4.</span> <span class="nav-text">进入redis安装目录，执行下面命令启动redis服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.5.</span> <span class="nav-text">其他设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87redis-cli%E6%B5%8B%E8%AF%95redis%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8%EF%BC%8C%E5%9C%A8redis%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">2.6.</span> <span class="nav-text">通过redis-cli测试redis是否可用，在redis安装目录执行下面命令：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF"><span class="nav-number">3.</span> <span class="nav-text">开机自启</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/7a6abf49.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Linux】Redis 离线安装 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Linux】Redis 离线安装
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-16 08:31:13" itemprop="dateCreated datePublished" datetime="2024-06-16T08:31:13+08:00">2024-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="下载并解压Redis"><a href="#下载并解压Redis" class="headerlink" title="下载并解压Redis"></a>下载并解压Redis</h2><h3 id="执行下面的命令下载redis："><a href="#执行下面的命令下载redis：" class="headerlink" title="执行下面的命令下载redis："></a>执行下面的命令下载redis：</h3><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.redis.io/releases/redis-6.2.6.tar.gz</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="解压redis："><a href="#解压redis：" class="headerlink" title="解压redis："></a>解压redis：</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzf redis-6.2.6.tar.gz</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="移动redis目录，一般都会将redis目录放置到-usr-local-redis目录："><a href="#移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：" class="headerlink" title="移动redis目录，一般都会将redis目录放置到 &#x2F;usr&#x2F;local&#x2F;redis目录："></a>移动redis目录，一般都会将redis目录放置到 &#x2F;usr&#x2F;local&#x2F;redis目录：</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv redis-6.2.6 /usr/local/redis</span><br></pre></td></tr></table></figure>
+</blockquote>
+<span id="more"></span>
+<h2 id="编译并安装redis"><a href="#编译并安装redis" class="headerlink" title="编译并安装redis"></a>编译并安装redis</h2><h3 id="进入redis安装目录，执行make命令编译redis："><a href="#进入redis安装目录，执行make命令编译redis：" class="headerlink" title="进入redis安装目录，执行make命令编译redis："></a>进入redis安装目录，执行make命令编译redis：</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/redis</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>等待make命令执行完成即可。</p>
+<p>如果执行make命令报错：cc 未找到命令，原因是虚拟机系统中缺少gcc，执行下面命令安装gcc：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc automake autoconf libtool make</span><br></pre></td></tr></table></figure>
+
+<p>如果执行make命令报错：致命错误:jemalloc&#x2F;jemalloc.h: 没有那个文件或目录，则需要在make指定分配器为libc。执行下面命令即可正常编译：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make MALLOC=libc</span><br></pre></td></tr></table></figure>
+
+<p>make命令执行完，redis就编译完成了。</p>
+</blockquote>
+<h3 id="执行下面命令安装redis，并指定安装目录"><a href="#执行下面命令安装redis，并指定安装目录" class="headerlink" title="执行下面命令安装redis，并指定安装目录"></a>执行下面命令安装redis，并指定安装目录</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install PREFIX=/usr/local/redis</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144541fff.png" alt="image-20240617144514525"></p>
+<p>至此，redis即安装成功。</p>
+</blockquote>
+<h3 id="启动redis"><a href="#启动redis" class="headerlink" title="启动redis"></a>启动redis</h3><h3 id="进入redis安装目录，执行下面命令启动redis服务"><a href="#进入redis安装目录，执行下面命令启动redis服务" class="headerlink" title="进入redis安装目录，执行下面命令启动redis服务"></a>进入redis安装目录，执行下面命令启动redis服务</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">./bin/redis-server redis.conf </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭</span></span><br><span class="line">./bin/redis-cli shutdown </span><br></pre></td></tr></table></figure>
+
+<p>此时，可以看到redis服务被成功启动：</p>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144725fff.png" alt="image-20240617144725136"></p>
+<p>但这种启动方式不能退出控制台，如果退出，那么redis服务也会停止。如果想要redis以后台方式运行，需要修改redis的配置文件：<code>redis.conf</code>。将该配置文件中的<code>daemonize no</code>改为<code>daemonize yes</code>即可：</p>
+<p>修改完成后，重新执行启动命令启动redis，然后通过下面命令查看redis进程，可以发现redis服务已经被启动了：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep redis</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">daemonize：如需要在后台运行，把该项的值改为yes</span><br><span class="line"> </span><br><span class="line">pdifile：把pid文件放在/var/run/redis.pid，可以配置到其他地址</span><br><span class="line"> </span><br><span class="line">bind：指定redis只接收来自该IP的请求，如果不设置，那么将处理所有请求，在生产环节中最好设置该项</span><br><span class="line"> </span><br><span class="line">            (设置0.0.0.0 则改为用iptables来控制访问权限)</span><br><span class="line"> </span><br><span class="line">port：监听端口，默认为6379</span><br><span class="line"> </span><br><span class="line">timeout：设置客户端连接时的超时时间，单位为秒</span><br><span class="line"> </span><br><span class="line">loglevel：等级分为4级，debug，revbose，notice和warning。生产环境下一般开启notice</span><br><span class="line"> </span><br><span class="line">logfile：配置log文件地址，默认使用标准输出，即打印在命令行终端的端口上</span><br><span class="line"> </span><br><span class="line">database：设置数据库的个数，默认使用的数据库是0</span><br><span class="line"> </span><br><span class="line">save：设置redis进行数据库镜像的频率</span><br><span class="line"> </span><br><span class="line">rdbcompression：在进行镜像备份时，是否进行压缩</span><br><span class="line"> </span><br><span class="line">dbfilename：镜像备份文件的文件名</span><br><span class="line"> </span><br><span class="line">dir：数据库镜像备份的文件放置的路径</span><br><span class="line"> </span><br><span class="line">slaveof：设置该数据库为其他数据库的从数据库</span><br><span class="line"> </span><br><span class="line">masterauth：当主数据库连接需要密码验证时，在这里设定</span><br><span class="line"> </span><br><span class="line">requirepass：设置客户端连接后进行任何其他指定前需要使用的密码</span><br><span class="line"> </span><br><span class="line">maxclients：限制同时连接的客户端数量</span><br><span class="line"> </span><br><span class="line">maxmemory：设置redis能够使用的最大内存</span><br><span class="line"> </span><br><span class="line">appendonly：开启appendonly模式后，redis会把每一次所接收到的写操作都追加到appendonly.aof文件中，当redis重新启动时，会从该文件恢复出之前的状态</span><br><span class="line"> </span><br><span class="line">appendfsync：设置appendonly.aof文件进行同步的频率</span><br><span class="line"> </span><br><span class="line">vm_enabled：是否开启虚拟内存支持</span><br><span class="line"> </span><br><span class="line">vm_swap_file：设置虚拟内存的交换文件的路径</span><br><span class="line"> </span><br><span class="line">vm_max_momery：设置开启虚拟内存后，redis将使用的最大物理内存的大小，默认为0</span><br><span class="line"> </span><br><span class="line">vm_page_size：设置虚拟内存页的大小</span><br><span class="line"> </span><br><span class="line">vm_pages：设置交换文件的总的page数量</span><br><span class="line"> </span><br><span class="line">vm_max_thrrads：设置vm IO同时使用的线程数量</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="通过redis-cli测试redis是否可用，在redis安装目录执行下面命令："><a href="#通过redis-cli测试redis是否可用，在redis安装目录执行下面命令：" class="headerlink" title="通过redis-cli测试redis是否可用，在redis安装目录执行下面命令："></a>通过redis-cli测试redis是否可用，在redis安装目录执行下面命令：</h3><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/redis-cli</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/0617144907fff.png" alt="image-20240617144907738"></p>
+</blockquote>
+<p>​    </p>
+<p>此处我们通过下面命令随便set一个字符串类型的值，key是test，value是hello：</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set test hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/06/17145110.png" alt="image-20240617145110416"></p>
+</blockquote>
+<p>​    </p>
+<p>然后通过下面命令get出test这个key的value值：</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get test</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/06/17145127.png" alt="image-20240617145127840"></p>
+</blockquote>
+<p>​    </p>
+<p>测试没有问题，至此，redis在我们的Linux服务器上就已经安装完成了。</p>
+<h2 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h2><blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/redis.service</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>注意：–daemonize no 为必须的，要不然起不来</strong></p>
+</blockquote>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description = Redis Server</span><br><span class="line">After = network.target</span><br><span class="line">[Service]</span><br><span class="line">ExecStart = /usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf --daemonize no</span><br><span class="line">ExecStop = /usr/local/redis/bin/redis-cli -p 6379 shutdown</span><br><span class="line">Restart = always</span><br><span class="line">[Install]</span><br><span class="line">WantedBy = multi-user.target</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重新加载服务</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开机自动启动</span></span><br><span class="line">systemctl enable redis.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">取消开机自动启动(卸载服务)</span></span><br><span class="line">systemctl disabled redis.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动redis服务</span></span><br><span class="line">systemctl start redis.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看服务状态</span></span><br><span class="line">systemctl status redis.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">停止服务</span></span><br><span class="line">systemctl stop redis.service</span><br></pre></td></tr></table></figure></blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/dfef5267.html" rel="prev" title="【Linux】Nacos 问题">
+                  <i class="fa fa-angle-left"></i> 【Linux】Nacos 问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/5711187a.html" rel="next" title="【Linux】Libgdiplus安装">
+                  【Linux】Libgdiplus安装 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0e07828af0af1fdf4b419cbf5ceca146"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

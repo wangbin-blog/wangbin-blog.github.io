@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="系统要求 系统要求1、64位操作系统，推荐 Linux&#x2F;Unix&#x2F;macOS2、64位 JDK 1.8+3、官网文档  安装部署下载 这里使用release免编译版本  1234# 解压$ unzip rocketmq-all-5.1.0-source-release.zip# 打开文件夹$ cd rocketmq-all-5.1.0-source-release&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux】RocketMQ 部署">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/3cdc8223.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="系统要求 系统要求1、64位操作系统，推荐 Linux&#x2F;Unix&#x2F;macOS2、64位 JDK 1.8+3、官网文档  安装部署下载 这里使用release免编译版本  1234# 解压$ unzip rocketmq-all-5.1.0-source-release.zip# 打开文件夹$ cd rocketmq-all-5.1.0-source-release&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.855Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/3cdc8223.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/3cdc8223.html","path":"post/3cdc8223.html","title":"【Linux】RocketMQ 部署"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Linux】RocketMQ 部署 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">系统要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">2.</span> <span class="nav-text">安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8NameServer"><span class="nav-number">2.2.</span> <span class="nav-text">启动NameServer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8Broker-Proxy"><span class="nav-number">2.3.</span> <span class="nav-text">启动Broker+Proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E6%B5%8B%E8%AF%95%E6%B6%88%E6%81%AF%E6%94%B6%E5%8F%91"><span class="nav-number">2.4.</span> <span class="nav-text">工具测试消息收发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dashboard-%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">dashboard(非必须)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">2.5.2.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text">Docker 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAnamesrv%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.1.</span> <span class="nav-text">创建namesrv服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="nav-number">3.1.1.</span> <span class="nav-text">拉取镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAnamesrv%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84"><span class="nav-number">3.1.2.</span> <span class="nav-text">创建namesrv数据存储路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BAnamesrv%E5%AE%B9%E5%99%A8"><span class="nav-number">3.1.3.</span> <span class="nav-text">构建namesrv容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAbroker%E8%8A%82%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text">创建broker节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAbroker%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84"><span class="nav-number">3.2.1.</span> <span class="nav-text">创建broker数据存储路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.2.</span> <span class="nav-text">创建配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BAbroker%E5%AE%B9%E5%99%A8"><span class="nav-number">3.2.3.</span> <span class="nav-text">构建broker容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BArockermq-console%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.3.</span> <span class="nav-text">创建rockermq-console服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">拉取镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BArockermq-console%E5%AE%B9%E5%99%A8"><span class="nav-number">3.3.2.</span> <span class="nav-text">构建rockermq-console容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3-9876-10911-10010"><span class="nav-number">3.3.3.</span> <span class="nav-text">开放端口  9876&#x2F;10911&#x2F;10010</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.3.4.</span> <span class="nav-text">创建系统服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81-%E7%BC%96%E5%86%99%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC%E5%91%BD%E4%BB%A4%EF%BC%8Cvi-etc-init-d-rocketmq"><span class="nav-number">3.3.4.1.</span> <span class="nav-text">1、 编写管理脚本命令，vi &#x2F;etc&#x2F;init.d&#x2F;rocketmq</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%B0%86rocketmq%E6%9C%8D%E5%8A%A1%E6%B7%BB%E5%8A%A0%E4%B8%BA%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.3.4.2.</span> <span class="nav-text">2、将rocketmq服务添加为开机启动服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E9%80%9A%E8%BF%87service%E5%91%BD%E4%BB%A4%E6%9D%A5%E7%AE%A1%E7%90%86rocketmq"><span class="nav-number">3.3.4.3.</span> <span class="nav-text">3、通过service命令来管理rocketmq</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/3cdc8223.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Linux】RocketMQ 部署 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Linux】RocketMQ 部署
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-21 08:31:13" itemprop="dateCreated datePublished" datetime="2024-05-21T08:31:13+08:00">2024-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h1><blockquote>
+<p><strong>系统要求</strong><br>1、64位操作系统，推荐 Linux&#x2F;Unix&#x2F;macOS<br>2、64位 JDK 1.8+<br>3、<a target="_blank" rel="noopener" href="https://rocketmq.apache.org/zh/docs/quickStart/01quickstart">官网文档</a></p>
+</blockquote>
+<h1 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
+<p>这里使用<a target="_blank" rel="noopener" href="https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip">release</a>免编译版本</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">$ unzip rocketmq-all-5.1.0-source-release.zip</span><br><span class="line"><span class="comment"># 打开文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> rocketmq-all-5.1.0-source-release/</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="启动NameServer"><a href="#启动NameServer" class="headerlink" title="启动NameServer"></a>启动NameServer</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 启动namesrv</span></span><br><span class="line">$ <span class="built_in">nohup</span> sh bin/mqnamesrv &amp;</span><br><span class="line"> </span><br><span class="line"><span class="comment">### 验证namesrv是否启动成功</span></span><br><span class="line">$ <span class="built_in">tail</span> -f ~/logs/rocketmqlogs/namesrv.log</span><br><span class="line">The Name Server boot success...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我们可以在namesrv.log 中看到 <code>The Name Server boot success..</code>， 表示NameServer 已成功启动。</p>
+</blockquote>
+<h2 id="启动Broker-Proxy"><a href="#启动Broker-Proxy" class="headerlink" title="启动Broker+Proxy"></a>启动Broker+Proxy</h2><p>NameServer成功启动后，我们启动Broker和Proxy，5.x 版本下我们建议使用 Local 模式部署，即 Broker 和 Proxy 同进程部署。5.x 版本也支持 Broker 和 Proxy 分离部署以实现更灵活的集群能力。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 先启动broker</span></span><br><span class="line">$ <span class="built_in">nohup</span> sh bin/mqbroker -n localhost:9876 --enable-proxy &amp;</span><br><span class="line"></span><br><span class="line"><span class="comment">### 验证broker是否启动成功, 比如, broker的ip是192.168.1.2 然后名字是broker-a</span></span><br><span class="line">$ <span class="built_in">tail</span> -f ~/logs/rocketmqlogs/proxy.log </span><br><span class="line">The broker[broker-a,192.169.1.2:10911] boot success...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我们可以在 proxy.log 中看到<code>The broker[brokerName,ip:port] boot success..</code>，这表明 broker 已成功启动。</p>
+</blockquote>
+<h2 id="工具测试消息收发"><a href="#工具测试消息收发" class="headerlink" title="工具测试消息收发"></a>工具测试消息收发</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> NAMESRV_ADDR=localhost:9876</span><br><span class="line">$ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"> SendResult [sendStatus=SEND_OK, msgId= ...</span><br><span class="line">$ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer</span><br><span class="line"> ConsumeMessageThread_%d Receive New Messages: [MessageExt...</span><br></pre></td></tr></table></figure>
+
+<h2 id="dashboard-非必须"><a href="#dashboard-非必须" class="headerlink" title="dashboard(非必须)"></a>dashboard(非必须)</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 dashboard，需要编译源代码. <a href="https://github.com/apache/rocketmq-dashboard">源码github 地址</a></p>
+<p>下载之后，修改 application.yml 参数，我这里只修改了 Name Server 地址：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rocketmq:</span></span><br><span class="line">  <span class="attr">config:</span></span><br><span class="line">    <span class="attr">namesrvAddrs:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9876</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">47.</span><span class="string">xx.xx.xx:9876</span></span><br></pre></td></tr></table></figure>
+
+<p>然后执行 Maven 打包命令，打出 jar 包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>打好 jar 包后上传到服务器，执行下面命令启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar rocketmq-dashboard-1.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器输入 <a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></p>
+<h1 id="Docker-部署"><a href="#Docker-部署" class="headerlink" title="Docker 部署"></a>Docker 部署</h1><h2 id="创建namesrv服务"><a href="#创建namesrv服务" class="headerlink" title="创建namesrv服务"></a>创建namesrv服务</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull apache/rocketmq</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建namesrv数据存储路径"><a href="#创建namesrv数据存储路径" class="headerlink" title="创建namesrv数据存储路径"></a>创建namesrv数据存储路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p  /docker/rocketmq/data/namesrv/logs   /docker/rocketmq/data/namesrv/store</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="构建namesrv容器"><a href="#构建namesrv容器" class="headerlink" title="构建namesrv容器"></a>构建namesrv容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">--restart=always \</span><br><span class="line">--name rmqnamesrv \</span><br><span class="line">-p 9876:9876 \</span><br><span class="line">-v /docker/rocketmq/data/namesrv/logs:/root/logs \</span><br><span class="line">-v /docker/rocketmq/data/namesrv/store:/root/store \</span><br><span class="line">-e <span class="string">&quot;MAX_POSSIBLE_HEAP=100000000&quot;</span> \</span><br><span class="line">apache/rocketmq \</span><br><span class="line">sh mqnamesrv </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-restart&#x3D;always| docker重启时候容器自动重启<br>-name rmqnamesrv | 把容器的名字设置为rmqnamesrv<br>-p 9876:9876| 把容器内的端口9876挂载到宿主机9876上面<br>-v &#x2F;docker&#x2F;rocketmq&#x2F;data&#x2F;namesrv&#x2F;logs:&#x2F;root&#x2F;logs |       把容器内的&#x2F;root&#x2F;logs日志目录挂载到宿主机的 &#x2F;docker&#x2F;rocketmq&#x2F;data&#x2F;namesrv&#x2F;logs目录<br>-v &#x2F;docker&#x2F;rocketmq&#x2F;data&#x2F;namesrv&#x2F;store:&#x2F;root&#x2F;store |         把容器内的&#x2F;root&#x2F;store数据存储目录挂载到宿主机的 &#x2F;docker&#x2F;rocketmq&#x2F;data&#x2F;namesrv目录<br>rmqnamesrv | 容器的名字<br>-e “MAX_POSSIBLE_HEAP&#x3D;100000000” | 设置容器的最大堆内存为100000000<br>apache&#x2F;rocketmq | 使用的镜像名称<br>sh mqnamesrv | 启动namesrv服务</p>
+</blockquote>
+<h2 id="创建broker节点"><a href="#创建broker节点" class="headerlink" title="创建broker节点"></a>创建broker节点</h2><h3 id="创建broker数据存储路径"><a href="#创建broker数据存储路径" class="headerlink" title="创建broker数据存储路径"></a>创建broker数据存储路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p  /docker/rocketmq/data/broker/logs   /docker/rocketmq/data/broker/store /docker/rocketmq/conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><blockquote>
+<p>注意修改 <code>brokerIP1 = 172.18.88.54</code> 中ip地址。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /docker/rocketmq/conf/broker.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所属集群名称，如果节点较多可以配置多个</span></span><br><span class="line">brokerClusterName = DefaultCluster</span><br><span class="line"><span class="comment">#broker名称，master和slave使用相同的名称，表明他们的主从关系</span></span><br><span class="line">brokerName = broker-a</span><br><span class="line"><span class="comment">#0表示Master，大于0表示不同的slave</span></span><br><span class="line">brokerId = 0</span><br><span class="line"><span class="comment">#表示几点做消息删除动作，默认是凌晨4点</span></span><br><span class="line">deleteWhen = 04</span><br><span class="line"><span class="comment">#在磁盘上保留消息的时长，单位是小时</span></span><br><span class="line">fileReservedTime = 48</span><br><span class="line"><span class="comment">#有三个值：SYNC_MASTER，ASYNC_MASTER，SLAVE；同步和异步表示Master和Slave之间同步数据的机制；</span></span><br><span class="line">brokerRole = ASYNC_MASTER</span><br><span class="line"><span class="comment">#刷盘策略，取值为：ASYNC_FLUSH，SYNC_FLUSH表示同步刷盘和异步刷盘；SYNC_FLUSH消息写入磁盘后才返回成功状态，ASYNC_FLUSH不需要；</span></span><br><span class="line">flushDiskType = ASYNC_FLUSH</span><br><span class="line"><span class="comment"># 设置broker节点所在服务器的ip地址</span></span><br><span class="line">brokerIP1 = 172.18.88.54</span><br><span class="line"><span class="comment"># 磁盘使用达到95%之后,生产者再写入消息会报错 CODE: 14 DESC: service not available now, maybe disk full</span></span><br><span class="line">diskMaxUsedSpaceRatio=95</span><br></pre></td></tr></table></figure>
+
+<h3 id="构建broker容器"><a href="#构建broker容器" class="headerlink" title="构建broker容器"></a>构建broker容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker run -d  \</span><br><span class="line">--restart=always \</span><br><span class="line">--name rmqbroker \</span><br><span class="line">--<span class="built_in">link</span> rmqnamesrv:namesrv \</span><br><span class="line">-p 10911:10911 \</span><br><span class="line">-p 10909:10909 \</span><br><span class="line">-v  /docker/rocketmq/data/broker/logs:/root/logs \</span><br><span class="line">-v  /docker/rocketmq/data/broker/store:/root/store \</span><br><span class="line">-v /docker/rocketmq/conf/broker.conf:/opt/rocketmq-4.4.0/conf/broker.conf \</span><br><span class="line">-e <span class="string">&quot;NAMESRV_ADDR=namesrv:9876&quot;</span> \</span><br><span class="line">-e <span class="string">&quot;MAX_POSSIBLE_HEAP=200000000&quot;</span> \</span><br><span class="line">apache/rocketmq \</span><br><span class="line">sh mqbroker -c /opt/rocketmq-4.4.0/conf/broker.conf </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-name rmqbroker | 把容器的名字设置为rmqbroker<br>–link rmqnamesrv:namesrv | 和rmqnamesrv容器通信<br>-p 10911:10911 | 把容器的非vip通道端口挂载到宿主机<br>-p 10909:10909 | 把容器的vip通道端口挂载到宿主机<br>-e “NAMESRV_ADDR&#x3D;namesrv:9876” | 指定namesrv的地址为本机namesrv的ip地址:9876<br>-e “MAX_POSSIBLE_HEAP&#x3D;200000000” rocketmqinc&#x2F;rocketmq sh mqbroker |指定broker服务的最大堆内存<br>rocketmqinc&#x2F;rocketmq | 使用的镜像名称<br>sh mqbroker -c &#x2F;opt&#x2F;rocketmq-4.4.0&#x2F;conf&#x2F;broker.conf | 指定配置文件启动broker节点</p>
+</blockquote>
+<h2 id="创建rockermq-console服务"><a href="#创建rockermq-console服务" class="headerlink" title="创建rockermq-console服务"></a>创建rockermq-console服务</h2><h3 id="拉取镜像-1"><a href="#拉取镜像-1" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull pangliang/rocketmq-console-ng</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="构建rockermq-console容器"><a href="#构建rockermq-console容器" class="headerlink" title="构建rockermq-console容器"></a>构建rockermq-console容器</h3><blockquote>
+<p>需要替换<code>192.168.52.136</code> 为实际ip地址</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">--restart=always \</span><br><span class="line">--name rmqadmin \</span><br><span class="line">-e <span class="string">&quot;JAVA_OPTS=-Drocketmq.namesrv.addr=172.18.88.54:9876 \</span></span><br><span class="line"><span class="string">-Dcom.rocketmq.sendMessageWithVIPChannel=false&quot;</span> \</span><br><span class="line">-p 10010:8080 \</span><br><span class="line">pangliang/rocketmq-console-ng</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-restart&#x3D;always| docker重启时候镜像自动重启<br>-name rmqadmin | 把容器的名字设置为rmqadmin<br>-e “JAVA_OPTS&#x3D;-Drocketmq.namesrv.addr&#x3D;192.168.52.136:9876 | 设置namesrv服务的ip地址<br>-Dcom.rocketmq.sendMessageWithVIPChannel&#x3D;false” | 不使用vip通道发送消息<br>–p 10010:8080 | 把容器内的端口8080挂载到宿主机上的9999端口</p>
+</blockquote>
+<h3 id="开放端口-9876-10911-10010"><a href="#开放端口-9876-10911-10010" class="headerlink" title="开放端口  9876&#x2F;10911&#x2F;10010"></a>开放端口  9876&#x2F;10911&#x2F;10010</h3><h3 id="创建系统服务"><a href="#创建系统服务" class="headerlink" title="创建系统服务"></a>创建系统服务</h3><h4 id="1、-编写管理脚本命令，vi-etc-init-d-rocketmq"><a href="#1、-编写管理脚本命令，vi-etc-init-d-rocketmq" class="headerlink" title="1、 编写管理脚本命令，vi &#x2F;etc&#x2F;init.d&#x2F;rocketmq"></a>1、 编写管理脚本命令，vi &#x2F;etc&#x2F;init.d&#x2F;rocketmq</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rocketmq - this script starts and stops the rocketmq daemon</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"></span><br><span class="line">ROCKETMQ_HOME=/home/sys_wh/soft/rocketmq-5.1.4</span><br><span class="line">ROCKETMQ_BIN=<span class="variable">$&#123;ROCKETMQ_HOME&#125;</span>/bin</span><br><span class="line">ADDR=192.168.0.75:9876</span><br><span class="line">LOG_DIR=<span class="variable">$&#123;ROCKETMQ_HOME&#125;</span>/logs</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line"><span class="keyword">if</span> [ ! -d <span class="variable">$&#123;LOG_DIR&#125;</span> ];<span class="keyword">then</span></span><br><span class="line"><span class="built_in">mkdir</span> <span class="variable">$&#123;LOG_DIR&#125;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$&#123;ROCKETMQ_HOME&#125;</span></span><br><span class="line"><span class="built_in">nohup</span> sh bin/mqnamesrv &gt; <span class="variable">$&#123;LOG_DIR&#125;</span>/mqnamesrv.log 2&gt;&amp;1 &amp;</span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">&quot;The Name Server boot success...&quot;</span></span><br><span class="line"><span class="built_in">nohup</span> sh bin/mqbroker -c <span class="variable">$&#123;ROCKETMQ_HOME&#125;</span>/conf/broker.conf &gt;<span class="variable">$&#123;LOG_DIR&#125;</span>/broker.log 2&gt;&amp;1 &amp;</span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">&quot;The broker[%s, <span class="variable">$&#123;ADDR&#125;</span>] boot success...&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$&#123;ROCKETMQ_HOME&#125;</span></span><br><span class="line">sh bin/mqshutdown broker</span><br><span class="line"><span class="built_in">sleep</span> 1</span><br><span class="line">sh bin/mqshutdown namesrv</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">restart</span></span>() &#123;</span><br><span class="line">stop</span><br><span class="line"><span class="built_in">sleep</span> 5</span><br><span class="line">start</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">start</span><br><span class="line">;;</span><br><span class="line">stop)</span><br><span class="line">stop</span><br><span class="line">;;</span><br><span class="line">restart)</span><br><span class="line">restart</span><br><span class="line">;;</span><br><span class="line">*)</span><br><span class="line"><span class="built_in">echo</span> $<span class="string">&quot;Usage: <span class="variable">$0</span> &#123;start|stop|restart&#125;&quot;</span></span><br><span class="line"><span class="built_in">exit</span> 2</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：</p>
+</blockquote>
+<p>1.1 注： 复制这个脚本到Linux可能会丢失最上面的一部分，不知道为什么，通过xshell打开Linux，然后复制这些内容到文件中，会丢失一部分，自己复制过去以后检查清楚是否丢失一些内容。不然就算注册成一个服务也没法用。</p>
+<p>1.2 ROCKETMQ_HOME的地址、利用nohup启动broker是指定启动的配置文件都要写对</p>
+<h4 id="2、将rocketmq服务添加为开机启动服务"><a href="#2、将rocketmq服务添加为开机启动服务" class="headerlink" title="2、将rocketmq服务添加为开机启动服务"></a>2、将rocketmq服务添加为开机启动服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /etc/init.d/rocketmq</span><br><span class="line"></span><br><span class="line">chkconfig --add rocketmq</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>再运行chkconfig –list查看是否出现以下内容，出现则代表加入成功了</p>
+</blockquote>
+<p>注：若出现下图0-6都是关，那代表还不能开机自启，再运行 <code>chkconfig rocketmq on</code>，然后再运行chkconfig –list以后2-5都是开以后才行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@host-172-20-42-212 rocketmq-5.1.2]# chkconfig --list</span><br><span class="line"></span><br><span class="line">Note: This output shows SysV services only and does not include native</span><br><span class="line">      systemd services. SysV configuration data might be overridden by native</span><br><span class="line">      systemd configuration.</span><br><span class="line"></span><br><span class="line">      If you want to list systemd services use <span class="string">&#x27;systemctl list-unit-files&#x27;</span>.</span><br><span class="line">      To see services enabled on particular target use</span><br><span class="line">      <span class="string">&#x27;systemctl list-dependencies [target]&#x27;</span>.</span><br><span class="line"></span><br><span class="line">rocketmq       	0:off	1:off	2:off	3:off	4:off	5:off	6:off</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、通过service命令来管理rocketmq"><a href="#3、通过service命令来管理rocketmq" class="headerlink" title="3、通过service命令来管理rocketmq"></a>3、通过service命令来管理rocketmq</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">service rocketmq start</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service rocketmq stop</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service rocketmq restart</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-- 启动namesrv</span><br><span class="line"><span class="built_in">nohup</span> sh /home/sys_wh/soft/rocketmq-5.1.4/bin/mqnamesrv &gt; /home/sys_wh/soft/rocketmq-5.1.4/logs/mqnamesrv.log 2&gt;&amp;1 &amp;</span><br><span class="line">-- 验证是否成功</span><br><span class="line"><span class="built_in">tail</span> -f /home/sys_wh/soft/rocketmq-5.1.4/logs/mqnamesrv.log</span><br><span class="line">-- 启动broker</span><br><span class="line"><span class="built_in">nohup</span> sh /home/sys_wh/soft/rocketmq-5.1.4/bin/mqbroker -c /home/sys_wh/soft/rocketmq-5.1.4/conf/broker.conf &gt;/home/sys_wh/soft/rocketmq-5.1.4/logs/broker.log 2&gt;&amp;1 &amp;</span><br><span class="line">-- 验证是否成功</span><br><span class="line"><span class="built_in">tail</span> -f /home/sys_wh/soft/rocketmq-5.1.4/logs/broker.log</span><br><span class="line"></span><br><span class="line">--停止broker</span><br><span class="line">sh /home/sys_wh/soft/rocketmq-5.1.4/bin/mqshutdown broker</span><br><span class="line">--停止 namesrv</span><br><span class="line">sh /home/sys_wh/soft/rocketmq-5.1.4/bin/mqshutdown namesrv</span><br><span class="line">-- 启动管理平台</span><br><span class="line"><span class="built_in">nohup</span> java -jar rocketmq-dashboard-1.0.0.jar   &gt; dashboard.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<p>4、设置密码</p>
+<p>4.1 开启acl控制</p>
+<p>在<code>conf/broker.conf</code>中开启<code>aclEnable=true</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim conf/broker.conf</span><br><span class="line"><span class="comment"># 最下面增加下面一行</span></span><br><span class="line">aclEnable=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>4.2 配置账号密码</p>
+<p>修改<code>conf/plain_acl.yml</code></p>
+<pre><code>accounts: 
+    # 管理员账号/密码
+    accessKey: catsicrocketmq
+    secretKey: Catsic1qsx@WDC
+</code></pre>
+<p>4.3 配置面板中的密码</p>
+<p>&#x9;在dashboard.jar包同级目录创建config文件夹，将项目底下的application.properties上传到config文件夹下，将注释放开，设置对应的账号密码。修改后重启</p>
+<pre><code>rocketmq.config.accessKey=catsicrocketmq
+rocketmq.config.secretKey=Catsic1qsx@WDC
+</code></pre>
+<p>4.4 当前，已经为RocketMQ设置了密码，但是，还存在问题，操作面板没有设置密码，操作面板没有设置密码，在实际应用中，也是很危险的。下面讲解面板设置密码：</p>
+<p>4.5 开启账号密码访问</p>
+<pre><code># 修改application.properties
+# 是否开启账号密码验证
+rocketmq.config.loginRequired= true
+# 账号密码配置文件为：users.properties，将users.properties上传到config目录，修改内容为
+# ,1 为管理员，不加为普通用户
+catstiMQ=catsti1qaz@WSX,1
+# 修改默认用户配置文件路径
+vim application.properties
+# 将其修改为：
+rocketmq.config.dataPath=./config
+# 重启dashboard
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/bec8364e.html" rel="prev" title="【Linux】Vim命令合集">
+                  <i class="fa fa-angle-left"></i> 【Linux】Vim命令合集
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/bf223232.html" rel="next" title="【Linux】Linux环境下运行jar包的几种方式">
+                  【Linux】Linux环境下运行jar包的几种方式 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a0f6559651e5792cd0212f61cd48d8ee"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

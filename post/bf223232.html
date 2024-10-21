@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="方式一(java -jar jar包名)123# 命令格式：java -jar jar包名[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar   分析： 执行此命令的时候，当前窗口被锁定，无法进行其它操作，直到main方法执行完毕，当前窗口才解除锁定。缺点： 锁定窗口。当然，我可以通过CTRL + C打断程序运行，或直接关闭">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux】Linux环境下运行jar包的几种方式">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/bf223232.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="方式一(java -jar jar包名)123# 命令格式：java -jar jar包名[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar   分析： 执行此命令的时候，当前窗口被锁定，无法进行其它操作，直到main方法执行完毕，当前窗口才解除锁定。缺点： 锁定窗口。当然，我可以通过CTRL + C打断程序运行，或直接关闭">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.849Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/bf223232.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/bf223232.html","path":"post/bf223232.html","title":"【Linux】Linux环境下运行jar包的几种方式"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Linux】Linux环境下运行jar包的几种方式 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80-java-jar-jar%E5%8C%85%E5%90%8D"><span class="nav-number">1.</span> <span class="nav-text">方式一(java -jar jar包名)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%BA%8C-java-jar-jar%E5%8C%85%E5%90%8D"><span class="nav-number">2.</span> <span class="nav-text">方式二(java -jar jar包名 &amp;)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%89"><span class="nav-number">3.</span> <span class="nav-text">方式三</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F%EF%BC%9Anohup-java-jar-jar%E5%8C%85%E5%90%8D"><span class="nav-number">3.1.</span> <span class="nav-text">命令格式：nohup java -jar jar包名 &amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F-nohup-java-jar-jar%E5%8C%85%E5%90%8D-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">3.2.</span> <span class="nav-text">命令格式:nohup java -jar jar包名 &gt; 文件名 &amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F-nohup-java-jar-jar%E5%8C%85%E5%90%8D-output-2-1"><span class="nav-number">3.3.</span> <span class="nav-text">命令格式: nohup java -jar jar包名 &gt;output 2&gt;&amp;1 &amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F%EF%BC%9Anohup-java-jar-spring-boot-demo-jar-dev-null-2-1"><span class="nav-number">3.4.</span> <span class="nav-text">命令格式：nohup java -jar spring-boot-demo.jar &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E5%9B%9B%EF%BC%9A%E8%84%9A%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">方式四：脚本方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%95%E4%B8%80%EF%BC%9A-nohup-%E5%92%8C"><span class="nav-number">5.</span> <span class="nav-text">附录一： nohup 和 &amp;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%95%E4%BA%8C%EF%BC%9A-dev-null-2-1"><span class="nav-number">6.</span> <span class="nav-text">附录二：&gt; &#x2F;dev&#x2F;null 2&gt;&amp;1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E5%90%AF%E5%8A%A8%E3%80%81%E5%81%9C%E6%AD%A2jar%E5%8C%85"><span class="nav-number">7.</span> <span class="nav-text">批量启动、停止jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x20-%E6%9C%8D%E5%8A%A1%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF"><span class="nav-number">8.</span> <span class="nav-text"> 服务开机自启</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x20-%E6%9C%8D%E5%8A%A1%E6%96%B9%E5%BC%8F%E5%90%AF%E5%8A%A8"><span class="nav-number">9.</span> <span class="nav-text"> 服务方式启动</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/bf223232.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Linux】Linux环境下运行jar包的几种方式 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Linux】Linux环境下运行jar包的几种方式
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-21 08:31:13" itemprop="dateCreated datePublished" datetime="2024-05-21T08:31:13+08:00">2024-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="方式一-java-jar-jar包名"><a href="#方式一-java-jar-jar包名" class="headerlink" title="方式一(java -jar jar包名)"></a>方式一(java -jar jar包名)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令格式：java -jar jar包名</span></span><br><span class="line"></span><br><span class="line">[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>分析：</strong> 执行此命令的时候，当前窗口被锁定，无法进行其它操作，直到main方法执行完毕，当前窗口才解除锁定。<br><strong>缺点：</strong> 锁定窗口。当然，我可以通过CTRL + C打断程序运行，或直接关闭窗口，程序退出，不过在实际的工作环境中，是绝对不会允许这种粗暴的方式终止的运行，毕竟我们的项目都是给用户提供服务的，程序要是退出了，公司还营不营业了。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="方式二-java-jar-jar包名"><a href="#方式二-java-jar-jar包名" class="headerlink" title="方式二(java -jar jar包名 &amp;)"></a>方式二(java -jar jar包名 &amp;)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">命令格式：java -jar jar包名 &amp;</span><br><span class="line"></span><br><span class="line">[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar &amp;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>分析：</strong> &amp;代表在后台运行。优点是当前ssh窗口不被锁定，但是当窗口关闭时，程序终止运行。<br>那么我们就会想，如何继续改进，让窗口关闭时，程序仍然运行呢？</p>
+</blockquote>
+<h2 id="方式三"><a href="#方式三" class="headerlink" title="方式三"></a>方式三</h2><blockquote>
+<p>方式三主要是引入nohup命令，具体使用主要包括下面三种方式。</p>
+</blockquote>
+<h3 id="命令格式：nohup-java-jar-jar包名"><a href="#命令格式：nohup-java-jar-jar包名" class="headerlink" title="命令格式：nohup java -jar jar包名 &amp;"></a>命令格式：nohup java -jar jar包名 &amp;</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令格式：<span class="built_in">nohup</span> java -jar jar包名 &amp;</span></span><br><span class="line">[root@localhost test_jar]# nohup java -jar test_jar-1.0-SNAPSHOT.jar &amp;     </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>nohup 意思是不挂断运行命令 ，当账户退出或终端关闭时，程序仍然运行。<br>当用 nohup 命令运行jar包时，缺省情况下该应用的所有输出被重定向到nohup.out的文件中，除非另外指定了输出文件。</p>
+</blockquote>
+<h3 id="命令格式-nohup-java-jar-jar包名-文件名"><a href="#命令格式-nohup-java-jar-jar包名-文件名" class="headerlink" title="命令格式:nohup java -jar jar包名 &gt; 文件名 &amp;"></a>命令格式:nohup java -jar jar包名 &gt; 文件名 &amp;</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">nohup</span> java -jar jar包名 &gt; 文件名 &amp;</span></span><br><span class="line">[root@localhost test_jar]# nohup java -jar test_jar-1.0-SNAPSHOT.jar &gt; test.txt &amp;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>command &gt;test.file 是将commandd test.flie文件，即输出内容不打印到屏幕上，而是输出到 test.file文件中</p>
+</blockquote>
+<h3 id="命令格式-nohup-java-jar-jar包名-output-2-1"><a href="#命令格式-nohup-java-jar-jar包名-output-2-1" class="headerlink" title="命令格式: nohup java -jar jar包名 &gt;output 2&gt;&amp;1 &amp;"></a>命令格式: nohup java -jar jar包名 &gt;output 2&gt;&amp;1 &amp;</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">nohup</span> java -jar jar包名 &gt;output 2&gt;&amp;1 &amp;</span></span><br><span class="line"></span><br><span class="line">[root@localhost test_jar]# nohup java -jar test_jar-1.0-SNAPSHOT.jar &gt;output 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<h3 id="命令格式：nohup-java-jar-spring-boot-demo-jar-dev-null-2-1"><a href="#命令格式：nohup-java-jar-spring-boot-demo-jar-dev-null-2-1" class="headerlink" title="命令格式：nohup java -jar spring-boot-demo.jar &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;"></a>命令格式：nohup java -jar spring-boot-demo.jar &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;</h3><blockquote>
+<p>不输出日志</p>
+</blockquote>
+<h2 id="方式四：脚本方式"><a href="#方式四：脚本方式" class="headerlink" title="方式四：脚本方式"></a>方式四：脚本方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#这里可替换为你自己的执行程序，其他代码无需更改</span></span><br><span class="line">APP_NAME=test_jar-1.0-SNAPSHOT.jar</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">#使用说明，用来提示输入参数</span></span><br><span class="line"><span class="function"><span class="title">usage</span></span>() &#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Usage: sh 脚本名.sh [start|stop|restart|status]&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#检查程序是否在运行</span></span><br><span class="line"><span class="function"><span class="title">is_exist</span></span>()&#123;</span><br><span class="line">  pid=`ps -ef|grep <span class="variable">$APP_NAME</span>|grep -v grep|awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> `</span><br><span class="line">  <span class="comment">#如果不存在返回1，存在返回0     </span></span><br><span class="line">  <span class="keyword">if</span> [ -z <span class="string">&quot;<span class="variable">$&#123;pid&#125;</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">return</span> 1</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">return</span> 0</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#启动方法</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  <span class="keyword">if</span> [ $? -eq <span class="string">&quot;0&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;APP_NAME&#125;</span> is already running. pid=<span class="variable">$&#123;pid&#125;</span> .&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">nohup</span> java -Xmx512m -Xms512m -jar <span class="variable">$APP_NAME</span>  &gt; ./logs/`<span class="built_in">log</span>+%Y-%m-%d`.txt 2&gt;&amp;1 &amp;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;APP_NAME&#125;</span> start success&quot;</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#停止方法</span></span><br><span class="line"><span class="function"><span class="title">stop</span></span>()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  <span class="keyword">if</span> [ $? -eq <span class="string">&quot;0&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">kill</span> -9 <span class="variable">$pid</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;APP_NAME&#125;</span> is not running&quot;</span></span><br><span class="line">  <span class="keyword">fi</span>  </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#输出运行状态</span></span><br><span class="line"><span class="function"><span class="title">status</span></span>()&#123;</span><br><span class="line">  is_exist</span><br><span class="line">  <span class="keyword">if</span> [ $? -eq <span class="string">&quot;0&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;APP_NAME&#125;</span> is running. Pid is <span class="variable">$&#123;pid&#125;</span>&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;APP_NAME&#125;</span> is NOT running.&quot;</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line"><span class="function"><span class="title">restart</span></span>()&#123;</span><br><span class="line">  stop</span><br><span class="line">  start</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">#根据输入参数，选择执行对应方法，不输入则执行使用说明</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">  <span class="string">&quot;start&quot;</span>)</span><br><span class="line">    start</span><br><span class="line">    ;;</span><br><span class="line">  <span class="string">&quot;stop&quot;</span>)</span><br><span class="line">    stop</span><br><span class="line">    ;;</span><br><span class="line">  <span class="string">&quot;status&quot;</span>)</span><br><span class="line">    status</span><br><span class="line">    ;;</span><br><span class="line">  <span class="string">&quot;restart&quot;</span>)</span><br><span class="line">    restart</span><br><span class="line">    ;;</span><br><span class="line">  *)</span><br><span class="line">    usage</span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h2 id="附录一：-nohup-和"><a href="#附录一：-nohup-和" class="headerlink" title="附录一： nohup 和 &amp;"></a>附录一： nohup 和 &amp;</h2><blockquote>
+<p>使用 <code>&amp;</code> 后台运行程序:</p>
+<ul>
+<li>结果会输出到终端</li>
+<li>使用Ctrl + C，程序免疫</li>
+<li>关闭session，程序关闭</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>使用<code>nohup</code>运行程序</p>
+<ul>
+<li>结果默认会输出到nohup.out</li>
+<li>使用Ctrl + C，程序关闭</li>
+<li>关闭session，程序免疫</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>平日线上经常使用nohup和&amp;配合来启动程序</p>
+</blockquote>
+<h2 id="附录二：-dev-null-2-1"><a href="#附录二：-dev-null-2-1" class="headerlink" title="附录二：&gt; /dev/null 2&gt;&amp;1"></a>附录二：<code>&gt;</code> <code>/dev/null</code> <code>2&gt;&amp;1</code></h2><blockquote>
+<ul>
+<li><code>&gt;</code> 标准重定向符，允许我们创建一个 0KB的空文件。它通常用于重定向一个命令的输出到一个新文件中。在没有命令的情况下使用重定向符号时，它会创建一个文件。</li>
+<li><code>/dev/null</code> 可以看作黑洞，等价于一个只写文件。所有写入它的内容都会永远丢失，尝试从它那儿读取内容则什么也读不到。也就是将所有产生的日志将被丢弃</li>
+<li><code>2&gt;&amp;1</code>符号&gt;&amp;是一个整体代表将标准错误2重定向到标准输出1,如果是2&gt;1的话，代表将标准错误输出到文件1，而不是重定向到标准输出流</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>先了解下1和2在Linux中代表什么<br>当Linux执行一个程序时，会自动打开三个流</p>
+<ul>
+<li>0：标准输入流（默认是键盘）</li>
+<li>1：标准输出流（默认是屏幕）</li>
+<li>2：标准错误流（默认是屏幕）</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>代码</th>
+<th>操作符</th>
+<th>java中表示</th>
+<th>Linux中文件描述符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标准输入(stdin)</td>
+<td>0</td>
+<td>&lt; 或 &lt;&lt;</td>
+<td>System.in</td>
+<td>&#x2F;dev&#x2F;stdin -&gt; &#x2F;proc&#x2F;self&#x2F;fd&#x2F;0 -&gt; &#x2F;dev&#x2F;pts&#x2F;0</td>
+</tr>
+<tr>
+<td>标准输出(stdout)</td>
+<td>1</td>
+<td>&gt;, &gt;&gt;, 1&gt; 或 1&gt;&gt;</td>
+<td>System.out</td>
+<td>&#x2F;dev&#x2F;stdout -&gt; &#x2F;proc&#x2F;self&#x2F;fd&#x2F;1 -&gt; &#x2F;dev&#x2F;pts&#x2F;0</td>
+</tr>
+<tr>
+<td>标准错误输出(stderr)</td>
+<td>2</td>
+<td>2&gt; 或 2&gt;&gt;</td>
+<td>System.err</td>
+<td>&#x2F;dev&#x2F;stderr -&gt; &#x2F;proc&#x2F;self&#x2F;fd&#x2F;2 -&gt; &#x2F;dev&#x2F;pts&#x2F;0</td>
+</tr>
+</tbody></table>
+<h2 id="批量启动、停止jar包"><a href="#批量启动、停止jar包" class="headerlink" title="批量启动、停止jar包"></a>批量启动、停止jar包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># 端口号</span></span><br><span class="line">PORTS=(9500 9600 9801 9802 9803 9804 9805 9901 9902)</span><br><span class="line"><span class="comment"># 系统模块</span></span><br><span class="line">MODULES=(gateway auth system job gen file risk supervise ssologin)</span><br><span class="line"><span class="comment"># 系统模块名称</span></span><br><span class="line">MODULE_NAMES=(网关模块 鉴权模块 系统管理模块 定时任务模块 代码生成模块 文件管理模块 风险预警模块)</span><br><span class="line"><span class="comment"># jar包数组</span></span><br><span class="line">JARS=(catsticloud-gateway.jar catsticloud-auth.jar catsticloud-modules-system.jar catsticloud-modules-job.jar catsticloud-modules-gen.jar catsticloud-modules-file.jar catsticloud-modules-risk.jar catsticloud-supervise.jar catsticloud-modules-ssologin.jar)</span><br><span class="line"><span class="comment"># jar包路径</span></span><br><span class="line">JAR_PATH=<span class="string">&#x27;/home/yunwei/gonggonganquan/jar&#x27;</span></span><br><span class="line"><span class="comment"># 日志路径</span></span><br><span class="line">LOG_PATH=<span class="string">&#x27;/home/yunwei/gonggonganquan/jar/logs&#x27;</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> MODULE=</span><br><span class="line">  <span class="built_in">local</span> MODULE_NAME=</span><br><span class="line">  <span class="built_in">local</span> JAR_NAME=</span><br><span class="line">  <span class="built_in">local</span> <span class="built_in">command</span>=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">  <span class="built_in">local</span> commandOk=0</span><br><span class="line">  <span class="built_in">local</span> count=0</span><br><span class="line">  <span class="built_in">local</span> okCount=0</span><br><span class="line">  <span class="built_in">local</span> port=0</span><br><span class="line">  <span class="keyword">for</span>((i=<span class="number">0</span>;i&lt;<span class="variable">$&#123;#MODULES[@]&#125;</span>;i++))</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    MODULE=<span class="variable">$&#123;MODULES[$i]&#125;</span></span><br><span class="line">    MODULE_NAME=<span class="variable">$&#123;MODULE_NAMES[$i]&#125;</span></span><br><span class="line">    JAR_NAME=<span class="variable">$&#123;JARS[$i]&#125;</span></span><br><span class="line">    PORT=<span class="variable">$&#123;PORTS[$i]&#125;</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> == <span class="string">&quot;all&quot;</span> ] || [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> == <span class="string">&quot;<span class="variable">$MODULE</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">      commandOk=1</span><br><span class="line">      count=0</span><br><span class="line">      PID=`ps -ef |grep $(<span class="built_in">echo</span> <span class="variable">$JAR_NAME</span> | awk -F/ <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>) | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">      <span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$PID</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:已经运行,PID=<span class="variable">$PID</span>&quot;</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">exec</span> <span class="built_in">nohup</span> java -jar <span class="variable">$JAR_PATH</span>/<span class="variable">$JAR_NAME</span> &gt; /dev/null  2&gt;&amp;1 &amp;</span><br><span class="line">        PID=`netstat -apn | grep <span class="variable">$PORT</span> | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | <span class="built_in">cut</span> -d/ -f 1`</span><br><span class="line">        <span class="keyword">while</span> [ -z <span class="string">&quot;<span class="variable">$PID</span>&quot;</span> ]</span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">          <span class="keyword">if</span> ((<span class="variable">$count</span> == <span class="number">30</span>));<span class="keyword">then</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:<span class="subst">$(expr $count \* 10)</span>秒内未启动,请检查!&quot;</span></span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">          <span class="keyword">fi</span></span><br><span class="line">          count=$((<span class="variable">$count</span>+<span class="number">1</span>))</span><br><span class="line">          <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE_NAME</span>启动中..................&quot;</span></span><br><span class="line">          <span class="built_in">sleep</span> 10s</span><br><span class="line">          PID=`netstat -apn | grep <span class="variable">$PORT</span> | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | <span class="built_in">cut</span> -d/ -f 1`</span><br><span class="line">        <span class="keyword">done</span></span><br><span class="line">        okCount=$((<span class="variable">$okCount</span>+<span class="number">1</span>))</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:已经启动成功,PID=<span class="variable">$PID</span>&quot;</span></span><br><span class="line">      <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="variable">$commandOk</span> == <span class="number">0</span>));<span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;第二个参数请输入:all|gateway|auth|system|job|gen|file|risk|supervise|ssologin&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;............本次共启动:<span class="variable">$okCount</span>个服务...........&quot;</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> MODULE=</span><br><span class="line">  <span class="built_in">local</span> MODULE_NAME=</span><br><span class="line">  <span class="built_in">local</span> JAR_NAME=</span><br><span class="line">  <span class="built_in">local</span> <span class="built_in">command</span>=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">  <span class="built_in">local</span> commandOk=0</span><br><span class="line">  <span class="built_in">local</span> okCount=0</span><br><span class="line">  <span class="keyword">for</span>((i=<span class="number">0</span>;i&lt;<span class="variable">$&#123;#MODULES[@]&#125;</span>;i++))</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    MODULE=<span class="variable">$&#123;MODULES[$i]&#125;</span></span><br><span class="line">    MODULE_NAME=<span class="variable">$&#123;MODULE_NAMES[$i]&#125;</span></span><br><span class="line">    JAR_NAME=<span class="variable">$&#123;JARS[$i]&#125;</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> = <span class="string">&quot;all&quot;</span> ] || [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> = <span class="string">&quot;<span class="variable">$MODULE</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">      commandOk=1</span><br><span class="line">      PID=`ps -ef |grep $(<span class="built_in">echo</span> <span class="variable">$JAR_NAME</span> | awk -F/ <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>) | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">      <span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$PID</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:准备结束,PID=<span class="variable">$PID</span>&quot;</span></span><br><span class="line">        <span class="built_in">kill</span> -9 <span class="variable">$PID</span></span><br><span class="line">        PID=`ps -ef |grep $(<span class="built_in">echo</span> <span class="variable">$JAR_NAME</span> | awk -F/ <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>) | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">        <span class="keyword">while</span> [ -n <span class="string">&quot;<span class="variable">$PID</span>&quot;</span> ]</span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">          <span class="built_in">sleep</span> 3s</span><br><span class="line">          PID=`ps -ef |grep $(<span class="built_in">echo</span> <span class="variable">$JAR_NAME</span> | awk -F/ <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>) | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">        <span class="keyword">done</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:成功结束&quot;</span></span><br><span class="line">        okCount=$((<span class="variable">$okCount</span>+<span class="number">1</span>))</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:未运行&quot;</span></span><br><span class="line">      <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line">  <span class="keyword">if</span> ((<span class="variable">$commandOk</span> == <span class="number">0</span>));<span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;第二个参数请输入:all|gateway|auth|system|job|gen|file|risk|supervise|ssologin&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;............本次共停止:<span class="variable">$okCount</span>个服务............&quot;</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">status</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> MODULE=</span><br><span class="line">  <span class="built_in">local</span> MODULE_NAME=</span><br><span class="line">  <span class="built_in">local</span> JAR_NAME=</span><br><span class="line">  <span class="built_in">local</span> <span class="built_in">command</span>=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">  <span class="built_in">local</span> commandOk=0</span><br><span class="line">  <span class="built_in">local</span> count=0</span><br><span class="line">  <span class="built_in">local</span> okCount=0</span><br><span class="line">  <span class="built_in">local</span> port=0</span><br><span class="line">  <span class="keyword">for</span>((i=<span class="number">0</span>;i&lt;<span class="variable">$&#123;#MODULES[@]&#125;</span>;i++))</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    MODULE=<span class="variable">$&#123;MODULES[$i]&#125;</span></span><br><span class="line">    MODULE_NAME=<span class="variable">$&#123;MODULE_NAMES[$i]&#125;</span></span><br><span class="line">    JAR_NAME=<span class="variable">$&#123;JARS[$i]&#125;</span></span><br><span class="line">    PORT=<span class="variable">$&#123;PORTS[$i]&#125;</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> == <span class="string">&quot;all&quot;</span> ] || [ <span class="string">&quot;<span class="variable">$command</span>&quot;</span> == <span class="string">&quot;<span class="variable">$MODULE</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">      commandOk=1</span><br><span class="line">      count=$((<span class="variable">$i</span>+<span class="number">1</span>))</span><br><span class="line">      PID=`ps -ef |grep $(<span class="built_in">echo</span> <span class="variable">$JAR_NAME</span> | awk -F/ <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>) | grep -v grep | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line">      <span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$PID</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:已经运行,PID=<span class="variable">$PID</span>&quot;</span></span><br><span class="line">        okCount=$((<span class="variable">$okCount</span>+<span class="number">1</span>))</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$MODULE</span>---<span class="variable">$MODULE_NAME</span>:未运行&quot;</span></span><br><span class="line">      <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="variable">$commandOk</span> == <span class="number">0</span>));<span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;第二个参数请输入:all|gateway|auth|system|job|gen|file|risk|supervise|ssologin&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;............共:<span class="variable">$count</span> 个服务,运行中<span class="variable">$okCount</span>个服务...........&quot;</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">  start)</span><br><span class="line">    start <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">  ;;</span><br><span class="line">  stop)</span><br><span class="line">    stop <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">  ;;</span><br><span class="line">  status)</span><br><span class="line">    status <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">  ;;</span><br><span class="line">  restart)</span><br><span class="line">    stop <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">    <span class="built_in">sleep</span> 3s</span><br><span class="line">    start <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">  ;;</span><br><span class="line">  *)</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;第一个参数请输入:start|stop|restart|status&quot;</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line">  ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 启动所有</span></span><br><span class="line">./start.sh start all</span><br><span class="line"><span class="comment">## 停止所有</span></span><br><span class="line">./start.sh stop all</span><br><span class="line"><span class="comment">## 重启所有</span></span><br><span class="line">./start.sh restart all</span><br><span class="line"><span class="comment">## 启动某一个 这里的gateway与sh中的module中定义的一样即可</span></span><br><span class="line">./start.sh restart gateway</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>问题1：<code>-bash: ./start.sh: Permission denied\</code><br><strong>原因:</strong> 无权限<br><strong>解决方法：</strong><br><code>chmod +x ./文件名.sh</code></p>
+</blockquote>
+<blockquote>
+<p>问题2：<code>bad interpreter\:No such file or directory</code>的错误</p>
+</blockquote>
+<blockquote>
+<p><strong>原因：</strong><br>.sh脚本在windows系统下编写的，所以可能有不可见字符，从上图错误提示来看，很有可能脚本文件是DOS格式的，即每一行的行尾以\r\n来标识, 其ASCII码分别是0x0D, 0x0A。<br><strong>解决方法：</strong></p>
+<ul>
+<li>通过<code>vim filename</code> 或者<code>vi filename</code> 进入编辑，即我这是<code>vim startup\_heartbeat.sh</code></li>
+<li>然后通过<code>shift+：</code>进入命令模式。接着通过命令<code>set ff</code> 或者 <code>set fileformat</code> 查看文件格式，即我这如下图：从中可以看到我这文件格式是dos</li>
+<li>修改文件格式dos为unix。通过命令<code>set ff=unix</code> 或 <code>set fileformat=unix</code>修改，然后再执行<code>set ff</code> 或者 <code>set fileformat</code>，查看是否修改成功。即如下图所示</li>
+<li>启动命令，发现正常启动，至此完毕。</li>
+</ul>
+</blockquote>
+<h2 id="x20-服务开机自启"><a href="#x20-服务开机自启" class="headerlink" title="&#x20;服务开机自启"></a>&#x20;服务开机自启</h2><p>一、新建jar包启动sh文件<br>新建<code>startup.sh</code>脚本文件，启动项目jar包</p>
+<p><code>nohup java -jar test.jar &gt;/dev/null 2&gt;&amp;1 &amp;</code></p>
+<p>二、设置自动启动命令<br>1.进入rc.d目录<br>执行<code>cd /etc/rc.d</code> 命令，进入rc.d目录</p>
+<p>如图所示（示例）：</p>
+<p>2.修改<code>rc.local</code>文件内容<br>执行命令 <code>vi rc.local</code>，然后按下键盘上的【i】键进入修改模式</p>
+<p>在末尾加上如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> /home/test`</span><br><span class="line"><span class="comment">#执行sh文件</span></span><br><span class="line">sh /home/test/startup.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后先按下【esc】键，再按下【:】键，在光标闪烁处输入<code>:wq</code>。按回车，完成修改后，执行相应命令，设置执行权限，重启服务器，验证即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /etc/rc.d/rc.local</span><br><span class="line"><span class="built_in">chmod</span> +x /home/test/startup.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<p>有时服务器重启服务很多时，可能需要延迟启动，可以在之前的命令前加上sleep 60命令延迟启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sleep</span> 60</span><br><span class="line"><span class="built_in">cd</span> /home/test</span><br><span class="line">sh /home/test/startup.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="x20-服务方式启动"><a href="#x20-服务方式启动" class="headerlink" title="&#x20;服务方式启动"></a>&#x20;服务方式启动</h2><blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">可以添加一个 systemd的服务  基本上可以如图进行设置</span><br><span class="line">一般位于 /etc/systemd/system/ 下面</span><br><span class="line">比如可以建立一个文件为 app.service</span><br><span class="line">可以使用 systemctl  <span class="built_in">enable</span> app 设置开机自动启动</span><br><span class="line">然后使用systemctl start app 来启动服务</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description = Redis Server</span><br><span class="line">After = network.target</span><br><span class="line">[Service]</span><br><span class="line">ExecStart=/app/startup.sh</span><br><span class="line">ExecStop=/usr/bin/kill -15 <span class="variable">$MAINPID</span></span><br><span class="line">Restart = always</span><br><span class="line">[Install]</span><br><span class="line">WantedBy = multi-user.target</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/3cdc8223.html" rel="prev" title="【Linux】RocketMQ 部署">
+                  <i class="fa fa-angle-left"></i> 【Linux】RocketMQ 部署
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/6632db9d.html" rel="next" title="【Linux】Doris 安装部署">
+                  【Linux】Doris 安装部署 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"ad1a3c5ff1e1d5984b1034dff9f0a5f2"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

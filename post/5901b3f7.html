@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="准备 Github账号注册&#x2F;创建一个Public仓库   picgo下载链接   Typora下载安装   Vscode下载安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github+picGo+Typora搭建图床">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/5901b3f7.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="准备 Github账号注册&#x2F;创建一个Public仓库   picgo下载链接   Typora下载安装   Vscode下载安装">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221413632.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409381.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221411737.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409748.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221413435.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409998.png">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221412995.png">
+<meta property="article:published_time" content="2024-05-22T12:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.840Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221413632.png">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/5901b3f7.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/5901b3f7.html","path":"post/5901b3f7.html","title":"Github+picGo+Typora搭建图床"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Github+picGo+Typora搭建图床 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90-Github-Tokens"><span class="nav-number">2.</span> <span class="nav-text">生成 Github Tokens</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGo%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">PicGo设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">Typora设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vscode%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">Vscode设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.</span> <span class="nav-text">开始写博客</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/5901b3f7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Github+picGo+Typora搭建图床 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Github+picGo+Typora搭建图床
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-22 20:31:13" itemprop="dateCreated datePublished" datetime="2024-05-22T20:31:13+08:00">2024-05-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>822</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><blockquote>
+<p>Github账号注册&#x2F;创建一个Public仓库</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/Molunerfinn/PicGo/releases">picgo下载链接</a></p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://typora.ymzhxing.cn/index.html?bd_vid=11765516185414740389">Typora下载安装</a></p>
+</blockquote>
+<blockquote>
+<p>Vscode下载安装</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="生成-Github-Tokens"><a href="#生成-Github-Tokens" class="headerlink" title="生成 Github Tokens"></a>生成 Github Tokens</h2><ul>
+<li><p>登录<a href="https://github.com/">Github</a></p>
+</li>
+<li><p>移动到右上角的头像，选择<code>Settings</code></p>
+</li>
+<li><p>进入<code>Settings</code>后，向下滚动找到<code>Developer Settings</code><a href="https://github.com/settings/tokens">tokens</a></p>
+</li>
+<li><p>网页跳转后，选左边的<code>Personal access tokens</code>，点击<code>Generate a personal access token</code></p>
+</li>
+<li><p><code>Note</code>里填写为什么创建这个Token，可随意填写，下方选项只勾选<code>repo</code>即可</p>
+</li>
+<li><p>滑到最下方点击 <code>Generate token</code>，Token信息只会出现一次，生成后记得复制保存。</p>
+<h2 id="PicGo设置"><a href="#PicGo设置" class="headerlink" title="PicGo设置"></a>PicGo设置</h2><ul>
+<li><p><a href="https://github.com/Molunerfinn/PicGo/releases">picgo下载链接</a></p>
+</li>
+<li><p>PicGo-Setup-2.4.0-beta.6.exe 选这个版本的</p>
+</li>
+<li><p>安装完成打开运行，左侧选择<code>图床设置</code>，选择<code>GitHub图床</code></p>
+</li>
+</ul>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221413632.png" alt="image-20240522141343592"></p>
+<ul>
+<li>参数说明<ul>
+<li>图床配置名 &gt;&gt; <code>Github创建的仓库名</code></li>
+<li>设定仓库名 &gt;&gt; <code>Github用户名</code>&#x2F;<code>Github创建的仓库名</code></li>
+<li>设定分支名 &gt;&gt; main</li>
+<li>设定Token &gt;&gt; 前面生成的<code>Token</code>（如果时间过期了就重新生成一个，嫌麻烦就直接生成一个永久的）</li>
+<li>设定储存路径 &gt;&gt; 会存在你Github仓库<code>main</code>分支下，建议设置成日期格式方便后期查找删除</li>
+<li>设定自定义域名 &gt;&gt; 设置为<code>https:cdn.jsd.cdn.zzko.cn/gh/Github用户名/仓库名/@main</code>（会使用VPN工具的话可以不使用cdn加速，空白即可）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//jsd.cdn.zzko.cn/gh/wangbin-blog/pic-resources@main</span></span><br><span class="line">https:<span class="comment">//raw.gitmirror.com/wangbin-blog/pic-resources/main</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sanjiudemiao为Github名，Blogimages是仓库名</li>
+<li>设置完成，点击完确定。 一定要 *<strong>设为默认图床*</strong></li>
+<li>打开 <code>PicGO设置</code>下的<code>时间戳重命名</code></li>
+</ul>
+<h2 id="Typora设置"><a href="#Typora设置" class="headerlink" title="Typora设置"></a>Typora设置</h2><ul>
+<li><p>手动激活</p>
+<p>Typora 手动激活，不用修改时间，不用补丁</p>
+<p>下面是操作步骤：</p>
+<p>第一步： 下载最新版本的Typora安装</p>
+<p>第二部： 安装完后，进入typora</p>
+<p>的安装目录下的 \resources\page-dist\static\js 目录，找到 LicenseIndex开头的文件</p>
+<p>第三部：用文本编辑器打开该文件，搜索hasActivated&#x3D;”true”&#x3D;&#x3D;e.hasActivated并将其替换为<br>hasActivated&#x3D;”true”&#x3D;&#x3D;”true”</p>
+<p>（修改前，可将该文件备份一下，万一操作失误，可以进行恢复）</p>
+</li>
+<li><p>打开Typora，点击左上角菜单栏的【文件】，点击弹出框里下方的【偏好设置】</p>
+</li>
+<li><p>打开页面，左侧选择【图象】，图像里的设置按下设置：</p>
+</li>
+</ul>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409381.png" alt="image-20240421212929685"></p>
+<ul>
+<li><p>设置完毕之后 点击验证图片上传选项 如果显示上传失败</p>
+<blockquote>
+<p>检查PicGO是否设置为<code>默认图床</code></p>
+</blockquote>
+</li>
+<li><p>将图片从Picgo上传，粘贴到Typora上</p>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221411737.png" alt="image-20240522141110701"></p>
+</li>
+<li><p>截图到粘贴到Typora上，然后点击上传图片</p>
+</li>
+</ul>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409748.png" alt="image-20240421213109034"></p>
+<h2 id="Vscode设置"><a href="#Vscode设置" class="headerlink" title="Vscode设置"></a>Vscode设置</h2><ul>
+<li><p>打开Vscode，点击左侧的<code>扩展</code>，搜索<code>cnblogs</code>，点击安装即可</p>
+<blockquote>
+<p>或者打开<a target="_blank" rel="noopener" href="https://i.cnblogs.com/preference">博客园设置</a><br>选择Vscode插件<br>点击·install· &gt;&gt; 点击·打开Vscode· &gt;&gt; 安装拓展即可</p>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221413435.png" alt="image-20240421213109033"></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="开始写博客"><a href="#开始写博客" class="headerlink" title="开始写博客"></a>开始写博客</h2><ul>
+<li>打开Typora完成博客的编写。</li>
+<li>打开Vscode，打开你写好的博客文件</li>
+<li>点击鼠标右键，选择上传到博客园，选择新建博文</li>
+</ul>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221409998.png" alt="ootd"></p>
+<ul>
+<li>右侧完成博文设置，点击确定，会显示博文已创建（勾选发布即可上传到博客主页上，不勾选则在草稿箱里）</li>
+</ul>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221412995.png" alt="ootd1"></p>
+<ul>
+<li>再次点击鼠标右键，选择上传到博客园完成上传</li>
+<li>后续修改直接在Typora上修改，然后打开Vscode，鼠标右键，再次点击上传到博客园即可</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/e4550ecb.html" rel="prev" title="Hexo Shoka 主题本地搜索">
+                  <i class="fa fa-angle-left"></i> Hexo Shoka 主题本地搜索
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/ec90412d.html" rel="next" title="【Linux】常用命令">
+                  【Linux】常用命令 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"bf78607c4890c6e92222aa0a5764f9e7"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

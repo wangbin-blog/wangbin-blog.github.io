@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="项目介绍Masuit.Tools(码数吐司库)是一个全龄段友好的C#&#x2F;.NET万能工具库，不管你是菜鸟新手还是骨灰级玩家都能轻松上手。 包含功能这个库包含一些常用的操作类，大都是静态类，加密解密，反射操作，树结构，文件探测，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="效率提升利器，一个全龄段友好的DotNET万能工具库">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/309e6522.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="项目介绍Masuit.Tools(码数吐司库)是一个全龄段友好的C#&#x2F;.NET万能工具库，不管你是菜鸟新手还是骨灰级玩家都能轻松上手。 包含功能这个库包含一些常用的操作类，大都是静态类，加密解密，反射操作，树结构，文件探测，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/09/640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1">
+<meta property="article:published_time" content="2024-09-03T04:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.838Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="DotNet">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/09/640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/309e6522.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/309e6522.html","path":"post/309e6522.html","title":"效率提升利器，一个全龄段友好的DotNET万能工具库"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>效率提升利器，一个全龄段友好的DotNET万能工具库 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">包含功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E8%AE%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">建议开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A3%80%E6%9F%A5"><span class="nav-number">4.</span> <span class="nav-text">字符串检查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E7%9B%91%E6%B5%8B"><span class="nav-number">5.</span> <span class="nav-text">硬件监测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LinqExtension"><span class="nav-number">6.</span> <span class="nav-text">LinqExtension</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%9C%B0%E5%9D%80"><span class="nav-number">7.</span> <span class="nav-text">开源地址</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/309e6522.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="效率提升利器，一个全龄段友好的DotNET万能工具库 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          效率提升利器，一个全龄段友好的DotNET万能工具库
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-09-03 12:31:13" itemprop="dateCreated datePublished" datetime="2024-09-03T12:31:13+08:00">2024-09-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/DotNet/" itemprop="url" rel="index"><span itemprop="name">DotNet</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a><strong>项目介绍</strong></h2><p>Masuit.Tools(码数吐司库)是一个全龄段友好的C#&#x2F;.NET万能工具库，不管你是菜鸟新手还是骨灰级玩家都能轻松上手。</p>
+<h2 id="包含功能"><a href="#包含功能" class="headerlink" title="包含功能"></a><strong>包含功能</strong></h2><p>这个库包含一些常用的操作类，大都是静态类，加密解密，反射操作，树结构，文件探测，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点续传，集合扩展、Excel导出等常用封装。</p>
+<blockquote>
+<p>诸多功能集一身，代码量不到2MB！</p>
+</blockquote>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/09/640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1" alt="图片"></p>
+<span id="more"></span>
+<h2 id="建议开发环境"><a href="#建议开发环境" class="headerlink" title="建议开发环境"></a><strong>建议开发环境</strong></h2><ul>
+<li>操作系统：Windows 11 23H2及以上版本.</li>
+<li>开发工具：VisualStudio2022 v17.8及以上版本.</li>
+<li>SDK：.Net Core 2.1.0及以上所有版本.</li>
+</ul>
+<h2 id="字符串检查"><a href="#字符串检查" class="headerlink" title="字符串检查"></a><strong>字符串检查</strong></h2><blockquote>
+<p>检验字符串是否是Email、手机号、URL、IP地址、身份证号等</p>
+</blockquote>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> (isMatch, match) = <span class="string">&quot;337845818@qq.com&quot;</span>.MatchEmail(); <span class="comment">// 可在appsetting.json中添加EmailDomainWhiteList和EmailDomainBlockList配置邮箱域名黑白名单，逗号分隔，如&quot;EmailDomainBlockList&quot;: &quot;^\\w&#123;1,5&#125;@qq.com,^\\w&#123;1,5&#125;@163.com,^\\w&#123;1,5&#125;@gmail.com,^\\w&#123;1,5&#125;@outlook.com&quot;,</span></span><br><span class="line"><span class="built_in">bool</span> isInetAddress = <span class="string">&quot;114.114.114.114&quot;</span>.MatchInetAddress(); <span class="comment">// 匹配IP地址</span></span><br><span class="line"><span class="built_in">bool</span> isUrl = <span class="string">&quot;http://masuit.org/20/history&quot;</span>.MatchUrl(); <span class="comment">// 匹配url</span></span><br><span class="line"><span class="built_in">bool</span> isPhoneNumber = <span class="string">&quot;15205201520&quot;</span>.MatchPhoneNumber(); <span class="comment">// 匹配手机号</span></span><br><span class="line"><span class="built_in">bool</span> isLandline = <span class="string">&quot;01088888888&quot;</span>.MatchLandline(); <span class="comment">// 匹配座机号</span></span><br><span class="line"><span class="built_in">bool</span> isIdentifyCard = <span class="string">&quot;312000199502230660&quot;</span>.MatchIdentifyCard();<span class="comment">// 校验中国大陆身份证号</span></span><br><span class="line"><span class="built_in">bool</span> isCNPatentNumber = <span class="string">&quot;200410018477.9&quot;</span>.MatchCNPatentNumber(); <span class="comment">// 校验中国专利申请号或专利号，是否带校验位，校验位前是否带“.”，都可以校验，待校验的号码前不要带CN、ZL字样的前缀</span></span><br><span class="line"><span class="built_in">bool</span> isUSCC = <span class="string">&quot;200410018477.9&quot;</span>.MatchUSCC(); <span class="comment">// 校验企业统一社会信用代码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="硬件监测"><a href="#硬件监测" class="headerlink" title="硬件监测"></a><strong>硬件监测</strong></h2><blockquote>
+<p>硬件监测(需要管理员权限，仅支持Windows，部分函数仅支持物理机模式)!</p>
+</blockquote>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> load = SystemInfo.CpuLoad;<span class="comment">// 获取CPU占用率</span></span><br><span class="line"><span class="built_in">long</span> physicalMemory = SystemInfo.PhysicalMemory;<span class="comment">// 获取物理内存总数</span></span><br><span class="line"><span class="built_in">long</span> memoryAvailable = SystemInfo.MemoryAvailable;<span class="comment">// 获取物理内存可用率</span></span><br><span class="line"><span class="built_in">double</span> freePhysicalMemory = SystemInfo.GetFreePhysicalMemory();<span class="comment">// 获取可用物理内存</span></span><br><span class="line"><span class="built_in">double</span> temperature = SystemInfo.GetCPUTemperature();<span class="comment">// 获取CPU温度</span></span><br><span class="line"><span class="built_in">int</span> cpuCount = SystemInfo.GetCpuCount();<span class="comment">// 获取CPU核心数</span></span><br><span class="line"><span class="keyword">var</span> ipAddress = SystemInfo.GetLocalIPs();<span class="comment">// 获取本机所有IP地址</span></span><br><span class="line"><span class="built_in">string</span> localUsedIp = SystemInfo.GetLocalUsedIP();<span class="comment">// 获取本机当前正在使用的IP地址</span></span><br><span class="line">IList&lt;<span class="built_in">string</span>&gt; macAddress = SystemInfo.GetMacAddress();<span class="comment">// 获取本机所有网卡mac地址</span></span><br><span class="line"><span class="built_in">string</span> osVersion = Windows.GetOsVersion();<span class="comment">// 获取操作系统版本</span></span><br><span class="line">RamInfo ramInfo = SystemInfo.GetRamInfo();<span class="comment">// 获取内存信息</span></span><br><span class="line"><span class="keyword">var</span> cpuSN=SystemInfo.GetCpuInfo()[<span class="number">0</span>].SerialNumber; <span class="comment">// CPU序列号</span></span><br><span class="line"><span class="keyword">var</span> driveSN=SystemInfo.GetDiskInfo()[<span class="number">0</span>].SerialNumber; <span class="comment">// 硬盘序列号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 快速方法</span></span><br><span class="line"><span class="keyword">var</span> cpuInfos = CpuInfo.Locals; <span class="comment">// 快速获取CPU的信息</span></span><br><span class="line"><span class="keyword">var</span> ramInfo = RamInfo.Local; <span class="comment">// 快速获取内存的信息</span></span><br><span class="line"><span class="keyword">var</span> diskInfos = DiskInfo.Locals; <span class="comment">// 快速获取硬盘的信息</span></span><br><span class="line"><span class="keyword">var</span> biosInfo = BiosInfo.Local; <span class="comment">// 快速获取主板的信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="LinqExtension"><a href="#LinqExtension" class="headerlink" title="LinqExtension"></a><strong>LinqExtension</strong></h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq.Expressions;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Masuit.Tools.Linq</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> LINQ扩展方法</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">LinqExtension</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 与连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">And</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> CombineLambdas(left, right, ExpressionType.AndAlso);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 与连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;condition&quot;&gt;</span>符合什么条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">AndIf</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, <span class="built_in">bool</span> condition, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> condition ? CombineLambdas(left, right, ExpressionType.AndAlso) : left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 与连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;condition&quot;&gt;</span>符合什么条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">AndIf</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, Func&lt;<span class="built_in">bool</span>&gt; condition, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> condition() ? CombineLambdas(left, right, ExpressionType.AndAlso) : left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 或连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">Or</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> CombineLambdas(left, right, ExpressionType.OrElse);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 或连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;condition&quot;&gt;</span>符合什么条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">OrIf</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, <span class="built_in">bool</span> condition, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> condition ? CombineLambdas(left, right, ExpressionType.OrElse) : left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 或连接</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;T&quot;&gt;</span>类型<span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;left&quot;&gt;</span>左条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;condition&quot;&gt;</span>符合什么条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;right&quot;&gt;</span>右条件<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>新表达式<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">OrIf</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, Func&lt;<span class="built_in">bool</span>&gt; condition, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> condition() ? CombineLambdas(left, right, ExpressionType.OrElse) : left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">Expression</span>&lt;<span class="title">Func</span>&lt;<span class="title">T</span>, <span class="title">bool</span>&gt;&gt; <span class="title">CombineLambdas</span>&lt;<span class="title">T</span>&gt;(<span class="params"><span class="keyword">this</span> Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; left, Expression&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt; right, ExpressionType expressionType</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> visitor = <span class="keyword">new</span> SubstituteParameterVisitor</span><br><span class="line">        &#123;</span><br><span class="line">            Sub =</span><br><span class="line">            &#123;</span><br><span class="line">                [<span class="meta">right.Parameters[0</span>]] = left.Parameters[<span class="number">0</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        Expression body = Expression.MakeBinary(expressionType, left.Body, visitor.Visit(right.Body));</span><br><span class="line">        <span class="keyword">return</span> Expression.Lambda&lt;Func&lt;T, <span class="built_in">bool</span>&gt;&gt;(body, left.Parameters[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">SubstituteParameterVisitor</span> : <span class="title">ExpressionVisitor</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Dictionary&lt;Expression, Expression&gt; Sub = <span class="keyword">new</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> Expression <span class="title">VisitParameter</span>(<span class="params">ParameterExpression node</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Sub.TryGetValue(node, <span class="keyword">out</span> <span class="keyword">var</span> newValue) ? newValue : node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="开源地址"><a href="#开源地址" class="headerlink" title="开源地址"></a><strong>开源地址</strong></h2><p><a href="https://github.com/ldqk/Masuit.Tools">https://github.com/ldqk/Masuit.Tools</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/DotNet/" rel="tag"># DotNet</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/a6b86d8c.html" rel="prev" title="【uniapp】个人中心页面">
+                  <i class="fa fa-angle-left"></i> 【uniapp】个人中心页面
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/3efe8d37.html" rel="next" title="JSDelivr & NPM CDN 国内加速节点">
+                  JSDelivr & NPM CDN 国内加速节点 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"75c4774031688b59c4db6ad31a590e02"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

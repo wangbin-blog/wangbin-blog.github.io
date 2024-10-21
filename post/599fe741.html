@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/wangbin-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/wangbin-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/wangbin-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/wangbin-blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/wangbin-blog/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/wangbin-blog/","images":"/wangbin-blog/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/wangbin-blog/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/wangbin-blog/js/config.js"></script>
+
+    <meta name="description" content="常用语法#安装软件 pacman -S 包名 ...  #给所有提示设置选项 yes | sudo pacman -S 包名 ...  #只下载包，不安装 pacman -Sw 包名 ...  #清理未安装的包文件，包文件位于 &#x2F;var&#x2F;cache&#x2F;pacman&#x2F;pkg&#x2F; 目录 pacman -Sc  #清理所有的缓存文件 pacman -Scc  #删除单个软件包，保留其全部已经安装的依赖关系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux】manjaro 环境配置">
+<meta property="og:url" content="https://github.com/wangbin-blog/post/599fe741.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="常用语法#安装软件 pacman -S 包名 ...  #给所有提示设置选项 yes | sudo pacman -S 包名 ...  #只下载包，不安装 pacman -Sw 包名 ...  #清理未安装的包文件，包文件位于 &#x2F;var&#x2F;cache&#x2F;pacman&#x2F;pkg&#x2F; 目录 pacman -Sc  #清理所有的缓存文件 pacman -Scc  #删除单个软件包，保留其全部已经安装的依赖关系">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
+<meta property="article:modified_time" content="2024-10-21T08:01:38.857Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://github.com/wangbin-blog/post/599fe741.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/wangbin-blog/post/599fe741.html","path":"post/599fe741.html","title":"【Linux】manjaro 环境配置"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【Linux】manjaro 环境配置 | 小王的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/wangbin-blog/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/wangbin-blog/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/wangbin-blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/wangbin-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/wangbin-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/wangbin-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/wangbin-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">32</span></a></li><li class="menu-item menu-item-about"><a href="/wangbin-blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-rss"><a href="/wangbin-blog/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-commonweal"><a href="/wangbin-blog/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">常用语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">系统配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%AD%E5%9B%BD%E6%BA%90"><span class="nav-number">2.1.</span> <span class="nav-text">设置中国源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5"><span class="nav-number">2.2.</span> <span class="nav-text">时间同步</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85yay"><span class="nav-number">3.1.</span> <span class="nav-text">安装yay</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85base-devel"><span class="nav-number">3.2.</span> <span class="nav-text">安装base-devel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85vim"><span class="nav-number">3.3.</span> <span class="nav-text">安装vim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85chrom"><span class="nav-number">3.4.</span> <span class="nav-text">安装chrom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-number">3.5.</span> <span class="nav-text">安装输入法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fcitx-%E6%90%9C%E7%8B%97"><span class="nav-number">3.5.1.</span> <span class="nav-text">fcitx+搜狗</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fctix5-rime"><span class="nav-number">3.5.2.</span> <span class="nav-text">fctix5+rime</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">3.5.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E8%B5%B7"><span class="nav-number">3.5.4.</span> <span class="nav-text">开机自起</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rime%E9%85%8D%E7%BD%AE"><span class="nav-number">3.5.5.</span> <span class="nav-text">rime配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85deepin%E7%A7%BB%E6%A4%8D%E7%9A%84%E5%BE%AE%E4%BF%A1"><span class="nav-number">3.6.</span> <span class="nav-text">安装deepin移植的微信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85qq-TIM"><span class="nav-number">3.7.</span> <span class="nav-text">安装qq &amp;&amp; TIM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85typora"><span class="nav-number">3.8.</span> <span class="nav-text">安装typora</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98"><span class="nav-number">3.9.</span> <span class="nav-text">百度网盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE"><span class="nav-number">3.10.</span> <span class="nav-text">安装深度截图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85idea"><span class="nav-number">3.11.</span> <span class="nav-text">安装idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-number">3.12.</span> <span class="nav-text">安装网易云音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85vscode"><span class="nav-number">3.13.</span> <span class="nav-text">安装vscode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85git"><span class="nav-number">3.14.</span> <span class="nav-text">安装git</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85NodeJS"><span class="nav-number">3.14.1.</span> <span class="nav-text">安装NodeJS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85wps"><span class="nav-number">3.15.</span> <span class="nav-text">安装wps</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">3.15.1.</span> <span class="nav-text">自动安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">3.15.2.</span> <span class="nav-text">手动安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">系统美化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85latte-dock"><span class="nav-number">4.1.</span> <span class="nav-text">安装latte-dock</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEohmyzsh-%E6%8F%92%E4%BB%B6%E5%9C%B0%E5%9D%80"><span class="nav-number">4.2.</span> <span class="nav-text">配置ohmyzsh 插件地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%8C%96grub%E4%B8%BB%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">优化grub主题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">一个上了年纪的猿人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/wangbin-blog/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/wangbin-blog/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/wangbin-blog/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/wangbin-blog/post/599fe741.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/wangbin-blog/images/avatar.gif">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="一个上了年纪的猿人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【Linux】manjaro 环境配置 | 小王的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Linux】manjaro 环境配置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-21 08:31:13" itemprop="dateCreated datePublished" datetime="2024-05-21T08:31:13+08:00">2024-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-21 16:01:38" itemprop="dateModified" datetime="2024-10-21T16:01:38+08:00">2024-10-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/wangbin-blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h3><pre><code>#安装软件
+pacman -S 包名 ...
+
+#给所有提示设置选项
+yes | sudo pacman -S 包名 ...
+
+#只下载包，不安装
+pacman -Sw 包名 ...
+
+#清理未安装的包文件，包文件位于 /var/cache/pacman/pkg/ 目录
+pacman -Sc
+
+#清理所有的缓存文件
+pacman -Scc
+
+#删除单个软件包，保留其全部已经安装的依赖关系
+pacman -R 包名
+
+#删除指定软件包，及其所有没有被其他已安装软件包使用的依赖关系
+pacman -Rs 包名
+
+#在删除包的同时，删除所有依赖这个软件包的程序
+pacman -Rsc 包名
+
+#在删除包时不检查依赖
+pacman -Rd 包名
+
+#更新所有包 y更新数据库，yy强制更新，u升级软件
+pacman -Syu
+
+#在数据库中查询软件包，查询位置包含了包的名字和描述
+pacman -Ss 关键字
+
+#获取已安装软件包所包含文件的列表
+pacman -Ql
+
+#从本地安装软件包
+pacman -U xxx.tar.gz
+
+#显示软件包依赖树
+pactree 包名
+
+# 卸载所有无用包
+pacman -c
+</code></pre>
+<span id="more"></span>
+<h3 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h3><h4 id="设置中国源"><a href="#设置中国源" class="headerlink" title="设置中国源"></a>设置中国源</h4><pre><code># 排列中国源
+sudo pacman-mirrors -i -c China -m rank
+# 选择中科大、阿里、华为等
+https://mirrors.ustc.edu.cn/manjaro/
+# 同步软件包数据库
+sudo pacman -Syy
+
+sudo gedit /etc/pacman.conf
+在打开的文件的末尾添加如下内容：
+[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+修改好上述两个部分后，终端执行下面的指令：
+sudo pacman -Syy 
+# 安装秘钥
+sudo pacman -S archlinuxcn-keyring 
+</code></pre>
+<h4 id="时间同步"><a href="#时间同步" class="headerlink" title="时间同步"></a>时间同步</h4><pre><code># 安装openNTPD
+sudo pacman -S openntpd
+# 重启openNTPD
+systemctl restart openntpd
+# 设置开机启动
+systemctl enable openntpd
+</code></pre>
+<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><h4 id="安装yay"><a href="#安装yay" class="headerlink" title="安装yay"></a>安装yay</h4><pre><code># 安装aur工具
+sudo pacman -S yay
+# 设置中国源
+yay --aururl &quot;https://aur.tuna.tsinghua.edu.cn&quot; --save
+# 验证是否成功
+yay -P -g
+# 更新包
+yay -Syu
+</code></pre>
+<h4 id="安装base-devel"><a href="#安装base-devel" class="headerlink" title="安装base-devel"></a>安装base-devel</h4><pre><code># 建议提前安装基础包，避免安装其他包时出现依赖错误
+sudo pacman -S base-devel
+</code></pre>
+<h4 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h4><pre><code>yay -S vim
+</code></pre>
+<h4 id="安装chrom"><a href="#安装chrom" class="headerlink" title="安装chrom"></a>安装chrom</h4><pre><code>yay -S google-chrome
+</code></pre>
+<h4 id="安装输入法"><a href="#安装输入法" class="headerlink" title="安装输入法"></a>安装输入法</h4><h5 id="fcitx-搜狗"><a href="#fcitx-搜狗" class="headerlink" title="fcitx+搜狗"></a>fcitx+搜狗</h5><pre><code># 输入法对比：https://wiki.archlinux.org/index.php/Fcitx_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%B8%AD%E6%96%87
+# 安装输入法需要的依赖
+yay -S fcitx-im fcitx-configtool fcitx-qt4
+# 编辑 ~/.pam_environment（不存在就添加），添加以下内容：
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+# 安装搜狗输入法需要的依赖
+yay -S qtwebkit-bin
+# 安装搜狗输入法
+yay -S fcitx-sogoupinyin 
+# 解决搜狗输入法候选项乱码
+cd ~/.config
+sudo rm -rf SogouPY* sogou*
+</code></pre>
+<h5 id="fctix5-rime"><a href="#fctix5-rime" class="headerlink" title="fctix5+rime"></a>fctix5+rime</h5><pre><code>先用这个
+sudo pacman -S fcitx-rime
+sudo pacman -S fcitx-im
+sudo pacman -S fcitx-configtool
+
+然后你需要编辑一个文件：
+sudo gedit ~/.xprofile
+
+在文件末尾添加如下文本：
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=&quot;@im=fcitx&quot;
+重启一下系统
+
+
+
+
+# 如果上述不可以再使用yay安装，有些包pacman没有
+yay -S fcitx5-git fcitx5-config-qt-git fcitx5-gtk-git fcitx5-rime-git
+</code></pre>
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><pre><code># 编辑 ~/.pam_environment（不存在就添加），添加以下内容：
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
+fcitx5 &amp;
+</code></pre>
+<h5 id="开机自起"><a href="#开机自起" class="headerlink" title="开机自起"></a>开机自起</h5><pre><code>sudo cp /usr/share/applications/fcitx5.desktop /etc/xdg/autostart/
+</code></pre>
+<h5 id="rime配置"><a href="#rime配置" class="headerlink" title="rime配置"></a>rime配置</h5><pre><code># 如果没有写权限，需要先赋予权限
+sudo vim /usr/share/rime-data/build/luna_pinyin.schema.yaml
+#配置候选数量
+menu:
+    page_size: 10
+#设置默认为简体
+#定位这一行
+- name: simplification
+    #在下方增加如下配置
+    reset: 1
+</code></pre>
+<h4 id="安装deepin移植的微信"><a href="#安装deepin移植的微信" class="headerlink" title="安装deepin移植的微信"></a>安装deepin移植的微信</h4><pre><code>yay -S deepin-wine-wechat
+</code></pre>
+<h4 id="安装qq-TIM"><a href="#安装qq-TIM" class="headerlink" title="安装qq &amp;&amp; TIM"></a>安装qq &amp;&amp; TIM</h4><pre><code>安装QQ：
+sudo pacman -S deepin.com.qq.office
+||
+sudo pacman -S com.qq.weixin.spark
+安装Tim：
+sudo pacman -S deepin.com.qq.im
+||
+sudo pacman -S com.qq.tim.spark
+</code></pre>
+<h4 id="安装typora"><a href="#安装typora" class="headerlink" title="安装typora"></a>安装typora</h4><pre><code>yay -S typora
+</code></pre>
+<h4 id="百度网盘"><a href="#百度网盘" class="headerlink" title="百度网盘"></a>百度网盘</h4><pre><code>yay -S baidunetdisk-bin
+</code></pre>
+<h4 id="安装深度截图"><a href="#安装深度截图" class="headerlink" title="安装深度截图"></a>安装深度截图</h4><pre><code>#安装
+sudo pacman -S deepin-screenshot
+#设置快捷键
+系统设置---&gt;工作区---&gt;快捷键---&gt;自定义快捷键---&gt;编辑---&gt;新建---&gt;全局快捷键---&gt;命令URL---&gt;命名/触发器(快捷键)/动作(deepin-screenshot)
+</code></pre>
+<h4 id="安装idea"><a href="#安装idea" class="headerlink" title="安装idea"></a>安装idea</h4><pre><code>下载idea
+wget https://download.jetbrains.8686c.com/idea/ideaIC-2020.1.3.tar.gz
+解压
+tar -zxvf ideaIC-2020.1.3.tar.gz
+安装
+bin/idea.sh
+</code></pre>
+<h4 id="安装网易云音乐"><a href="#安装网易云音乐" class="headerlink" title="安装网易云音乐"></a>安装网易云音乐</h4><pre><code>yay -S netease-cloud-music
+</code></pre>
+<h4 id="安装vscode"><a href="#安装vscode" class="headerlink" title="安装vscode"></a>安装vscode</h4><pre><code>yay -S visual-studio-code-bin
+</code></pre>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><pre><code>yay -S git
+yay -S gitkraken
+</code></pre>
+<h5 id="安装NodeJS"><a href="#安装NodeJS" class="headerlink" title="安装NodeJS"></a>安装NodeJS</h5><pre><code># 安装nodejs
+sudo pacman -S nodejs
+# 安装npm
+sudo pacman -S npm
+# 安装cnpm源
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org 
+</code></pre>
+<h4 id="安装wps"><a href="#安装wps" class="headerlink" title="安装wps"></a>安装wps</h4><h5 id="自动安装"><a href="#自动安装" class="headerlink" title="自动安装"></a>自动安装</h5><pre><code>#如果以下方式不行  使用yay试试
+sudo pacman -S wps-office ttf-wps-fonts
+</code></pre>
+<h5 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h5><pre><code># 去官网下载安装deb包
+https://linux.wps.cn/
+# 安装debtap
+yay -S debtap
+#安装字体依赖
+sudo pacman -S ttf-wps-fonts c
+# 更新debtap  
+sudo debtap -u
+# 静默模式转换安装包  根据提示输入包名随便写   license写GPL
+debtap -q xxx.deb
+# 安装 如果提示缺少依赖  先安装依赖  再手动安装包
+sudo pacman -U xxx.tar.zst
+</code></pre>
+<h3 id="系统美化"><a href="#系统美化" class="headerlink" title="系统美化"></a>系统美化</h3><h4 id="安装latte-dock"><a href="#安装latte-dock" class="headerlink" title="安装latte-dock"></a>安装latte-dock</h4><blockquote>
+<p><code>yay -S latte-dock</code> </br><br>添加一个新空面板，默认会出现在上面，然后删除下面这个面板<br>在新面板上添加必要的部件：应用程序面板，数字时钟，托盘图标<br>还可以加全局菜单，显示面板等等</br><br>启动<code>latte-dock</code>，下方就会出现一个dock栏，具体配置看自己爱好</p>
+</blockquote>
+<h4 id="配置ohmyzsh-插件地址"><a href="#配置ohmyzsh-插件地址" class="headerlink" title="配置ohmyzsh 插件地址"></a>配置ohmyzsh <a href="https://github.com/zsh-users">插件地址</a></h4><blockquote>
+<p>1、首先修改默认shell为zsh:</br><br><code>chsh -s /usr/bin/zsh</code> </br><br>安装ohmyzsh </br><br>wget <a href="https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh">https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh</a> -O - | sh </br><br>如果每次执行都失败提示被拒绝连接就先改一下hosts文件</br><br><code> sudo nano /etc/hosts</code> </br><br>把这段话复制到下面 </br></p>
+<pre><code># GitHub Start
+151.101.64.133 raw.githubusercontent.com
+# GitHub End 
+</code></pre>
+<p>2、安装zsh-syntax-highlighting：提供命令高亮</p>
+<pre><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting
+</code></pre>
+<p>3、安装autosuggestions：记住你之前使用过的命令</p>
+<pre><code>git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+</code></pre>
+<p>4、安装incr：（需要注意的是这个插件会拖慢zsh的速度，新手入门可以试试）</p>
+<pre><code>git clone git://github.com/makeitjoe/incr.zsh $ZSH_CUSTOM/plugins/incr
+</code></pre>
+<p>5、启用所有插件</p>
+<pre><code>nano ~/.zshrc
+</code></pre>
+<p>将plugins&#x3D;(git)改为:</p>
+<pre><code>plugins=(git zsh-syntax-highlighting zsh-autosuggestions incr sudo extract)
+</code></pre>
+<p>6、重载配置<br><code> source ~/.zshrc</code><br>如果想要卸载 oh my zsh，直接执行下面命令</br><br><code> uninstall oh my zsh</code></p>
+</blockquote>
+<h4 id="优化grub主题"><a href="#优化grub主题" class="headerlink" title="优化grub主题"></a>优化grub主题</h4><blockquote>
+<p>准备好主题文档夹，可以在<a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse/cat/109/ord/latest/">Grub Themes</a>挑选下载</br><br>1、将主题文档夹移至&#x2F;boot&#x2F;grub&#x2F;themes&#x2F;下</br></p>
+<pre><code>$ sudo mv -r YourTheme /boot/grub/themes
+</code></pre>
+<p>2、更改Grub配置文档 </br></p>
+<blockquote>
+<p>注释掉GRUB_BACKGROUND行</p>
+</blockquote>
+<pre><code>#GRUB_BACKGROUND=&quot;/usr/share/grub/YourImg.*&quot;
+</code></pre>
+<blockquote>
+<p>更改GRUB_THEME行</p>
+</blockquote>
+<pre><code>GRUB_THEME=&quot;/usr/share/grub/themes/YourTheme/theme.txt&quot;
+</code></pre>
+<blockquote>
+<p>更新Grub配置</p>
+</blockquote>
+<pre><code>$ sudo update-grub
+</code></pre>
+<blockquote>
+<p>重启即可看见效果啦~ </br></p>
+</blockquote>
+<p>&#x3D;&#x3D;3、注：在Grub Themes下载的主题压缩包，其中一部分有安装脚本install.sh，解压后，进入主题文档夹，执行sudo .&#x2F;install.sh即可配置成功，等效于上述的步骤。&#x3D;&#x3D;</p>
+</blockquote>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17K4y1K7ur">发行版的安装</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gv41177GE">软件包管理和中文化配置</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1AQ4y1Z7wj">自启动程序配置</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Xv411L75q">桌面环境的切换</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/114296129">环境配置</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/2019/08/27/5d654c90b0b83/">grub 主题修改</a></li>
+<li>Manjaro <a target="_blank" rel="noopener" href="https://zhang_hao_yu123.gitee.io/2021/01/14/manjaro-an-zhuang-he-pei-zhi/">命令安装</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/wangbin-blog/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/4a0c2abb.html" rel="prev" title="【Linux】安装OpenJDK">
+                  <i class="fa fa-angle-left"></i> 【Linux】安装OpenJDK
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/wangbin-blog/post/bec8364e.html" rel="next" title="【Linux】Vim命令合集">
+                  【Linux】Vim命令合集 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">86k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:13</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/comments.js"></script><script src="/wangbin-blog/js/utils.js"></script><script src="/wangbin-blog/js/motion.js"></script><script src="/wangbin-blog/js/sidebar.js"></script><script src="/wangbin-blog/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/wangbin-blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"wangbin-blog","repo":"wangbin-blog.github.io","client_id":"Ov23liYFPnDfpGiaBoi2","client_secret":"1e02eb7f6d5d00aabee0927261c998ceee3e9099","admin_user":"wangbin-blog","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"ac8f78617f0825e139fe15c691b968e0"}</script>
+<script src="/wangbin-blog/js/third-party/comments/gitalk.js"></script>
+
+<script src="/wangbin-blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/wangbin-blog/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

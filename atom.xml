@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小王的博客</title>
+  <icon>https://github.com/wangbin-blog/icon.png</icon>
+  
+  <link href="https://github.com/wangbin-blog/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/wangbin-blog/"/>
+  <updated>2024-10-21T08:01:38.836Z</updated>
+  <id>https://github.com/wangbin-blog/</id>
+  
+  <author>
+    <name>Think.Wang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://github.com/wangbin-blog/post/4a17b156.html"/>
+    <id>https://github.com/wangbin-blog/post/4a17b156.html</id>
+    <published>2024-09-25T01:25:19.896Z</published>
+    <updated>2024-10-21T08:01:38.836Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PicList-轻松管理你的图片库，让美好瞬间触手可及</title>
+    <link href="https://github.com/wangbin-blog/post/161c3e54.html"/>
+    <id>https://github.com/wangbin-blog/post/161c3e54.html</id>
+    <published>2024-09-09T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.871Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;🚀-发现-PicList：超越-PicGo-的图片管理新星！&quot;&gt;&lt;a href=&quot;#🚀-发现-PicList：超越-PicGo-的图片管理新星！&quot; class=&quot;headerlink&quot; title=&quot;🚀 发现 PicList：超越 PicGo 的图片管理新星！&quot;&gt;&lt;/a&gt;🚀 发现 PicList：超越 PicGo 的图片管理新星！&lt;/h1&gt;&lt;p&gt;在日常工作中，我们经常需要上传、管理和分享图片。无论是开发者还是普通用户，找到一个好用的工具来辅助这项任务都是至关重要的。今天，我要向大家推荐一个在 &lt;code&gt;PicGo&lt;/code&gt; 基础上进行了深度二次开发的图片管理工具——&lt;code&gt;PicList&lt;/code&gt;。它不仅继承了 &lt;code&gt;PicGo&lt;/code&gt; 的所有优秀特性，如支持多种图床服务（如 GitHub、SM.MS 等），而且还引入了更多高级功能，使其成为图片管理领域的佼佼者。🌈&lt;/p&gt;
+&lt;h2 id=&quot;为什么选择-PicList？&quot;&gt;&lt;a href=&quot;#为什么选择-PicList？&quot; class=&quot;headerlink&quot; title=&quot;为什么选择 PicList？&quot;&gt;&lt;/a&gt;为什么选择 &lt;code&gt;PicList&lt;/code&gt;？&lt;/h2&gt;&lt;p&gt;&lt;code&gt;PicList&lt;/code&gt; 是一款高效且易于使用的云存储和图床管理工具。它不仅完美保留了 &lt;code&gt;PicGo&lt;/code&gt; 的所有优点，还增添了许多令人惊喜的新功能。&lt;/p&gt;
+&lt;h3 id=&quot;新增特性一览&quot;&gt;&lt;a href=&quot;#新增特性一览&quot; class=&quot;headerlink&quot; title=&quot;新增特性一览&quot;&gt;&lt;/a&gt;新增特性一览&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相册同步&lt;/strong&gt;：支持云端文件的同步删除，确保本地和云端的一致性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多图床支持&lt;/strong&gt;：除了常见的图床选项外，&lt;code&gt;PicList&lt;/code&gt; 还内置了 WebDav、本地图床和 SFTP 等多种图床服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;云存储管理&lt;/strong&gt;：增加了完整的云端存储管理功能，包括目录查看、文件搜索、批量上传下载及删除文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;链接复制&lt;/strong&gt;：能够复制多种格式的文件链接，方便在不同场景下使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预览功能&lt;/strong&gt;：支持图片、Markdown 文档、文本和视频的预览，无需离开应用即可查看文件内容。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSDelivr &amp; NPM CDN 国内加速节点</title>
+    <link href="https://github.com/wangbin-blog/post/3efe8d37.html"/>
+    <id>https://github.com/wangbin-blog/post/3efe8d37.html</id>
+    <published>2024-09-08T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.870Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;JSDelivr-节点&quot;&gt;&lt;a href=&quot;#JSDelivr-节点&quot; class=&quot;headerlink&quot; title=&quot;JSDelivr 节点&quot;&gt;&lt;/a&gt;JSDelivr 节点&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;节点名称&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;描述&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;可用性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;cdn.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;通用节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;低&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;gcore.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Gcore 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;testingcf.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Cloudflare 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;quantil.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Quantil 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;尚可&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;fastly.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Fastly 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;尚可&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;originfastly.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Fastly 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;低&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;test1.jsdelivr.net&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;Cloudflare 节点&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;低&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>效率提升利器，一个全龄段友好的DotNET万能工具库</title>
+    <link href="https://github.com/wangbin-blog/post/309e6522.html"/>
+    <id>https://github.com/wangbin-blog/post/309e6522.html</id>
+    <published>2024-09-03T04:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.838Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;项目介绍&quot;&gt;&lt;a href=&quot;#项目介绍&quot; class=&quot;headerlink&quot; title=&quot;项目介绍&quot;&gt;&lt;/a&gt;&lt;strong&gt;项目介绍&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;Masuit.Tools(码数吐司库)是一个全龄段友好的C#&amp;#x2F;.NET万能工具库，不管你是菜鸟新手还是骨灰级玩家都能轻松上手。&lt;/p&gt;
+&lt;h2 id=&quot;包含功能&quot;&gt;&lt;a href=&quot;#包含功能&quot; class=&quot;headerlink&quot; title=&quot;包含功能&quot;&gt;&lt;/a&gt;&lt;strong&gt;包含功能&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;这个库包含一些常用的操作类，大都是静态类，加密解密，反射操作，树结构，文件探测，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点续传，集合扩展、Excel导出等常用封装。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;诸多功能集一身，代码量不到2MB！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/09/640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="DotNet" scheme="https://github.com/wangbin-blog/categories/DotNet/"/>
+    
+    
+    <category term="DotNet" scheme="https://github.com/wangbin-blog/tags/DotNet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【uniapp】个人中心页面</title>
+    <link href="https://github.com/wangbin-blog/post/a6b86d8c.html"/>
+    <id>https://github.com/wangbin-blog/post/a6b86d8c.html</id>
+    <published>2024-08-11T10:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.865Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;先看效果-eyes&quot;&gt;&lt;a href=&quot;#先看效果-eyes&quot; class=&quot;headerlink&quot; title=&quot;先看效果:eyes:&quot;&gt;&lt;/a&gt;先看效果:eyes:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/57881c7a81834b0ca30b00803480e65d&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PC端登录页源码(一键复制)</title>
+    <link href="https://github.com/wangbin-blog/post/f2b42afb.html"/>
+    <id>https://github.com/wangbin-blog/post/f2b42afb.html</id>
+    <published>2024-08-11T10:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.867Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;先看效果-eye&quot;&gt;&lt;a href=&quot;#先看效果-eye&quot; class=&quot;headerlink&quot; title=&quot;先看效果 :eye:&quot;&gt;&lt;/a&gt;先看效果 :eye:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/1499be202c9c43f7b3729502c31411f6&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/89753498cef341ceb3cbec1e6d4e3f13&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/5a1f6cf1302d4d2b8f8522728ba5da26&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【uniapp】小程序滚动tab</title>
+    <link href="https://github.com/wangbin-blog/post/fc344f65.html"/>
+    <id>https://github.com/wangbin-blog/post/fc344f65.html</id>
+    <published>2024-08-11T10:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.866Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;文字版&quot;&gt;&lt;a href=&quot;#文字版&quot; class=&quot;headerlink&quot; title=&quot;文字版&quot;&gt;&lt;/a&gt;文字版&lt;/h3&gt;&lt;h4 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享一个非常好用的loading效果网站</title>
+    <link href="https://github.com/wangbin-blog/post/98cc63b2.html"/>
+    <id>https://github.com/wangbin-blog/post/98cc63b2.html</id>
+    <published>2024-08-11T10:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.866Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;先看效果&quot;&gt;&lt;a href=&quot;#先看效果&quot; class=&quot;headerlink&quot; title=&quot;先看效果&quot;&gt;&lt;/a&gt;先看效果&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【MACCMS】docker环境中安装服务</title>
+    <link href="https://github.com/wangbin-blog/post/5f2de2cf.html"/>
+    <id>https://github.com/wangbin-blog/post/5f2de2cf.html</id>
+    <published>2024-08-01T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.863Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Docker&lt;ul&gt;
+&lt;li&gt;Mysql&lt;/li&gt;
+&lt;li&gt;Nginx&lt;/li&gt;
+&lt;li&gt;Php&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/magicblack/maccms10/releases&quot;&gt;maccmsV10 项目文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/07/6e7b7cb7ecc2cabf146b694492444590.zip&quot;&gt;模板文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/830bdd46a759797d47a71490dba2d6c5.zip&quot;&gt;萌芽采集插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dkewl.com/&quot;&gt;集模板&amp;#x2F;插件于一身的网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/b8b949ab6f2d0ecf68206a3542a6cfda.rar&quot;&gt;移动端模板&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/255ffd96a9b9f336d9dd5e7f660351f3.zip&quot;&gt;pc端模板&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装waf防火墙（可选）</summary>
+    
+    
+    
+    <category term="MACCMS" scheme="https://github.com/wangbin-blog/categories/MACCMS/"/>
+    
+    
+    <category term="MACCMS" scheme="https://github.com/wangbin-blog/tags/MACCMS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【MACCMS】2023年最新可采集CMS视频资源站网址合集</title>
+    <link href="https://github.com/wangbin-blog/post/9791b8ea.html"/>
+    <id>https://github.com/wangbin-blog/post/9791b8ea.html</id>
+    <published>2024-07-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资源名称&lt;/th&gt;
+&lt;th&gt;地址&lt;/th&gt;
+&lt;th&gt;状态&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;聚合资源&lt;/td&gt;
+&lt;td&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="MACCMS" scheme="https://github.com/wangbin-blog/categories/MACCMS/"/>
+    
+    
+    <category term="MACCMS" scheme="https://github.com/wangbin-blog/tags/MACCMS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【工具】GitHub访问设置</title>
+    <link href="https://github.com/wangbin-blog/post/4fd5a719.html"/>
+    <id>https://github.com/wangbin-blog/post/4fd5a719.html</id>
+    <published>2024-07-19T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.869Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;访问GitHub的速度和稳定性可以通过修改hosts文件来提高。‌&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，‌获取github.com的IP地址是关键的一步。‌&lt;/p&gt;
+&lt;p&gt;你可以通过在线DNS解析网站，‌如&lt;a href=&quot;http://www.ip33.com/dns.html&quot;&gt;ip33&lt;/a&gt;，‌输入&lt;code&gt;github.com&lt;/code&gt;域名，‌获取A记录的IP地址。‌然后将这个IP地址赋值到&lt;code&gt;hosts&lt;/code&gt;文件（‌文件路径为&lt;code&gt;C:&#92;Windows&#92;System32&#92;drivers&#92;etc&lt;/code&gt;）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将hosts文件copy到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌&lt;/p&gt;
+&lt;p&gt;此外，‌还有一些特定的IP地址可以帮助加速访问GitHub的特定服务，‌&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】DotNet运行命令</title>
+    <link href="https://github.com/wangbin-blog/post/26185413.html"/>
+    <id>https://github.com/wangbin-blog/post/26185413.html</id>
+    <published>2024-07-01T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.852Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;设置系统级环境变量&quot;&gt;&lt;a href=&quot;#设置系统级环境变量&quot; class=&quot;headerlink&quot; title=&quot;设置系统级环境变量&quot;&gt;&lt;/a&gt;设置系统级环境变量&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# /etc/profile.d/&amp;#123;文件名.sh&amp;#125; 新建并打开配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vi /etc/profile.d/dotnet.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 文件末尾加变量定义&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 此处我的dotnet文件在 这个位置  /home/sys_wh/dotnet&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; DOTNET_ROOT=/home/sys_wh/dotnet&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;:/home/sys_wh/dotnet&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重载配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; /etc/profile.d/dotnet.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 终端使用变量,执行以下命令查看是否有版本输出，最好切换下用户测试是否所有用户都可以读到变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dotnet info&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Libgdiplus安装</title>
+    <link href="https://github.com/wangbin-blog/post/5711187a.html"/>
+    <id>https://github.com/wangbin-blog/post/5711187a.html</id>
+    <published>2024-07-01T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.847Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ASP.NET Core MVC的项目需要处理图片，部署到CentOS 7上面时会报&lt;code&gt;The type initializer for ‘Gdip‘ threw an exception&lt;/code&gt;，需要安装&lt;code&gt;libgdiplus&lt;/code&gt;。&lt;br&gt;做为linux门外汉，虽然网上已经有不少相关内容，还是摸索了不少时间，记录一下。&lt;br&gt;感谢CentOS7离线安装神器&lt;code&gt;yumdownloader&lt;/code&gt;一文的帮助，主要内容均来自此文。&lt;br&gt;首先在虚拟机上安装CentOS7，需要借用这台能上网的CentOS7虚拟机下载离线安装包。并且要保证这台虚拟机和要部署的目标服务器环境相同，避免下载安装包时遗漏了某些依赖包。&lt;br&gt;运行以下命令安装&lt;code&gt;yumdownloader&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install yum-utils -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;下载EPEL最新发布包：&lt;code&gt;epel-release-7-14.noarch.rpm&lt;/code&gt;并安装，否则&lt;code&gt;yumdownloader&lt;/code&gt;找不到&lt;code&gt;libgdiplus&lt;/code&gt;的离线安装包。&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rpm -ivh epel-release-7-14.noarch.rpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;下载libgdiplus离线安装包&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yumdownloader --destdir=./libgdiplus --resolve libgdiplus.x86_64&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Redis 离线安装</title>
+    <link href="https://github.com/wangbin-blog/post/7a6abf49.html"/>
+    <id>https://github.com/wangbin-blog/post/7a6abf49.html</id>
+    <published>2024-06-16T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.853Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;下载并解压Redis&quot;&gt;&lt;a href=&quot;#下载并解压Redis&quot; class=&quot;headerlink&quot; title=&quot;下载并解压Redis&quot;&gt;&lt;/a&gt;下载并解压Redis&lt;/h2&gt;&lt;h3 id=&quot;执行下面的命令下载redis：&quot;&gt;&lt;a href=&quot;#执行下面的命令下载redis：&quot; class=&quot;headerlink&quot; title=&quot;执行下面的命令下载redis：&quot;&gt;&lt;/a&gt;执行下面的命令下载redis：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget https://download.redis.io/releases/redis-6.2.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;解压redis：&quot;&gt;&lt;a href=&quot;#解压redis：&quot; class=&quot;headerlink&quot; title=&quot;解压redis：&quot;&gt;&lt;/a&gt;解压redis：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tar xzf redis-6.2.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot;&gt;&lt;a href=&quot;#移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot; class=&quot;headerlink&quot; title=&quot;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&quot;&gt;&lt;/a&gt;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&lt;/h3&gt;&lt;blockquote&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv redis-6.2.6 /usr/local/redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Nacos 问题</title>
+    <link href="https://github.com/wangbin-blog/post/dfef5267.html"/>
+    <id>https://github.com/wangbin-blog/post/dfef5267.html</id>
+    <published>2024-06-16T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.851Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
+&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
+&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
+&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】nginx 离线安装</title>
+    <link href="https://github.com/wangbin-blog/post/1c39c402.html"/>
+    <id>https://github.com/wangbin-blog/post/1c39c402.html</id>
+    <published>2024-06-16T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.859Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;资源下载&quot;&gt;&lt;a href=&quot;#资源下载&quot; class=&quot;headerlink&quot; title=&quot;资源下载&quot;&gt;&lt;/a&gt;资源下载&lt;/h2&gt;&lt;p&gt;nginx-1.20.1.tar.gz（下载链接中包含&lt;a href=&quot;https://so.csdn.net/so/search?q=gcc&amp;spm=1001.2101.3001.7020&quot;&gt;gcc&lt;/a&gt;、g++、pcre、libtool、nginx）&lt;/p&gt;
+&lt;p&gt;链接：&lt;a href=&quot;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&quot;&gt;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提取码：0b91&lt;/p&gt;
+&lt;h2 id=&quot;安装步骤&quot;&gt;&lt;a href=&quot;#安装步骤&quot; class=&quot;headerlink&quot; title=&quot;安装步骤&quot;&gt;&lt;/a&gt;安装步骤&lt;/h2&gt;&lt;h3 id=&quot;安装gcc&quot;&gt;&lt;a href=&quot;#安装gcc&quot; class=&quot;headerlink&quot; title=&quot;安装gcc&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装gcc&lt;/strong&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rpm -Uvh *.rpm --nodeps --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;结果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@doris54 gcc]# rpm -Uvh *.rpm --nodeps --force&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warning: cpp-4.8.5-16.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Preparing...                          ################################# [100%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Updating / installing...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   1:zlib-1.2.7-17.el7                ################################# [  6%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   2:mpfr-3.1.1-4.el7                 ################################# [ 13%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   3:libmpc-1.0.1-3.el7               ################################# [ 19%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   4:openssl-libs-1:1.0.2k-8.el7      ################################# [ 25%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   5:cpp-4.8.5-16.el7                 ################################# [ 31%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   6:zlib-devel-1.2.7-17.el7          ################################# [ 38%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   7:kernel-headers-3.10.0-693.el7    ################################# [ 44%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   8:glibc-headers-2.17-196.el7       ################################# [ 50%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   9:glibc-devel-2.17-196.el7         ################################# [ 56%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  10:gcc-4.8.5-16.el7                 ################################# [ 63%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  11:openssl-devel-1:1.0.2k-8.el7     ################################# [ 69%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  12:openssl-1:1.0.2k-8.el7           ################################# [ 75%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  13:openssl098e-0.9.8e-29.el7.centos.################################# [ 81%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Cleaning up / removing...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  14:openssl-1:1.0.2k-19.el7          ################################# [ 88%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  15:openssl-libs-1:1.0.2k-19.el7     ################################# [ 94%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  16:zlib-1.2.7-18.el7                ################################# [100%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@doris54 gcc]# &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NET Core 优秀项目和框架精选</title>
+    <link href="https://github.com/wangbin-blog/post/9beaa6c0.html"/>
+    <id>https://github.com/wangbin-blog/post/9beaa6c0.html</id>
+    <published>2024-06-12T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.862Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;C-NET-NET-Core优秀项目和框架精选&quot;&gt;&lt;a href=&quot;#C-NET-NET-Core优秀项目和框架精选&quot; class=&quot;headerlink&quot; title=&quot;C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&quot;&gt;&lt;/a&gt;C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202406130850957.png&quot; alt=&quot;优秀项目和框架精选图&quot; title=&quot;优秀项目和框架精选图&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：排名不分先后，都是十分优秀的开源项目和框架，每周定期更新分享（欢迎关注公众号：&lt;strong&gt;追逐时光者&lt;/strong&gt;，第一时间获取每周精选分享资讯🔔）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;帮助开发者发现功能强大、性能优越、创新前沿、简单易用的C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架，无论你是寻找灵感、学习新技术、改进代码质量，还是想拓展自己的技术视野，都能为你提供有价值的参考和指导。关注优秀项目和框架精选能让你及时了解C#、.NET和.NET Core领域的最新动态和最佳实践，提高开发效率和质量。坑已挖，欢迎大家踊跃提交PR或者在该&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/issues/5&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;/a&gt;中留言（&lt;strong&gt;让优秀的项目和框架不被埋没&lt;/strong&gt;），我会定期收录、&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectMonthly.md&quot;&gt;公众号推广和分享👀&lt;/a&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/trending/c%23?since=daily&quot;&gt;📈C# GitHub趋势榜&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotNetTreasury&quot;&gt;🎁C#&amp;#x2F;.NET&amp;#x2F;.NET Core项目宝库组织&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectPicks.md&quot;&gt;🔔C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/issues/5&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectMonthly.md&quot;&gt;📰C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架公众号月刊&lt;/a&gt;</summary>
+    
+    
+    
+    <category term="DotNet" scheme="https://github.com/wangbin-blog/categories/DotNet/"/>
+    
+    
+    <category term="DotNet" scheme="https://github.com/wangbin-blog/tags/DotNet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】常用命令</title>
+    <link href="https://github.com/wangbin-blog/post/ec90412d.html"/>
+    <id>https://github.com/wangbin-blog/post/ec90412d.html</id>
+    <published>2024-05-25T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.861Z</updated>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h2 id=&quot;基本命令&quot;&gt;&lt;a href=&quot;#基本命令&quot; class=&quot;headerlink&quot; title=&quot;基本命令&quot;&gt;&lt;/a&gt;基本命令&lt;/h2&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -m 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -r 显示正在使用的内核版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dmidecode -q 显示硬件系统部件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(SMBIOS / DMI) hdparm -i /dev/hda 罗列一个磁盘的架构特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -tT /dev/sda 在磁盘上执行测试性读取操作系统信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;arch&lt;/span&gt; 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -m 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -r 显示正在使用的内核版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -i /dev/hda 罗列一个磁盘的架构特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -tT /dev/sda 在磁盘上执行测试性读取操作&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/cpuinfo 显示CPU info的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/interrupts 显示中断&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/meminfo 校验内存使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/swaps 显示哪些swap被使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/version 显示内核的版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/net/dev 显示网络适配器及统计&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/mounts 显示已加载的文件系统&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lspci -tv 罗列 PCI 设备&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lsusb -tv 显示 USB 设备&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;date&lt;/span&gt; 显示系统日期&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cal 2007 显示2007年的日历表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;date&lt;/span&gt; 041217002007.00 设置日期和时间 - 月日时分年.秒&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clock -w 将时间修改保存到 BIOS&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github+picGo+Typora搭建图床</title>
+    <link href="https://github.com/wangbin-blog/post/5901b3f7.html"/>
+    <id>https://github.com/wangbin-blog/post/5901b3f7.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.840Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Github账号注册&amp;#x2F;创建一个Public仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Molunerfinn/PicGo/releases&quot;&gt;picgo下载链接&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://typora.ymzhxing.cn/index.html?bd_vid=11765516185414740389&quot;&gt;Typora下载安装&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vscode下载安装&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Shoka 主题本地搜索</title>
+    <link href="https://github.com/wangbin-blog/post/e4550ecb.html"/>
+    <id>https://github.com/wangbin-blog/post/e4550ecb.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.844Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;由于 &lt;code&gt;Shoka&lt;/code&gt; 作者提供的搜索使用 &lt;code&gt;Algolia&lt;/code&gt; 实现，但是 &lt;code&gt;Algolia&lt;/code&gt; 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 &lt;code&gt;Shoka&lt;/code&gt; 主题的搜索功能配置找到了解决办法，在此感谢 &lt;code&gt;linn&lt;/code&gt; 提供的方法。&lt;/p&gt;
+&lt;h2 id=&quot;问题-解决&quot;&gt;&lt;a href=&quot;#问题-解决&quot; class=&quot;headerlink&quot; title=&quot;问题 &amp;amp; 解决&quot;&gt;&lt;/a&gt;问题 &amp;amp; 解决&lt;/h2&gt;&lt;p&gt;在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。&lt;/p&gt;
+&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;p&gt;本地搜索通过 &lt;code&gt;hexo-generator-searchdb&lt;/code&gt; 插件实现，需要先安装插件。 &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-searchdb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Shoka 文章加密</title>
+    <link href="https://github.com/wangbin-blog/post/6aea9c03.html"/>
+    <id>https://github.com/wangbin-blog/post/6aea9c03.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.843Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;这是个啥&quot;&gt;&lt;a href=&quot;#这是个啥&quot; class=&quot;headerlink&quot; title=&quot;这是个啥&quot;&gt;&lt;/a&gt;这是个啥&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;首先, 这是 Hexo 生态圈中 &lt;strong&gt;最好的&lt;/strong&gt; 博客加密插件&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;你可能需要写一些私密的博客, 通过密码验证的方式让人不能随意浏览.&lt;/li&gt;
+&lt;li&gt;这在 wordpress, emlog 或是其他博客系统中都很容易实现, 然而 hexo 除外. :(&lt;/li&gt;
+&lt;li&gt;为了解决这个问题, 让我们有请 “hexo-blog-encrypt”.</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【工具】Typora安装使用</title>
+    <link href="https://github.com/wangbin-blog/post/e64ca3b2.html"/>
+    <id>https://github.com/wangbin-blog/post/e64ca3b2.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【工具】Watt Toolkit GitHub加速</title>
+    <link href="https://github.com/wangbin-blog/post/6375ab96.html"/>
+    <id>https://github.com/wangbin-blog/post/6375ab96.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.874Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Steam 必备神器 &lt;code&gt;Watt Toolkit&lt;/code&gt;，也就是 &lt;code&gt;Steam++&lt;/code&gt; 自带了 GitHub 加速，但当我们开启 GitHub 加速后，网页是加速了，但 git 命令还不行。如果想让 &lt;code&gt;git</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://github.com/wangbin-blog/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【前端】高颜值登录页面（一键复制）</title>
+    <link href="https://github.com/wangbin-blog/post/506e9c17.html"/>
+    <id>https://github.com/wangbin-blog/post/506e9c17.html</id>
+    <published>2024-05-22T10:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.868Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;登录页面是每一个项目不可缺少的页面，是一个应用的门面，首次进入看见的可能就是登录界面，做了这么久的前端，发现登录界面其实都大同小异，有时候没必要从头写，我写了几个自认为比较好看的uniapp登录界面记录一下，下次用到的话，可以直接复制过来，修改下就行了。只有静态页面，并未做逻辑上的东西，这样便于在此基础上做调整。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先看效果：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221359689.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实际应用效果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221400909.webp&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/wangbin-blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Doris 安装部署</title>
+    <link href="https://github.com/wangbin-blog/post/6632db9d.html"/>
+    <id>https://github.com/wangbin-blog/post/6632db9d.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.846Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;doris-安装部署&quot;&gt;&lt;a href=&quot;#doris-安装部署&quot; class=&quot;headerlink&quot; title=&quot;doris 安装部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;doris 安装部署&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、环境配置&quot;&gt;&lt;a href=&quot;#一、环境配置&quot; class=&quot;headerlink&quot; title=&quot;一、环境配置&quot;&gt;&lt;/a&gt;一、环境配置&lt;/h2&gt;&lt;h4 id=&quot;1-服务器环境&quot;&gt;&lt;a href=&quot;#1-服务器环境&quot; class=&quot;headerlink&quot; title=&quot;1. 服务器环境&quot;&gt;&lt;/a&gt;1. 服务器环境&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;centos 7&lt;/li&gt;
+&lt;li&gt;docker &lt;a href=&quot;https://download.docker.com/linux/static/stable/x86_64/&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;doris 1.0.0 &lt;a href=&quot;https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;doris &lt;a href=&quot;https://doris.apache.org/zh-CN/installing/compilation.html&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;storrocks &lt;a href=&quot;https://docs.starrocks.com/zh-cn/main/quick_start/Deploy&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ult_me?type=blog&quot;&gt;学习地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Linux环境下运行jar包的几种方式</title>
+    <link href="https://github.com/wangbin-blog/post/bf223232.html"/>
+    <id>https://github.com/wangbin-blog/post/bf223232.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.849Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;方式一-java-jar-jar包名&quot;&gt;&lt;a href=&quot;#方式一-java-jar-jar包名&quot; class=&quot;headerlink&quot; title=&quot;方式一(java -jar jar包名)&quot;&gt;&lt;/a&gt;方式一(java -jar jar包名)&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;命令格式：java -jar jar包名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;分析：&lt;/strong&gt; 执行此命令的时候，当前窗口被锁定，无法进行其它操作，直到main方法执行完毕，当前窗口才解除锁定。&lt;br&gt;&lt;strong&gt;缺点：&lt;/strong&gt; 锁定窗口。当然，我可以通过CTRL + C打断程序运行，或直接关闭窗口，程序退出，不过在实际的工作环境中，是绝对不会允许这种粗暴的方式终止的运行，毕竟我们的项目都是给用户提供服务的，程序要是退出了，公司还营不营业了。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】RocketMQ 部署</title>
+    <link href="https://github.com/wangbin-blog/post/3cdc8223.html"/>
+    <id>https://github.com/wangbin-blog/post/3cdc8223.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.855Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系统要求&quot; class=&quot;headerlink&quot; title=&quot;系统要求&quot;&gt;&lt;/a&gt;系统要求&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;系统要求&lt;/strong&gt;&lt;br&gt;1、64位操作系统，推荐 Linux&amp;#x2F;Unix&amp;#x2F;macOS&lt;br&gt;2、64位 JDK 1.8+&lt;br&gt;3、&lt;a href=&quot;https://rocketmq.apache.org/zh/docs/quickStart/01quickstart&quot;&gt;官网文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;安装部署&quot;&gt;&lt;a href=&quot;#安装部署&quot; class=&quot;headerlink&quot; title=&quot;安装部署&quot;&gt;&lt;/a&gt;安装部署&lt;/h1&gt;&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;这里使用&lt;a href=&quot;https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip&quot;&gt;release&lt;/a&gt;免编译版本&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 解压&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ unzip rocketmq-all-5.1.0-source-release.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 打开文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; rocketmq-all-5.1.0-source-release/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Vim命令合集</title>
+    <link href="https://github.com/wangbin-blog/post/bec8364e.html"/>
+    <id>https://github.com/wangbin-blog/post/bec8364e.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.854Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;命令历史&quot;&gt;&lt;a href=&quot;#命令历史&quot; class=&quot;headerlink&quot; title=&quot;命令历史&quot;&gt;&lt;/a&gt;命令历史&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;以:和&amp;#x2F;开头的命令都有历史纪录，可以首先键入:或&amp;#x2F;然后按上下箭头来选择某个历史命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;启动vim&quot;&gt;&lt;a href=&quot;#启动vim&quot; class=&quot;headerlink&quot; title=&quot;启动vim&quot;&gt;&lt;/a&gt;启动vim&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在命令行窗口中输入以下命令即可&lt;/p&gt;
+&lt;p&gt;vim 直接启动vim&lt;/p&gt;
+&lt;p&gt;vim filename 打开vim并创建名为filename的文件&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】manjaro 环境配置</title>
+    <link href="https://github.com/wangbin-blog/post/599fe741.html"/>
+    <id>https://github.com/wangbin-blog/post/599fe741.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.857Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;常用语法&quot;&gt;&lt;a href=&quot;#常用语法&quot; class=&quot;headerlink&quot; title=&quot;常用语法&quot;&gt;&lt;/a&gt;常用语法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;#安装软件
+pacman -S 包名 ...
+
+#给所有提示设置选项
+yes | sudo pacman -S 包名 ...
+
+#只下载包，不安装
+pacman -Sw 包名 ...
+
+#清理未安装的包文件，包文件位于 /var/cache/pacman/pkg/ 目录
+pacman -Sc
+
+#清理所有的缓存文件
+pacman -Scc
+
+#删除单个软件包，保留其全部已经安装的依赖关系
+pacman -R 包名
+
+#删除指定软件包，及其所有没有被其他已安装软件包使用的依赖关系
+pacman -Rs 包名
+
+#在删除包的同时，删除所有依赖这个软件包的程序
+pacman -Rsc 包名
+
+#在删除包时不检查依赖
+pacman -Rd 包名
+
+#更新所有包 y更新数据库，yy强制更新，u升级软件
+pacman -Syu
+
+#在数据库中查询软件包，查询位置包含了包的名字和描述
+pacman -Ss 关键字
+
+#获取已安装软件包所包含文件的列表
+pacman -Ql
+
+#从本地安装软件包
+pacman -U xxx.tar.gz
+
+#显示软件包依赖树
+pactree 包名
+
+# 卸载所有无用包
+pacman -c
+&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】安装OpenJDK</title>
+    <link href="https://github.com/wangbin-blog/post/4a0c2abb.html"/>
+    <id>https://github.com/wangbin-blog/post/4a0c2abb.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.857Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;【Linux】-安装OpenJDK&quot;&gt;&lt;a href=&quot;#【Linux】-安装OpenJDK&quot; class=&quot;headerlink&quot; title=&quot;【Linux】 安装OpenJDK&quot;&gt;&lt;/a&gt;【Linux】 安装OpenJDK&lt;/h1&gt;&lt;h2 id=&quot;在线安装&quot;&gt;&lt;a href=&quot;#在线安装&quot; class=&quot;headerlink&quot; title=&quot;在线安装&quot;&gt;&lt;/a&gt;在线安装&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;### a) 检查系统中是否有java环境
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​                    &lt;code&gt;rpm -qa | grep java&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;### b) 使用yum安装/升级OpenJDK：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​                    &lt;code&gt;yum -y install java-1.8.0-openjdk-devel&lt;/code&gt;&lt;br&gt;​    ### c) 查找OpenJDK安装路径：&lt;br&gt;​                    &lt;code&gt;[root@node01 ~]# which java       //找到java的执行路径&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/bin/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /usr/bin/java       //执行路径指向环境的软连接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 22 Sep 10 21:23 /usr/bin/java -&amp;gt; /etc/alternatives/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /etc/alternatives/java     //最终指向安装路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 73 Sep 10 21:23 /etc/alternatives/java -&amp;gt; /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64/jre/bin/java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/wangbin-blog/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo主题安装</title>
+    <link href="https://github.com/wangbin-blog/post/ec0b08ff.html"/>
+    <id>https://github.com/wangbin-blog/post/ec0b08ff.html</id>
+    <published>2024-05-18T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.841Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;一、Butterfly&quot;&gt;&lt;a href=&quot;#一、Butterfly&quot; class=&quot;headerlink&quot; title=&quot;一、Butterfly&quot;&gt;&lt;/a&gt;一、Butterfly&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot; alt=&quot;Butterfly&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在线演示：&lt;a href=&quot;https://crazywong.com/&quot;&gt;CrazyWong&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;魔改标杆：&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://akilar.top/&quot;&gt;Akilarの糖果屋 - Akilar.top&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.zhheo.com/&quot;&gt;张洪Heo - 分享设计与科技生活 (zhheo.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sunguoqi.com/&quot;&gt;小孙同学 (sunguoqi.com)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;魔改教程：&lt;a href=&quot;https://butterfly.zhheo.com/docs/&quot;&gt;人人都可以去自定义 | Butterfly主题美化教程 (zhheo.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用文档：&lt;a href=&quot;https://butterfly.js.org/&quot;&gt;Butterfly - A Simple and Card UI Design theme for Hexo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;推荐值：⭐⭐⭐⭐⭐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;二、yun&quot;&gt;&lt;a href=&quot;#二、yun&quot; class=&quot;headerlink&quot; title=&quot;二、yun&quot;&gt;&lt;/a&gt;二、yun&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot; alt=&quot;yun&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在线演示：&lt;a href=&quot;https://www.yunyoujun.cn/&quot;&gt;云游君的小站 (yunyoujun.cn)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;a href=&quot;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用文档：&lt;a href=&quot;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun/docs/zh-CN&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun&amp;#x2F;docs&amp;#x2F;zh-CN at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;推荐值：⭐⭐⭐⭐</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo基本使用</title>
+    <link href="https://github.com/wangbin-blog/post/c3c198d3.html"/>
+    <id>https://github.com/wangbin-blog/post/c3c198d3.html</id>
+    <published>2024-05-18T12:01:13.000Z</published>
+    <updated>2024-10-21T08:01:38.850Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;什么是-Hexo？&quot;&gt;&lt;a href=&quot;#什么是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo？&quot;&gt;&lt;/a&gt;什么是 Hexo？&lt;/h1&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h1 id=&quot;开始使用&quot;&gt;&lt;a href=&quot;#开始使用&quot; class=&quot;headerlink&quot; title=&quot;开始使用&quot;&gt;&lt;/a&gt;开始使用&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;提交问题&lt;/a&gt;，我们会尽力解决您的问题。&lt;/p&gt;
+&lt;h3 id=&quot;安装前提&quot;&gt;&lt;a href=&quot;#安装前提&quot; class=&quot;headerlink&quot; title=&quot;安装前提&quot;&gt;&lt;/a&gt;安装前提&lt;/h3&gt;&lt;p&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 &lt;a href=&quot;https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo&quot;&gt;安装 Hexo&lt;/a&gt; 步骤。&lt;/p&gt;
+&lt;p&gt;如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/wangbin-blog/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
