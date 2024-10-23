@@ -6,7 +6,7 @@
   <link href="https://github.com/atom.xml" rel="self"/>
   
   <link href="https://github.com/"/>
-  <updated>2024-10-21T08:01:38.836Z</updated>
+  <updated>2024-10-23T06:06:22.072Z</updated>
   <id>https://github.com/</id>
   
   <author>
@@ -17,23 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/post/4a17b156.html"/>
-    <id>https://github.com/post/4a17b156.html</id>
-    <published>2024-09-25T01:25:19.896Z</published>
-    <updated>2024-10-21T08:01:38.836Z</updated>
+    <title>记录Dotnet6中使用Redis共享Session的实现</title>
+    <link href="https://github.com/post/7b05deaf.html"/>
+    <id>https://github.com/post/7b05deaf.html</id>
+    <published>2024-10-23T04:32:13.000Z</published>
+    <updated>2024-10-23T06:06:22.072Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;因项目中实际需要，需要对dotnet服务做横向扩展，但是Session默认存储在&lt;code&gt;MemoryCache&lt;/code&gt;中，无法实现多台服务器共享&lt;code&gt;Session&lt;/code&gt;,导致通过&lt;code&gt;nginx&lt;/code&gt;做负载均衡后出现跳登录的情况，因此需要使用Redis共享Session解决此问题。&lt;/p&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;h3 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依赖&quot; class=&quot;headerlink&quot; title=&quot;安装依赖&quot;&gt;&lt;/a&gt;安装依赖&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Microsoft.AspNetCore.DataProtection.StackExchangeRedis 6.0.35&lt;/li&gt;
+&lt;li&gt;Microsoft.Extensions.Caching.StackExchangeRedis 6.0.35&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
+    <category term="DotNet" scheme="https://github.com/categories/DotNet/"/>
+    
+    
+    <category term="DotNet" scheme="https://github.com/tags/DotNet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集群环境下，你不得不注意的ASP.NET Core Data Protection 机制</title>
+    <link href="https://github.com/post/a473e677.html"/>
+    <id>https://github.com/post/a473e677.html</id>
+    <published>2024-10-23T04:31:13.000Z</published>
+    <updated>2024-10-23T06:06:22.073Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近线上环境遇到一个问题，就是ASP.NET Core Web应用在单个容器使用正常，扩展多个容器无法访问的问题。查看容器日志，发现以下异常：&lt;/p&gt;
+&lt;figure class=&quot;highlight c#&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;warn: Microsoft.AspNetCore.Session.SessionMiddleware[&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;] Error unprotecting the session cookie. System.Security.Cryptography.CryptographicException: The key &amp;#123;&lt;span class=&quot;number&quot;&gt;3b&lt;/span&gt;046482&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt;cff&lt;span class=&quot;number&quot;&gt;-475b&lt;/span&gt;-b252-d12ab389d6c3&amp;#125; was &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; found &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; the key ring. For more information go to http:&lt;span class=&quot;comment&quot;&gt;//aka.ms/dataprotectionwarning at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus&amp;amp; status) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean&amp;amp; requiresMigration, Boolean&amp;amp; wasRevoked) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData) at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;通过排查，发现了是由于 &lt;a href=&quot;https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-3.0&quot;&gt;ASP.NET Core Data Protection&lt;/a&gt; 机制引起的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="DotNet" scheme="https://github.com/categories/DotNet/"/>
+    
+    
+    <category term="DotNet" scheme="https://github.com/tags/DotNet/"/>
     
   </entry>
   
@@ -150,14 +174,16 @@
   </entry>
   
   <entry>
-    <title>【uniapp】个人中心页面</title>
-    <link href="https://github.com/post/a6b86d8c.html"/>
-    <id>https://github.com/post/a6b86d8c.html</id>
+    <title>PC端登录页源码(一键复制)</title>
+    <link href="https://github.com/post/f2b42afb.html"/>
+    <id>https://github.com/post/f2b42afb.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.865Z</updated>
+    <updated>2024-10-21T08:01:38.867Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;先看效果-eyes&quot;&gt;&lt;a href=&quot;#先看效果-eyes&quot; class=&quot;headerlink&quot; title=&quot;先看效果:eyes:&quot;&gt;&lt;/a&gt;先看效果:eyes:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/57881c7a81834b0ca30b00803480e65d&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h3 id=&quot;先看效果-eye&quot;&gt;&lt;a href=&quot;#先看效果-eye&quot; class=&quot;headerlink&quot; title=&quot;先看效果 :eye:&quot;&gt;&lt;/a&gt;先看效果 :eye:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/1499be202c9c43f7b3729502c31411f6&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/89753498cef341ceb3cbec1e6d4e3f13&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/5a1f6cf1302d4d2b8f8522728ba5da26&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -169,16 +195,14 @@
   </entry>
   
   <entry>
-    <title>PC端登录页源码(一键复制)</title>
-    <link href="https://github.com/post/f2b42afb.html"/>
-    <id>https://github.com/post/f2b42afb.html</id>
+    <title>【uniapp】个人中心页面</title>
+    <link href="https://github.com/post/a6b86d8c.html"/>
+    <id>https://github.com/post/a6b86d8c.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.867Z</updated>
+    <updated>2024-10-21T08:01:38.865Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;先看效果-eye&quot;&gt;&lt;a href=&quot;#先看效果-eye&quot; class=&quot;headerlink&quot; title=&quot;先看效果 :eye:&quot;&gt;&lt;/a&gt;先看效果 :eye:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/1499be202c9c43f7b3729502c31411f6&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/89753498cef341ceb3cbec1e6d4e3f13&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/5a1f6cf1302d4d2b8f8522728ba5da26&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h3 id=&quot;先看效果-eyes&quot;&gt;&lt;a href=&quot;#先看效果-eyes&quot; class=&quot;headerlink&quot; title=&quot;先看效果:eyes:&quot;&gt;&lt;/a&gt;先看效果:eyes:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/57881c7a81834b0ca30b00803480e65d&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -362,6 +386,31 @@
   </entry>
   
   <entry>
+    <title>【Linux】Nacos 问题</title>
+    <link href="https://github.com/post/dfef5267.html"/>
+    <id>https://github.com/post/dfef5267.html</id>
+    <published>2024-06-16T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.851Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
+&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
+&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
+&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Linux】Redis 离线安装</title>
     <link href="https://github.com/post/7a6abf49.html"/>
     <id>https://github.com/post/7a6abf49.html</id>
@@ -378,31 +427,6 @@
 &lt;h3 id=&quot;移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot;&gt;&lt;a href=&quot;#移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot; class=&quot;headerlink&quot; title=&quot;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&quot;&gt;&lt;/a&gt;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&lt;/h3&gt;&lt;blockquote&gt;
 &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv redis-6.2.6 /usr/local/redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Linux】Nacos 问题</title>
-    <link href="https://github.com/post/dfef5267.html"/>
-    <id>https://github.com/post/dfef5267.html</id>
-    <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.851Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
-&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
-&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
-&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -493,6 +517,29 @@
   </entry>
   
   <entry>
+    <title>Hexo Shoka 文章加密</title>
+    <link href="https://github.com/post/6aea9c03.html"/>
+    <id>https://github.com/post/6aea9c03.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.843Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;这是个啥&quot;&gt;&lt;a href=&quot;#这是个啥&quot; class=&quot;headerlink&quot; title=&quot;这是个啥&quot;&gt;&lt;/a&gt;这是个啥&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;首先, 这是 Hexo 生态圈中 &lt;strong&gt;最好的&lt;/strong&gt; 博客加密插件&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;你可能需要写一些私密的博客, 通过密码验证的方式让人不能随意浏览.&lt;/li&gt;
+&lt;li&gt;这在 wordpress, emlog 或是其他博客系统中都很容易实现, 然而 hexo 除外. :(&lt;/li&gt;
+&lt;li&gt;为了解决这个问题, 让我们有请 “hexo-blog-encrypt”.</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github+picGo+Typora搭建图床</title>
     <link href="https://github.com/post/5901b3f7.html"/>
     <id>https://github.com/post/5901b3f7.html</id>
@@ -512,51 +559,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;Vscode下载安装&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Shoka 主题本地搜索</title>
-    <link href="https://github.com/post/e4550ecb.html"/>
-    <id>https://github.com/post/e4550ecb.html</id>
-    <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.844Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;由于 &lt;code&gt;Shoka&lt;/code&gt; 作者提供的搜索使用 &lt;code&gt;Algolia&lt;/code&gt; 实现，但是 &lt;code&gt;Algolia&lt;/code&gt; 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 &lt;code&gt;Shoka&lt;/code&gt; 主题的搜索功能配置找到了解决办法，在此感谢 &lt;code&gt;linn&lt;/code&gt; 提供的方法。&lt;/p&gt;
-&lt;h2 id=&quot;问题-解决&quot;&gt;&lt;a href=&quot;#问题-解决&quot; class=&quot;headerlink&quot; title=&quot;问题 &amp;amp; 解决&quot;&gt;&lt;/a&gt;问题 &amp;amp; 解决&lt;/h2&gt;&lt;p&gt;在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。&lt;/p&gt;
-&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;p&gt;本地搜索通过 &lt;code&gt;hexo-generator-searchdb&lt;/code&gt; 插件实现，需要先安装插件。 &lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-searchdb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Shoka 文章加密</title>
-    <link href="https://github.com/post/6aea9c03.html"/>
-    <id>https://github.com/post/6aea9c03.html</id>
-    <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.843Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;这是个啥&quot;&gt;&lt;a href=&quot;#这是个啥&quot; class=&quot;headerlink&quot; title=&quot;这是个啥&quot;&gt;&lt;/a&gt;这是个啥&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;del&gt;首先, 这是 Hexo 生态圈中 &lt;strong&gt;最好的&lt;/strong&gt; 博客加密插件&lt;/del&gt;&lt;/li&gt;
-&lt;li&gt;你可能需要写一些私密的博客, 通过密码验证的方式让人不能随意浏览.&lt;/li&gt;
-&lt;li&gt;这在 wordpress, emlog 或是其他博客系统中都很容易实现, 然而 hexo 除外. :(&lt;/li&gt;
-&lt;li&gt;为了解决这个问题, 让我们有请 “hexo-blog-encrypt”.</summary>
     
     
     
@@ -619,6 +621,28 @@
   </entry>
   
   <entry>
+    <title>Hexo Shoka 主题本地搜索</title>
+    <link href="https://github.com/post/e4550ecb.html"/>
+    <id>https://github.com/post/e4550ecb.html</id>
+    <published>2024-05-22T12:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.844Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;由于 &lt;code&gt;Shoka&lt;/code&gt; 作者提供的搜索使用 &lt;code&gt;Algolia&lt;/code&gt; 实现，但是 &lt;code&gt;Algolia&lt;/code&gt; 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 &lt;code&gt;Shoka&lt;/code&gt; 主题的搜索功能配置找到了解决办法，在此感谢 &lt;code&gt;linn&lt;/code&gt; 提供的方法。&lt;/p&gt;
+&lt;h2 id=&quot;问题-解决&quot;&gt;&lt;a href=&quot;#问题-解决&quot; class=&quot;headerlink&quot; title=&quot;问题 &amp;amp; 解决&quot;&gt;&lt;/a&gt;问题 &amp;amp; 解决&lt;/h2&gt;&lt;p&gt;在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。&lt;/p&gt;
+&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;p&gt;本地搜索通过 &lt;code&gt;hexo-generator-searchdb&lt;/code&gt; 插件实现，需要先安装插件。 &lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-searchdb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://github.com/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://github.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【前端】高颜值登录页面（一键复制）</title>
     <link href="https://github.com/post/506e9c17.html"/>
     <id>https://github.com/post/506e9c17.html</id>
@@ -640,34 +664,6 @@
     
     
     <category term="前端" scheme="https://github.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Linux】Doris 安装部署</title>
-    <link href="https://github.com/post/6632db9d.html"/>
-    <id>https://github.com/post/6632db9d.html</id>
-    <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-21T08:01:38.846Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;doris-安装部署&quot;&gt;&lt;a href=&quot;#doris-安装部署&quot; class=&quot;headerlink&quot; title=&quot;doris 安装部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;doris 安装部署&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、环境配置&quot;&gt;&lt;a href=&quot;#一、环境配置&quot; class=&quot;headerlink&quot; title=&quot;一、环境配置&quot;&gt;&lt;/a&gt;一、环境配置&lt;/h2&gt;&lt;h4 id=&quot;1-服务器环境&quot;&gt;&lt;a href=&quot;#1-服务器环境&quot; class=&quot;headerlink&quot; title=&quot;1. 服务器环境&quot;&gt;&lt;/a&gt;1. 服务器环境&lt;/h4&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;centos 7&lt;/li&gt;
-&lt;li&gt;docker &lt;a href=&quot;https://download.docker.com/linux/static/stable/x86_64/&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;doris 1.0.0 &lt;a href=&quot;https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;doris &lt;a href=&quot;https://doris.apache.org/zh-CN/installing/compilation.html&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;storrocks &lt;a href=&quot;https://docs.starrocks.com/zh-cn/main/quick_start/Deploy&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ult_me?type=blog&quot;&gt;学习地址&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
     
   </entry>
   
@@ -823,6 +819,34 @@ pacman -c
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;​                    &lt;code&gt;yum -y install java-1.8.0-openjdk-devel&lt;/code&gt;&lt;br&gt;​    ### c) 查找OpenJDK安装路径：&lt;br&gt;​                    &lt;code&gt;[root@node01 ~]# which java       //找到java的执行路径&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/bin/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /usr/bin/java       //执行路径指向环境的软连接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 22 Sep 10 21:23 /usr/bin/java -&amp;gt; /etc/alternatives/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /etc/alternatives/java     //最终指向安装路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 73 Sep 10 21:23 /etc/alternatives/java -&amp;gt; /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64/jre/bin/java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://github.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Doris 安装部署</title>
+    <link href="https://github.com/post/6632db9d.html"/>
+    <id>https://github.com/post/6632db9d.html</id>
+    <published>2024-05-21T00:31:13.000Z</published>
+    <updated>2024-10-21T08:01:38.846Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;doris-安装部署&quot;&gt;&lt;a href=&quot;#doris-安装部署&quot; class=&quot;headerlink&quot; title=&quot;doris 安装部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;doris 安装部署&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、环境配置&quot;&gt;&lt;a href=&quot;#一、环境配置&quot; class=&quot;headerlink&quot; title=&quot;一、环境配置&quot;&gt;&lt;/a&gt;一、环境配置&lt;/h2&gt;&lt;h4 id=&quot;1-服务器环境&quot;&gt;&lt;a href=&quot;#1-服务器环境&quot; class=&quot;headerlink&quot; title=&quot;1. 服务器环境&quot;&gt;&lt;/a&gt;1. 服务器环境&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;centos 7&lt;/li&gt;
+&lt;li&gt;docker &lt;a href=&quot;https://download.docker.com/linux/static/stable/x86_64/&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;doris 1.0.0 &lt;a href=&quot;https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;doris &lt;a href=&quot;https://doris.apache.org/zh-CN/installing/compilation.html&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;storrocks &lt;a href=&quot;https://docs.starrocks.com/zh-cn/main/quick_start/Deploy&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ult_me?type=blog&quot;&gt;学习地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
