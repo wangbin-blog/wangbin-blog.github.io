@@ -323,7 +323,7 @@
     <link href="https://wangbin-blog.github.io/post/4fd5a719.html"/>
     <id>https://wangbin-blog.github.io/post/4fd5a719.html</id>
     <published>2024-07-19T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.779Z</updated>
+    <updated>2024-10-28T09:29:30.135Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;访问GitHub的速度和稳定性可以通过修改hosts文件来提高。‌&lt;/strong&gt;&lt;/p&gt;
@@ -672,7 +672,7 @@
     <link href="https://wangbin-blog.github.io/post/bf223232.html"/>
     <id>https://wangbin-blog.github.io/post/bf223232.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.765Z</updated>
+    <updated>2024-10-28T09:29:39.623Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;方式一-java-jar-jar包名&quot;&gt;&lt;a href=&quot;#方式一-java-jar-jar包名&quot; class=&quot;headerlink&quot; title=&quot;方式一(java -jar jar包名)&quot;&gt;&lt;/a&gt;方式一(java -jar jar包名)&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;命令格式：java -jar jar包名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -900,7 +900,7 @@ pacman -c
     <link href="https://wangbin-blog.github.io/post/c3c198d3.html"/>
     <id>https://wangbin-blog.github.io/post/c3c198d3.html</id>
     <published>2024-05-18T12:01:13.000Z</published>
-    <updated>2024-10-24T08:13:42.751Z</updated>
+    <updated>2024-10-28T09:29:37.297Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;什么是-Hexo？&quot;&gt;&lt;a href=&quot;#什么是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo？&quot;&gt;&lt;/a&gt;什么是 Hexo？&lt;/h1&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
