@@ -386,31 +386,6 @@
   </entry>
   
   <entry>
-    <title>【Linux】Nacos 问题</title>
-    <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
-    <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
-    <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.766Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
-&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
-&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
-&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://wangbin-blog.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://wangbin-blog.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【Linux】Redis 离线安装</title>
     <link href="https://wangbin-blog.github.io/post/7a6abf49.html"/>
     <id>https://wangbin-blog.github.io/post/7a6abf49.html</id>
@@ -427,6 +402,31 @@
 &lt;h3 id=&quot;移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot;&gt;&lt;a href=&quot;#移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot; class=&quot;headerlink&quot; title=&quot;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&quot;&gt;&lt;/a&gt;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&lt;/h3&gt;&lt;blockquote&gt;
 &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv redis-6.2.6 /usr/local/redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://wangbin-blog.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://wangbin-blog.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux】Nacos 问题</title>
+    <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
+    <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
+    <published>2024-06-16T00:31:13.000Z</published>
+    <updated>2024-10-24T08:13:42.766Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
+&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
+&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
+&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
