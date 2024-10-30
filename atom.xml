@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2024-10-30T02:34:25.840Z</updated>
+  <updated>2024-10-30T03:38:14.460Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【工具】TVBoxAPP</title>
+    <title>【音乐】洛雪音乐助手</title>
+    <link href="https://wangbin-blog.github.io/post/ba3c9851.html"/>
+    <id>https://wangbin-blog.github.io/post/ba3c9851.html</id>
+    <published>2024-10-29T14:32:13.000Z</published>
+    <updated>2024-10-30T03:38:14.460Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;简介&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一个基于 Electron + Vue 开发的开源免费音乐软件，聚合各音乐平台，完善软件设计，覆盖多平台（MAC、windows），搜索、试听、收藏、下载（已不支持无损下载）样样行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本项目开源发布于 GitHub 面向全世界人用作对技术的学习交流使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;免费且无广告&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本项目开发的初衷仅是为了对新技术的学习与研究，因此软件直至停止维护都将会一直保持纯净&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;多端支持&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本项目支持在Windows、Mac OS、Linux、Android平台上运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;本项目不计划支持IOS。当前版本比128k更高的音质已失效！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;官方网站：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcA==&quot;&gt;https://github.com/lyswhut/lx-music-desktop&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更新记录：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcC9ibG9iL21hc3Rlci9DSEFOR0VMT0cubWQ=&quot;&gt;https://github.com/lyswhut/lx-music-desktop/blob/master/CHANGELOG.md&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="娱乐" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="娱乐" scheme="https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
+    
+    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【影视】TVBoxAPP</title>
     <link href="https://wangbin-blog.github.io/post/13d4ef64.html"/>
     <id>https://wangbin-blog.github.io/post/13d4ef64.html</id>
     <published>2024-10-29T13:31:13.000Z</published>
-    <updated>2024-10-30T02:34:25.840Z</updated>
+    <updated>2024-10-30T03:10:11.870Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png&quot; alt=&quot;图片描述&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
@@ -54,11 +111,11 @@
   </entry>
   
   <entry>
-    <title>【工具】异次元APP</title>
+    <title>【漫画】异次元APP</title>
     <link href="https://wangbin-blog.github.io/post/1b4d6191.html"/>
     <id>https://wangbin-blog.github.io/post/1b4d6191.html</id>
     <published>2024-10-29T12:32:13.000Z</published>
-    <updated>2024-10-30T02:17:01.792Z</updated>
+    <updated>2024-10-30T03:11:09.600Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png&quot; alt=&quot;异次元APP&quot;&gt;&lt;/p&gt;
@@ -89,11 +146,11 @@
   </entry>
   
   <entry>
-    <title>【工具】益达APP</title>
+    <title>【漫画/小说/影视/音乐】益达APP</title>
     <link href="https://wangbin-blog.github.io/post/3a1c4628.html"/>
     <id>https://wangbin-blog.github.io/post/3a1c4628.html</id>
     <published>2024-10-29T12:32:13.000Z</published>
-    <updated>2024-10-30T02:16:37.877Z</updated>
+    <updated>2024-10-30T03:10:58.720Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png&quot; alt=&quot;益达APP&quot;&gt;&lt;/p&gt;
@@ -129,16 +186,16 @@
     
     <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
-    <category term="音频" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
+    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
   <entry>
-    <title>【工具】阅读APP</title>
+    <title>【小说】阅读APP</title>
     <link href="https://wangbin-blog.github.io/post/e047a4b0.html"/>
     <id>https://wangbin-blog.github.io/post/e047a4b0.html</id>
     <published>2024-10-29T12:31:13.000Z</published>
-    <updated>2024-10-30T02:17:32.326Z</updated>
+    <updated>2024-10-30T03:10:18.551Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;

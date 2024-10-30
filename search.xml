@@ -10519,7 +10519,7 @@ Database changed
       </tags>
   </entry>
   <entry>
-    <title>【工具】阅读APP</title>
+    <title>【小说】阅读APP</title>
     <url>/post/e047a4b0.html</url>
     <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png" alt="图片"></p>
 <blockquote>
@@ -10587,7 +10587,7 @@ Database changed
       </tags>
   </entry>
   <entry>
-    <title>【工具】异次元APP</title>
+    <title>【漫画】异次元APP</title>
     <url>/post/1b4d6191.html</url>
     <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png" alt="异次元APP"></p>
 <blockquote>
@@ -10663,7 +10663,7 @@ Database changed
       </tags>
   </entry>
   <entry>
-    <title>【工具】益达APP</title>
+    <title>【漫画/小说/影视/音乐】益达APP</title>
     <url>/post/3a1c4628.html</url>
     <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png" alt="益达APP"></p>
 <blockquote>
@@ -10703,11 +10703,11 @@ Database changed
         <tag>小说</tag>
         <tag>漫画</tag>
         <tag>影视</tag>
-        <tag>音频</tag>
+        <tag>音乐</tag>
       </tags>
   </entry>
   <entry>
-    <title>【工具】TVBoxAPP</title>
+    <title>【影视】TVBoxAPP</title>
     <url>/post/13d4ef64.html</url>
     <content><![CDATA[<img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png" alt="图片描述" width="100" height="100">
 
@@ -10810,6 +10810,103 @@ Database changed
         <tag>工具</tag>
         <tag>娱乐</tag>
         <tag>影视</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【音乐】洛雪音乐助手</title>
+    <url>/post/ba3c9851.html</url>
+    <content><![CDATA[<blockquote>
+<p>简介</p>
+</blockquote>
+<p>一个基于 Electron + Vue 开发的开源免费音乐软件，聚合各音乐平台，完善软件设计，覆盖多平台（MAC、windows），搜索、试听、收藏、下载（已不支持无损下载）样样行。</p>
+<blockquote>
+<p>开源</p>
+</blockquote>
+<ul>
+<li>本项目开源发布于 GitHub 面向全世界人用作对技术的学习交流使用</li>
+</ul>
+<blockquote>
+<p>免费且无广告</p>
+</blockquote>
+<ul>
+<li>本项目开发的初衷仅是为了对新技术的学习与研究，因此软件直至停止维护都将会一直保持纯净</li>
+</ul>
+<blockquote>
+<p>多端支持</p>
+</blockquote>
+<ul>
+<li>本项目支持在Windows、Mac OS、Linux、Android平台上运行。</li>
+</ul>
+<blockquote>
+<p>说明</p>
+</blockquote>
+<ul>
+<li><p>本项目不计划支持IOS。当前版本比128k更高的音质已失效！</p>
+</li>
+<li><p>官方网站：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcA==">https://github.com/lyswhut/lx-music-desktop<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>更新记录：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcC9ibG9iL21hc3Rlci9DSEFOR0VMT0cubWQ=">https://github.com/lyswhut/lx-music-desktop/blob/master/CHANGELOG.md<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<blockquote>
+<p>下载</p>
+</blockquote>
+<p>桌面端： </p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcC9yZWxlYXNlcw==">github下载<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubGFuem91aS5jb20vYjBiZjJjZmEv">蓝凑云下载<i class="fa fa-external-link-alt"></i></span> 密码：<code>glqw</code></li>
+</ul>
+<p>移动端：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtbW9iaWxlL3JlbGVhc2Vz">github下载<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubGFuem91aS5jb20vYjBiZjJjZmEv">蓝凑云下载<i class="fa fa-external-link-alt"></i></span> 密码：<code>glqw</code><blockquote>
+<p><strong>若链接无法打开请百度：蓝奏云链接打不开</strong></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>自定义音源</p>
+</blockquote>
+<ol>
+<li><p>下载并解压 六音自定义音源 <span class="exturl" data-url="aHR0cHM6Ly93d3cuc2l4eWluLmNvbS84NDk4Lmh0bWw=">官方页面<i class="fa fa-external-link-alt"></i></span> | <span class="exturl" data-url="aHR0cHM6Ly9zb3NvLmxhbnpvdWouY29tL2IwMHA5Yzk0ZiM4bW5v">下载链接<i class="fa fa-external-link-alt"></i></span>(提取码：8mno)</p>
+</li>
+<li><p><strong>解压，解压，一定要解压！！</strong></p>
+</li>
+<li><p>打开 <code>设置</code> &gt; <code>基本设置</code> &gt; <code>音乐来源</code> &gt; <code>自定义源管理</code></p>
+</li>
+</ol>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301131186.png" alt="自定义源管理"></p>
+<ol start="4">
+<li>点本地导入，把下载的文件导进去</li>
+</ol>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301133552.png" alt="文件导入"></p>
+<ol start="5">
+<li>退出来把钩子打上，等待初始化即可。初始化完看起来是这样：</li>
+</ol>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301133920.png" alt="初始化"></p>
+<ol start="6">
+<li>设置 &gt; 下载设置 &gt; 是否启用下载功能 勾上✅</li>
+</ol>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301134748.png" alt="启用下载功能"></p>
+<ol start="7">
+<li>去搜索歌曲现在就可以下载了</li>
+</ol>
+<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301135664.png" alt="搜索歌曲"></p>
+<blockquote>
+<p>大功告成</p>
+</blockquote>
+<p>剩下的功能自己探索吧，接下来我们一起愉快的听歌吧</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>音乐</tag>
       </tags>
   </entry>
 </search>
