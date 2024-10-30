@@ -281,10 +281,10 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h1><blockquote>
-<p><strong>系统要求</strong><br>1、64位操作系统，推荐 Linux&#x2F;Unix&#x2F;macOS<br>2、64位 JDK 1.8+<br>3、<a target="_blank" rel="noopener" href="https://rocketmq.apache.org/zh/docs/quickStart/01quickstart">官网文档</a></p>
+<p><strong>系统要求</strong><br>1、64位操作系统，推荐 Linux&#x2F;Unix&#x2F;macOS<br>2、64位 JDK 1.8+<br>3、<span class="exturl" data-url="aHR0cHM6Ly9yb2NrZXRtcS5hcGFjaGUub3JnL3poL2RvY3MvcXVpY2tTdGFydC8wMXF1aWNrc3RhcnQ=">官网文档<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <h1 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><blockquote>
-<p>这里使用<a target="_blank" rel="noopener" href="https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip">release</a>免编译版本</p>
+<p>这里使用<span class="exturl" data-url="aHR0cHM6Ly9kaXN0LmFwYWNoZS5vcmcvcmVwb3MvZGlzdC9yZWxlYXNlL3JvY2tldG1xLzUuMS4wL3JvY2tldG1xLWFsbC01LjEuMC1iaW4tcmVsZWFzZS56aXA=">release<i class="fa fa-external-link-alt"></i></span>免编译版本</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">$ unzip rocketmq-all-5.1.0-source-release.zip</span><br><span class="line"><span class="comment"># 打开文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> rocketmq-all-5.1.0-source-release/</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
@@ -301,7 +301,7 @@
 </blockquote>
 <h2 id="工具测试消息收发"><a href="#工具测试消息收发" class="headerlink" title="工具测试消息收发"></a>工具测试消息收发</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> NAMESRV_ADDR=localhost:9876</span><br><span class="line">$ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Producer</span><br><span class="line"> SendResult [sendStatus=SEND_OK, msgId= ...</span><br><span class="line">$ sh bin/tools.sh org.apache.rocketmq.example.quickstart.Consumer</span><br><span class="line"> ConsumeMessageThread_%d Receive New Messages: [MessageExt...</span><br></pre></td></tr></table></figure>
 
-<h2 id="dashboard-非必须"><a href="#dashboard-非必须" class="headerlink" title="dashboard(非必须)"></a>dashboard(非必须)</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 dashboard，需要编译源代码. <a target="_blank" rel="noopener" href="https://github.com/apache/rocketmq-dashboard">源码github 地址</a></p>
+<h2 id="dashboard-非必须"><a href="#dashboard-非必须" class="headerlink" title="dashboard(非必须)"></a>dashboard(非必须)</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 dashboard，需要编译源代码. <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9yb2NrZXRtcS1kYXNoYm9hcmQ=">源码github 地址<i class="fa fa-external-link-alt"></i></span></p>
 <p>下载之后，修改 application.yml 参数，我这里只修改了 Name Server 地址：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rocketmq:</span></span><br><span class="line">  <span class="attr">config:</span></span><br><span class="line">    <span class="attr">namesrvAddrs:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9876</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">47.</span><span class="string">xx.xx.xx:9876</span></span><br></pre></td></tr></table></figure>
 
@@ -311,7 +311,7 @@
 <p>打好 jar 包后上传到服务器，执行下面命令启动：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar rocketmq-dashboard-1.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
 
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器输入 <a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器输入 <span class="exturl" data-url="aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==">http://127.0.0.1:8080/<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="Docker-部署"><a href="#Docker-部署" class="headerlink" title="Docker 部署"></a>Docker 部署</h1><h2 id="创建namesrv服务"><a href="#创建namesrv服务" class="headerlink" title="创建namesrv服务"></a>创建namesrv服务</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull apache/rocketmq</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建namesrv数据存储路径"><a href="#创建namesrv数据存储路径" class="headerlink" title="创建namesrv数据存储路径"></a>创建namesrv数据存储路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p  /docker/rocketmq/data/namesrv/logs   /docker/rocketmq/data/namesrv/store</span><br><span class="line"></span><br></pre></td></tr></table></figure>

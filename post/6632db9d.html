@@ -283,11 +283,11 @@
     <div class="post-body" itemprop="articleBody"><h1 id="doris-安装部署"><a href="#doris-安装部署" class="headerlink" title="doris 安装部署"></a><strong>doris 安装部署</strong></h1><h2 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h2><h4 id="1-服务器环境"><a href="#1-服务器环境" class="headerlink" title="1. 服务器环境"></a>1. 服务器环境</h4><blockquote>
 <ul>
 <li>centos 7</li>
-<li>docker <a target="_blank" rel="noopener" href="https://download.docker.com/linux/static/stable/x86_64/">下载地址</a></li>
-<li>doris 1.0.0 <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81">下载地址</a></li>
-<li>doris <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/installing/compilation.html">官方文档</a></li>
-<li>storrocks <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/quick_start/Deploy">官方文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ult_me?type=blog">学习地址</a></li>
+<li>docker <span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==">下载地址<i class="fa fa-external-link-alt"></i></span></li>
+<li>doris 1.0.0 <span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbCNkb3Jpcy0lRTQlQjglQkIlRTQlQkIlQTMlRTclQTAlODE=">下载地址<i class="fa fa-external-link-alt"></i></span></li>
+<li>doris <span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2luc3RhbGxpbmcvY29tcGlsYXRpb24uaHRtbA==">官方文档<i class="fa fa-external-link-alt"></i></span></li>
+<li>storrocks <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9xdWlja19zdGFydC9EZXBsb3k=">官方文档<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VsdF9tZT90eXBlPWJsb2c=">学习地址<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 </blockquote>
 <span id="more"></span>
@@ -366,7 +366,7 @@
 <p>**安装完成后，自行设置环境变量 PATH, JAVA_HOME 等。(可以通过alternatives –list命令找到jdk的安装目录) 注意： Doris 0.14.0 的版本仍然使用gcc7 的依赖编译，之后的代码将使用gcc10 的依赖 **</p>
 </li>
 <li><p>c). 下载源码</p>
-<p><a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html">官网地址</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbA==">官网地址<i class="fa fa-external-link-alt"></i></span></p>
 </li>
 <li><p>d) 编译</p>
 <p>上传源码到服务器后，解压文件，进入文件夹后，执行编译</p>
@@ -377,7 +377,7 @@
 </ul>
 <h4 id="2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"><a href="#2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集" class="headerlink" title="2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"></a>2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</h4><blockquote>
 <ol>
-<li>下载官方镜像 <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/administration/Build_in_docker">文档</a></li>
+<li>下载官方镜像 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9hZG1pbmlzdHJhdGlvbi9CdWlsZF9pbl9kb2NrZXI=">文档<i class="fa fa-external-link-alt"></i></span></li>
 </ol>
 </blockquote>
 <h3 id="2、部署环境准备"><a href="#2、部署环境准备" class="headerlink" title="2、部署环境准备"></a>2、部署环境准备</h3><ul>
@@ -564,7 +564,7 @@ firewall-cmd --reload
 <blockquote>
 <p>StarRocks依赖JDK 1.8+环境，Oracle JDK 1.8+或OpenJDK8+均可以使用（下文演示使用OpenJDK 1.8.0_41）：</p>
 <p> [root@node01 ~]# java -version<br> openjdk version “1.8.0_41”<br> OpenJDK Runtime Environment (build 1.8.0_41-b04)<br> OpenJDK 64-Bit Server VM (build 25.40-b25, mixed mode)</p>
-<p>OpenJDK 8的安装操作见:文档：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=6a91052faf8d92c8bb559d030af50173&sub=06660F2C04AC4D259E712C37184AF3BA">【Linux】安装OpenJDK.md</a></p>
+<p>OpenJDK 8的安装操作见:文档：<span class="exturl" data-url="aHR0cDovL25vdGUueW91ZGFvLmNvbS9ub3Rlc2hhcmU/aWQ9NmE5MTA1MmZhZjhkOTJjOGJiNTU5ZDAzMGFmNTAxNzMmc3ViPTA2NjYwRjJDMDRBQzREMjU5RTcxMkMzNzE4NEFGM0JB">【Linux】安装OpenJDK.md<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 </li>
 <li><p>安装Mysql</p>
@@ -575,7 +575,7 @@ firewall-cmd --reload
 <p>为方便集群部署和运维，我们通常建议在集群服务器中选择一个节点安装mysql-client。当然，我们也可以不安装mysql-client，通过外部的SQLyog、DBeaver、Navicat等图形化工具直接访问StarRocks。</p>
 </blockquote>
 <blockquote>
-<p>mysql 安装操作文档见：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=d5a1fbccd727cefea317f9cf16fe5fcd&sub=7CA727CB637D44AE8CE8C59C0101F31E">【Linux】CentOS7安装mysql5.7</a></p>
+<p>mysql 安装操作文档见：<span class="exturl" data-url="aHR0cDovL25vdGUueW91ZGFvLmNvbS9ub3Rlc2hhcmU/aWQ9ZDVhMWZiY2NkNzI3Y2VmZWEzMTdmOWNmMTZmZTVmY2Qmc3ViPTdDQTcyN0NCNjM3RDQ0QUU4Q0U4QzU5QzAxMDFGMzFF">【Linux】CentOS7安装mysql5.7<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 </li>
 </ul>
@@ -623,7 +623,7 @@ firewall-cmd --reload
 <td>部署目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;apache_hdfs_broker</td>
 </tr>
 </tbody></table>
-<h4 id="1-下载二进制包"><a href="#1-下载二进制包" class="headerlink" title="1. 下载二进制包"></a>1. 下载二进制包</h4><p>StarRocks的二进制部署包可在官网下载获取：<a target="_blank" rel="noopener" href="https://www.starrocks.com/zh-CN/download/community">下载地址</a></p>
+<h4 id="1-下载二进制包"><a href="#1-下载二进制包" class="headerlink" title="1. 下载二进制包"></a>1. 下载二进制包</h4><p>StarRocks的二进制部署包可在官网下载获取：<span class="exturl" data-url="aHR0cHM6Ly93d3cuc3RhcnJvY2tzLmNvbS96aC1DTi9kb3dubG9hZC9jb21tdW5pdHk=">下载地址<i class="fa fa-external-link-alt"></i></span></p>
 <p>doris 使用编译到output文件中的文件<br>这儿是用storrocks 为例,将下载好的部署包上传至 <code>/opt/software</code> 目录下</p>
 <blockquote>
 <pre><code>[root@starrocks ~]# mkdir /opt/software

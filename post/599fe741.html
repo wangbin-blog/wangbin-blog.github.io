@@ -481,8 +481,8 @@ sudo pacman -U xxx.tar.zst
 <h3 id="系统美化"><a href="#系统美化" class="headerlink" title="系统美化"></a>系统美化</h3><h4 id="安装latte-dock"><a href="#安装latte-dock" class="headerlink" title="安装latte-dock"></a>安装latte-dock</h4><blockquote>
 <p><code>yay -S latte-dock</code> </br><br>添加一个新空面板，默认会出现在上面，然后删除下面这个面板<br>在新面板上添加必要的部件：应用程序面板，数字时钟，托盘图标<br>还可以加全局菜单，显示面板等等</br><br>启动<code>latte-dock</code>，下方就会出现一个dock栏，具体配置看自己爱好</p>
 </blockquote>
-<h4 id="配置ohmyzsh-插件地址"><a href="#配置ohmyzsh-插件地址" class="headerlink" title="配置ohmyzsh 插件地址"></a>配置ohmyzsh <a target="_blank" rel="noopener" href="https://github.com/zsh-users">插件地址</a></h4><blockquote>
-<p>1、首先修改默认shell为zsh:</br><br><code>chsh -s /usr/bin/zsh</code> </br><br>安装ohmyzsh </br><br>wget <a target="_blank" rel="noopener" href="https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh">https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh</a> -O - | sh </br><br>如果每次执行都失败提示被拒绝连接就先改一下hosts文件</br><br><code> sudo nano /etc/hosts</code> </br><br>把这段话复制到下面 </br></p>
+<h4 id="配置ohmyzsh-插件地址"><a href="#配置ohmyzsh-插件地址" class="headerlink" title="配置ohmyzsh 插件地址"></a>配置ohmyzsh <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3pzaC11c2Vycw==">插件地址<i class="fa fa-external-link-alt"></i></span></h4><blockquote>
+<p>1、首先修改默认shell为zsh:</br><br><code>chsh -s /usr/bin/zsh</code> </br><br>安装ohmyzsh </br><br>wget <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JvYmJ5cnVzc2VsbC9vaC1teS16c2gvcmF3L21hc3Rlci90b29scy9pbnN0YWxsLnNo">https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh<i class="fa fa-external-link-alt"></i></span> -O - | sh </br><br>如果每次执行都失败提示被拒绝连接就先改一下hosts文件</br><br><code> sudo nano /etc/hosts</code> </br><br>把这段话复制到下面 </br></p>
 <pre><code># GitHub Start
 151.101.64.133 raw.githubusercontent.com
 # GitHub End 
@@ -505,7 +505,7 @@ sudo pacman -U xxx.tar.zst
 <p>6、重载配置<br><code> source ~/.zshrc</code><br>如果想要卸载 oh my zsh，直接执行下面命令</br><br><code> uninstall oh my zsh</code></p>
 </blockquote>
 <h4 id="优化grub主题"><a href="#优化grub主题" class="headerlink" title="优化grub主题"></a>优化grub主题</h4><blockquote>
-<p>准备好主题文档夹，可以在<a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse/cat/109/ord/latest/">Grub Themes</a>挑选下载</br><br>1、将主题文档夹移至&#x2F;boot&#x2F;grub&#x2F;themes&#x2F;下</br></p>
+<p>准备好主题文档夹，可以在<span class="exturl" data-url="aHR0cHM6Ly93d3cuZ25vbWUtbG9vay5vcmcvYnJvd3NlL2NhdC8xMDkvb3JkL2xhdGVzdC8=">Grub Themes<i class="fa fa-external-link-alt"></i></span>挑选下载</br><br>1、将主题文档夹移至&#x2F;boot&#x2F;grub&#x2F;themes&#x2F;下</br></p>
 <pre><code>$ sudo mv -r YourTheme /boot/grub/themes
 </code></pre>
 <p>2、更改Grub配置文档 </br></p>
@@ -530,13 +530,13 @@ sudo pacman -U xxx.tar.zst
 <p>&#x3D;&#x3D;3、注：在Grub Themes下载的主题压缩包，其中一部分有安装脚本install.sh，解压后，进入主题文档夹，执行sudo .&#x2F;install.sh即可配置成功，等效于上述的步骤。&#x3D;&#x3D;</p>
 </blockquote>
 <h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17K4y1K7ur">发行版的安装</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gv41177GE">软件包管理和中文化配置</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1AQ4y1Z7wj">自启动程序配置</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Xv411L75q">桌面环境的切换</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/114296129">环境配置</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/2019/08/27/5d654c90b0b83/">grub 主题修改</a></li>
-<li>Manjaro <a target="_blank" rel="noopener" href="https://zhang_hao_yu123.gitee.io/2021/01/14/manjaro-an-zhuang-he-pei-zhi/">命令安装</a></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTdLNHkxSzd1cg==">发行版的安装<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUd2NDExNzdHRQ==">软件包管理和中文化配置<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUFRNHkxWjd3ag==">自启动程序配置<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVh2NDExTDc1cQ==">桌面环境的切换<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMTQyOTYxMjk=">环境配置<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly93d3cuZGF6aHVhbmxhbi5jb20vMjAxOS8wOC8yNy81ZDY1NGM5MGIwYjgzLw==">grub 主题修改<i class="fa fa-external-link-alt"></i></span></li>
+<li>Manjaro <span class="exturl" data-url="aHR0cHM6Ly96aGFuZ19oYW9feXUxMjMuZ2l0ZWUuaW8vMjAyMS8wMS8xNC9tYW5qYXJvLWFuLXpodWFuZy1oZS1wZWktemhpLw==">命令安装<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 
     </div>

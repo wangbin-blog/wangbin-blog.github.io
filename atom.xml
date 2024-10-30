@@ -180,11 +180,11 @@
     
     <category term="娱乐" scheme="https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
-    <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
+    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
     <category term="漫画" scheme="https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/"/>
     
-    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
+    <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
     <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
@@ -260,7 +260,7 @@
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近线上环境遇到一个问题，就是ASP.NET Core Web应用在单个容器使用正常，扩展多个容器无法访问的问题。查看容器日志，发现以下异常：&lt;/p&gt;
 &lt;figure class=&quot;highlight c#&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;warn: Microsoft.AspNetCore.Session.SessionMiddleware[&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;] Error unprotecting the session cookie. System.Security.Cryptography.CryptographicException: The key &amp;#123;&lt;span class=&quot;number&quot;&gt;3b&lt;/span&gt;046482&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt;cff&lt;span class=&quot;number&quot;&gt;-475b&lt;/span&gt;-b252-d12ab389d6c3&amp;#125; was &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; found &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; the key ring. For more information go to http:&lt;span class=&quot;comment&quot;&gt;//aka.ms/dataprotectionwarning at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus&amp;amp; status) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean&amp;amp; requiresMigration, Boolean&amp;amp; wasRevoked) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData) at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;通过排查，发现了是由于 &lt;a href=&quot;https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/introduction?view=aspnetcore-3.0&quot;&gt;ASP.NET Core Data Protection&lt;/a&gt; 机制引起的。&lt;/p&gt;</summary>
+&lt;p&gt;通过排查，发现了是由于 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvYXNwbmV0L2NvcmUvc2VjdXJpdHkvZGF0YS1wcm90ZWN0aW9uL2ludHJvZHVjdGlvbj92aWV3PWFzcG5ldGNvcmUtMy4w&quot;&gt;ASP.NET Core Data Protection&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 机制引起的。&lt;/p&gt;</summary>
     
     
     
@@ -476,12 +476,12 @@
 &lt;li&gt;Php&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/magicblack/maccms10/releases&quot;&gt;maccmsV10 项目文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/07/6e7b7cb7ecc2cabf146b694492444590.zip&quot;&gt;模板文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/830bdd46a759797d47a71490dba2d6c5.zip&quot;&gt;萌芽采集插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dkewl.com/&quot;&gt;集模板&amp;#x2F;插件于一身的网站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/b8b949ab6f2d0ecf68206a3542a6cfda.rar&quot;&gt;移动端模板&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/255ffd96a9b9f336d9dd5e7f660351f3.zip&quot;&gt;pc端模板&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL21hZ2ljYmxhY2svbWFjY21zMTAvcmVsZWFzZXM=&quot;&gt;maccmsV10 项目文件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDcvNmU3YjdjYjdlY2MyY2FiZjE0NmI2OTQ0OTI0NDQ1OTAuemlw&quot;&gt;模板文件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvODMwYmRkNDZhNzU5Nzk3ZDQ3YTcxNDkwZGJhMmQ2YzUuemlw&quot;&gt;萌芽采集插件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuZGtld2wuY29tLw==&quot;&gt;集模板&amp;#x2F;插件于一身的网站&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvYjhiOTQ5YWI2ZjJkMGVjZjY4MjA2YTM1NDJhNmNmZGEucmFy&quot;&gt;移动端模板&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvMjU1ZmZkOTZhOWI5ZjMzNmQ5ZGQ1ZTdmNjYwMzUxZjMuemlw&quot;&gt;pc端模板&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;安装waf防火墙（可选）</summary>
     
     
@@ -515,7 +515,7 @@
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
 &lt;td&gt;聚合资源&lt;/td&gt;
-&lt;td&gt;&lt;a</summary>
+&lt;td&gt;&lt;span class=&quot;exturl&quot;</summary>
         
       
     
@@ -659,8 +659,8 @@
     <updated>2024-10-24T08:13:42.774Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;资源下载&quot;&gt;&lt;a href=&quot;#资源下载&quot; class=&quot;headerlink&quot; title=&quot;资源下载&quot;&gt;&lt;/a&gt;资源下载&lt;/h2&gt;&lt;p&gt;nginx-1.20.1.tar.gz（下载链接中包含&lt;a href=&quot;https://so.csdn.net/so/search?q=gcc&amp;spm=1001.2101.3001.7020&quot;&gt;gcc&lt;/a&gt;、g++、pcre、libtool、nginx）&lt;/p&gt;
-&lt;p&gt;链接：&lt;a href=&quot;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&quot;&gt;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;资源下载&quot;&gt;&lt;a href=&quot;#资源下载&quot; class=&quot;headerlink&quot; title=&quot;资源下载&quot;&gt;&lt;/a&gt;资源下载&lt;/h2&gt;&lt;p&gt;nginx-1.20.1.tar.gz（下载链接中包含&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1nY2Mmc3BtPTEwMDEuMjEwMS4zMDAxLjcwMjA=&quot;&gt;gcc&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;、g++、pcre、libtool、nginx）&lt;/p&gt;
+&lt;p&gt;链接：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU5pdjMzdVphNGdqMHZpWUZybkJUQlE=&quot;&gt;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;提取码：0b91&lt;/p&gt;
 &lt;h2 id=&quot;安装步骤&quot;&gt;&lt;a href=&quot;#安装步骤&quot; class=&quot;headerlink&quot; title=&quot;安装步骤&quot;&gt;&lt;/a&gt;安装步骤&lt;/h2&gt;&lt;h3 id=&quot;安装gcc&quot;&gt;&lt;a href=&quot;#安装gcc&quot; class=&quot;headerlink&quot; title=&quot;安装gcc&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装gcc&lt;/strong&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rpm -Uvh *.rpm --nodeps --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
@@ -690,13 +690,13 @@
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;注意：排名不分先后，都是十分优秀的开源项目和框架，每周定期更新分享（欢迎关注公众号：&lt;strong&gt;追逐时光者&lt;/strong&gt;，第一时间获取每周精选分享资讯🔔）。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;帮助开发者发现功能强大、性能优越、创新前沿、简单易用的C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架，无论你是寻找灵感、学习新技术、改进代码质量，还是想拓展自己的技术视野，都能为你提供有价值的参考和指导。关注优秀项目和框架精选能让你及时了解C#、.NET和.NET Core领域的最新动态和最佳实践，提高开发效率和质量。坑已挖，欢迎大家踊跃提交PR或者在该&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/issues/5&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;/a&gt;中留言（&lt;strong&gt;让优秀的项目和框架不被埋没&lt;/strong&gt;），我会定期收录、&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectMonthly.md&quot;&gt;公众号推广和分享👀&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;帮助开发者发现功能强大、性能优越、创新前沿、简单易用的C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架，无论你是寻找灵感、学习新技术、改进代码质量，还是想拓展自己的技术视野，都能为你提供有价值的参考和指导。关注优秀项目和框架精选能让你及时了解C#、.NET和.NET Core领域的最新动态和最佳实践，提高开发效率和质量。坑已挖，欢迎大家踊跃提交PR或者在该&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvaXNzdWVzLzU=&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;中留言（&lt;strong&gt;让优秀的项目和框架不被埋没&lt;/strong&gt;），我会定期收录、&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RNb250aGx5Lm1k&quot;&gt;公众号推广和分享👀&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/trending/c%23?since=daily&quot;&gt;📈C# GitHub趋势榜&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/dotNetTreasury&quot;&gt;🎁C#&amp;#x2F;.NET&amp;#x2F;.NET Core项目宝库组织&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectPicks.md&quot;&gt;🔔C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/issues/5&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/YSGStudyHards/DotNetGuide/blob/main/docs/DotNet/DotNetProjectMonthly.md&quot;&gt;📰C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架公众号月刊&lt;/a&gt;</summary>
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL3RyZW5kaW5nL2MlMjM/c2luY2U9ZGFpbHk=&quot;&gt;📈C# GitHub趋势榜&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2RvdE5ldFRyZWFzdXJ5&quot;&gt;🎁C#&amp;#x2F;.NET&amp;#x2F;.NET Core项目宝库组织&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RQaWNrcy5tZA==&quot;&gt;🔔C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvaXNzdWVzLzU=&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RNb250aGx5Lm1k&quot;&gt;📰C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架公众号月刊&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;</summary>
     
     
     
@@ -742,10 +742,10 @@
 &lt;p&gt;Github账号注册&amp;#x2F;创建一个Public仓库&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Molunerfinn/PicGo/releases&quot;&gt;picgo下载链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&quot;&gt;picgo下载链接&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://typora.ymzhxing.cn/index.html?bd_vid=11765516185414740389&quot;&gt;Typora下载安装&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=&quot;&gt;Typora下载安装&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Vscode下载安装&lt;/p&gt;
@@ -796,7 +796,7 @@
         
         
     <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a</summary>
+&lt;p&gt;&lt;span class=&quot;exturl&quot;</summary>
         
       
     
@@ -913,10 +913,10 @@
     
     
     <summary type="html">&lt;h1 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系统要求&quot; class=&quot;headerlink&quot; title=&quot;系统要求&quot;&gt;&lt;/a&gt;系统要求&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;系统要求&lt;/strong&gt;&lt;br&gt;1、64位操作系统，推荐 Linux&amp;#x2F;Unix&amp;#x2F;macOS&lt;br&gt;2、64位 JDK 1.8+&lt;br&gt;3、&lt;a href=&quot;https://rocketmq.apache.org/zh/docs/quickStart/01quickstart&quot;&gt;官网文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统要求&lt;/strong&gt;&lt;br&gt;1、64位操作系统，推荐 Linux&amp;#x2F;Unix&amp;#x2F;macOS&lt;br&gt;2、64位 JDK 1.8+&lt;br&gt;3、&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yb2NrZXRtcS5hcGFjaGUub3JnL3poL2RvY3MvcXVpY2tTdGFydC8wMXF1aWNrc3RhcnQ=&quot;&gt;官网文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;安装部署&quot;&gt;&lt;a href=&quot;#安装部署&quot; class=&quot;headerlink&quot; title=&quot;安装部署&quot;&gt;&lt;/a&gt;安装部署&lt;/h1&gt;&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;这里使用&lt;a href=&quot;https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.0-bin-release.zip&quot;&gt;release&lt;/a&gt;免编译版本&lt;/p&gt;
+&lt;p&gt;这里使用&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kaXN0LmFwYWNoZS5vcmcvcmVwb3MvZGlzdC9yZWxlYXNlL3JvY2tldG1xLzUuMS4wL3JvY2tldG1xLWFsbC01LjEuMC1iaW4tcmVsZWFzZS56aXA=&quot;&gt;release&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;免编译版本&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 解压&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ unzip rocketmq-all-5.1.0-source-release.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 打开文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; rocketmq-all-5.1.0-source-release/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
@@ -1054,11 +1054,11 @@ pacman -c
     <summary type="html">&lt;h1 id=&quot;doris-安装部署&quot;&gt;&lt;a href=&quot;#doris-安装部署&quot; class=&quot;headerlink&quot; title=&quot;doris 安装部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;doris 安装部署&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、环境配置&quot;&gt;&lt;a href=&quot;#一、环境配置&quot; class=&quot;headerlink&quot; title=&quot;一、环境配置&quot;&gt;&lt;/a&gt;一、环境配置&lt;/h2&gt;&lt;h4 id=&quot;1-服务器环境&quot;&gt;&lt;a href=&quot;#1-服务器环境&quot; class=&quot;headerlink&quot; title=&quot;1. 服务器环境&quot;&gt;&lt;/a&gt;1. 服务器环境&lt;/h4&gt;&lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;centos 7&lt;/li&gt;
-&lt;li&gt;docker &lt;a href=&quot;https://download.docker.com/linux/static/stable/x86_64/&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;doris 1.0.0 &lt;a href=&quot;https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81&quot;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;doris &lt;a href=&quot;https://doris.apache.org/zh-CN/installing/compilation.html&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;storrocks &lt;a href=&quot;https://docs.starrocks.com/zh-cn/main/quick_start/Deploy&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/ult_me?type=blog&quot;&gt;学习地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docker &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==&quot;&gt;下载地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;doris 1.0.0 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbCNkb3Jpcy0lRTQlQjglQkIlRTQlQkIlQTMlRTclQTAlODE=&quot;&gt;下载地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;doris &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2luc3RhbGxpbmcvY29tcGlsYXRpb24uaHRtbA==&quot;&gt;官方文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;storrocks &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9xdWlja19zdGFydC9EZXBsb3k=&quot;&gt;官方文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VsdF9tZT90eXBlPWJsb2c=&quot;&gt;学习地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;</summary>
     
@@ -1081,23 +1081,23 @@ pacman -c
     
     <summary type="html">&lt;h1 id=&quot;一、Butterfly&quot;&gt;&lt;a href=&quot;#一、Butterfly&quot; class=&quot;headerlink&quot; title=&quot;一、Butterfly&quot;&gt;&lt;/a&gt;一、Butterfly&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot; alt=&quot;Butterfly&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在线演示：&lt;a href=&quot;https://crazywong.com/&quot;&gt;CrazyWong&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在线演示：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9jcmF6eXdvbmcuY29tLw==&quot;&gt;CrazyWong&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;魔改标杆：&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://akilar.top/&quot;&gt;Akilarの糖果屋 - Akilar.top&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.zhheo.com/&quot;&gt;张洪Heo - 分享设计与科技生活 (zhheo.com)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sunguoqi.com/&quot;&gt;小孙同学 (sunguoqi.com)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ha2lsYXIudG9wLw==&quot;&gt;Akilarの糖果屋 - Akilar.top&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ibG9nLnpoaGVvLmNvbS8=&quot;&gt;张洪Heo - 分享设计与科技生活 (zhheo.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9zdW5ndW9xaS5jb20v&quot;&gt;小孙同学 (sunguoqi.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;魔改教程：&lt;a href=&quot;https://butterfly.zhheo.com/docs/&quot;&gt;人人都可以去自定义 | Butterfly主题美化教程 (zhheo.com)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;a href=&quot;https://github.com/jerryc127/hexo-theme-butterfly&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;使用文档：&lt;a href=&quot;https://butterfly.js.org/&quot;&gt;Butterfly - A Simple and Card UI Design theme for Hexo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;魔改教程：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9idXR0ZXJmbHkuemhoZW8uY29tL2RvY3Mv&quot;&gt;人人都可以去自定义 | Butterfly主题美化教程 (zhheo.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2plcnJ5YzEyNy9oZXhvLXRoZW1lLWJ1dHRlcmZseQ==&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;使用文档：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9idXR0ZXJmbHkuanMub3JnLw==&quot;&gt;Butterfly - A Simple and Card UI Design theme for Hexo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;推荐值：⭐⭐⭐⭐⭐&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;二、yun&quot;&gt;&lt;a href=&quot;#二、yun&quot; class=&quot;headerlink&quot; title=&quot;二、yun&quot;&gt;&lt;/a&gt;二、yun&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot; alt=&quot;yun&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在线演示：&lt;a href=&quot;https://www.yunyoujun.cn/&quot;&gt;云游君的小站 (yunyoujun.cn)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;a href=&quot;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;使用文档：&lt;a href=&quot;https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun/docs/zh-CN&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun&amp;#x2F;docs&amp;#x2F;zh-CN at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在线演示：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cueXVueW91anVuLmNuLw==&quot;&gt;云游君的小站 (yunyoujun.cn)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;主题仓库：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4=&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;使用文档：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4vZG9jcy96aC1DTg==&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun&amp;#x2F;docs&amp;#x2F;zh-CN at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;推荐值：⭐⭐⭐⭐</summary>
     
     
@@ -1117,14 +1117,14 @@ pacman -c
     <updated>2024-10-28T09:29:37.297Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;什么是-Hexo？&quot;&gt;&lt;a href=&quot;#什么是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo？&quot;&gt;&lt;/a&gt;什么是 Hexo？&lt;/h1&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h1 id=&quot;开始使用&quot;&gt;&lt;a href=&quot;#开始使用&quot; class=&quot;headerlink&quot; title=&quot;开始使用&quot;&gt;&lt;/a&gt;开始使用&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;提交问题&lt;/a&gt;，我们会尽力解决您的问题。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;什么是-Hexo？&quot;&gt;&lt;a href=&quot;#什么是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo？&quot;&gt;&lt;/a&gt;什么是 Hexo？&lt;/h1&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=&quot;&gt;Markdown&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h1 id=&quot;开始使用&quot;&gt;&lt;a href=&quot;#开始使用&quot; class=&quot;headerlink&quot; title=&quot;开始使用&quot;&gt;&lt;/a&gt;开始使用&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&quot;&gt;提交问题&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;，我们会尽力解决您的问题。&lt;/p&gt;
 &lt;h3 id=&quot;安装前提&quot;&gt;&lt;a href=&quot;#安装前提&quot; class=&quot;headerlink&quot; title=&quot;安装前提&quot;&gt;&lt;/a&gt;安装前提&lt;/h3&gt;&lt;p&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL25vZGVqcy5vcmcv&quot;&gt;Node.js&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL2dpdC1zY20uY29tLw==&quot;&gt;Git&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 &lt;a href=&quot;https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo&quot;&gt;安装 Hexo&lt;/a&gt; 步骤。&lt;/p&gt;
+&lt;p&gt;如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvIyVFNSVBRSU4OSVFOCVBMyU4NS1IZXhv&quot;&gt;安装 Hexo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 步骤。&lt;/p&gt;
 &lt;p&gt;如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。&lt;/p&gt;</summary>
     
     
