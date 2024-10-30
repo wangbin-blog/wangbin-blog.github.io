@@ -1944,7 +1944,7 @@ export PATH=$PATH:$JAVA_HOME/bin
     <url>/post/4fd5a719.html</url>
     <content><![CDATA[<p><strong>访问GitHub的速度和稳定性可以通过修改hosts文件来提高。‌</strong></p>
 <p>首先，‌获取github.com的IP地址是关键的一步。‌</p>
-<p>你可以通过在线DNS解析网站，‌如<a href="http://www.ip33.com/dns.html">ip33</a>，‌输入<code>github.com</code>域名，‌获取A记录的IP地址。‌然后将这个IP地址赋值到<code>hosts</code>文件（‌文件路径为<code>C:\Windows\System32\drivers\etc</code>）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将hosts文件copy到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌</p>
+<p>你可以通过在线DNS解析网站，‌如<span class="exturl" data-url="aHR0cDovL3d3dy5pcDMzLmNvbS9kbnMuaHRtbA==">ip33<i class="fa fa-external-link-alt"></i></span>，‌输入<code>github.com</code>域名，‌获取A记录的IP地址。‌然后将这个IP地址赋值到<code>hosts</code>文件（‌文件路径为<code>C:\Windows\System32\drivers\etc</code>）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将hosts文件copy到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌</p>
 <p>此外，‌还有一些特定的IP地址可以帮助加速访问GitHub的特定服务，‌</p>
 <span id="more"></span>
 <p>例如 <a href="avatars.githubusercontent.com">avatars.githubusercontent.com</a>、‌<a href="codeload.github.com">codeload.github.com</a>等，‌这些服务通常用于加载图片、‌代码等资源。‌通过将这些服务与特定的IP地址关联，‌可以进一步提高访问速度和稳定性。‌</p>
@@ -1963,52 +1963,54 @@ export PATH=$PATH:$JAVA_HOME/bin
 <tbody><tr>
 <td align="left">百度DNS</td>
 <td align="left">180.76.76.76</td>
-<td align="left"><a href="http://dudns.baidu.com/">http://dudns.baidu.com/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL2R1ZG5zLmJhaWR1LmNvbS8=">http://dudns.baidu.com/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">-</td>
 </tr>
 <tr>
 <td align="left">阿里DNS</td>
 <td align="left">223.5.5.5 223.6.6.6</td>
-<td align="left"><a href="http://www.alidns.com/">http://www.alidns.com/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5hbGlkbnMuY29tLw==">http://www.alidns.com/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">-</td>
 </tr>
 <tr>
 <td align="left">DNSPod</td>
 <td align="left">119.29.29.29</td>
-<td align="left"><a href="https://www.dnspod.cn/Products/Public.DNS">https://www.dnspod.cn/Products/Public.DNS</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cuZG5zcG9kLmNuL1Byb2R1Y3RzL1B1YmxpYy5ETlM=">https://www.dnspod.cn/Products/Public.DNS<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">腾讯旗下</td>
 </tr>
 <tr>
 <td align="left">114 DNS</td>
 <td align="left">114.114.114.114 114.114.115.115</td>
-<td align="left"><a href="http://www.114dns.com/">http://www.114dns.com/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy4xMTRkbnMuY29tLw==">http://www.114dns.com/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">电信合作商</td>
 </tr>
 <tr>
 <td align="left">Google DNS</td>
 <td align="left">8.8.8.8  8.8.4.4</td>
-<td align="left"><a href="https://developers.google.com/speed/public-dns/">https://developers.google.com/speed/public-dns/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcHVibGljLWRucy8=">https://developers.google.com/speed/public-dns/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">纯净无污染，注意墙</td>
 </tr>
 <tr>
 <td align="left">SDNS</td>
 <td align="left">1.2.4.8 210.2.4.8</td>
-<td align="left"><a href="http://www.sdns.cn/">http://www.sdns.cn/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5zZG5zLmNuLw==">http://www.sdns.cn/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">中国互联网络信息中心提供</td>
 </tr>
 <tr>
 <td align="left">OpenDNS</td>
 <td align="left">208.67.220.220 208.67.222.222</td>
-<td align="left"><a href="http://www.opendns.com/">http://www.opendns.com/</a></td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5vcGVuZG5zLmNvbS8=">http://www.opendns.com/<i class="fa fa-external-link-alt"></i></span></td>
 <td align="left">资深、专业的公众DNS</td>
 </tr>
 </tbody></table>
 ]]></content>
       <categories>
         <category>工具</category>
+        <category>开发工具</category>
       </categories>
       <tags>
         <tag>工具</tag>
+        <tag>开发工具</tag>
       </tags>
   </entry>
   <entry>
@@ -10514,6 +10516,300 @@ Database changed
       </categories>
       <tags>
         <tag>DotNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【工具】阅读APP</title>
+    <url>/post/e047a4b0.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png" alt="图片"></p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>小说</li>
+</ul>
+<span id="more"></span>
+<blockquote>
+<p>阅读</p>
+</blockquote>
+<ol>
+<li><p>自定义书源，自己设置规则，抓取网页数据，规则简单易懂，软件内有规则说明</p>
+</li>
+<li><p>书源规则支持搜索及发现，所有找书看书功能全部自定义，找书更方便</p>
+</li>
+<li><p>支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等</p>
+</li>
+<li><p>支持替换净化，去除广告替换内容很方便</p>
+</li>
+<li><p>支持本地TXT、EPUB阅读，手动浏览，智能扫描</p>
+</li>
+<li><p>支持多种翻页模式，覆盖、仿真、滑动、滚动等</p>
+</li>
+</ol>
+<blockquote>
+<p>相关链接</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8=">阅读APP开源地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9keS5tZ3o2LmNjLw==">喵公子-喵公子订阅源<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2l0bGluay5vcmcuY24veWktYy95ZC90cmVlL21hc3Rlci9SRUFETUUubWQ=">一程的书源，RSS源，更新地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9sZWdhZG8uYW9hb3N0YXIuY29tLw==">「阅读」APP 源<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly95Y2tjZW8udmlwLw==">源仓库发布页（防走丢）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>APP下载</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8vcmVsZWFzZXM=">官方下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vYXBrLzI1NjAzMA==">酷安下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>小说</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【工具】异次元APP</title>
+    <url>/post/1b4d6191.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png" alt="异次元APP"></p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>漫画 <span id="more"></span></li>
+</ul>
+<blockquote>
+<p>异次元</p>
+</blockquote>
+<ol>
+<li><p>应用界面超级干净清爽，无广告，无多余花哨的东西。</p>
+</li>
+<li><p>完全免费，没有会员，没有广告骚扰</p>
+</li>
+<li><p>支持下载缓存，支持离线阅读</p>
+</li>
+<li><p>支持添加多个图源源，拥有近乎无限的资源，可随时切换源</p>
+</li>
+<li><p>可一次搜索多源漫画。</p>
+</li>
+<li><p>加入定制源地址后，可以在一个APP中免费观看全网漫画</p>
+</li>
+<li><p>现在只支持Android平台，不支持iPhone&#x2F;iOS</p>
+</li>
+</ol>
+<blockquote>
+<p>图源(不定时更新)</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg1Lmh0bWw=">九妖漫画👙 https://app.jymhapp.com<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg0Lmh0bWw=">禁漫天堂[国内] https://18comic-hok.vip<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzgzLmh0bWw=">漫蛙 https://manwasb.cc<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>图源合集（不定时更新）</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzUwLmh0bWw=">2024.10.06 伪官方图源合集<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ4Lmh0bWw=">自用整合（已检校）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ2Lmh0bWw=">又在鬼混（自用6.13校验）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>相关链接</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vaW5kZXgvaW5kZXguaHRtbA==">异次元-源仓库地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly95aWNpeXVhbi5sYW56b3VpLmNvbS9iMDBlajBrYmE=">异次元-下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>漫画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【工具】益达APP</title>
+    <url>/post/3a1c4628.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png" alt="益达APP"></p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>全平台(安卓\IOS\MAC\WIN)</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>小说  </li>
+<li>影视 </li>
+<li>漫画 </li>
+<li>音频</li>
+</ul>
+<span id="more"></span>
+
+<blockquote>
+<p>flutter + rust 开发! 跨平台</p>
+</blockquote>
+<ul>
+<li>安装包获取:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmVsZWFzZXM=">https://github.com/xiaohucode/yidaRule/releases<i class="fa fa-external-link-alt"></i></span></li>
+<li>规则导入：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmF3L21haW4vc2l0ZVJ1bGUveWRTb3VyY2UueWRz">https://github.com/xiaohucode/yidaRule/raw/main/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
+<li>规则说明文档: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvYmxvYi9tYWluL0RvY3VtZW50Lm1k">https://github.com/xiaohucode/yidaRule/blob/main/Document.md<i class="fa fa-external-link-alt"></i></span></li>
+<li>PS: 规则中有很多失效的了，重在学习怎么制作源！</li>
+<li>源第三方地址：<span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gveGlhb2h1Y29kZS95aWRhUnVsZS9zaXRlUnVsZS95ZFNvdXJjZS55ZHM=">https://gcore.jsdelivr.net/gh/xiaohucode/yidaRule/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>小说</tag>
+        <tag>漫画</tag>
+        <tag>影视</tag>
+        <tag>音频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【工具】TVBoxAPP</title>
+    <url>/post/13d4ef64.html</url>
+    <content><![CDATA[<img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png" alt="图片描述" width="100" height="100">
+
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>影视</li>
+</ul>
+<span id="more"></span>
+<blockquote>
+<p>TVbox开源版</p>
+</blockquote>
+<ul>
+<li><p>通过导入特点资源接口,解析各类爬虫源、XP源、采集源等。完全无任何限制,也无任何广告。</p>
+</li>
+<li><p>原版支持本地功能，聚合模式，支持多种视频格式，增加分辨率、时间及缓冲速度显示，优化采集等等。</p>
+</li>
+<li><p>新UI聚合检索(长按影片)，支持读取挂载阿里网盘资源，其他功能同原版。</p>
+</li>
+<li><p>设置 — 配置地址 — 输入你的站源规则 — 确定即可；</p>
+</li>
+<li><p>新版支持多jar(爬虫包)，增加直播节目预告 EGP。</p>
+</li>
+<li><p>编辑器 PC Web版 CatVodTVJsonEditor</p>
+</li>
+<li><p>配置地址—输入站源—确定即可 URL站源规则</p>
+</li>
+</ul>
+<blockquote>
+<p>相关版本</p>
+</blockquote>
+<p>由于开源版已很久没人维护更新，所以现在网上大部分都是根据该版二开衍生的各种版本</p>
+<p>这里引用了 奇奇乐享 公众号上的一个下载链接，里面包含了大部分的TVBOX相关的版本</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9xaXFpMjAyMC5sYW56b3V3LmNvbS9iMDlzdnF2MWM=">https://qiqi2020.lanzouw.com/b09svqv1c<i class="fa fa-external-link-alt"></i></span></p>
+<p>推荐较多有 影迷 和 影视仓 仅作参考，也可能其他版本你更喜欢！</p>
+<blockquote>
+<p>资源中心</p>
+</blockquote>
+<p>资源仅来源于网络，不保证最新。如有失效或推荐，可联系站长重新整理和添加！</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">dxawi</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9keGF3aS5naXRodWIuaW8vMC8wLmpzb24=">https://dxawi.github.io/0/0.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">饭太硬</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy7ppa3lpKrnoawuY29tL3R2">http://www.饭太硬.com/tv<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">小米</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">唐三</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyOC5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0828.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">小米</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">FongMI</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyNy5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0827.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">纯一</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly8xMDBrbS50b3AvMA==">https://100km.top/0<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">巧儿</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3BhbmRvd24ucHJvL3R2Ym94L3R2Ym94Lmpzb24=">http://pandown.pro/tvbox/tvbox.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">霜灰</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvbG0zMTczNzk4MjkvUHlyYW1pZFN0b3JlL3B5cmFtaWQvcHkuanNvbg==">https://gcore.jsdelivr.net/gh/lm317379829/PyramidStore/pyramid/py.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">更多地址</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20vaW5kZXgvYXBwbGlzdC90dmJveC5odG1s">https://www.yck2.com/index/applist/tvbox.html<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>影视</tag>
       </tags>
   </entry>
 </search>
