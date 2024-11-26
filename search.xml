@@ -1745,7 +1745,6 @@ export PATH=$PATH:$JAVA_HOME/bin
     <title>【uniapp】个人中心页面</title>
     <url>/post/a6b86d8c.html</url>
     <content><![CDATA[<h3 id="先看效果-eyes"><a href="#先看效果-eyes" class="headerlink" title="先看效果:eyes:"></a>先看效果:eyes:</h3><p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/57881c7a81834b0ca30b00803480e65d" alt="图片"></p>
-<span id="more"></span>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><h4 id="01：第一个黄色（图一）"><a href="#01：第一个黄色（图一）" class="headerlink" title="01：第一个黄色（图一）"></a>01：第一个黄色（图一）</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tops&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">uni-icons</span> <span class="attr">type</span>=<span class="string">&quot;gear&quot;</span> <span class="attr">size</span>=<span class="string">&quot;32&quot;</span> <span class="attr">class</span>=<span class="string">&quot;setIcon&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;setFun&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">uni-icons</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;infos&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">          <span class="attr">src</span>=<span class="string">&quot;https://img1.baidu.com/it/u=1665929857,2089570148&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=500&amp;h=889&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">mode</span>=<span class="string">&quot;aspectFill&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;names&quot;</span>&gt;</span></span><br><span class="line">          韩信</span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;desc&quot;</span>&gt;</span></span><br><span class="line">          纵情山河万里，肆意九州五岳，爱恨痴狂，抵不过沧海一笑</span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;t-list&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;t-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span></span><br><span class="line">              收藏</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;vals&quot;</span>&gt;</span></span><br><span class="line">              45</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;t-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span></span><br><span class="line">              点赞</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;vals&quot;</span>&gt;</span></span><br><span class="line">              266</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;t-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span></span><br><span class="line">              分享</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;vals&quot;</span>&gt;</span></span><br><span class="line">              103</span><br><span class="line">            <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;lists&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">uni-list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon1&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;个人信息&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> <span class="attr">rightText</span>=<span class="string">&quot;右侧文字&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon2&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;我的购物车&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> <span class="attr">rightText</span>=<span class="string">&quot;右侧文字&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon3&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;用户反馈&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon4&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;我的邮件&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon5&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;分享有礼&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">uni-list</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon1</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;auth&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon2</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;cart&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon3</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;chatboxes&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon4</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;email&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon5</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;gift&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">setFun</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        uni.<span class="title function_">showToast</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">title</span>: <span class="string">&quot;点击设置&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">icon</span>: <span class="string">&quot;none&quot;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">clickList</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        uni.<span class="title function_">showToast</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">title</span>: <span class="string">&quot;点击列表&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">icon</span>: <span class="string">&quot;none&quot;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.tops</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">580</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: aquamarine;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;https://img1.baidu.com/it/u=3643237076,897388802&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=800&amp;h=400&quot;</span>) no-repeat;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.setIcon</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">top</span>: <span class="number">50</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">right</span>: <span class="number">50</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.lists</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.tops</span> <span class="selector-class">.infos</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">80%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">450</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">top</span>: <span class="number">40%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">left</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">25%</span>);</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.infos</span> <span class="selector-tag">image</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">120</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">120</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: <span class="number">4</span>rpx solid <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.infos</span> <span class="selector-class">.names</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">34</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: <span class="number">20</span>rpx <span class="number">0</span> <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.infos</span> <span class="selector-class">.desc</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">max-width</span>: <span class="number">62%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: <span class="number">10</span>rpx auto;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-overflow</span>: ellipsis;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">white-space</span>: nowrap;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.infos</span> <span class="selector-class">.t-list</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">60</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: space-around;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.t-item</span> <span class="selector-class">.tit</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">32</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.t-item</span> <span class="selector-class">.vals</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">36</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  /deep/<span class="selector-class">.uni-list-item__content-title</span><span class="selector-attr">[data-v-296a3d7e]</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: <span class="number">500</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  /deep/<span class="selector-class">.uni-list-item__container</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="第二个蓝色（图二）"><a href="#第二个蓝色（图二）" class="headerlink" title="第二个蓝色（图二）"></a>第二个蓝色（图二）</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;topBox&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;setbox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;set-left&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-icons</span> <span class="attr">type</span>=<span class="string">&quot;calendar&quot;</span> <span class="attr">size</span>=<span class="string">&quot;30&quot;</span> <span class="attr">color</span>=<span class="string">&quot;#fff&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">uni-icons</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;txt&quot;</span>&gt;</span>签到<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;set-right&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-icons</span> <span class="attr">type</span>=<span class="string">&quot;gear&quot;</span> <span class="attr">size</span>=<span class="string">&quot;30&quot;</span> <span class="attr">color</span>=<span class="string">&quot;#fff&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;setFun&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">uni-icons</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-icons</span> <span class="attr">type</span>=<span class="string">&quot;chat&quot;</span> <span class="attr">size</span>=<span class="string">&quot;30&quot;</span> <span class="attr">color</span>=<span class="string">&quot;#fff&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">uni-icons</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;users&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-top&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">&quot;https://img2.baidu.com/it/u=2953585264,744730101&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=360&amp;h=360&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">mode</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span></span><br><span class="line">            登录 / 注册</span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-bottom&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;num&quot;</span>&gt;</span>12<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-tit&quot;</span>&gt;</span>浏览<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;num&quot;</span>&gt;</span>12<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-tit&quot;</span>&gt;</span>浏览<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-item&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;num&quot;</span>&gt;</span>12<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;u-tit&quot;</span>&gt;</span>浏览<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;bottomBox&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;order-list&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;o-item&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;../../static/daifuk.png&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span>待付款<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;o-item&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;../../static/daifa.png&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span>待发货<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;o-item&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;../../static/yifa.png&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span>已发货<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;o-item&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">&quot;../../static/wancheng.png&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tit&quot;</span>&gt;</span>已完成<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;listBox&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;lists&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">uni-list</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon1&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;个人信息&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> <span class="attr">rightText</span>=<span class="string">&quot;右侧文字&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon2&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;我的购物车&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> <span class="attr">rightText</span>=<span class="string">&quot;右侧文字&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon3&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;用户反馈&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon4&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;我的邮件&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">uni-list-item</span> <span class="attr">:show-extra-icon</span>=<span class="string">&quot;true&quot;</span> <span class="attr">:extra-icon</span>=<span class="string">&quot;extraIcon5&quot;</span> <span class="attr">showArrow</span> <span class="attr">title</span>=<span class="string">&quot;分享有礼&quot;</span> <span class="attr">clickable</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">click</span>=<span class="string">&quot;clickList&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">uni-list</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon1</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;auth&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon2</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;cart&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon3</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;chatboxes&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon4</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;email&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">extraIcon5</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">color</span>: <span class="string">&#x27;#666666&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">size</span>: <span class="string">&#x27;22&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">type</span>: <span class="string">&#x27;gift&#x27;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;,</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">setFun</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        uni.<span class="title function_">showToast</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">title</span>: <span class="string">&quot;点击设置&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">icon</span>: <span class="string">&quot;none&quot;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">clickList</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        uni.<span class="title function_">showToast</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">title</span>: <span class="string">&quot;点击列表&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="attr">icon</span>: <span class="string">&quot;none&quot;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.content</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">100vh</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* 弧形背景 */</span></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.topBox</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">60</span>rpx <span class="number">20</span>rpx <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.topBox</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">140%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">left</span>: -<span class="number">20%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">50%</span> <span class="number">50%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background</span>: <span class="number">#00aaff</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* 弧形背景 */</span></span></span><br><span class="line"><span class="language-css">  </span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.setbox</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: space-between;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.set-left</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">18%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: space-between;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.txt</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.set-right</span> <span class="selector-class">.uni-icons</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-right</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.users</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">280</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">10</span>rpx <span class="number">20</span>rpx <span class="number">#ececec</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">12</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-top</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: flex-start;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.users</span> <span class="selector-class">.u-top</span> <span class="selector-tag">image</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">100</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-right</span>: <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-top</span> <span class="selector-class">.tit</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-bottom</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: space-around;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-item</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-item</span> <span class="selector-class">.u-tit</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#757575</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">26</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.u-item</span> <span class="selector-class">.num</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#000000</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">33</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.bottomBox</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.order-list</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">200</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: -<span class="number">15</span>rpx auto <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">12</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">justify-content</span>: space-around;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.o-item</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">25%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.o-item</span> <span class="selector-tag">image</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">65</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">55</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.o-item</span> <span class="selector-class">.tit</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.listBox</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">200</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin</span>: -<span class="number">10</span>rpx auto <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">20</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-radius</span>: <span class="number">12</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1767,7 +1766,6 @@ export PATH=$PATH:$JAVA_HOME/bin
     <title>【uniapp】小程序滚动tab</title>
     <url>/post/fc344f65.html</url>
     <content><![CDATA[<h3 id="文字版"><a href="#文字版" class="headerlink" title="文字版"></a>文字版</h3><h4 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h4><p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D" alt="图片"></p>
-<span id="more"></span>
 <h4 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;scrollBox&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;scroll&quot;</span> <span class="attr">scroll-x</span>=<span class="string">&#x27;true&#x27;</span> <span class="attr">scroll-with-animation</span> <span class="attr">:scroll-left</span>=<span class="string">&#x27;scrollLeft&#x27;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;tabBox&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in tabsList&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;index&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:class</span>=<span class="string">&quot;[&#123; active: currentIndex === index &#125;, &#x27;scroll-item&#x27;]&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;changeTab(index)&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;nanum&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;currentIndex === index?&#x27;active&#x27;:&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">            &#123;&#123;index+1&#125;&#125;</span><br><span class="line">          <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">scrollWidth</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">tabsList</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab1&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">2</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab2&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">3</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab3&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">4</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab4&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">5</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab5&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">6</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab6&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">7</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab7&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">8</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab8&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">id</span>: <span class="number">9</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="attr">name</span>: <span class="string">&#x27;tab9&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">          &#125;</span></span><br><span class="line"><span class="language-javascript">        ],</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">currentIndex</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">scrollLeft</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">onLoad</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 获取元素宽度</span></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> query = uni.<span class="title function_">createSelectorQuery</span>().<span class="title function_">select</span>(<span class="string">&#x27;.scroll&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">      query.<span class="title function_">boundingClientRect</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">scrollWidth</span> = res.<span class="property">width</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;).<span class="title function_">exec</span>()</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 切换Tab</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">changeTab</span>(<span class="params">index</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(index, <span class="string">&quot;文字tab&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">currentIndex</span> = index;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="title function_">moveTo</span>(index)</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 当前点击的元素移动到屏幕中间</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">moveTo</span>(<span class="params">index</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> query = uni.<span class="title function_">createSelectorQuery</span>().<span class="title function_">in</span>(<span class="variable language_">this</span>)</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">selectAll</span>(<span class="string">&#x27;.scroll-item&#x27;</span>).<span class="title function_">boundingClientRect</span>(<span class="function"><span class="params">rect</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">const</span> windowWidth = <span class="variable language_">this</span>.<span class="property">scrollWidth</span>; <span class="comment">// 获取到的屏幕宽度</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">let</span> width = <span class="number">0</span></span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 计算当前点击的标签项距离左侧的距离</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; index; i++) &#123;</span></span><br><span class="line"><span class="language-javascript">            width += rect[i].<span class="property">width</span></span></span><br><span class="line"><span class="language-javascript">          &#125;</span></span><br><span class="line"><span class="language-javascript">          <span class="comment">// 当大于屏幕一半的宽度则滚动，否则就设置左侧位置为0</span></span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">if</span> (width &gt; windowWidth / <span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">scrollLeft</span> = width + rect[index].<span class="property">width</span> / <span class="number">2</span> - windowWidth / <span class="number">2</span></span></span><br><span class="line"><span class="language-javascript">          &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">this</span>.<span class="property">scrollLeft</span> = <span class="number">0</span></span></span><br><span class="line"><span class="language-javascript">          &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;).<span class="title function_">exec</span>()</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.scrollBox</span> <span class="selector-class">.tabBox</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">150</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-right</span>: <span class="number">10</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">padding</span>: <span class="number">4</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">40</span>rpx;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.scrollBox</span> <span class="selector-class">.tabBox</span> <span class="selector-class">.nanum</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">24</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">60</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">line-height</span>: <span class="number">60</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.scroll</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">white-space</span>: nowrap;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.scroll</span> view &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#000</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.scroll</span> view<span class="selector-class">.active</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background-color</span>: <span class="number">#000000</span> <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -1786,7 +1784,6 @@ export PATH=$PATH:$JAVA_HOME/bin
     <title>分享一个非常好用的loading效果网站</title>
     <url>/post/98cc63b2.html</url>
     <content><![CDATA[<h3 id="先看效果"><a href="#先看效果" class="headerlink" title="先看效果"></a>先看效果</h3><p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D" alt="图片"></p>
-<span id="more"></span>
 <h3 id="神仙网站"><a href="#神仙网站" class="headerlink" title="神仙网站"></a>神仙网站</h3><p>网址 ：<span class="exturl" data-url="aHR0cHM6Ly9lcGljLXNwaW5uZXJzLmVwaWNtYXguY28vP21vZGU9bGlnaHQ=">https://epic-spinners.epicmax.co/?mode=light<i class="fa fa-external-link-alt"></i></span></p>
 <p>点击想要的效果就会弹出相关代码:egg:</p>
 <p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dpng%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1%7Bstr-number%7D" alt="图片"></p>
@@ -1831,256 +1828,6 @@ export PATH=$PATH:$JAVA_HOME/bin
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【影视】TVBoxAPP</title>
-    <url>/post/13d4ef64.html</url>
-    <content><![CDATA[<img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png" alt="图片描述" width="100" height="100">
-
-<blockquote>
-<p>简介</p>
-</blockquote>
-<p>平台：  </p>
-<ul>
-<li>安卓</li>
-</ul>
-<p>类型：</p>
-<ul>
-<li>影视</li>
-</ul>
-<span id="more"></span>
-<blockquote>
-<p>TVbox开源版</p>
-</blockquote>
-<ul>
-<li><p>通过导入特点资源接口,解析各类爬虫源、XP源、采集源等。完全无任何限制,也无任何广告。</p>
-</li>
-<li><p>原版支持本地功能，聚合模式，支持多种视频格式，增加分辨率、时间及缓冲速度显示，优化采集等等。</p>
-</li>
-<li><p>新UI聚合检索(长按影片)，支持读取挂载阿里网盘资源，其他功能同原版。</p>
-</li>
-<li><p>设置 — 配置地址 — 输入你的站源规则 — 确定即可；</p>
-</li>
-<li><p>新版支持多jar(爬虫包)，增加直播节目预告 EGP。</p>
-</li>
-<li><p>编辑器 PC Web版 CatVodTVJsonEditor</p>
-</li>
-<li><p>配置地址—输入站源—确定即可 URL站源规则</p>
-</li>
-</ul>
-<blockquote>
-<p>相关版本</p>
-</blockquote>
-<p>由于开源版已很久没人维护更新，所以现在网上大部分都是根据该版二开衍生的各种版本</p>
-<p>这里引用了 奇奇乐享 公众号上的一个下载链接，里面包含了大部分的TVBOX相关的版本</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9xaXFpMjAyMC5sYW56b3V3LmNvbS9iMDlzdnF2MWM=">https://qiqi2020.lanzouw.com/b09svqv1c<i class="fa fa-external-link-alt"></i></span></p>
-<p>推荐较多有 影迷 和 影视仓 仅作参考，也可能其他版本你更喜欢！</p>
-<blockquote>
-<p>资源中心</p>
-</blockquote>
-<p>资源仅来源于网络，不保证最新。如有失效或推荐，可联系站长重新整理和添加！</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">dxawi</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9keGF3aS5naXRodWIuaW8vMC8wLmpzb24=">https://dxawi.github.io/0/0.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">饭太硬</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy7ppa3lpKrnoawuY29tL3R2">http://www.饭太硬.com/tv<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">小米</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">唐三</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyOC5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0828.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">小米</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">FongMI</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyNy5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0827.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">纯一</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly8xMDBrbS50b3AvMA==">https://100km.top/0<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">巧儿</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3BhbmRvd24ucHJvL3R2Ym94L3R2Ym94Lmpzb24=">http://pandown.pro/tvbox/tvbox.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">霜灰</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvbG0zMTczNzk4MjkvUHlyYW1pZFN0b3JlL3B5cmFtaWQvcHkuanNvbg==">https://gcore.jsdelivr.net/gh/lm317379829/PyramidStore/pyramid/py.json<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-<tr>
-<td align="left">更多地址</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20vaW5kZXgvYXBwbGlzdC90dmJveC5odG1s">https://www.yck2.com/index/applist/tvbox.html<i class="fa fa-external-link-alt"></i></span></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>娱乐</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>娱乐</tag>
-        <tag>影视</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【漫画】异次元APP</title>
-    <url>/post/1b4d6191.html</url>
-    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png" alt="异次元APP"></p>
-<blockquote>
-<p>简介</p>
-</blockquote>
-<p>平台：  </p>
-<ul>
-<li>安卓</li>
-</ul>
-<p>类型：</p>
-<ul>
-<li>漫画 <span id="more"></span></li>
-</ul>
-<blockquote>
-<p>异次元</p>
-</blockquote>
-<ol>
-<li><p>应用界面超级干净清爽，无广告，无多余花哨的东西。</p>
-</li>
-<li><p>完全免费，没有会员，没有广告骚扰</p>
-</li>
-<li><p>支持下载缓存，支持离线阅读</p>
-</li>
-<li><p>支持添加多个图源源，拥有近乎无限的资源，可随时切换源</p>
-</li>
-<li><p>可一次搜索多源漫画。</p>
-</li>
-<li><p>加入定制源地址后，可以在一个APP中免费观看全网漫画</p>
-</li>
-<li><p>现在只支持Android平台，不支持iPhone&#x2F;iOS</p>
-</li>
-</ol>
-<blockquote>
-<p>图源(不定时更新)</p>
-</blockquote>
-<ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg1Lmh0bWw=">九妖漫画👙 https://app.jymhapp.com<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg0Lmh0bWw=">禁漫天堂[国内] https://18comic-hok.vip<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzgzLmh0bWw=">漫蛙 https://manwasb.cc<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-</ul>
-<blockquote>
-<p>图源合集（不定时更新）</p>
-</blockquote>
-<ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzUwLmh0bWw=">2024.10.06 伪官方图源合集<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ4Lmh0bWw=">自用整合（已检校）<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ2Lmh0bWw=">又在鬼混（自用6.13校验）<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-</ul>
-<blockquote>
-<p>相关链接</p>
-</blockquote>
-<ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vaW5kZXgvaW5kZXguaHRtbA==">异次元-源仓库地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly95aWNpeXVhbi5sYW56b3VpLmNvbS9iMDBlajBrYmE=">异次元-下载地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>娱乐</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>娱乐</tag>
-        <tag>漫画</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【小说】阅读APP</title>
-    <url>/post/e047a4b0.html</url>
-    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png" alt="图片"></p>
-<blockquote>
-<p>简介</p>
-</blockquote>
-<p>平台：  </p>
-<ul>
-<li>安卓</li>
-</ul>
-<p>类型：</p>
-<ul>
-<li>小说</li>
-</ul>
-<span id="more"></span>
-<blockquote>
-<p>阅读</p>
-</blockquote>
-<ol>
-<li><p>自定义书源，自己设置规则，抓取网页数据，规则简单易懂，软件内有规则说明</p>
-</li>
-<li><p>书源规则支持搜索及发现，所有找书看书功能全部自定义，找书更方便</p>
-</li>
-<li><p>支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等</p>
-</li>
-<li><p>支持替换净化，去除广告替换内容很方便</p>
-</li>
-<li><p>支持本地TXT、EPUB阅读，手动浏览，智能扫描</p>
-</li>
-<li><p>支持多种翻页模式，覆盖、仿真、滑动、滚动等</p>
-</li>
-</ol>
-<blockquote>
-<p>相关链接</p>
-</blockquote>
-<ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8=">阅读APP开源地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9keS5tZ3o2LmNjLw==">喵公子-喵公子订阅源<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2l0bGluay5vcmcuY24veWktYy95ZC90cmVlL21hc3Rlci9SRUFETUUubWQ=">一程的书源，RSS源，更新地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9sZWdhZG8uYW9hb3N0YXIuY29tLw==">「阅读」APP 源<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly95Y2tjZW8udmlwLw==">源仓库发布页（防走丢）<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-</ul>
-<blockquote>
-<p>APP下载</p>
-</blockquote>
-<ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8vcmVsZWFzZXM=">官方下载地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vYXBrLzI1NjAzMA==">酷安下载地址<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>娱乐</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>娱乐</tag>
-        <tag>小说</tag>
       </tags>
   </entry>
   <entry>
@@ -2178,6 +1925,299 @@ export PATH=$PATH:$JAVA_HOME/bin
         <tag>工具</tag>
         <tag>娱乐</tag>
         <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画】异次元APP</title>
+    <url>/post/1b4d6191.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png" alt="异次元APP"></p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>漫画 <span id="more"></span></li>
+</ul>
+<blockquote>
+<p>异次元</p>
+</blockquote>
+<ol>
+<li><p>应用界面超级干净清爽，无广告，无多余花哨的东西。</p>
+</li>
+<li><p>完全免费，没有会员，没有广告骚扰</p>
+</li>
+<li><p>支持下载缓存，支持离线阅读</p>
+</li>
+<li><p>支持添加多个图源源，拥有近乎无限的资源，可随时切换源</p>
+</li>
+<li><p>可一次搜索多源漫画。</p>
+</li>
+<li><p>加入定制源地址后，可以在一个APP中免费观看全网漫画</p>
+</li>
+<li><p>现在只支持Android平台，不支持iPhone&#x2F;iOS</p>
+</li>
+</ol>
+<blockquote>
+<p>图源(不定时更新)</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg1Lmh0bWw=">九妖漫画👙 https://app.jymhapp.com<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzg0Lmh0bWw=">禁漫天堂[国内] https://18comic-hok.vip<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFuL2NvbnRlbnQvaWQvNzgzLmh0bWw=">漫蛙 https://manwasb.cc<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>图源合集（不定时更新）</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzUwLmh0bWw=">2024.10.06 伪官方图源合集<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ4Lmh0bWw=">自用整合（已检校）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vdHV5dWFucy9jb250ZW50L2lkLzQ2Lmh0bWw=">又在鬼混（自用6.13校验）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>相关链接</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20veWljaXl1YW4vaW5kZXgvaW5kZXguaHRtbA==">异次元-源仓库地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly95aWNpeXVhbi5sYW56b3VpLmNvbS9iMDBlajBrYmE=">异次元-下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>漫画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画/小说/影视/音乐】益达APP</title>
+    <url>/post/3a1c4628.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png" alt="益达APP"></p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>全平台(安卓\IOS\MAC\WIN)</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>小说  </li>
+<li>影视 </li>
+<li>漫画 </li>
+<li>音频</li>
+</ul>
+<span id="more"></span>
+
+<blockquote>
+<p>flutter + rust 开发! 跨平台</p>
+</blockquote>
+<ul>
+<li>安装包获取:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmVsZWFzZXM=">https://github.com/xiaohucode/yidaRule/releases<i class="fa fa-external-link-alt"></i></span></li>
+<li>规则导入：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmF3L21haW4vc2l0ZVJ1bGUveWRTb3VyY2UueWRz">https://github.com/xiaohucode/yidaRule/raw/main/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
+<li>规则说明文档: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvYmxvYi9tYWluL0RvY3VtZW50Lm1k">https://github.com/xiaohucode/yidaRule/blob/main/Document.md<i class="fa fa-external-link-alt"></i></span></li>
+<li>PS: 规则中有很多失效的了，重在学习怎么制作源！</li>
+<li>源第三方地址：<span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gveGlhb2h1Y29kZS95aWRhUnVsZS9zaXRlUnVsZS95ZFNvdXJjZS55ZHM=">https://gcore.jsdelivr.net/gh/xiaohucode/yidaRule/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>音乐</tag>
+        <tag>漫画</tag>
+        <tag>小说</tag>
+        <tag>影视</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【小说】阅读APP</title>
+    <url>/post/e047a4b0.html</url>
+    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png" alt="图片"></p>
+<blockquote>
+<p>简介<br>【阅读APP】，一个专为安卓平台设计的小说阅读应用。该应用支持自定义书源和规则，用户可以轻松抓取网页数据，方便找书和看书。软件提供高度自定义的阅读界面，包括字体、颜色、背景、行距、段距等设置，并支持替换净化功能，去除广告。此外，还支持本地TXT和EPUB阅读，多种翻页模式供用户选择。文章提供了开源地址、书源订阅源和官方下载链接，帮助用户更好地使用该应用。<br>平台：  </p>
+</blockquote>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>小说</li>
+</ul>
+<span id="more"></span>
+<blockquote>
+<p>阅读</p>
+</blockquote>
+<ol>
+<li><p>自定义书源，自己设置规则，抓取网页数据，规则简单易懂，软件内有规则说明</p>
+</li>
+<li><p>书源规则支持搜索及发现，所有找书看书功能全部自定义，找书更方便</p>
+</li>
+<li><p>支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等</p>
+</li>
+<li><p>支持替换净化，去除广告替换内容很方便</p>
+</li>
+<li><p>支持本地TXT、EPUB阅读，手动浏览，智能扫描</p>
+</li>
+<li><p>支持多种翻页模式，覆盖、仿真、滑动、滚动等</p>
+</li>
+</ol>
+<blockquote>
+<p>相关链接</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8=">阅读APP开源地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9keS5tZ3o2LmNjLw==">喵公子-喵公子订阅源<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2l0bGluay5vcmcuY24veWktYy95ZC90cmVlL21hc3Rlci9SRUFETUUubWQ=">一程的书源，RSS源，更新地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9sZWdhZG8uYW9hb3N0YXIuY29tLw==">「阅读」APP 源<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly95Y2tjZW8udmlwLw==">源仓库发布页（防走丢）<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<blockquote>
+<p>APP下载</p>
+</blockquote>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2dlZG9vci9sZWdhZG8vcmVsZWFzZXM=">官方下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vYXBrLzI1NjAzMA==">酷安下载地址<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>小说</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【影视】TVBoxAPP</title>
+    <url>/post/13d4ef64.html</url>
+    <content><![CDATA[<img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png" alt="图片描述" width="100" height="100">
+
+<blockquote>
+<p>简介<br>“TVBox开源版APP”，一个专为安卓平台设计的影视播放应用。该应用通过导入特定资源接口，解析各类爬虫源、XP源和采集源，完全无广告且无任何限制。新版本支持多jar（爬虫包）、直播节目预告等功能，并优化了UI聚合检索和阿里网盘资源读取。文章提供了配置方法、相关版本下载链接和多个资源中心地址，帮助用户更好地使用该应用。</p>
+</blockquote>
+<p>平台：  </p>
+<ul>
+<li>安卓</li>
+</ul>
+<p>类型：</p>
+<ul>
+<li>影视</li>
+</ul>
+<span id="more"></span>
+<blockquote>
+<p>TVbox开源版</p>
+</blockquote>
+<ul>
+<li><p>通过导入特点资源接口,解析各类爬虫源、XP源、采集源等。完全无任何限制,也无任何广告。</p>
+</li>
+<li><p>原版支持本地功能，聚合模式，支持多种视频格式，增加分辨率、时间及缓冲速度显示，优化采集等等。</p>
+</li>
+<li><p>新UI聚合检索(长按影片)，支持读取挂载阿里网盘资源，其他功能同原版。</p>
+</li>
+<li><p>设置 — 配置地址 — 输入你的站源规则 — 确定即可；</p>
+</li>
+<li><p>新版支持多jar(爬虫包)，增加直播节目预告 EGP。</p>
+</li>
+<li><p>编辑器 PC Web版 CatVodTVJsonEditor</p>
+</li>
+<li><p>配置地址—输入站源—确定即可 URL站源规则</p>
+</li>
+</ul>
+<blockquote>
+<p>相关版本</p>
+</blockquote>
+<p>由于开源版已很久没人维护更新，所以现在网上大部分都是根据该版二开衍生的各种版本</p>
+<p>这里引用了 奇奇乐享 公众号上的一个下载链接，里面包含了大部分的TVBOX相关的版本</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9xaXFpMjAyMC5sYW56b3V3LmNvbS9iMDlzdnF2MWM=">https://qiqi2020.lanzouw.com/b09svqv1c<i class="fa fa-external-link-alt"></i></span></p>
+<p>推荐较多有 影迷 和 影视仓 仅作参考，也可能其他版本你更喜欢！</p>
+<blockquote>
+<p>资源中心</p>
+</blockquote>
+<p>资源仅来源于网络，不保证最新。如有失效或推荐，可联系站长重新整理和添加！</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">dxawi</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9keGF3aS5naXRodWIuaW8vMC8wLmpzb24=">https://dxawi.github.io/0/0.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">饭太硬</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy7ppa3lpKrnoawuY29tL3R2">http://www.饭太硬.com/tv<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">小米</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">唐三</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyOC5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0828.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">小米</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3hod3cuZnVuOjYzLyVFNSVCMCU4RiVFNyVCMSVCMy9ERU1PLmpzb24=">http://xhww.fun:63/小米/DEMO.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">FongMI</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvZ2FvdGlhbmxpdXl1bi9nYW8vMDgyNy5qc29u">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao/0827.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">纯一</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly8xMDBrbS50b3AvMA==">https://100km.top/0<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">巧儿</td>
+<td align="left"><span class="exturl" data-url="aHR0cDovL3BhbmRvd24ucHJvL3R2Ym94L3R2Ym94Lmpzb24=">http://pandown.pro/tvbox/tvbox.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">霜灰</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gvbG0zMTczNzk4MjkvUHlyYW1pZFN0b3JlL3B5cmFtaWQvcHkuanNvbg==">https://gcore.jsdelivr.net/gh/lm317379829/PyramidStore/pyramid/py.json<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+<tr>
+<td align="left">更多地址</td>
+<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cueWNrMi5jb20vaW5kZXgvYXBwbGlzdC90dmJveC5odG1s">https://www.yck2.com/index/applist/tvbox.html<i class="fa fa-external-link-alt"></i></span></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>娱乐</tag>
+        <tag>影视</tag>
       </tags>
   </entry>
   <entry>
@@ -2361,50 +2401,6 @@ export PATH=$PATH:$JAVA_HOME/bin
       </tags>
   </entry>
   <entry>
-    <title>【漫画/小说/影视/音乐】益达APP</title>
-    <url>/post/3a1c4628.html</url>
-    <content><![CDATA[<p><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png" alt="益达APP"></p>
-<blockquote>
-<p>简介</p>
-</blockquote>
-<p>平台：  </p>
-<ul>
-<li>全平台(安卓\IOS\MAC\WIN)</li>
-</ul>
-<p>类型：</p>
-<ul>
-<li>小说  </li>
-<li>影视 </li>
-<li>漫画 </li>
-<li>音频</li>
-</ul>
-<span id="more"></span>
-
-<blockquote>
-<p>flutter + rust 开发! 跨平台</p>
-</blockquote>
-<ul>
-<li>安装包获取:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmVsZWFzZXM=">https://github.com/xiaohucode/yidaRule/releases<i class="fa fa-external-link-alt"></i></span></li>
-<li>规则导入：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvcmF3L21haW4vc2l0ZVJ1bGUveWRTb3VyY2UueWRz">https://github.com/xiaohucode/yidaRule/raw/main/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
-<li>规则说明文档: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3hpYW9odWNvZGUveWlkYVJ1bGUvYmxvYi9tYWluL0RvY3VtZW50Lm1k">https://github.com/xiaohucode/yidaRule/blob/main/Document.md<i class="fa fa-external-link-alt"></i></span></li>
-<li>PS: 规则中有很多失效的了，重在学习怎么制作源！</li>
-<li>源第三方地址：<span class="exturl" data-url="aHR0cHM6Ly9nY29yZS5qc2RlbGl2ci5uZXQvZ2gveGlhb2h1Y29kZS95aWRhUnVsZS9zaXRlUnVsZS95ZFNvdXJjZS55ZHM=">https://gcore.jsdelivr.net/gh/xiaohucode/yidaRule/siteRule/ydSource.yds<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具</category>
-        <category>娱乐</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>娱乐</tag>
-        <tag>影视</tag>
-        <tag>漫画</tag>
-        <tag>小说</tag>
-        <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PicList-轻松管理你的图片库，让美好瞬间触手可及</title>
     <url>/post/161c3e54.html</url>
     <content><![CDATA[<h1 id="🚀-发现-PicList：超越-PicGo-的图片管理新星！"><a href="#🚀-发现-PicList：超越-PicGo-的图片管理新星！" class="headerlink" title="🚀 发现 PicList：超越 PicGo 的图片管理新星！"></a>🚀 发现 PicList：超越 PicGo 的图片管理新星！</h1><p>在日常工作中，我们经常需要上传、管理和分享图片。无论是开发者还是普通用户，找到一个好用的工具来辅助这项任务都是至关重要的。今天，我要向大家推荐一个在 <code>PicGo</code> 基础上进行了深度二次开发的图片管理工具——<code>PicList</code>。它不仅继承了 <code>PicGo</code> 的所有优秀特性，如支持多种图床服务（如 GitHub、SM.MS 等），而且还引入了更多高级功能，使其成为图片管理领域的佼佼者。🌈</p>
@@ -2414,7 +2410,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 <li><strong>多图床支持</strong>：除了常见的图床选项外，<code>PicList</code> 还内置了 WebDav、本地图床和 SFTP 等多种图床服务。</li>
 <li><strong>云存储管理</strong>：增加了完整的云端存储管理功能，包括目录查看、文件搜索、批量上传下载及删除文件。</li>
 <li><strong>链接复制</strong>：能够复制多种格式的文件链接，方便在不同场景下使用。</li>
-<li><strong>预览功能</strong>：支持图片、Markdown 文档、文本和视频的预览，无需离开应用即可查看文件内容。<span id="more"></span></li>
+<li><strong>预览功能</strong>：支持图片、Markdown 文档、文本和视频的预览，无需离开应用即可查看文件内容。</li>
 </ul>
 <h2 id="如何开始使用-PicList？"><a href="#如何开始使用-PicList？" class="headerlink" title="如何开始使用 PicList？"></a>如何开始使用 <code>PicList</code>？</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先，你需要从官方网站下载适用于你操作系统的 <code>PicList</code> 版本。安装过程非常直观，只需按照安装向导的指示操作即可完成。</p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>启动 <code>PicList</code> 后，你需要配置你常用的图床服务。这通常涉及到输入访问凭证或者创建一个新的账户。<code>PicList</code> 的用户界面设计友好，每一步都有明确的提示，因此即便是第一次使用也能轻松搞定。</p>

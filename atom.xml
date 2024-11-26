@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2024-10-30T03:38:14.460Z</updated>
+  <updated>2024-11-26T01:19:47.462Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -21,42 +21,10 @@
     <link href="https://wangbin-blog.github.io/post/ba3c9851.html"/>
     <id>https://wangbin-blog.github.io/post/ba3c9851.html</id>
     <published>2024-10-29T14:32:13.000Z</published>
-    <updated>2024-10-30T03:38:14.460Z</updated>
+    <updated>2024-11-26T01:19:47.462Z</updated>
     
     
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;简介&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一个基于 Electron + Vue 开发的开源免费音乐软件，聚合各音乐平台，完善软件设计，覆盖多平台（MAC、windows），搜索、试听、收藏、下载（已不支持无损下载）样样行。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;开源&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;本项目开源发布于 GitHub 面向全世界人用作对技术的学习交流使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;免费且无广告&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;本项目开发的初衷仅是为了对新技术的学习与研究，因此软件直至停止维护都将会一直保持纯净&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;多端支持&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;本项目支持在Windows、Mac OS、Linux、Android平台上运行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;说明&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;本项目不计划支持IOS。当前版本比128k更高的音质已失效！&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;官方网站：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcA==&quot;&gt;https://github.com/lyswhut/lx-music-desktop&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;更新记录：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2x5c3dodXQvbHgtbXVzaWMtZGVza3RvcC9ibG9iL21hc3Rlci9DSEFOR0VMT0cubWQ=&quot;&gt;https://github.com/lyswhut/lx-music-desktop/blob/master/CHANGELOG.md&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">本文介绍了“洛雪音乐助手”，一个基于 Electron + Vue 开发的开源免费音乐软件。该软件聚合了多个音乐平台的功能，支持在 Windows、Mac OS、Linux 和 Android 平台上运行。软件提供搜索、试听、收藏和下载功能（已不支持无损下载）。项目开源发布于 GitHub，旨在为技术学习交流提供资源。文章还提供了详细的下载链接和自定义音源的设置步骤，帮助用户更好地使用该软件。</summary>
     
     
     
@@ -78,22 +46,10 @@
     <link href="https://wangbin-blog.github.io/post/13d4ef64.html"/>
     <id>https://wangbin-blog.github.io/post/13d4ef64.html</id>
     <published>2024-10-29T13:31:13.000Z</published>
-    <updated>2024-10-30T03:10:11.870Z</updated>
+    <updated>2024-11-26T01:23:50.557Z</updated>
     
     
-    <summary type="html">&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301031512.png&quot; alt=&quot;图片描述&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;简介&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;平台：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;安卓&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;类型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;影视&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">“TVBox开源版APP”，一个专为安卓平台设计的影视播放应用。该应用通过导入特定资源接口，解析各类爬虫源、XP源和采集源，完全无广告且无任何限制。新版本支持多jar（爬虫包）、直播节目预告等功能，并优化了UI聚合检索和阿里网盘资源读取。文章提供了配置方法、相关版本下载链接和多个资源中心地址，帮助用户更好地使用该应用。</summary>
     
     
     
@@ -115,20 +71,10 @@
     <link href="https://wangbin-blog.github.io/post/1b4d6191.html"/>
     <id>https://wangbin-blog.github.io/post/1b4d6191.html</id>
     <published>2024-10-29T12:32:13.000Z</published>
-    <updated>2024-10-30T03:11:09.600Z</updated>
+    <updated>2024-11-26T01:20:26.760Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301004368.png&quot; alt=&quot;异次元APP&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;简介&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;平台：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;安卓&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;类型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;漫画</summary>
+    <summary type="html">“异次元APP”，一个专为安卓平台设计的漫画阅读应用。该应用界面干净清爽，无广告，完全免费，支持下载缓存和离线阅读。用户可以通过添加多个图源，实现一次搜索多源漫画，享受近乎无限的资源。文章还提供了多个图源链接和相关下载地址，帮助用户更好地使用该应用。</summary>
     
     
     
@@ -150,24 +96,10 @@
     <link href="https://wangbin-blog.github.io/post/3a1c4628.html"/>
     <id>https://wangbin-blog.github.io/post/3a1c4628.html</id>
     <published>2024-10-29T12:32:13.000Z</published>
-    <updated>2024-10-30T03:10:58.720Z</updated>
+    <updated>2024-11-26T01:21:07.449Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410301009719.png&quot; alt=&quot;益达APP&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;简介&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;平台：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;全平台(安卓&#92;IOS&#92;MAC&#92;WIN)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;类型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;小说  &lt;/li&gt;
-&lt;li&gt;影视 &lt;/li&gt;
-&lt;li&gt;漫画 &lt;/li&gt;
-&lt;li&gt;音频&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">“益达APP”，一个基于 Flutter + Rust 开发的跨平台娱乐应用。该应用支持小说、影视、漫画和音频等多种内容类型，适用于安卓、iOS、Mac 和 Windows 平台。文章提供了安装包下载链接、规则导入链接和规则说明文档，帮助用户更好地使用该应用。此外，还提到了第三方源地址，方便用户扩展内容资源。</summary>
     
     
     
@@ -180,13 +112,13 @@
     
     <category term="娱乐" scheme="https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
-    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
+    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
     <category term="漫画" scheme="https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/"/>
     
     <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
-    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
   </entry>
   
@@ -195,21 +127,10 @@
     <link href="https://wangbin-blog.github.io/post/e047a4b0.html"/>
     <id>https://wangbin-blog.github.io/post/e047a4b0.html</id>
     <published>2024-10-29T12:31:13.000Z</published>
-    <updated>2024-10-30T03:10:18.551Z</updated>
+    <updated>2024-11-26T01:22:58.163Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/202410300947397.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;简介&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;平台：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;安卓&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;类型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;小说&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">“阅读APP”，一个专为安卓平台设计的小说阅读应用。该应用支持自定义书源和规则，用户可以轻松抓取网页数据，方便找书和看书。软件提供高度自定义的阅读界面，包括字体、颜色、背景、行距、段距等设置，并支持替换净化功能，去除广告。此外，还支持本地TXT和EPUB阅读，多种翻页模式供用户选择。文章提供了开源地址、书源订阅源和官方下载链接，帮助用户更好地使用该应用。</summary>
     
     
     
@@ -231,14 +152,10 @@
     <link href="https://wangbin-blog.github.io/post/7b05deaf.html"/>
     <id>https://wangbin-blog.github.io/post/7b05deaf.html</id>
     <published>2024-10-23T04:32:13.000Z</published>
-    <updated>2024-10-24T08:13:42.715Z</updated>
+    <updated>2024-11-26T01:39:25.970Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;因项目中实际需要，需要对dotnet服务做横向扩展，但是Session默认存储在&lt;code&gt;MemoryCache&lt;/code&gt;中，无法实现多台服务器共享&lt;code&gt;Session&lt;/code&gt;,导致通过&lt;code&gt;nginx&lt;/code&gt;做负载均衡后出现跳登录的情况，因此需要使用Redis共享Session解决此问题。&lt;/p&gt;
-&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;h3 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依赖&quot; class=&quot;headerlink&quot; title=&quot;安装依赖&quot;&gt;&lt;/a&gt;安装依赖&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Microsoft.AspNetCore.DataProtection.StackExchangeRedis 6.0.35&lt;/li&gt;
-&lt;li&gt;Microsoft.Extensions.Caching.StackExchangeRedis 6.0.35&lt;/li&gt;
-&lt;/ul&gt;</summary>
+    <summary type="html">本文《记录Dotnet6中使用Redis共享Session的实现》详细介绍了如何在Dotnet 6项目中使用Redis实现Session的共享。文章首先阐述了在多服务器环境下，由于Session默认存储在内存中导致的会话信息丢失问题。接着，文章详细描述了安装必要的NuGet包、修改startup.cs或Program.cs文件以配置Redis作为Session存储的步骤。其中包括配置Redis连接、设置数据保护服务、添加分布式缓存和Session服务的具体实现方法。通过这些配置，可以有效解决多服务器环境下的Session共享问题，确保用户在负载均衡后的正常访问体验。</summary>
     
     
     
@@ -254,13 +171,10 @@
     <link href="https://wangbin-blog.github.io/post/a473e677.html"/>
     <id>https://wangbin-blog.github.io/post/a473e677.html</id>
     <published>2024-10-23T04:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.725Z</updated>
+    <updated>2024-11-26T01:39:00.779Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近线上环境遇到一个问题，就是ASP.NET Core Web应用在单个容器使用正常，扩展多个容器无法访问的问题。查看容器日志，发现以下异常：&lt;/p&gt;
-&lt;figure class=&quot;highlight c#&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;warn: Microsoft.AspNetCore.Session.SessionMiddleware[&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;] Error unprotecting the session cookie. System.Security.Cryptography.CryptographicException: The key &amp;#123;&lt;span class=&quot;number&quot;&gt;3b&lt;/span&gt;046482&lt;span class=&quot;number&quot;&gt;-7&lt;/span&gt;cff&lt;span class=&quot;number&quot;&gt;-475b&lt;/span&gt;-b252-d12ab389d6c3&amp;#125; was &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; found &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; the key ring. For more information go to http:&lt;span class=&quot;comment&quot;&gt;//aka.ms/dataprotectionwarning at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus&amp;amp; status) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean&amp;amp; requiresMigration, Boolean&amp;amp; wasRevoked) at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData) at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;通过排查，发现了是由于 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvYXNwbmV0L2NvcmUvc2VjdXJpdHkvZGF0YS1wcm90ZWN0aW9uL2ludHJvZHVjdGlvbj92aWV3PWFzcG5ldGNvcmUtMy4w&quot;&gt;ASP.NET Core Data Protection&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 机制引起的。&lt;/p&gt;</summary>
+    <summary type="html">本文《集群环境下，你不得不注意的ASP.NET Core Data Protection 机制》详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。文章首先介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。接着，文章深入讲解了ASP.NET Core Data Protection机制的工作原理，强调了在集群环境中共享私钥的必要性。最后，文章提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。通过这些措施，可以有效解决集群环境下的会话信息丢失问题。</summary>
     
     
     
@@ -276,17 +190,10 @@
     <link href="https://wangbin-blog.github.io/post/161c3e54.html"/>
     <id>https://wangbin-blog.github.io/post/161c3e54.html</id>
     <published>2024-09-09T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.788Z</updated>
+    <updated>2024-11-26T01:26:36.455Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;🚀-发现-PicList：超越-PicGo-的图片管理新星！&quot;&gt;&lt;a href=&quot;#🚀-发现-PicList：超越-PicGo-的图片管理新星！&quot; class=&quot;headerlink&quot; title=&quot;🚀 发现 PicList：超越 PicGo 的图片管理新星！&quot;&gt;&lt;/a&gt;🚀 发现 PicList：超越 PicGo 的图片管理新星！&lt;/h1&gt;&lt;p&gt;在日常工作中，我们经常需要上传、管理和分享图片。无论是开发者还是普通用户，找到一个好用的工具来辅助这项任务都是至关重要的。今天，我要向大家推荐一个在 &lt;code&gt;PicGo&lt;/code&gt; 基础上进行了深度二次开发的图片管理工具——&lt;code&gt;PicList&lt;/code&gt;。它不仅继承了 &lt;code&gt;PicGo&lt;/code&gt; 的所有优秀特性，如支持多种图床服务（如 GitHub、SM.MS 等），而且还引入了更多高级功能，使其成为图片管理领域的佼佼者。🌈&lt;/p&gt;
-&lt;h2 id=&quot;为什么选择-PicList？&quot;&gt;&lt;a href=&quot;#为什么选择-PicList？&quot; class=&quot;headerlink&quot; title=&quot;为什么选择 PicList？&quot;&gt;&lt;/a&gt;为什么选择 &lt;code&gt;PicList&lt;/code&gt;？&lt;/h2&gt;&lt;p&gt;&lt;code&gt;PicList&lt;/code&gt; 是一款高效且易于使用的云存储和图床管理工具。它不仅完美保留了 &lt;code&gt;PicGo&lt;/code&gt; 的所有优点，还增添了许多令人惊喜的新功能。&lt;/p&gt;
-&lt;h3 id=&quot;新增特性一览&quot;&gt;&lt;a href=&quot;#新增特性一览&quot; class=&quot;headerlink&quot; title=&quot;新增特性一览&quot;&gt;&lt;/a&gt;新增特性一览&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;相册同步&lt;/strong&gt;：支持云端文件的同步删除，确保本地和云端的一致性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;多图床支持&lt;/strong&gt;：除了常见的图床选项外，&lt;code&gt;PicList&lt;/code&gt; 还内置了 WebDav、本地图床和 SFTP 等多种图床服务。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;云存储管理&lt;/strong&gt;：增加了完整的云端存储管理功能，包括目录查看、文件搜索、批量上传下载及删除文件。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;链接复制&lt;/strong&gt;：能够复制多种格式的文件链接，方便在不同场景下使用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;预览功能&lt;/strong&gt;：支持图片、Markdown 文档、文本和视频的预览，无需离开应用即可查看文件内容。</summary>
+    <summary type="html">【PicList】，一款基于 PicGo 深度二次开发的图片管理工具。PicList 不仅继承了 PicGo 的所有优秀特性，如支持多种图床服务（GitHub、SM.MS 等），还新增了相册同步、多图床支持、云存储管理、链接复制和预览功能等高级特性。文章详细讲解了如何安装、配置和使用 PicList，并提供了批量上传、云端同步和预览功能的使用技巧。PicList 的高效和易用性使其成为图片管理领域的佼佼者，适合开发者和普通用户使用。</summary>
     
     
     
@@ -364,15 +271,10 @@
     <link href="https://wangbin-blog.github.io/post/309e6522.html"/>
     <id>https://wangbin-blog.github.io/post/309e6522.html</id>
     <published>2024-09-03T04:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.704Z</updated>
+    <updated>2024-11-26T01:39:54.413Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;项目介绍&quot;&gt;&lt;a href=&quot;#项目介绍&quot; class=&quot;headerlink&quot; title=&quot;项目介绍&quot;&gt;&lt;/a&gt;&lt;strong&gt;项目介绍&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;Masuit.Tools(码数吐司库)是一个全龄段友好的C#&amp;#x2F;.NET万能工具库，不管你是菜鸟新手还是骨灰级玩家都能轻松上手。&lt;/p&gt;
-&lt;h2 id=&quot;包含功能&quot;&gt;&lt;a href=&quot;#包含功能&quot; class=&quot;headerlink&quot; title=&quot;包含功能&quot;&gt;&lt;/a&gt;&lt;strong&gt;包含功能&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;这个库包含一些常用的操作类，大都是静态类，加密解密，反射操作，树结构，文件探测，权重随机筛选算法，分布式短id，表达式树，linq扩展，文件压缩，多线程下载，硬件信息，字符串扩展方法，日期时间扩展操作，中国农历，大文件拷贝，图像裁剪，验证码，断点续传，集合扩展、Excel导出等常用封装。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;诸多功能集一身，代码量不到2MB！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/09/640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%26wx_co%3D1&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">本文《效率提升利器，一个全龄段友好的DotNET万能工具库》介绍了Masuit.Tools库，这是一个适用于所有水平开发者的C#/.NET工具库。文章详细描述了该库的功能，包括加密解密、反射操作、树结构、文件探测、权重随机筛选算法、分布式短ID生成、表达式树、LINQ扩展、文件压缩、多线程下载、硬件信息获取、字符串扩展方法、日期时间操作、中国农历、大文件拷贝、图像裁剪、验证码生成、断点续传、集合扩展和Excel导出等。此外，文章还提供了具体的使用示例，如字符串检查、硬件监测和LINQ扩展方法的实现。通过这些功能，开发者可以大幅提升开发效率，简化复杂操作。</summary>
     
     
     
@@ -409,10 +311,10 @@
     <link href="https://wangbin-blog.github.io/post/a6b86d8c.html"/>
     <id>https://wangbin-blog.github.io/post/a6b86d8c.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.795Z</updated>
+    <updated>2024-11-26T01:16:17.810Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;先看效果-eyes&quot;&gt;&lt;a href=&quot;#先看效果-eyes&quot; class=&quot;headerlink&quot; title=&quot;先看效果:eyes:&quot;&gt;&lt;/a&gt;先看效果:eyes:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/57881c7a81834b0ca30b00803480e65d&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">本文档详细介绍了如何使用 UniApp 开发一个个人中心页面。个人中心页面是移动应用中常见的功能模块，通常包含用户的头像、昵称、简介以及各种功能列表。本文将通过三个不同风格的设计示例，展示如何实现这些功能。</summary>
     
     
     
@@ -428,10 +330,10 @@
     <link href="https://wangbin-blog.github.io/post/fc344f65.html"/>
     <id>https://wangbin-blog.github.io/post/fc344f65.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.796Z</updated>
+    <updated>2024-11-26T01:17:01.140Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;文字版&quot;&gt;&lt;a href=&quot;#文字版&quot; class=&quot;headerlink&quot; title=&quot;文字版&quot;&gt;&lt;/a&gt;文字版&lt;/h3&gt;&lt;h4 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26from%3Dappmsg%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">本文档详细介绍了如何使用 UniApp 实现一个滚动的 Tab 栏。滚动 Tab 栏在小程序中非常常见，适用于需要展示多个选项卡且每个选项卡内容较多的情况。本文将通过两个不同的实现方式（文字版和图片版）来展示如何实现这一功能。</summary>
     
     
     
@@ -447,10 +349,10 @@
     <link href="https://wangbin-blog.github.io/post/98cc63b2.html"/>
     <id>https://wangbin-blog.github.io/post/98cc63b2.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.796Z</updated>
+    <updated>2024-11-26T01:17:38.850Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;先看效果&quot;&gt;&lt;a href=&quot;#先看效果&quot; class=&quot;headerlink&quot; title=&quot;先看效果&quot;&gt;&lt;/a&gt;先看效果&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/640%3Fwx_fmt%3Dgif%26tp%3Dwebp%26wxfrom%3D5%26wx_lazy%3D1%7Bstr-number%7D&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">本文介绍了一个非常实用的加载效果网站，适合前端开发者寻找和使用各种加载动画。以下是文章的详细内容</summary>
     
     
     
@@ -466,23 +368,10 @@
     <link href="https://wangbin-blog.github.io/post/5f2de2cf.html"/>
     <id>https://wangbin-blog.github.io/post/5f2de2cf.html</id>
     <published>2024-08-01T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.778Z</updated>
+    <updated>2024-11-26T01:29:11.037Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Docker&lt;ul&gt;
-&lt;li&gt;Mysql&lt;/li&gt;
-&lt;li&gt;Nginx&lt;/li&gt;
-&lt;li&gt;Php&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL21hZ2ljYmxhY2svbWFjY21zMTAvcmVsZWFzZXM=&quot;&gt;maccmsV10 项目文件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDcvNmU3YjdjYjdlY2MyY2FiZjE0NmI2OTQ0OTI0NDQ1OTAuemlw&quot;&gt;模板文件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvODMwYmRkNDZhNzU5Nzk3ZDQ3YTcxNDkwZGJhMmQ2YzUuemlw&quot;&gt;萌芽采集插件&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuZGtld2wuY29tLw==&quot;&gt;集模板&amp;#x2F;插件于一身的网站&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvYjhiOTQ5YWI2ZjJkMGVjZjY4MjA2YTM1NDJhNmNmZGEucmFy&quot;&gt;移动端模板&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yYXcuZ2l0bWlycm9yLmNvbS93YW5nYmluLWJsb2cvcGljLXJlc291cmNlcy9tYWluLzIwMjQvMDgvMjU1ZmZkOTZhOWI5ZjMzNmQ5ZGQ1ZTdmNjYwMzUxZjMuemlw&quot;&gt;pc端模板&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;安装waf防火墙（可选）</summary>
+    <summary type="html">本文详细介绍了如何在Docker环境中安装和配置MACCMS视频管理系统。首先，文章指导读者准备Docker环境，包括安装Docker以及创建所需的网络。接着，依次介绍了如何安装和配置MySQL、Nginx和PHP容器，确保这些服务能够正常运行并相互协作。随后，文章提供了MACCMS项目文件的下载和部署步骤，包括文件的解压、权限设置等。此外，还详细描述了Nginx的配置方法，以支持MACCMS的正常访问。最后，文章给出了如何配置视频分类的具体SQL语句，帮助用户快速完成系统的初始化设置。通过本文的指导，读者可以顺利地在Docker环境中搭建一个功能完整的MACCMS视频管理平台。</summary>
     
     
     
@@ -533,13 +422,10 @@
     <link href="https://wangbin-blog.github.io/post/4fd5a719.html"/>
     <id>https://wangbin-blog.github.io/post/4fd5a719.html</id>
     <published>2024-07-19T12:31:13.000Z</published>
-    <updated>2024-10-30T01:38:47.634Z</updated>
+    <updated>2024-11-26T01:25:17.343Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;strong&gt;访问GitHub的速度和稳定性可以通过修改hosts文件来提高。‌&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;首先，‌获取github.com的IP地址是关键的一步。‌&lt;/p&gt;
-&lt;p&gt;你可以通过在线DNS解析网站，‌如&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL3d3dy5pcDMzLmNvbS9kbnMuaHRtbA==&quot;&gt;ip33&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;，‌输入&lt;code&gt;github.com&lt;/code&gt;域名，‌获取A记录的IP地址。‌然后将这个IP地址赋值到&lt;code&gt;hosts&lt;/code&gt;文件（‌文件路径为&lt;code&gt;C:&#92;Windows&#92;System32&#92;drivers&#92;etc&lt;/code&gt;）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将hosts文件copy到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌&lt;/p&gt;
-&lt;p&gt;此外，‌还有一些特定的IP地址可以帮助加速访问GitHub的特定服务，‌&lt;/p&gt;</summary>
+    <summary type="html">本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的DNS服务器及其IP地址，包括百度DNS、阿里DNS、DNSPod等，用户可以根据需要选择合适的DNS进行设置。最后，文章提醒用户，即使设置了hosts文件，仍需定期更新IP地址，以确保访问的稳定性和速度。</summary>
     
     
     
@@ -559,10 +445,10 @@
     <link href="https://wangbin-blog.github.io/post/26185413.html"/>
     <id>https://wangbin-blog.github.io/post/26185413.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.762Z</updated>
+    <updated>2024-11-26T01:33:21.182Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;设置系统级环境变量&quot;&gt;&lt;a href=&quot;#设置系统级环境变量&quot; class=&quot;headerlink&quot; title=&quot;设置系统级环境变量&quot;&gt;&lt;/a&gt;设置系统级环境变量&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# /etc/profile.d/&amp;#123;文件名.sh&amp;#125; 新建并打开配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vi /etc/profile.d/dotnet.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 文件末尾加变量定义&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 此处我的dotnet文件在 这个位置  /home/sys_wh/dotnet&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; DOTNET_ROOT=/home/sys_wh/dotnet&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;export&lt;/span&gt; PATH=&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;:/home/sys_wh/dotnet&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重载配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; /etc/profile.d/dotnet.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 终端使用变量,执行以下命令查看是否有版本输出，最好切换下用户测试是否所有用户都可以读到变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dotnet info&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文档详细介绍了在Linux环境下运行DotNet应用程序的方法，包括设置系统级环境变量、编写启动脚本、批量启动脚本以及注册系统服务。首先，文档说明了如何通过编辑 /etc/profile.d/dotnet.sh 文件来设置DotNet的环境变量，并确保所有用户都能访问。接着，提供了详细的启动脚本，用于启动、停止、重启和检查应用程序的状态。此外，还介绍了一个批量启动脚本，可以同时启动多个端口的应用程序。最后，文档展示了如何将DotNet应用程序注册为系统服务，确保其在系统启动时自动运行。</summary>
     
     
     
@@ -578,17 +464,10 @@
     <link href="https://wangbin-blog.github.io/post/5711187a.html"/>
     <id>https://wangbin-blog.github.io/post/5711187a.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.763Z</updated>
+    <updated>2024-11-26T01:34:27.244Z</updated>
     
     
-    <summary type="html">&lt;p&gt;ASP.NET Core MVC的项目需要处理图片，部署到CentOS 7上面时会报&lt;code&gt;The type initializer for ‘Gdip‘ threw an exception&lt;/code&gt;，需要安装&lt;code&gt;libgdiplus&lt;/code&gt;。&lt;br&gt;做为linux门外汉，虽然网上已经有不少相关内容，还是摸索了不少时间，记录一下。&lt;br&gt;感谢CentOS7离线安装神器&lt;code&gt;yumdownloader&lt;/code&gt;一文的帮助，主要内容均来自此文。&lt;br&gt;首先在虚拟机上安装CentOS7，需要借用这台能上网的CentOS7虚拟机下载离线安装包。并且要保证这台虚拟机和要部署的目标服务器环境相同，避免下载安装包时遗漏了某些依赖包。&lt;br&gt;运行以下命令安装&lt;code&gt;yumdownloader&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install yum-utils -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;下载EPEL最新发布包：&lt;code&gt;epel-release-7-14.noarch.rpm&lt;/code&gt;并安装，否则&lt;code&gt;yumdownloader&lt;/code&gt;找不到&lt;code&gt;libgdiplus&lt;/code&gt;的离线安装包。&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rpm -ivh epel-release-7-14.noarch.rpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;下载libgdiplus离线安装包&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yumdownloader --destdir=./libgdiplus --resolve libgdiplus.x86_64&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文档详细介绍了在CentOS 7上安装libgdiplus的过程，以解决ASP.NET Core MVC项目在处理图片时遇到的The type initializer for ‘Gdip‘ threw an exception错误。首先，通过安装yum-utils和epel-release来获取必要的工具和仓库支持。然后，使用yumdownloader下载libgdiplus及其依赖包，并将其压缩打包。最后，将压缩包上传到目标服务器，解压并安装这些包，确保所有依赖项都正确安装。文档还提供了已打包的安装文件下载地址，方便用户快速完成安装。</summary>
     
     
     
@@ -604,16 +483,10 @@
     <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
     <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.766Z</updated>
+    <updated>2024-11-26T01:36:04.071Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;启动-jar-连接不上Nacos服务&quot;&gt;&lt;a href=&quot;#启动-jar-连接不上Nacos服务&quot; class=&quot;headerlink&quot; title=&quot;启动 jar 连接不上Nacos服务&quot;&gt;&lt;/a&gt;启动 jar 连接不上Nacos服务&lt;/h2&gt;&lt;h3 id=&quot;前置条件&quot;&gt;&lt;a href=&quot;#前置条件&quot; class=&quot;headerlink&quot; title=&quot;前置条件&quot;&gt;&lt;/a&gt;前置条件&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Nacos 版本 2.0.3&lt;/li&gt;
-&lt;li&gt;Nacos 服务没问题，后台页面可以打开&lt;/li&gt;
-&lt;li&gt;Nacos所在服务器8848&amp;#x2F;9848&amp;#x2F;9849&amp;#x2F;端口都开放，或者防火墙已经关闭&lt;/li&gt;
-&lt;li&gt;启动相同的jar有的服务器有问题，有的没问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;启动jar-报错&quot;&gt;&lt;a href=&quot;#启动jar-报错&quot; class=&quot;headerlink&quot; title=&quot;启动jar 报错&quot;&gt;&lt;/a&gt;启动jar 报错&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;20:39:30.692 [main] INFO  c.a.n.c.r.client - [printIfInfoEnabled,60] - [2d2b5901-f6f8-414e-850c-1a92807e9f25_config-0] Try to connect to server on start up, server: &amp;#123;serverIp = &amp;#x27;192.168.x.x&amp;#x27;, server main port = 8848&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20:39:33.695 [main] ERROR c.a.n.c.r.c.g.GrpcClient - [printIfErrorEnabled,99] - Server check fail, please check server 192.168.166.51 ,port 9848 is available , error =&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 65041 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@77114efe[status=PENDING, info=[GrpcFuture&amp;#123;clientCall=&amp;#123;delegate=&amp;#123;delegate=ClientCallImpl&amp;#123;method=MethodDescriptor&amp;#123;fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@77681ce4, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@5d96bdf8, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@6f76c2cc&amp;#125;&amp;#125;&amp;#125;&amp;#125;&amp;#125;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文《【Linux】Nacos 问题》详细记录了在Linux环境下遇到的Nacos服务连接问题及其解决方法。文章首先描述了启动jar文件时无法连接Nacos服务的错误日志，分析了问题原因可能是由于hostname -i命令执行过慢导致Nacos客户端检查超时。接着，文章提供了具体的解决办法，包括检查和修改主机的hostname配置，确保hostname -i命令能够快速返回正确的IP地址。最后，文章还介绍了如何配置Nacos服务的开机自启动，确保服务在系统重启后能够自动运行。这些内容对解决Nacos连接问题和提高系统稳定性非常有帮助。</summary>
     
     
     
@@ -629,18 +502,10 @@
     <link href="https://wangbin-blog.github.io/post/7a6abf49.html"/>
     <id>https://wangbin-blog.github.io/post/7a6abf49.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.768Z</updated>
+    <updated>2024-11-26T01:37:10.200Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;下载并解压Redis&quot;&gt;&lt;a href=&quot;#下载并解压Redis&quot; class=&quot;headerlink&quot; title=&quot;下载并解压Redis&quot;&gt;&lt;/a&gt;下载并解压Redis&lt;/h2&gt;&lt;h3 id=&quot;执行下面的命令下载redis：&quot;&gt;&lt;a href=&quot;#执行下面的命令下载redis：&quot; class=&quot;headerlink&quot; title=&quot;执行下面的命令下载redis：&quot;&gt;&lt;/a&gt;执行下面的命令下载redis：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget https://download.redis.io/releases/redis-6.2.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;解压redis：&quot;&gt;&lt;a href=&quot;#解压redis：&quot; class=&quot;headerlink&quot; title=&quot;解压redis：&quot;&gt;&lt;/a&gt;解压redis：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tar xzf redis-6.2.6.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot;&gt;&lt;a href=&quot;#移动redis目录，一般都会将redis目录放置到-usr-local-redis目录：&quot; class=&quot;headerlink&quot; title=&quot;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&quot;&gt;&lt;/a&gt;移动redis目录，一般都会将redis目录放置到 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;redis目录：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv redis-6.2.6 /usr/local/redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">本文《【Linux】Redis 离线安装》详细介绍了在Linux环境下离线安装Redis的全过程。文章首先提供了Redis的下载链接及解压步骤，接着详细描述了编译和安装Redis的方法，包括解决编译过程中可能遇到的问题。随后，文章介绍了如何启动Redis服务，并提供了常见的配置选项，确保Redis能够以守护进程方式运行。最后，文章还介绍了如何设置Redis的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Redis安装和管理非常有帮助。</summary>
     
     
     
@@ -656,18 +521,10 @@
     <link href="https://wangbin-blog.github.io/post/1c39c402.html"/>
     <id>https://wangbin-blog.github.io/post/1c39c402.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.774Z</updated>
+    <updated>2024-11-26T01:36:40.395Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;资源下载&quot;&gt;&lt;a href=&quot;#资源下载&quot; class=&quot;headerlink&quot; title=&quot;资源下载&quot;&gt;&lt;/a&gt;资源下载&lt;/h2&gt;&lt;p&gt;nginx-1.20.1.tar.gz（下载链接中包含&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1nY2Mmc3BtPTEwMDEuMjEwMS4zMDAxLjcwMjA=&quot;&gt;gcc&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;、g++、pcre、libtool、nginx）&lt;/p&gt;
-&lt;p&gt;链接：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU5pdjMzdVphNGdqMHZpWUZybkJUQlE=&quot;&gt;https://pan.baidu.com/s/1Niv33uZa4gj0viYFrnBTBQ&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;提取码：0b91&lt;/p&gt;
-&lt;h2 id=&quot;安装步骤&quot;&gt;&lt;a href=&quot;#安装步骤&quot; class=&quot;headerlink&quot; title=&quot;安装步骤&quot;&gt;&lt;/a&gt;安装步骤&lt;/h2&gt;&lt;h3 id=&quot;安装gcc&quot;&gt;&lt;a href=&quot;#安装gcc&quot; class=&quot;headerlink&quot; title=&quot;安装gcc&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装gcc&lt;/strong&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;rpm -Uvh *.rpm --nodeps --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;结果&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@doris54 gcc]# rpm -Uvh *.rpm --nodeps --force&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warning: cpp-4.8.5-16.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Preparing...                          ################################# [100%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Updating / installing...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   1:zlib-1.2.7-17.el7                ################################# [  6%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   2:mpfr-3.1.1-4.el7                 ################################# [ 13%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   3:libmpc-1.0.1-3.el7               ################################# [ 19%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   4:openssl-libs-1:1.0.2k-8.el7      ################################# [ 25%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   5:cpp-4.8.5-16.el7                 ################################# [ 31%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   6:zlib-devel-1.2.7-17.el7          ################################# [ 38%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   7:kernel-headers-3.10.0-693.el7    ################################# [ 44%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   8:glibc-headers-2.17-196.el7       ################################# [ 50%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   9:glibc-devel-2.17-196.el7         ################################# [ 56%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  10:gcc-4.8.5-16.el7                 ################################# [ 63%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  11:openssl-devel-1:1.0.2k-8.el7     ################################# [ 69%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  12:openssl-1:1.0.2k-8.el7           ################################# [ 75%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  13:openssl098e-0.9.8e-29.el7.centos.################################# [ 81%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Cleaning up / removing...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  14:openssl-1:1.0.2k-19.el7          ################################# [ 88%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  15:openssl-libs-1:1.0.2k-19.el7     ################################# [ 94%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  16:zlib-1.2.7-18.el7                ################################# [100%]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@doris54 gcc]# &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文《【Linux】nginx 离线安装》详细介绍了在Linux环境下离线安装Nginx的全过程。文章首先提供了所需的资源下载链接，包括Nginx及其依赖项（如gcc、g++、pcre、libtool）。接着，文章逐步讲解了每个依赖项的安装步骤，包括使用rpm命令安装gcc和g++，以及编译安装pcre和libtool。随后，文章详细描述了Nginx的编译安装过程，并提供了启动Nginx的常用命令。最后，文章介绍了如何配置Nginx的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Nginx安装和管理非常有帮助。</summary>
     
     
     
@@ -712,14 +569,10 @@
     <link href="https://wangbin-blog.github.io/post/ec90412d.html"/>
     <id>https://wangbin-blog.github.io/post/ec90412d.html</id>
     <published>2024-05-25T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.776Z</updated>
+    <updated>2024-11-26T01:30:39.144Z</updated>
     
     
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;h2 id=&quot;基本命令&quot;&gt;&lt;a href=&quot;#基本命令&quot; class=&quot;headerlink&quot; title=&quot;基本命令&quot;&gt;&lt;/a&gt;基本命令&lt;/h2&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -m 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -r 显示正在使用的内核版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dmidecode -q 显示硬件系统部件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(SMBIOS / DMI) hdparm -i /dev/hda 罗列一个磁盘的架构特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -tT /dev/sda 在磁盘上执行测试性读取操作系统信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;arch&lt;/span&gt; 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -m 显示机器的处理器架构&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;uname&lt;/span&gt; -r 显示正在使用的内核版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -i /dev/hda 罗列一个磁盘的架构特性&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hdparm -tT /dev/sda 在磁盘上执行测试性读取操作&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/cpuinfo 显示CPU info的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/interrupts 显示中断&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/meminfo 校验内存使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/swaps 显示哪些swap被使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/version 显示内核的版本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/net/dev 显示网络适配器及统计&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cat&lt;/span&gt; /proc/mounts 显示已加载的文件系统&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lspci -tv 罗列 PCI 设备&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lsusb -tv 显示 USB 设备&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;date&lt;/span&gt; 显示系统日期&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cal 2007 显示2007年的日历表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;date&lt;/span&gt; 041217002007.00 设置日期和时间 - 月日时分年.秒&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clock -w 将时间修改保存到 BIOS&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文档《【Linux】常用命令》详细列出了Linux系统中常用的命令及其用法，涵盖了从基本命令、关机操作、文件和目录管理、文件搜索、文件系统的挂载与卸载、磁盘空间管理、用户和群组管理、文件权限设置、文件的特殊属性、打包和压缩文件、RPM包管理、YUM软件包升级器、DEB包管理、查看文件内容、文本处理、字符设置和文件格式转换、文件系统分析、初始化文件系统、SWAP文件系统管理、备份操作、光盘操作、网络配置、列出目录内容、查看文件类型以及复制文件目录等操作。每个部分都提供了具体的命令示例，帮助用户更好地理解和使用Linux系统中的各种命令。文档内容详实，适合Linux初学者和有一定经验的用户参考使用。</summary>
     
     
     
@@ -735,21 +588,10 @@
     <link href="https://wangbin-blog.github.io/post/5901b3f7.html"/>
     <id>https://wangbin-blog.github.io/post/5901b3f7.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.727Z</updated>
+    <updated>2024-11-26T01:38:30.699Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Github账号注册&amp;#x2F;创建一个Public仓库&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&quot;&gt;picgo下载链接&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly90eXBvcmEueW16aHhpbmcuY24vaW5kZXguaHRtbD9iZF92aWQ9MTE3NjU1MTYxODU0MTQ3NDAzODk=&quot;&gt;Typora下载安装&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Vscode下载安装&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">本文《Github+picGo+Typora搭建图床》详细介绍了如何使用Github、PicGo和Typora搭建个人图床的过程。文章首先介绍了准备工作，包括注册Github账号、创建Public仓库、下载安装PicGo和Typora。接着，详细讲解了生成Github Tokens的步骤，以及如何在PicGo中设置图床，包括配置仓库名、分支名、Token、存储路径和自定义域名。随后，文章介绍了如何手动激活Typora并设置图片上传功能，确保图片能够顺利上传到PicGo。最后，文章还介绍了如何在Vscode中安装Cnblogs插件，以便将写好的博客上传到博客园。整个过程步骤清晰，适合初学者参考和实践。</summary>
     
     
     
@@ -788,17 +630,10 @@
     <link href="https://wangbin-blog.github.io/post/e64ca3b2.html"/>
     <id>https://wangbin-blog.github.io/post/e64ca3b2.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.789Z</updated>
+    <updated>2024-11-26T01:27:16.021Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot;</summary>
-        
-      
+    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。本文适合需要长期免费使用 Typora 的用户参考。</summary>
     
     
     
@@ -814,16 +649,10 @@
     <link href="https://wangbin-blog.github.io/post/6375ab96.html"/>
     <id>https://wangbin-blog.github.io/post/6375ab96.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.793Z</updated>
+    <updated>2024-11-26T01:28:03.487Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Steam 必备神器 &lt;code&gt;Watt Toolkit&lt;/code&gt;，也就是 &lt;code&gt;Steam++&lt;/code&gt; 自带了 GitHub 加速，但当我们开启 GitHub 加速后，网页是加速了，但 git 命令还不行。如果想让 &lt;code&gt;git</summary>
-        
-      
+    <summary type="html">本文介绍了如何使用 Watt Toolkit（即 Steam++）来加速 GitHub 访问。首先，将 Watt Toolkit 的 GitHub 加速模式设置为系统代理模式，并通过操作系统设置查看代理 IP 和端口（例如：127.0.0.1:26561）。接着，通过配置 git 的 HTTP 代理和禁用 SSL 证书检查，使 git clone 等命令也能实现加速效果。文章还提供了取消 git 代理的命令，方便用户根据需要进行切换。本文适合需要提高 GitHub 访问速度的开发者和用户参考。</summary>
     
     
     
@@ -886,14 +715,10 @@
     <link href="https://wangbin-blog.github.io/post/bf223232.html"/>
     <id>https://wangbin-blog.github.io/post/bf223232.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-28T09:29:39.623Z</updated>
+    <updated>2024-11-26T01:34:51.028Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;方式一-java-jar-jar包名&quot;&gt;&lt;a href=&quot;#方式一-java-jar-jar包名&quot; class=&quot;headerlink&quot; title=&quot;方式一(java -jar jar包名)&quot;&gt;&lt;/a&gt;方式一(java -jar jar包名)&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;# &lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;命令格式：java -jar jar包名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@localhost test_jar]# java -jar test_jar-1.0-SNAPSHOT.jar&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;分析：&lt;/strong&gt; 执行此命令的时候，当前窗口被锁定，无法进行其它操作，直到main方法执行完毕，当前窗口才解除锁定。&lt;br&gt;&lt;strong&gt;缺点：&lt;/strong&gt; 锁定窗口。当然，我可以通过CTRL + C打断程序运行，或直接关闭窗口，程序退出，不过在实际的工作环境中，是绝对不会允许这种粗暴的方式终止的运行，毕竟我们的项目都是给用户提供服务的，程序要是退出了，公司还营不营业了。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">本文《Linux环境下运行jar包的几种方式》详细介绍了在Linux系统中启动Java应用程序的多种方法。首先，文章从最基本的java -jar命令开始，指出其主要缺点是在执行过程中会锁定当前终端窗口。接着，文章介绍了通过在命令后面加&amp;符号使程序在后台运行的方法，虽然解决了窗口锁定的问题，但在关闭终端时程序也会随之终止。为了解决这一问题，文章进一步探讨了使用nohup命令，确保即使关闭终端，程序也能持续运行，并提供了几种不同的nohup命令使用方式，包括重定向输出至指定文件。此外，文章还提供了一个启动、停止和管理多个Java应用的Shell脚本示例，以及如何设置服务开机自启的步骤，最后简要介绍了通过Systemd服务配置实现更高级的服务管理。这些内容对于希望在Linux环境中高效部署和管理Java应用的开发人员非常实用。</summary>
     
     
     
@@ -909,16 +734,10 @@
     <link href="https://wangbin-blog.github.io/post/3cdc8223.html"/>
     <id>https://wangbin-blog.github.io/post/3cdc8223.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.769Z</updated>
+    <updated>2024-11-26T01:37:34.397Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;系统要求&quot;&gt;&lt;a href=&quot;#系统要求&quot; class=&quot;headerlink&quot; title=&quot;系统要求&quot;&gt;&lt;/a&gt;系统要求&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;系统要求&lt;/strong&gt;&lt;br&gt;1、64位操作系统，推荐 Linux&amp;#x2F;Unix&amp;#x2F;macOS&lt;br&gt;2、64位 JDK 1.8+&lt;br&gt;3、&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9yb2NrZXRtcS5hcGFjaGUub3JnL3poL2RvY3MvcXVpY2tTdGFydC8wMXF1aWNrc3RhcnQ=&quot;&gt;官网文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;安装部署&quot;&gt;&lt;a href=&quot;#安装部署&quot; class=&quot;headerlink&quot; title=&quot;安装部署&quot;&gt;&lt;/a&gt;安装部署&lt;/h1&gt;&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;这里使用&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kaXN0LmFwYWNoZS5vcmcvcmVwb3MvZGlzdC9yZWxlYXNlL3JvY2tldG1xLzUuMS4wL3JvY2tldG1xLWFsbC01LjEuMC1iaW4tcmVsZWFzZS56aXA=&quot;&gt;release&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;免编译版本&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 解压&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ unzip rocketmq-all-5.1.0-source-release.zip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 打开文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; rocketmq-all-5.1.0-source-release/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。这些内容对在Linux环境下部署和管理RocketMQ非常有帮助。</summary>
     
     
     
@@ -934,17 +753,10 @@
     <link href="https://wangbin-blog.github.io/post/bec8364e.html"/>
     <id>https://wangbin-blog.github.io/post/bec8364e.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.771Z</updated>
+    <updated>2024-11-26T01:38:02.222Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;命令历史&quot;&gt;&lt;a href=&quot;#命令历史&quot; class=&quot;headerlink&quot; title=&quot;命令历史&quot;&gt;&lt;/a&gt;命令历史&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;以:和&amp;#x2F;开头的命令都有历史纪录，可以首先键入:或&amp;#x2F;然后按上下箭头来选择某个历史命令。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;启动vim&quot;&gt;&lt;a href=&quot;#启动vim&quot; class=&quot;headerlink&quot; title=&quot;启动vim&quot;&gt;&lt;/a&gt;启动vim&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在命令行窗口中输入以下命令即可&lt;/p&gt;
-&lt;p&gt;vim 直接启动vim&lt;/p&gt;
-&lt;p&gt;vim filename 打开vim并创建名为filename的文件&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">本文《【Linux】Vim命令合集》详细总结了Vim编辑器的各种常用命令和技巧。文章首先介绍了Vim的基本启动和文件操作命令，包括打开单个或多个文件、在新窗口中打开文件等。接着，文章详细列出了Vim的导航、插入、查找、替换、移动、撤销与重做、删除、拷贝与粘贴、剪切、退出、窗口管理、录制宏、执行Shell命令、注释、帮助以及其他非编辑命令。每个命令都配有详细的说明和使用示例，非常适合初学者和进阶用户学习和参考。文章最后还提供了Vim教程的启动方法和一些参考文档，帮助读者更好地掌握Vim的使用技巧。</summary>
     
     
     
@@ -960,54 +772,10 @@
     <link href="https://wangbin-blog.github.io/post/599fe741.html"/>
     <id>https://wangbin-blog.github.io/post/599fe741.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.772Z</updated>
+    <updated>2024-11-26T01:35:22.370Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;常用语法&quot;&gt;&lt;a href=&quot;#常用语法&quot; class=&quot;headerlink&quot; title=&quot;常用语法&quot;&gt;&lt;/a&gt;常用语法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;#安装软件
-pacman -S 包名 ...
-
-#给所有提示设置选项
-yes | sudo pacman -S 包名 ...
-
-#只下载包，不安装
-pacman -Sw 包名 ...
-
-#清理未安装的包文件，包文件位于 /var/cache/pacman/pkg/ 目录
-pacman -Sc
-
-#清理所有的缓存文件
-pacman -Scc
-
-#删除单个软件包，保留其全部已经安装的依赖关系
-pacman -R 包名
-
-#删除指定软件包，及其所有没有被其他已安装软件包使用的依赖关系
-pacman -Rs 包名
-
-#在删除包的同时，删除所有依赖这个软件包的程序
-pacman -Rsc 包名
-
-#在删除包时不检查依赖
-pacman -Rd 包名
-
-#更新所有包 y更新数据库，yy强制更新，u升级软件
-pacman -Syu
-
-#在数据库中查询软件包，查询位置包含了包的名字和描述
-pacman -Ss 关键字
-
-#获取已安装软件包所包含文件的列表
-pacman -Ql
-
-#从本地安装软件包
-pacman -U xxx.tar.gz
-
-#显示软件包依赖树
-pactree 包名
-
-# 卸载所有无用包
-pacman -c
-&lt;/code&gt;&lt;/pre&gt;</summary>
+    <summary type="html">本文《Manjaro 环境配置》详细介绍了在Manjaro Linux系统中进行环境配置的各种方法。文章首先介绍了常用的Pacman包管理命令，包括软件的安装、更新、删除等操作。接着，文章详细讲解了如何设置中国源、时间同步、安装常用软件（如yay、vim、Chrome、输入法、微信、QQ、TIM、Typora、百度网盘、IDEA、网易云音乐、VSCode、Git等）的具体步骤。此外，文章还提供了系统美化的方法，包括安装Latte Dock、配置Oh My Zsh、优化GRUB主题等内容。最后，文章列出了多个参考文档，方便读者深入学习和解决问题。这些内容对于初学者和有一定经验的用户都非常有帮助，能够快速搭建一个高效、美观的Manjaro环境。</summary>
     
     
     
@@ -1023,16 +791,10 @@ pacman -c
     <link href="https://wangbin-blog.github.io/post/4a0c2abb.html"/>
     <id>https://wangbin-blog.github.io/post/4a0c2abb.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.775Z</updated>
+    <updated>2024-11-26T01:29:46.526Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;【Linux】-安装OpenJDK&quot;&gt;&lt;a href=&quot;#【Linux】-安装OpenJDK&quot; class=&quot;headerlink&quot; title=&quot;【Linux】 安装OpenJDK&quot;&gt;&lt;/a&gt;【Linux】 安装OpenJDK&lt;/h1&gt;&lt;h2 id=&quot;在线安装&quot;&gt;&lt;a href=&quot;#在线安装&quot; class=&quot;headerlink&quot; title=&quot;在线安装&quot;&gt;&lt;/a&gt;在线安装&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;### a) 检查系统中是否有java环境
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​                    &lt;code&gt;rpm -qa | grep java&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;### b) 使用yum安装/升级OpenJDK：
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;​                    &lt;code&gt;yum -y install java-1.8.0-openjdk-devel&lt;/code&gt;&lt;br&gt;​    ### c) 查找OpenJDK安装路径：&lt;br&gt;​                    &lt;code&gt;[root@node01 ~]# which java       //找到java的执行路径&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/bin/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /usr/bin/java       //执行路径指向环境的软连接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 22 Sep 10 21:23 /usr/bin/java -&amp;gt; /etc/alternatives/java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@node01 ~]# &lt;span class=&quot;built_in&quot;&gt;ls&lt;/span&gt; -lrt /etc/alternatives/java     //最终指向安装路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;lrwxrwxrwx 1 root root 73 Sep 10 21:23 /etc/alternatives/java -&amp;gt; /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.el7_9.x86_64/jre/bin/java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">本文详细介绍了在Linux系统上安装OpenJDK的方法，包括在线安装和离线安装两种方式。在线安装部分，首先检查系统中是否已存在Java环境，然后使用yum命令安装OpenJDK，并配置环境变量。离线安装部分，适用于无外网的集群环境，需预先下载OpenJDK二进制包，上传至指定目录，解压并配置环境变量。通过本文的指导，读者可以轻松地在Linux系统上安装和配置OpenJDK，确保Java应用程序的正常运行。</summary>
     
     
     
@@ -1048,19 +810,10 @@ pacman -c
     <link href="https://wangbin-blog.github.io/post/6632db9d.html"/>
     <id>https://wangbin-blog.github.io/post/6632db9d.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.761Z</updated>
+    <updated>2024-11-26T01:32:45.109Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;doris-安装部署&quot;&gt;&lt;a href=&quot;#doris-安装部署&quot; class=&quot;headerlink&quot; title=&quot;doris 安装部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;doris 安装部署&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、环境配置&quot;&gt;&lt;a href=&quot;#一、环境配置&quot; class=&quot;headerlink&quot; title=&quot;一、环境配置&quot;&gt;&lt;/a&gt;一、环境配置&lt;/h2&gt;&lt;h4 id=&quot;1-服务器环境&quot;&gt;&lt;a href=&quot;#1-服务器环境&quot; class=&quot;headerlink&quot; title=&quot;1. 服务器环境&quot;&gt;&lt;/a&gt;1. 服务器环境&lt;/h4&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;centos 7&lt;/li&gt;
-&lt;li&gt;docker &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==&quot;&gt;下载地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;doris 1.0.0 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbCNkb3Jpcy0lRTQlQjglQkIlRTQlQkIlQTMlRTclQTAlODE=&quot;&gt;下载地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;doris &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2luc3RhbGxpbmcvY29tcGlsYXRpb24uaHRtbA==&quot;&gt;官方文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;storrocks &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9xdWlja19zdGFydC9EZXBsb3k=&quot;&gt;官方文档&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VsdF9tZT90eXBlPWJsb2c=&quot;&gt;学习地址&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">本文档详细介绍了在Linux环境下Doris的安装部署流程，包括环境配置、Docker的安装与配置、Doris的编译与部署步骤。首先，文档列出了所需的服务器环境，包括操作系统版本、Docker、Doris及其相关资源链接。接着，逐步指导如何安装Docker，从上传安装包到配置服务，再到启动与卸载Docker。随后，文档深入讲解了Doris的安装过程，分为编译安装和直接部署两种方式，详述了不同版本的依赖安装、源码下载、编译命令以及部署环境的准备。最后，文档提供了详细的单节点部署示例，涵盖FE、BE、Broker的配置与启动，确保读者能够顺利完成Doris的安装与基本配置</summary>
     
     
     
