@@ -112,13 +112,13 @@
     
     <category term="娱乐" scheme="https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
-    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
     <category term="漫画" scheme="https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/"/>
     
-    <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
+    <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
-    <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
+    <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
@@ -479,14 +479,14 @@
   </entry>
   
   <entry>
-    <title>【Linux】Nacos 问题</title>
-    <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
-    <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
+    <title>【Linux】Redis 离线安装</title>
+    <link href="https://wangbin-blog.github.io/post/7a6abf49.html"/>
+    <id>https://wangbin-blog.github.io/post/7a6abf49.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-11-26T01:36:04.071Z</updated>
+    <updated>2024-11-26T01:37:10.200Z</updated>
     
     
-    <summary type="html">本文《【Linux】Nacos 问题》详细记录了在Linux环境下遇到的Nacos服务连接问题及其解决方法。文章首先描述了启动jar文件时无法连接Nacos服务的错误日志，分析了问题原因可能是由于hostname -i命令执行过慢导致Nacos客户端检查超时。接着，文章提供了具体的解决办法，包括检查和修改主机的hostname配置，确保hostname -i命令能够快速返回正确的IP地址。最后，文章还介绍了如何配置Nacos服务的开机自启动，确保服务在系统重启后能够自动运行。这些内容对解决Nacos连接问题和提高系统稳定性非常有帮助。</summary>
+    <summary type="html">本文《【Linux】Redis 离线安装》详细介绍了在Linux环境下离线安装Redis的全过程。文章首先提供了Redis的下载链接及解压步骤，接着详细描述了编译和安装Redis的方法，包括解决编译过程中可能遇到的问题。随后，文章介绍了如何启动Redis服务，并提供了常见的配置选项，确保Redis能够以守护进程方式运行。最后，文章还介绍了如何设置Redis的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Redis安装和管理非常有帮助。</summary>
     
     
     
@@ -498,14 +498,14 @@
   </entry>
   
   <entry>
-    <title>【Linux】Redis 离线安装</title>
-    <link href="https://wangbin-blog.github.io/post/7a6abf49.html"/>
-    <id>https://wangbin-blog.github.io/post/7a6abf49.html</id>
+    <title>【Linux】Nacos 问题</title>
+    <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
+    <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-11-26T01:37:10.200Z</updated>
+    <updated>2024-11-26T01:36:04.071Z</updated>
     
     
-    <summary type="html">本文《【Linux】Redis 离线安装》详细介绍了在Linux环境下离线安装Redis的全过程。文章首先提供了Redis的下载链接及解压步骤，接着详细描述了编译和安装Redis的方法，包括解决编译过程中可能遇到的问题。随后，文章介绍了如何启动Redis服务，并提供了常见的配置选项，确保Redis能够以守护进程方式运行。最后，文章还介绍了如何设置Redis的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Redis安装和管理非常有帮助。</summary>
+    <summary type="html">本文《【Linux】Nacos 问题》详细记录了在Linux环境下遇到的Nacos服务连接问题及其解决方法。文章首先描述了启动jar文件时无法连接Nacos服务的错误日志，分析了问题原因可能是由于hostname -i命令执行过慢导致Nacos客户端检查超时。接着，文章提供了具体的解决办法，包括检查和修改主机的hostname配置，确保hostname -i命令能够快速返回正确的IP地址。最后，文章还介绍了如何配置Nacos服务的开机自启动，确保服务在系统重启后能够自动运行。这些内容对解决Nacos连接问题和提高系统稳定性非常有帮助。</summary>
     
     
     
