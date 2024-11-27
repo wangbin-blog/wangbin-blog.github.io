@@ -28,7 +28,7 @@
 <meta property="og:description" content="本文《【Linux】Vim命令合集》详细总结了Vim编辑器的各种常用命令和技巧。文章首先介绍了Vim的基本启动和文件操作命令，包括打开单个或多个文件、在新窗口中打开文件等。接着，文章详细列出了Vim的导航、插入、查找、替换、移动、撤销与重做、删除、拷贝与粘贴、剪切、退出、窗口管理、录制宏、执行Shell命令、注释、帮助以及其他非编辑命令。每个命令都配有详细的说明和使用示例，非常适合初学者和进阶用户">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
-<meta property="article:modified_time" content="2024-11-26T01:38:02.222Z">
+<meta property="article:modified_time" content="2024-11-27T06:09:49.146Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%8E%86%E5%8F%B2"><span class="nav-number">1.</span> <span class="nav-text">命令历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8vim"><span class="nav-number">2.</span> <span class="nav-text">启动vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">文件命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim%E7%9A%84%E6%A8%A1%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">vim的模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">导航命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">插入命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">查找命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">替换命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">移动命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%A4%E9%94%80%E5%92%8C%E9%87%8D%E5%81%9A"><span class="nav-number">6.</span> <span class="nav-text">撤销和重做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4"><span class="nav-number">7.</span> <span class="nav-text">删除命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E5%92%8C%E7%B2%98%E8%B4%B4"><span class="nav-number">8.</span> <span class="nav-text">拷贝和粘贴</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%AA%E5%88%87%E5%91%BD%E4%BB%A4"><span class="nav-number">9.</span> <span class="nav-text">剪切命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%80%E5%87%BA%E5%91%BD%E4%BB%A4"><span class="nav-number">10.</span> <span class="nav-text">退出命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E5%91%BD%E4%BB%A4"><span class="nav-number">11.</span> <span class="nav-text">窗口命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4"><span class="nav-number">12.</span> <span class="nav-text">执行shell命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E5%91%BD%E4%BB%A4"><span class="nav-number">13.</span> <span class="nav-text">注释命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="nav-number">14.</span> <span class="nav-text">帮助命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%9D%9E%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4"><span class="nav-number">15.</span> <span class="nav-text">其他非编辑命令</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%8E%86%E5%8F%B2"><span class="nav-number">1.</span> <span class="nav-text">命令历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8vim"><span class="nav-number">2.</span> <span class="nav-text">启动vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">文件命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim%E7%9A%84%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">vim的模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E5%91%BD%E4%BB%A4"><span class="nav-number">4.1.</span> <span class="nav-text">导航命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%91%BD%E4%BB%A4"><span class="nav-number">4.2.</span> <span class="nav-text">插入命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="nav-number">4.3.</span> <span class="nav-text">查找命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E5%91%BD%E4%BB%A4"><span class="nav-number">4.4.</span> <span class="nav-text">替换命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">4.5.</span> <span class="nav-text">移动命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%A4%E9%94%80%E5%92%8C%E9%87%8D%E5%81%9A"><span class="nav-number">4.6.</span> <span class="nav-text">撤销和重做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4"><span class="nav-number">4.7.</span> <span class="nav-text">删除命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E5%92%8C%E7%B2%98%E8%B4%B4"><span class="nav-number">4.8.</span> <span class="nav-text">拷贝和粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%AA%E5%88%87%E5%91%BD%E4%BB%A4"><span class="nav-number">4.9.</span> <span class="nav-text">剪切命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%80%E5%87%BA%E5%91%BD%E4%BB%A4"><span class="nav-number">4.10.</span> <span class="nav-text">退出命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E5%91%BD%E4%BB%A4"><span class="nav-number">4.11.</span> <span class="nav-text">窗口命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4"><span class="nav-number">4.12.</span> <span class="nav-text">执行shell命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E5%91%BD%E4%BB%A4"><span class="nav-number">4.13.</span> <span class="nav-text">注释命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="nav-number">4.14.</span> <span class="nav-text">帮助命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%9D%9E%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4"><span class="nav-number">4.15.</span> <span class="nav-text">其他非编辑命令</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -237,7 +237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-26 09:38:02" itemprop="dateModified" datetime="2024-11-26T09:38:02+08:00">2024-11-26</time>
+      <time title="修改时间：2024-11-27 14:09:49" itemprop="dateModified" datetime="2024-11-27T14:09:49+08:00">2024-11-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,14 +293,14 @@
 <h2 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h2><blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开单个文件</span></span><br><span class="line">vim file</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">同时打开多个文件</span></span><br><span class="line">vim file1 file2 file3 ...</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在vim窗口中打开一个新文件</span></span><br><span class="line">:open file</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在新窗口中打开文件</span></span><br><span class="line">:split file</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换到下一个文件</span></span><br><span class="line">:bn</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换到上一个文件</span></span><br><span class="line">:bp</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前打开的文件列表，当前正在编辑的文件会用[]括起来。</span></span><br><span class="line">:args</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开远程文件，比如ftp或者share folder</span></span><br><span class="line">:e ftp://192.168.10.76/abc.txt</span><br><span class="line">:e \\qadrive\test\1.txt</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h1 id="vim的模式"><a href="#vim的模式" class="headerlink" title="vim的模式"></a>vim的模式</h1><h2 id="导航命令"><a href="#导航命令" class="headerlink" title="导航命令"></a>导航命令</h2><p>% 括号匹配</p>
-<h2 id="插入命令"><a href="#插入命令" class="headerlink" title="插入命令"></a>插入命令</h2><p>i 在当前位置生前插入</p>
+<h2 id="vim的模式"><a href="#vim的模式" class="headerlink" title="vim的模式"></a>vim的模式</h2><h3 id="导航命令"><a href="#导航命令" class="headerlink" title="导航命令"></a>导航命令</h3><p>% 括号匹配</p>
+<h3 id="插入命令"><a href="#插入命令" class="headerlink" title="插入命令"></a>插入命令</h3><p>i 在当前位置生前插入</p>
 <p>I 在当前行首插入</p>
 <p>a 在当前位置后插入</p>
 <p>A 在当前行尾插入</p>
 <p>o 在当前行之后插入一行</p>
 <p>O 在当前行之前插入一行</p>
-<h2 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h2><p><code> /text　　</code>查找text，按n健查找下一个，按N健查找前一个。</p>
+<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><p><code> /text　　</code>查找text，按n健查找下一个，按N健查找前一个。</p>
 <p><code> ?text　</code>　查找text，反向查找，按n健查找下一个，按N健查找前一个。</p>
 <p>vim中有一些特殊字符在查找时需要转义　　.*[]^%&#x2F;?~$</p>
 <p><code> :set ignorecase</code>　　忽略大小写的查找</p>
@@ -311,14 +311,14 @@
 <p><code> :nohlsearch</code>　　关闭当前的高亮显示，如果再次搜索或者按下n或N键，则会再次高亮。</p>
 <p><code> :set incsearch</code>　　逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成。</p>
 <p><code> :set wrapscan</code>　　重新搜索，在搜索到文件头或尾时，返回继续搜索，默认开启。</p>
-<h2 id="替换命令"><a href="#替换命令" class="headerlink" title="替换命令"></a>替换命令</h2><p><code> ra</code> 将当前字符替换为a，当期字符即光标所在字符。</p>
+<h3 id="替换命令"><a href="#替换命令" class="headerlink" title="替换命令"></a>替换命令</h3><p><code> ra</code> 将当前字符替换为a，当期字符即光标所在字符。</p>
 <p><code> s/old/new/</code> 用old替换new，替换当前行的第一个匹配</p>
 <p><code>s/old/new/g</code>用old替换new，替换当前行的所有匹配</p>
 <p><code> %s/old/new/</code> 用old替换new，替换所有行的第一个匹配</p>
 <p><code>%s/old/new/g</code>用old替换new，替换整个文件的所有匹配</p>
 <p><code>:10,20 s/^/  /g</code>在第10行知第20行每行前面加四个空格，用于缩进。</p>
 <p><code>ddp</code> 交换光标所在行和其下紧邻的一行。</p>
-<h2 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h2><p><code>h</code> 左移一个字符<br>l 右移一个字符，这个命令很少用，一般用w代替。<br><code>k</code> 上移一个字符<br><code>j</code> 下移一个字符<br>以上四个命令可以配合数字使用，比如20j就是向下移动20行，5h就是向左移动5个字符，在Vim中，很多命令都可以配合数字使用，比如删除10个字符10x，在当前位置后插入3个！，3a！&lt;Esc&gt;，这里的Esc是必须的，否则命令不生效。</p>
+<h3 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h3><p><code>h</code> 左移一个字符<br>l 右移一个字符，这个命令很少用，一般用w代替。<br><code>k</code> 上移一个字符<br><code>j</code> 下移一个字符<br>以上四个命令可以配合数字使用，比如20j就是向下移动20行，5h就是向左移动5个字符，在Vim中，很多命令都可以配合数字使用，比如删除10个字符10x，在当前位置后插入3个！，3a！&lt;Esc&gt;，这里的Esc是必须的，否则命令不生效。</p>
 <p><code>w</code> 向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以代替l命令。</p>
 <p><code>b</code> 向后移动一个单词 2b 向后移动2个单词</p>
 <p><code>e</code>，同w，只不过是光标停在单词尾部</p>
@@ -338,8 +338,8 @@
 <p><code>Ctrl + u</code> 向上滚动半屏</p>
 <p><code>Ctrl + f</code> 向下滚动一屏</p>
 <p><code>Ctrl + b</code> 向上滚动一屏</p>
-<h2 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h2><p><code>u</code> 撤销（Undo）<br><code>U</code> 撤销对整行的操作<br><code>Ctrl + r</code> 重做（Redo），即撤销的撤销。</p>
-<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2><p><code>x</code> 删除当前字符</p>
+<h3 id="撤销和重做"><a href="#撤销和重做" class="headerlink" title="撤销和重做"></a>撤销和重做</h3><p><code>u</code> 撤销（Undo）<br><code>U</code> 撤销对整行的操作<br><code>Ctrl + r</code> 重做（Redo），即撤销的撤销。</p>
+<h3 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h3><p><code>x</code> 删除当前字符</p>
 <p><code>3x</code> 删除当前光标开始向后三个字符</p>
 <p><code>X</code> 删除当前字符的前一个字符。X&#x3D;dh</p>
 <p><code>dl</code> 删除当前字符， dl&#x3D;x</p>
@@ -356,7 +356,7 @@
 <p><code>:11,\$d</code> 删除11行及以后所有的行</p>
 <p><code>:1,\$d</code> 删除所有行</p>
 <p><code>J(shift + j)</code>　　删除两行之间的空行，实际上是合并两行。</p>
-<h2 id="拷贝和粘贴"><a href="#拷贝和粘贴" class="headerlink" title="拷贝和粘贴"></a>拷贝和粘贴</h2><p><code>yy</code> 拷贝当前行</p>
+<h3 id="拷贝和粘贴"><a href="#拷贝和粘贴" class="headerlink" title="拷贝和粘贴"></a>拷贝和粘贴</h3><p><code>yy</code> 拷贝当前行</p>
 <p><code>nyy</code> 拷贝当前后开始的n行，比如2yy拷贝当前行及其下一行。</p>
 <p><code>p</code> 在当前光标后粘贴,如果之前使用了yy命令来复制一行，那么就在当前行的下一行粘贴。</p>
 <p><code>shift+p</code> 在当前行前粘贴</p>
@@ -365,15 +365,15 @@
 <p>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按y即可复制</p>
 <p><code>ddp</code>交换当前行和其下一行</p>
 <p><code>xp</code>交换当前字符和其后一个字符</p>
-<h2 id="剪切命令"><a href="#剪切命令" class="headerlink" title="剪切命令"></a>剪切命令</h2><p>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切</p>
+<h3 id="剪切命令"><a href="#剪切命令" class="headerlink" title="剪切命令"></a>剪切命令</h3><p>正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切</p>
 <p>ndd 剪切当前行之后的n行。利用p命令可以对剪切的内容进行粘贴</p>
 <p><code>:1,10d</code> 将1-10行剪切。利用p命令可将剪切后的内容进行粘贴。</p>
 <p><code>:1, 10 m 20</code> 将第1-10行移动到第20行之后。</p>
-<h2 id="退出命令"><a href="#退出命令" class="headerlink" title="退出命令"></a>退出命令</h2><p><code>:wq</code> 保存并退出</p>
+<h3 id="退出命令"><a href="#退出命令" class="headerlink" title="退出命令"></a>退出命令</h3><p><code>:wq</code> 保存并退出</p>
 <p><code>ZZ</code> 保存并退出</p>
 <p><code>:q!</code> 强制退出并忽略所有更改</p>
 <p><code>:e!</code> 放弃所有修改，并打开原来文件。</p>
-<h2 id="窗口命令"><a href="#窗口命令" class="headerlink" title="窗口命令"></a>窗口命令</h2><p><code>:split或new</code> 打开一个新窗口，光标停在顶层的窗口上</p>
+<h3 id="窗口命令"><a href="#窗口命令" class="headerlink" title="窗口命令"></a>窗口命令</h3><p><code>:split或new</code> 打开一个新窗口，光标停在顶层的窗口上</p>
 <p><code>:split file或\:new file</code> 用新窗口打开文件</p>
 <p><code>split</code>打开的窗口都是横向的，使用vsplit可以纵向打开窗口。</p>
 <p><code>Ctrl+ww</code> 移动到下一个窗口</p>
@@ -387,18 +387,18 @@
 <p>:only</p>
 <p>录制宏</p>
 <p>按q键加任意字母开始录制，再按q键结束录制（这意味着vim中的宏不可嵌套），使用的时候@加宏名，比如qa。。。q录制名为a的宏，@a使用这个宏。</p>
-<h2 id="执行shell命令"><a href="#执行shell命令" class="headerlink" title="执行shell命令"></a>执行shell命令</h2><p>:!command</p>
+<h3 id="执行shell命令"><a href="#执行shell命令" class="headerlink" title="执行shell命令"></a>执行shell命令</h3><p>:!command</p>
 <p>:!ls 列出当前目录下文件</p>
 <p>:!perl -c script.pl 检查perl脚本语法，可以不用退出vim，非常方便。</p>
 <p>:!perl script.pl 执行perl脚本，可以不用退出vim，非常方便。</p>
 <p>:suspend或Ctrl - Z 挂起vim，回到shell，按fg可以返回vim。</p>
-<h2 id="注释命令"><a href="#注释命令" class="headerlink" title="注释命令"></a>注释命令</h2><p>perl程序中#开始的行为注释，所以要注释某些行，只需在行首加入#</p>
+<h3 id="注释命令"><a href="#注释命令" class="headerlink" title="注释命令"></a>注释命令</h3><p>perl程序中#开始的行为注释，所以要注释某些行，只需在行首加入#</p>
 <p>3,5 s&#x2F;^&#x2F;#&#x2F;g 注释第3-5行</p>
 <p>3,5 s&#x2F;^#&#x2F;&#x2F;g 解除3-5行的注释</p>
 <p>1,$ s&#x2F;^&#x2F;#&#x2F;g 注释整个文档。</p>
 <p>:%s&#x2F;^&#x2F;#&#x2F;g 注释整个文档，此法更快。</p>
-<h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h2><p>:help or F1 显示整个帮助<br>:help xxx 显示xxx的帮助，比如 :help i, :help CTRL-[（即Ctrl+[的帮助）。<br>:help ‘number’ Vim选项的帮助用单引号括起<br>:help &lt;Esc&gt; 特殊键的帮助用&lt;&gt;扩起<br>:help -t Vim启动参数的帮助用-<br>：help i_&lt;Esc&gt; 插入模式下Esc的帮助，某个模式下的帮助用模式_主题的模式<br>帮助文件中位于||之间的内容是超链接，可以用Ctrl+]进入链接，Ctrl+o（Ctrl + t）返回</p>
-<h2 id="其他非编辑命令"><a href="#其他非编辑命令" class="headerlink" title="其他非编辑命令"></a>其他非编辑命令</h2><p>. 重复前一次命令</p>
+<h3 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h3><p>:help or F1 显示整个帮助<br>:help xxx 显示xxx的帮助，比如 :help i, :help CTRL-[（即Ctrl+[的帮助）。<br>:help ‘number’ Vim选项的帮助用单引号括起<br>:help &lt;Esc&gt; 特殊键的帮助用&lt;&gt;扩起<br>:help -t Vim启动参数的帮助用-<br>：help i_&lt;Esc&gt; 插入模式下Esc的帮助，某个模式下的帮助用模式_主题的模式<br>帮助文件中位于||之间的内容是超链接，可以用Ctrl+]进入链接，Ctrl+o（Ctrl + t）返回</p>
+<h3 id="其他非编辑命令"><a href="#其他非编辑命令" class="headerlink" title="其他非编辑命令"></a>其他非编辑命令</h3><p>. 重复前一次命令</p>
 <p>:set ruler?　　查看是否设置了ruler，在.vimrc中，使用set命令设制的选项都可以通过这个命令查看</p>
 <p>:scriptnames　　查看vim脚本文件的位置，比如.vimrc文件，语法文件及plugin等。</p>
 <p>:set list 显示非打印字符，如tab，空格，行尾等。如果tab无法显示，请确定用set lcs&#x3D;tab:&gt;-命令设置了.vimrc文件，并确保你的文件中的确有tab，如果开启了expendtab，那么tab将被扩展为空格。</p>
@@ -471,7 +471,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5:23</span>
+    <span title="站点阅读时长">5:24</span>
   </span>
 </div>
 <div class="busuanzi-count">
