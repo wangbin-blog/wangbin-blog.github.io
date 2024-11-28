@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小王的博客</title>
   <icon>https://wangbin-blog.github.io/icon.png</icon>
-  
+  <subtitle>一个上了年纪的猿人</subtitle>
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
@@ -112,11 +112,11 @@
     
     <category term="娱乐" scheme="https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
+    <category term="漫画" scheme="https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/"/>
+    
     <category term="影视" scheme="https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
     <category term="音乐" scheme="https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-    <category term="漫画" scheme="https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/"/>
     
     <category term="小说" scheme="https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
@@ -626,14 +626,14 @@
   </entry>
   
   <entry>
-    <title>【工具】Watt Toolkit GitHub加速</title>
-    <link href="https://wangbin-blog.github.io/post/6375ab96.html"/>
-    <id>https://wangbin-blog.github.io/post/6375ab96.html</id>
+    <title>【工具】Typora安装使用</title>
+    <link href="https://wangbin-blog.github.io/post/e64ca3b2.html"/>
+    <id>https://wangbin-blog.github.io/post/e64ca3b2.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-11-26T01:28:03.487Z</updated>
+    <updated>2024-11-26T01:27:16.021Z</updated>
     
     
-    <summary type="html">本文介绍了如何使用 Watt Toolkit（即 Steam++）来加速 GitHub 访问。首先，将 Watt Toolkit 的 GitHub 加速模式设置为系统代理模式，并通过操作系统设置查看代理 IP 和端口（例如：127.0.0.1:26561）。接着，通过配置 git 的 HTTP 代理和禁用 SSL 证书检查，使 git clone 等命令也能实现加速效果。文章还提供了取消 git 代理的命令，方便用户根据需要进行切换。本文适合需要提高 GitHub 访问速度的开发者和用户参考。</summary>
+    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。本文适合需要长期免费使用 Typora 的用户参考。</summary>
     
     
     
@@ -645,14 +645,14 @@
   </entry>
   
   <entry>
-    <title>【工具】Typora安装使用</title>
-    <link href="https://wangbin-blog.github.io/post/e64ca3b2.html"/>
-    <id>https://wangbin-blog.github.io/post/e64ca3b2.html</id>
+    <title>【工具】Watt Toolkit GitHub加速</title>
+    <link href="https://wangbin-blog.github.io/post/6375ab96.html"/>
+    <id>https://wangbin-blog.github.io/post/6375ab96.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-11-26T01:27:16.021Z</updated>
+    <updated>2024-11-26T01:28:03.487Z</updated>
     
     
-    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。本文适合需要长期免费使用 Typora 的用户参考。</summary>
+    <summary type="html">本文介绍了如何使用 Watt Toolkit（即 Steam++）来加速 GitHub 访问。首先，将 Watt Toolkit 的 GitHub 加速模式设置为系统代理模式，并通过操作系统设置查看代理 IP 和端口（例如：127.0.0.1:26561）。接着，通过配置 git 的 HTTP 代理和禁用 SSL 证书检查，使 git clone 等命令也能实现加速效果。文章还提供了取消 git 代理的命令，方便用户根据需要进行切换。本文适合需要提高 GitHub 访问速度的开发者和用户参考。</summary>
     
     
     
