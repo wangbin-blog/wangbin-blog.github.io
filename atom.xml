@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2024-11-26T01:19:47.462Z</updated>
+  <updated>2024-12-10T01:11:45.684Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux系统Tomcat启动指定JDK版本</title>
+    <link href="https://wangbin-blog.github.io/post/6508e70d.html"/>
+    <id>https://wangbin-blog.github.io/post/6508e70d.html</id>
+    <published>2024-12-09T00:31:13.000Z</published>
+    <updated>2024-12-10T01:11:45.684Z</updated>
+    
+    
+    <summary type="html">在linux系统上启动tomcat指定jdk版本，多版本环境</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://wangbin-blog.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://wangbin-blog.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>【音乐】洛雪音乐助手</title>

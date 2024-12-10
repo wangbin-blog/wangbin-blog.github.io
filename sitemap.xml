@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangbin-blog.github.io/post/6508e70d.html</loc>
+    
+    <lastmod>2024-12-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wangbin-blog.github.io/post/ec0b08ff.html</loc>
     
     <lastmod>2024-11-27</lastmod>
@@ -382,7 +391,7 @@
 
   <url>
     <loc>https://wangbin-blog.github.io/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -390,84 +399,84 @@
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/DotNet/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/Hexo/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/Linux/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/MACCMS/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E6%BC%AB%E7%94%BB/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%BD%B1%E8%A7%86/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E9%9F%B3%E4%B9%90/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -476,56 +485,56 @@
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/DotNet/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/Hexo/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/Linux/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/MACCMS/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-12-03</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

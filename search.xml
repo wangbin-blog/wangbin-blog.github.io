@@ -10908,4 +10908,28 @@ Database changed
         <tag>DotNet</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux系统Tomcat启动指定JDK版本</title>
+    <url>/post/6508e70d.html</url>
+    <content><![CDATA[<h2 id="Linux系统Tomcat启动指定JDK版本"><a href="#Linux系统Tomcat启动指定JDK版本" class="headerlink" title="Linux系统Tomcat启动指定JDK版本"></a>Linux系统Tomcat启动指定JDK版本</h2><blockquote>
+<p>JDK安装目录<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/usr/java</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="修改catalina-sh和setclasspath-sh文件"><a href="#修改catalina-sh和setclasspath-sh文件" class="headerlink" title="修改catalina.sh和setclasspath.sh文件"></a>修改catalina.sh和setclasspath.sh文件</h2><blockquote>
+<p>进入tomcat bin目录</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">../apache-tomcat-8.5.35/bin</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>两个文件都加入以下内容</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=/usr/local/java/jdk1.8.0_131/</span><br><span class="line">export JRE_HOME=/usr/local/java/jdk1.8.0_131/jre </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：”&#x3D;” 左右两边不要有空格，否则会报错!!!!!</strong></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>
