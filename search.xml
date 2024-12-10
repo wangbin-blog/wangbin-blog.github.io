@@ -10912,7 +10912,7 @@ Database changed
     <title>Linux系统Tomcat启动指定JDK版本</title>
     <url>/post/6508e70d.html</url>
     <content><![CDATA[<h2 id="Linux系统Tomcat启动指定JDK版本"><a href="#Linux系统Tomcat启动指定JDK版本" class="headerlink" title="Linux系统Tomcat启动指定JDK版本"></a>Linux系统Tomcat启动指定JDK版本</h2><blockquote>
-<p>JDK安装目录<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/usr/java</span><br></pre></td></tr></table></figure></p>
+<p>JDK安装目录<br> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/usr/local/java</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="修改catalina-sh和setclasspath-sh文件"><a href="#修改catalina-sh和setclasspath-sh文件" class="headerlink" title="修改catalina.sh和setclasspath.sh文件"></a>修改catalina.sh和setclasspath.sh文件</h2><blockquote>
 <p>进入tomcat bin目录</p>
