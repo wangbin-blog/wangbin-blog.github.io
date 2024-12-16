@@ -10932,4 +10932,42 @@ Database changed
         <tag>Linux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>47k Star：一款开源免费的 Markdown 编辑器</title>
+    <url>/post/46bd4ea2.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>MarkText 是一款简单优雅的 Markdown 编辑器，适用于 Linux、macOS 和 Windows 系统。它拥有简洁干净的界面设计，没有过多复杂的菜单和按钮，使得用户可以专注于内容创作。无论是新手还是习惯简洁风格的用户，都能轻松上手并享受高效的写作体验。</p>
+<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ul>
+<li><strong>跨平台：</strong> 支持 Linux、macOS 和 Windows 等多个操作系统，用户可以在不同的设备和系统上使用相同的编辑工具，方便在不同平台上进行写作和编辑。</li>
+<li><strong>简洁界面：</strong> 界面设计简洁，去除了多余的菜单和按钮，让用户更加专注于内容创作。</li>
+<li><strong>实时预览：</strong> 提供实时预览功能（WYSIWYG），用户在编辑过程中可以即时看到最终的呈现效果，无需频繁切换预览模式，方便用户及时调整格式和内容，提高写作效率。</li>
+<li><strong>丰富的语法支持：</strong> 支持 CommonMark Spec、GitHub Flavored Markdown Spec 等多种 Markdown 规范，对基础语法以及数学表达式（KaTeX）、front matter 和 emojis 等扩展语法都有很好的支持，能够满足用户多样化的写作需求。</li>
+<li><strong>多种编辑模式：</strong> 具有源代码模式、打字机模式、焦点模式等多种编辑模式，可以满足用户在不同场景下的写作需求。例如，在源代码模式下可以专注于代码的编写，在打字机模式下可以享受打字时自动滚动屏幕的流畅体验。</li>
+<li><strong>强大的表格功能：</strong> 表格功能较为强大，支持直接插入预先定义大小的表格，并且可以方便地用鼠标移动列和行，操作简单，无需过多关注底层代码。</li>
+<li><strong>开源免费：</strong> 采用 MIT 许可证开源，用户可以免费使用，并且开源的特性也使得代码透明度高，安全性有一定保障，同时吸引了众多开发者为其贡献代码，能够不断改进和完善。</li>
+<li><strong>丰富的主题：</strong> 提供了多种主题，如 Cadmium Light、Material Dark 等，用户可以根据自己的喜好选择主题，并且还支持自定义 CSS 样式，满足用户对于界面个性化的需求。</li>
+<li><strong>丰富的快捷键：</strong> 提供了丰富的快捷键操作，方便用户快速执行常用的功能，如保存、加粗、斜体、插入代码块、插入表格等，提高编辑效率。</li>
+</ul>
+<blockquote>
+<p>编辑模式展示</p>
+</blockquote>
+<ul>
+<li>源代码模式<br><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/12/640.gif"></li>
+<li>打字机模式<br><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/12/641.gif"></li>
+<li>焦点模式<br><img src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/12/642.gif"></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>MarkText 是一个非常适合撰写文档、博客和技术文章的工具，尤其适合喜欢 Markdown 格式的用户。其简洁的界面、丰富的功能和跨平台支持使其成为一款不可多得的 Markdown 编辑器。无论是初学者还是资深用户，都能在 MarkText 中找到满意的使用体验。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
+<li>官网地址：<span class="exturl" data-url="aHR0cHM6Ly93d3cubWFya3RleHQuY2Mv">https://www.marktext.cc/<i class="fa fa-external-link-alt"></i></span></li>
+<li>github地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmt0ZXh0L21hcmt0ZXh0">https://github.com/marktext/marktext<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
 </search>
