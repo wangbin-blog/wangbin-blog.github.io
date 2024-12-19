@@ -194,10 +194,10 @@
     <link href="https://wangbin-blog.github.io/post/7b05deaf.html"/>
     <id>https://wangbin-blog.github.io/post/7b05deaf.html</id>
     <published>2024-10-23T04:32:13.000Z</published>
-    <updated>2024-11-26T01:39:25.970Z</updated>
+    <updated>2024-12-19T06:48:48.186Z</updated>
     
     
-    <summary type="html">本文《记录Dotnet6中使用Redis共享Session的实现》详细介绍了如何在Dotnet 6项目中使用Redis实现Session的共享。文章首先阐述了在多服务器环境下，由于Session默认存储在内存中导致的会话信息丢失问题。接着，文章详细描述了安装必要的NuGet包、修改startup.cs或Program.cs文件以配置Redis作为Session存储的步骤。其中包括配置Redis连接、设置数据保护服务、添加分布式缓存和Session服务的具体实现方法。通过这些配置，可以有效解决多服务器环境下的Session共享问题，确保用户在负载均衡后的正常访问体验。</summary>
+    <summary type="html">如何在Dotnet 6项目中使用Redis实现Session的共享。在多服务器环境下，由于Session默认存储在内存中导致的会话信息丢失问题。描述了安装必要的NuGet包、修改startup.cs或Program.cs文件以配置Redis作为Session存储的步骤。通过这些配置，可以有效解决多服务器环境下的Session共享问题</summary>
     
     
     
@@ -213,10 +213,10 @@
     <link href="https://wangbin-blog.github.io/post/a473e677.html"/>
     <id>https://wangbin-blog.github.io/post/a473e677.html</id>
     <published>2024-10-23T04:31:13.000Z</published>
-    <updated>2024-11-26T01:39:00.779Z</updated>
+    <updated>2024-12-19T06:47:44.039Z</updated>
     
     
-    <summary type="html">本文《集群环境下，你不得不注意的ASP.NET Core Data Protection 机制》详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。文章首先介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。接着，文章深入讲解了ASP.NET Core Data Protection机制的工作原理，强调了在集群环境中共享私钥的必要性。最后，文章提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。通过这些措施，可以有效解决集群环境下的会话信息丢失问题。</summary>
+    <summary type="html">详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。</summary>
     
     
     
@@ -313,10 +313,10 @@
     <link href="https://wangbin-blog.github.io/post/309e6522.html"/>
     <id>https://wangbin-blog.github.io/post/309e6522.html</id>
     <published>2024-09-03T04:31:13.000Z</published>
-    <updated>2024-11-26T01:39:54.413Z</updated>
+    <updated>2024-12-19T06:49:46.773Z</updated>
     
     
-    <summary type="html">本文《效率提升利器，一个全龄段友好的DotNET万能工具库》介绍了Masuit.Tools库，这是一个适用于所有水平开发者的C#/.NET工具库。文章详细描述了该库的功能，包括加密解密、反射操作、树结构、文件探测、权重随机筛选算法、分布式短ID生成、表达式树、LINQ扩展、文件压缩、多线程下载、硬件信息获取、字符串扩展方法、日期时间操作、中国农历、大文件拷贝、图像裁剪、验证码生成、断点续传、集合扩展和Excel导出等。此外，文章还提供了具体的使用示例，如字符串检查、硬件监测和LINQ扩展方法的实现。通过这些功能，开发者可以大幅提升开发效率，简化复杂操作。</summary>
+    <summary type="html">介绍了Masuit.Tools库，这是一个适用于所有水平开发者的C#/.NET工具库。描述了该库的功能，包括加密解密、反射操作、树结构、文件探测、权重随机筛选算法、分布式短ID生成、表达式树、LINQ扩展、文件压缩、多线程下载、硬件信息获取、字符串扩展方法、日期时间操作、中国农历、大文件拷贝、图像裁剪等功能</summary>
     
     
     
@@ -332,12 +332,10 @@
     <link href="https://wangbin-blog.github.io/post/f2b42afb.html"/>
     <id>https://wangbin-blog.github.io/post/f2b42afb.html</id>
     <published>2024-08-11T10:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.794Z</updated>
+    <updated>2024-12-19T06:52:08.793Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;先看效果-eye&quot;&gt;&lt;a href=&quot;#先看效果-eye&quot; class=&quot;headerlink&quot; title=&quot;先看效果 :eye:&quot;&gt;&lt;/a&gt;先看效果 :eye:&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/1499be202c9c43f7b3729502c31411f6&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/89753498cef341ceb3cbec1e6d4e3f13&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/08/5a1f6cf1302d4d2b8f8522728ba5da26&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">登录页面是每一个项目不可缺少的页面，是一个应用的门面，首次进入看见的可能就是登录界面，做了这么久的前端，发现登录界面其实都大同小异，有时候没必要从头写，我写了几个自认为比较好看的uniapp登录界面记录一下，下次用到的话，可以直接复制过来，修改下就行了.只有静态页面，并未做逻辑上的东西，这样便于在此基础上做调整。</summary>
     
     
     
@@ -582,20 +580,10 @@
     <link href="https://wangbin-blog.github.io/post/9beaa6c0.html"/>
     <id>https://wangbin-blog.github.io/post/9beaa6c0.html</id>
     <published>2024-06-12T12:31:13.000Z</published>
-    <updated>2024-11-27T05:55:56.620Z</updated>
+    <updated>2024-12-19T06:50:48.403Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;C-NET-NET-Core优秀项目和框架精选&quot;&gt;&lt;a href=&quot;#C-NET-NET-Core优秀项目和框架精选&quot; class=&quot;headerlink&quot; title=&quot;C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&quot;&gt;&lt;/a&gt;C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202406130850957.png&quot; alt=&quot;优秀项目和框架精选图&quot; title=&quot;优秀项目和框架精选图&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;注意：排名不分先后，都是十分优秀的开源项目和框架，每周定期更新分享（欢迎关注公众号：&lt;strong&gt;追逐时光者&lt;/strong&gt;，第一时间获取每周精选分享资讯🔔）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;帮助开发者发现功能强大、性能优越、创新前沿、简单易用的C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架，无论你是寻找灵感、学习新技术、改进代码质量，还是想拓展自己的技术视野，都能为你提供有价值的参考和指导。关注优秀项目和框架精选能让你及时了解C#、.NET和.NET Core领域的最新动态和最佳实践，提高开发效率和质量。坑已挖，欢迎大家踊跃提交PR或者在该&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvaXNzdWVzLzU=&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;中留言（&lt;strong&gt;让优秀的项目和框架不被埋没&lt;/strong&gt;），我会定期收录、&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RNb250aGx5Lm1k&quot;&gt;公众号推广和分享👀&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL3RyZW5kaW5nL2MlMjM/c2luY2U9ZGFpbHk=&quot;&gt;📈C# GitHub趋势榜&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2RvdE5ldFRyZWFzdXJ5&quot;&gt;🎁C#&amp;#x2F;.NET&amp;#x2F;.NET Core项目宝库组织&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RQaWNrcy5tZA==&quot;&gt;🔔C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架精选&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvaXNzdWVzLzU=&quot;&gt;🏗️C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架Issues&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1lTR1N0dWR5SGFyZHMvRG90TmV0R3VpZGUvYmxvYi9tYWluL2RvY3MvRG90TmV0L0RvdE5ldFByb2plY3RNb250aGx5Lm1k&quot;&gt;📰C#&amp;#x2F;.NET&amp;#x2F;.NET Core优秀项目和框架公众号月刊&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;</summary>
+    <summary type="html">帮助开发者发现功能强大、性能优越、创新前沿、简单易用的C#/.NET/.NET Core优秀项目和框架，无论你是寻找灵感、学习新技术、改进代码质量，还是想拓展自己的技术视野，都能为你提供有价值的参考和指导。关注优秀项目和框架精选能让你及时了解C#、.NET和.NET Core领域的最新动态和最佳实践，提高开发效率和质量</summary>
     
     
     
@@ -732,16 +720,10 @@
     <link href="https://wangbin-blog.github.io/post/506e9c17.html"/>
     <id>https://wangbin-blog.github.io/post/506e9c17.html</id>
     <published>2024-05-22T10:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.797Z</updated>
+    <updated>2024-12-19T06:51:52.554Z</updated>
     
     
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;登录页面是每一个项目不可缺少的页面，是一个应用的门面，首次进入看见的可能就是登录界面，做了这么久的前端，发现登录界面其实都大同小异，有时候没必要从头写，我写了几个自认为比较好看的uniapp登录界面记录一下，下次用到的话，可以直接复制过来，修改下就行了。只有静态页面，并未做逻辑上的东西，这样便于在此基础上做调整。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;先看效果：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221359689.png&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;实际应用效果&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221400909.webp&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">登录页面是每一个项目不可缺少的页面，是一个应用的门面，首次进入看见的可能就是登录界面，做了这么久的前端，发现登录界面其实都大同小异，有时候没必要从头写，我写了几个自认为比较好看的uniapp登录界面记录一下，下次用到的话，可以直接复制过来，修改下就行了.只有静态页面，并未做逻辑上的东西，这样便于在此基础上做调整。</summary>
     
     
     
