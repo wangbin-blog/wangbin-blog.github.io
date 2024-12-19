@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。">
+    <meta name="description" content="在集群环境中使用ASP.NET Core时遇到的数据保护问题。在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集群环境下，你不得不注意的ASP.NET Core Data Protection 机制">
 <meta property="og:url" content="https://wangbin-blog.github.io/post/a473e677.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。">
+<meta property="og:description" content="在集群环境中使用ASP.NET Core时遇到的数据保护问题。在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-23T04:31:13.000Z">
-<meta property="article:modified_time" content="2024-12-19T06:47:44.039Z">
+<meta property="article:modified_time" content="2024-12-19T08:21:34.233Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="DotNet">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="集群环境下，你不得不注意的ASP.NET Core Data Protection 机制 | 小王的博客">
-      <meta itemprop="description" content="详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。">
+      <meta itemprop="description" content="在集群环境中使用ASP.NET Core时遇到的数据保护问题。在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-19 14:47:44" itemprop="dateModified" datetime="2024-12-19T14:47:44+08:00">2024-12-19</time>
+      <time title="修改时间：2024-12-19 16:21:34" itemprop="dateModified" datetime="2024-12-19T16:21:34+08:00">2024-12-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,7 +275,7 @@
     </span>
 </div>
 
-            <div class="post-description">详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。</div>
+            <div class="post-description">在集群环境中使用ASP.NET Core时遇到的数据保护问题。在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法</div>
         </div>
       </header>
 

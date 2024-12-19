@@ -194,10 +194,10 @@
     <link href="https://wangbin-blog.github.io/post/7b05deaf.html"/>
     <id>https://wangbin-blog.github.io/post/7b05deaf.html</id>
     <published>2024-10-23T04:32:13.000Z</published>
-    <updated>2024-12-19T06:48:48.186Z</updated>
+    <updated>2024-12-19T07:50:50.141Z</updated>
     
     
-    <summary type="html">如何在Dotnet 6项目中使用Redis实现Session的共享。在多服务器环境下，由于Session默认存储在内存中导致的会话信息丢失问题。描述了安装必要的NuGet包、修改startup.cs或Program.cs文件以配置Redis作为Session存储的步骤。通过这些配置，可以有效解决多服务器环境下的Session共享问题</summary>
+    <summary type="html">如何在Dotnet 6项目中使用Redis实现Session的共享。在多服务器环境下，由于Session默认存储在内存中导致的会话信息丢失问题。通过安装必要的NuGet包、修改startup.cs或Program.cs文件以配置Redis作为Session存储的步骤，可以有效解决Session共享问题</summary>
     
     
     
@@ -213,10 +213,10 @@
     <link href="https://wangbin-blog.github.io/post/a473e677.html"/>
     <id>https://wangbin-blog.github.io/post/a473e677.html</id>
     <published>2024-10-23T04:31:13.000Z</published>
-    <updated>2024-12-19T06:47:44.039Z</updated>
+    <updated>2024-12-19T08:21:34.233Z</updated>
     
     
-    <summary type="html">详细探讨了在集群环境中使用ASP.NET Core时遇到的数据保护问题。介绍了在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法。</summary>
+    <summary type="html">在集群环境中使用ASP.NET Core时遇到的数据保护问题。在单个容器中正常运行的Web应用，在扩展到多个容器后出现的会话信息丢失问题，并分析了其根本原因在于每个容器生成的私钥不同。提供了使用Redis作为存储介质来实现私钥共享的具体步骤，包括添加必要的NuGet包和配置数据保护服务及分布式Session的方法</summary>
     
     
     
@@ -232,10 +232,10 @@
     <link href="https://wangbin-blog.github.io/post/161c3e54.html"/>
     <id>https://wangbin-blog.github.io/post/161c3e54.html</id>
     <published>2024-09-09T12:31:13.000Z</published>
-    <updated>2024-12-19T06:30:03.001Z</updated>
+    <updated>2024-12-19T07:16:20.992Z</updated>
     
     
-    <summary type="html">PicList，一款基于 PicGo 深度二次开发的图片管理工具。PicList 不仅继承了 PicGo 的所有优秀特性，如支持多种图床服务（GitHub、SM.MS 等），还新增了相册同步、多图床支持、云存储管理、链接复制和预览功能等高级特性。如何安装、配置和使用 PicList，并提供了批量上传、云端同步和预览功能的使用技巧。</summary>
+    <summary type="html">PicList，一款基于 PicGo 深度二次开发的图片管理工具。PicList 不仅继承了 PicGo 的所有优秀特性，如支持多种图床服务（GitHub、SM.MS 等），还新增了相册同步、多图床支持、云存储管理、链接复制和预览功能等高级特性。如何安装、配置和使用 PicList，及其他使用技巧。</summary>
     
     
     
@@ -660,10 +660,10 @@
     <link href="https://wangbin-blog.github.io/post/e64ca3b2.html"/>
     <id>https://wangbin-blog.github.io/post/e64ca3b2.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-12-19T06:30:19.931Z</updated>
+    <updated>2024-12-19T09:44:17.495Z</updated>
     
     
-    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。</summary>
+    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法，并提供了自定义样式的下载链接。</summary>
     
     
     
@@ -698,13 +698,10 @@
     <link href="https://wangbin-blog.github.io/post/e4550ecb.html"/>
     <id>https://wangbin-blog.github.io/post/e4550ecb.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-10-24T08:13:42.748Z</updated>
+    <updated>2024-12-19T08:26:53.221Z</updated>
     
     
-    <summary type="html">&lt;p&gt;由于 &lt;code&gt;Shoka&lt;/code&gt; 作者提供的搜索使用 &lt;code&gt;Algolia&lt;/code&gt; 实现，但是 &lt;code&gt;Algolia&lt;/code&gt; 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 &lt;code&gt;Shoka&lt;/code&gt; 主题的搜索功能配置找到了解决办法，在此感谢 &lt;code&gt;linn&lt;/code&gt; 提供的方法。&lt;/p&gt;
-&lt;h2 id=&quot;问题-解决&quot;&gt;&lt;a href=&quot;#问题-解决&quot; class=&quot;headerlink&quot; title=&quot;问题 &amp;amp; 解决&quot;&gt;&lt;/a&gt;问题 &amp;amp; 解决&lt;/h2&gt;&lt;p&gt;在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。&lt;/p&gt;
-&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;p&gt;本地搜索通过 &lt;code&gt;hexo-generator-searchdb&lt;/code&gt; 插件实现，需要先安装插件。 &lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-generator-searchdb&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">由于Shoka作者提供的搜索使用Algolia实现，但是Algolia免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在Shoka主题的搜索功能配置找到了解决办法，在此感谢linn提供的方法。在使用过程中也遇到了一些问题，所以在此记录一下各文件的修改情况。</summary>
     
     
     

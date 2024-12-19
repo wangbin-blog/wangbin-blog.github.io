@@ -20,16 +20,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="由于 Shoka 作者提供的搜索使用 Algolia 实现，但是 Algolia 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 Shoka 主题的搜索功能配置找到了解决办法，在此感谢 linn 提供的方法。 问题 &amp; 解决在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。 安装插件本地搜">
+    <meta name="description" content="由于Shoka作者提供的搜索使用Algolia实现，但是Algolia免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在Shoka主题的搜索功能配置找到了解决办法，在此感谢linn提供的方法。在使用过程中也遇到了一些问题，所以在此记录一下各文件的修改情况。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Shoka 主题本地搜索">
 <meta property="og:url" content="https://wangbin-blog.github.io/post/e4550ecb.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="由于 Shoka 作者提供的搜索使用 Algolia 实现，但是 Algolia 免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在 Shoka 主题的搜索功能配置找到了解决办法，在此感谢 linn 提供的方法。 问题 &amp; 解决在使用过程中也遇到了一些问题，如 localSearch() 方法报不支持的语法错误，所以在此记录一下各文件的修改情况。 安装插件本地搜">
+<meta property="og:description" content="由于Shoka作者提供的搜索使用Algolia实现，但是Algolia免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在Shoka主题的搜索功能配置找到了解决办法，在此感谢linn提供的方法。在使用过程中也遇到了一些问题，所以在此记录一下各文件的修改情况。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/202405221725861.png">
 <meta property="article:published_time" content="2024-05-22T12:31:13.000Z">
-<meta property="article:modified_time" content="2024-10-24T08:13:42.748Z">
+<meta property="article:modified_time" content="2024-12-19T08:26:53.221Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -218,7 +218,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Hexo Shoka 主题本地搜索 | 小王的博客">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="由于Shoka作者提供的搜索使用Algolia实现，但是Algolia免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在Shoka主题的搜索功能配置找到了解决办法，在此感谢linn提供的方法。在使用过程中也遇到了一些问题，所以在此记录一下各文件的修改情况。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -240,7 +240,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-24 16:13:42" itemprop="dateModified" datetime="2024-10-24T16:13:42+08:00">2024-10-24</time>
+      <time title="修改时间：2024-12-19 16:26:53" itemprop="dateModified" datetime="2024-12-19T16:26:53+08:00">2024-12-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,6 +277,7 @@
     </span>
 </div>
 
+            <div class="post-description">由于Shoka作者提供的搜索使用Algolia实现，但是Algolia免费版是有每月请求次数限制的，因此想要使用本地搜索来替换。功夫不负有心人，我在Shoka主题的搜索功能配置找到了解决办法，在此感谢linn提供的方法。在使用过程中也遇到了一些问题，所以在此记录一下各文件的修改情况。</div>
         </div>
       </header>
 
