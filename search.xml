@@ -3778,7 +3778,6 @@ Database changed
 </ul>
 <p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvIyVFNSVBRSU4OSVFOCVBMyU4NS1IZXhv">安装 Hexo<i class="fa fa-external-link-alt"></i></span> 步骤。</p>
 <p>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
-<span id="more"></span>
 <h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h4><ul>
 <li>Windows：下载并安装 <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4=">git<i class="fa fa-external-link-alt"></i></span>。</li>
 <li>Mac：使用 <span class="exturl" data-url="aHR0cDovL214Y2wuZ2l0aHViLmNvbS9ob21lYnJldy8=">Homebrew<i class="fa fa-external-link-alt"></i></span>, <span class="exturl" data-url="aHR0cDovL3d3dy5tYWNwb3J0cy5vcmcv">MacPorts<i class="fa fa-external-link-alt"></i></span> 或者下载 <span class="exturl" data-url="aHR0cDovL3NvdXJjZWZvcmdlLm5ldC9wcm9qZWN0cy9naXQtb3N4LWluc3RhbGxlci8=">安装程序<i class="fa fa-external-link-alt"></i></span>。</li>

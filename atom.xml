@@ -63,10 +63,10 @@
     <link href="https://wangbin-blog.github.io/post/ba3c9851.html"/>
     <id>https://wangbin-blog.github.io/post/ba3c9851.html</id>
     <published>2024-10-29T14:32:13.000Z</published>
-    <updated>2024-11-26T01:19:47.462Z</updated>
+    <updated>2024-12-19T06:31:14.369Z</updated>
     
     
-    <summary type="html">本文介绍了“洛雪音乐助手”，一个基于 Electron + Vue 开发的开源免费音乐软件。该软件聚合了多个音乐平台的功能，支持在 Windows、Mac OS、Linux 和 Android 平台上运行。软件提供搜索、试听、收藏和下载功能（已不支持无损下载）。项目开源发布于 GitHub，旨在为技术学习交流提供资源。文章还提供了详细的下载链接和自定义音源的设置步骤，帮助用户更好地使用该软件。</summary>
+    <summary type="html">本文介绍了“洛雪音乐助手”，一个基于 Electron + Vue 开发的开源免费音乐软件。该软件聚合了多个音乐平台的功能，支持在 Windows、Mac OS、Linux 和 Android 平台上运行。软件提供搜索、试听、收藏和下载功能（已不支持无损下载）。项目开源发布于 GitHub，旨在为技术学习交流提供资源</summary>
     
     
     
@@ -138,10 +138,10 @@
     <link href="https://wangbin-blog.github.io/post/3a1c4628.html"/>
     <id>https://wangbin-blog.github.io/post/3a1c4628.html</id>
     <published>2024-10-29T12:32:13.000Z</published>
-    <updated>2024-11-26T01:21:07.449Z</updated>
+    <updated>2024-12-19T06:31:29.412Z</updated>
     
     
-    <summary type="html">“益达APP”，一个基于 Flutter + Rust 开发的跨平台娱乐应用。该应用支持小说、影视、漫画和音频等多种内容类型，适用于安卓、iOS、Mac 和 Windows 平台。文章提供了安装包下载链接、规则导入链接和规则说明文档，帮助用户更好地使用该应用。此外，还提到了第三方源地址，方便用户扩展内容资源。</summary>
+    <summary type="html">“益达APP”，一个基于 Flutter + Rust 开发的跨平台娱乐应用。该应用支持小说、影视、漫画和音频等多种内容类型，适用于安卓、iOS、Mac 和 Windows 平台。文章提供了安装包下载链接、规则导入链接和规则说明文档，帮助用户更好地使用该应用。</summary>
     
     
     
@@ -169,10 +169,10 @@
     <link href="https://wangbin-blog.github.io/post/e047a4b0.html"/>
     <id>https://wangbin-blog.github.io/post/e047a4b0.html</id>
     <published>2024-10-29T12:31:13.000Z</published>
-    <updated>2024-11-26T01:22:58.163Z</updated>
+    <updated>2024-12-19T06:31:40.216Z</updated>
     
     
-    <summary type="html">“阅读APP”，一个专为安卓平台设计的小说阅读应用。该应用支持自定义书源和规则，用户可以轻松抓取网页数据，方便找书和看书。软件提供高度自定义的阅读界面，包括字体、颜色、背景、行距、段距等设置，并支持替换净化功能，去除广告。此外，还支持本地TXT和EPUB阅读，多种翻页模式供用户选择。文章提供了开源地址、书源订阅源和官方下载链接，帮助用户更好地使用该应用。</summary>
+    <summary type="html">“阅读APP”，一个专为安卓平台设计的小说阅读应用。该应用支持自定义书源和规则，用户可以轻松抓取网页数据，方便找书和看书。软件提供高度自定义的阅读界面，包括字体、颜色、背景、行距、段距等设置，并支持替换净化功能，去除广告。此外，还支持本地TXT和EPUB阅读，多种翻页模式供用户选择。</summary>
     
     
     
@@ -232,10 +232,10 @@
     <link href="https://wangbin-blog.github.io/post/161c3e54.html"/>
     <id>https://wangbin-blog.github.io/post/161c3e54.html</id>
     <published>2024-09-09T12:31:13.000Z</published>
-    <updated>2024-11-27T05:53:32.762Z</updated>
+    <updated>2024-12-19T06:30:03.001Z</updated>
     
     
-    <summary type="html">【PicList】，一款基于 PicGo 深度二次开发的图片管理工具。PicList 不仅继承了 PicGo 的所有优秀特性，如支持多种图床服务（GitHub、SM.MS 等），还新增了相册同步、多图床支持、云存储管理、链接复制和预览功能等高级特性。文章详细讲解了如何安装、配置和使用 PicList，并提供了批量上传、云端同步和预览功能的使用技巧。PicList 的高效和易用性使其成为图片管理领域的佼佼者，适合开发者和普通用户使用。</summary>
+    <summary type="html">PicList，一款基于 PicGo 深度二次开发的图片管理工具。PicList 不仅继承了 PicGo 的所有优秀特性，如支持多种图床服务（GitHub、SM.MS 等），还新增了相册同步、多图床支持、云存储管理、链接复制和预览功能等高级特性。如何安装、配置和使用 PicList，并提供了批量上传、云端同步和预览功能的使用技巧。</summary>
     
     
     
@@ -464,10 +464,10 @@
     <link href="https://wangbin-blog.github.io/post/4fd5a719.html"/>
     <id>https://wangbin-blog.github.io/post/4fd5a719.html</id>
     <published>2024-07-19T12:31:13.000Z</published>
-    <updated>2024-11-26T01:25:17.343Z</updated>
+    <updated>2024-12-19T06:29:22.545Z</updated>
     
     
-    <summary type="html">本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的DNS服务器及其IP地址，包括百度DNS、阿里DNS、DNSPod等，用户可以根据需要选择合适的DNS进行设置。最后，文章提醒用户，即使设置了hosts文件，仍需定期更新IP地址，以确保访问的稳定性和速度。</summary>
+    <summary type="html">本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。</summary>
     
     
     
@@ -487,10 +487,10 @@
     <link href="https://wangbin-blog.github.io/post/26185413.html"/>
     <id>https://wangbin-blog.github.io/post/26185413.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
-    <updated>2024-11-26T01:33:21.182Z</updated>
+    <updated>2024-12-19T06:20:45.142Z</updated>
     
     
-    <summary type="html">本文档详细介绍了在Linux环境下运行DotNet应用程序的方法，包括设置系统级环境变量、编写启动脚本、批量启动脚本以及注册系统服务。首先，文档说明了如何通过编辑 /etc/profile.d/dotnet.sh 文件来设置DotNet的环境变量，并确保所有用户都能访问。接着，提供了详细的启动脚本，用于启动、停止、重启和检查应用程序的状态。此外，还介绍了一个批量启动脚本，可以同时启动多个端口的应用程序。最后，文档展示了如何将DotNet应用程序注册为系统服务，确保其在系统启动时自动运行。</summary>
+    <summary type="html">本文档详细介绍了在Linux环境下运行DotNet应用程序的方法，包括设置系统级环境变量、编写启动脚本、批量启动脚本以及注册系统服务。首先，文档说明了如何通设置DotNet的环境变量，并确保所有用户都能访问。接着，提供了详细的启动脚本，用于启动、停止、重启和检查应用程序的状态。</summary>
     
     
     
@@ -506,10 +506,10 @@
     <link href="https://wangbin-blog.github.io/post/5711187a.html"/>
     <id>https://wangbin-blog.github.io/post/5711187a.html</id>
     <published>2024-07-01T00:31:13.000Z</published>
-    <updated>2024-11-26T01:34:27.244Z</updated>
+    <updated>2024-12-19T06:21:31.935Z</updated>
     
     
-    <summary type="html">本文档详细介绍了在CentOS 7上安装libgdiplus的过程，以解决ASP.NET Core MVC项目在处理图片时遇到的The type initializer for ‘Gdip‘ threw an exception错误。首先，通过安装yum-utils和epel-release来获取必要的工具和仓库支持。然后，使用yumdownloader下载libgdiplus及其依赖包，并将其压缩打包。最后，将压缩包上传到目标服务器，解压并安装这些包，确保所有依赖项都正确安装。文档还提供了已打包的安装文件下载地址，方便用户快速完成安装。</summary>
+    <summary type="html">在CentOS 7上安装libgdiplus的过程，以解决ASP.NET Core MVC项目在处理图片时遇到的The type initializer for ‘Gdip‘ threw an exception错误。首先，通过安装yum-utils和epel-release来获取必要的工具和仓库支持。</summary>
     
     
     
@@ -525,10 +525,10 @@
     <link href="https://wangbin-blog.github.io/post/dfef5267.html"/>
     <id>https://wangbin-blog.github.io/post/dfef5267.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-11-26T01:36:04.071Z</updated>
+    <updated>2024-12-19T06:22:43.192Z</updated>
     
     
-    <summary type="html">本文《【Linux】Nacos 问题》详细记录了在Linux环境下遇到的Nacos服务连接问题及其解决方法。文章首先描述了启动jar文件时无法连接Nacos服务的错误日志，分析了问题原因可能是由于hostname -i命令执行过慢导致Nacos客户端检查超时。接着，文章提供了具体的解决办法，包括检查和修改主机的hostname配置，确保hostname -i命令能够快速返回正确的IP地址。最后，文章还介绍了如何配置Nacos服务的开机自启动，确保服务在系统重启后能够自动运行。这些内容对解决Nacos连接问题和提高系统稳定性非常有帮助。</summary>
+    <summary type="html">本文《【Linux】Nacos 问题》详细记录了在Linux环境下遇到的Nacos服务连接问题及其解决方法。文章还介绍了如何配置Nacos服务的开机自启动，确保服务在系统重启后能够自动运行。这些内容对解决Nacos连接问题和提高系统稳定性非常有帮助。</summary>
     
     
     
@@ -544,10 +544,10 @@
     <link href="https://wangbin-blog.github.io/post/7a6abf49.html"/>
     <id>https://wangbin-blog.github.io/post/7a6abf49.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-11-26T01:37:10.200Z</updated>
+    <updated>2024-12-19T06:23:58.620Z</updated>
     
     
-    <summary type="html">本文《【Linux】Redis 离线安装》详细介绍了在Linux环境下离线安装Redis的全过程。文章首先提供了Redis的下载链接及解压步骤，接着详细描述了编译和安装Redis的方法，包括解决编译过程中可能遇到的问题。随后，文章介绍了如何启动Redis服务，并提供了常见的配置选项，确保Redis能够以守护进程方式运行。最后，文章还介绍了如何设置Redis的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Redis安装和管理非常有帮助。</summary>
+    <summary type="html">在Linux环境下离线安装Redis的全过程。文章首先提供了Redis的下载链接及解压步骤，接着详细描述了编译和安装Redis的方法，包括解决编译过程中可能遇到的问题。随后，文章介绍了如何启动Redis服务，如何设置Redis的开机自启动，这些内容对离线环境下的Redis安装和管理非常有帮助。</summary>
     
     
     
@@ -563,10 +563,10 @@
     <link href="https://wangbin-blog.github.io/post/1c39c402.html"/>
     <id>https://wangbin-blog.github.io/post/1c39c402.html</id>
     <published>2024-06-16T00:31:13.000Z</published>
-    <updated>2024-11-26T01:36:40.395Z</updated>
+    <updated>2024-12-19T06:23:28.904Z</updated>
     
     
-    <summary type="html">本文《【Linux】nginx 离线安装》详细介绍了在Linux环境下离线安装Nginx的全过程。文章首先提供了所需的资源下载链接，包括Nginx及其依赖项（如gcc、g++、pcre、libtool）。接着，文章逐步讲解了每个依赖项的安装步骤，包括使用rpm命令安装gcc和g++，以及编译安装pcre和libtool。随后，文章详细描述了Nginx的编译安装过程，并提供了启动Nginx的常用命令。最后，文章介绍了如何配置Nginx的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Nginx安装和管理非常有帮助。</summary>
+    <summary type="html">本文《【Linux】nginx 离线安装》详细介绍了在Linux环境下离线安装Nginx的全过程。文章详细描述了Nginx的编译安装过程，并提供了启动Nginx的常用命令。最后，文章介绍了如何配置Nginx的开机自启动，确保服务在系统重启后能够自动运行。这些内容对离线环境下的Nginx安装和管理非常有帮助。</summary>
     
     
     
@@ -611,10 +611,10 @@
     <link href="https://wangbin-blog.github.io/post/ec90412d.html"/>
     <id>https://wangbin-blog.github.io/post/ec90412d.html</id>
     <published>2024-05-25T00:31:13.000Z</published>
-    <updated>2024-11-26T01:30:39.144Z</updated>
+    <updated>2024-12-19T06:19:59.829Z</updated>
     
     
-    <summary type="html">本文档《【Linux】常用命令》详细列出了Linux系统中常用的命令及其用法，涵盖了从基本命令、关机操作、文件和目录管理、文件搜索、文件系统的挂载与卸载、磁盘空间管理、用户和群组管理、文件权限设置、文件的特殊属性、打包和压缩文件、RPM包管理、YUM软件包升级器、DEB包管理、查看文件内容、文本处理、字符设置和文件格式转换、文件系统分析、初始化文件系统、SWAP文件系统管理、备份操作、光盘操作、网络配置、列出目录内容、查看文件类型以及复制文件目录等操作。每个部分都提供了具体的命令示例，帮助用户更好地理解和使用Linux系统中的各种命令。文档内容详实，适合Linux初学者和有一定经验的用户参考使用。</summary>
+    <summary type="html">本文档《【Linux】常用命令》详细列出了Linux系统中常用的命令及其用法，涵盖了从基本命令、关机操作、文件和目录管理、文件搜索、文件系统的挂载与卸载、磁盘空间管理、文件权限设置、文件的特殊属性、打包和压缩文件、RPM包管理、YUM软件包升级器、DEB包管理、查看文件内容、文本处理、字符设置和文件格式转换等操作。</summary>
     
     
     
@@ -630,10 +630,10 @@
     <link href="https://wangbin-blog.github.io/post/5901b3f7.html"/>
     <id>https://wangbin-blog.github.io/post/5901b3f7.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-11-26T01:38:30.699Z</updated>
+    <updated>2024-12-19T06:25:24.623Z</updated>
     
     
-    <summary type="html">本文《Github+picGo+Typora搭建图床》详细介绍了如何使用Github、PicGo和Typora搭建个人图床的过程。文章首先介绍了准备工作，包括注册Github账号、创建Public仓库、下载安装PicGo和Typora。接着，详细讲解了生成Github Tokens的步骤，以及如何在PicGo中设置图床，包括配置仓库名、分支名、Token、存储路径和自定义域名。随后，文章介绍了如何手动激活Typora并设置图片上传功能，确保图片能够顺利上传到PicGo。最后，文章还介绍了如何在Vscode中安装Cnblogs插件，以便将写好的博客上传到博客园。整个过程步骤清晰，适合初学者参考和实践。</summary>
+    <summary type="html">本文《Github+picGo+Typora搭建图床》详细介绍了如何使用Github、PicGo和Typora搭建个人图床的过程。如何在Vscode中安装Cnblogs插件，以便将写好的博客上传到博客园。整个过程步骤清晰，适合初学者参考和实践。</summary>
     
     
     
@@ -672,10 +672,10 @@
     <link href="https://wangbin-blog.github.io/post/e64ca3b2.html"/>
     <id>https://wangbin-blog.github.io/post/e64ca3b2.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-11-26T01:27:16.021Z</updated>
+    <updated>2024-12-19T06:30:19.931Z</updated>
     
     
-    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。本文适合需要长期免费使用 Typora 的用户参考。</summary>
+    <summary type="html">如何安装和激活 Markdown 编辑器 Typora。首先，从官方下载最新版本的 Typora 并安装。接着，通过修改安装目录下的 LicenseIndex 文件中的特定代码，实现手动激活。为了优化使用体验，文章还提供了关闭每次启动时的激活弹窗和去除左下角“未激活”提示的方法。最后，建议关闭自动更新以确保激活方法的有效性，并提供了自定义样式的下载链接。</summary>
     
     
     
@@ -691,10 +691,10 @@
     <link href="https://wangbin-blog.github.io/post/6375ab96.html"/>
     <id>https://wangbin-blog.github.io/post/6375ab96.html</id>
     <published>2024-05-22T12:31:13.000Z</published>
-    <updated>2024-11-26T01:28:03.487Z</updated>
+    <updated>2024-12-19T06:30:53.696Z</updated>
     
     
-    <summary type="html">本文介绍了如何使用 Watt Toolkit（即 Steam++）来加速 GitHub 访问。首先，将 Watt Toolkit 的 GitHub 加速模式设置为系统代理模式，并通过操作系统设置查看代理 IP 和端口（例如：127.0.0.1:26561）。接着，通过配置 git 的 HTTP 代理和禁用 SSL 证书检查，使 git clone 等命令也能实现加速效果。文章还提供了取消 git 代理的命令，方便用户根据需要进行切换。本文适合需要提高 GitHub 访问速度的开发者和用户参考。</summary>
+    <summary type="html">本文介绍了如何使用 Watt Toolkit（即 Steam++）来加速 GitHub 访问。文章还提供了取消 git 代理的命令，方便用户根据需要进行切换。本文适合需要提高 GitHub 访问速度的开发者和用户参考。</summary>
     
     
     
@@ -757,10 +757,10 @@
     <link href="https://wangbin-blog.github.io/post/bf223232.html"/>
     <id>https://wangbin-blog.github.io/post/bf223232.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-26T01:34:51.028Z</updated>
+    <updated>2024-12-19T06:22:03.561Z</updated>
     
     
-    <summary type="html">本文《Linux环境下运行jar包的几种方式》详细介绍了在Linux系统中启动Java应用程序的多种方法。首先，文章从最基本的java -jar命令开始，指出其主要缺点是在执行过程中会锁定当前终端窗口。接着，文章介绍了通过在命令后面加&amp;符号使程序在后台运行的方法，虽然解决了窗口锁定的问题，但在关闭终端时程序也会随之终止。为了解决这一问题，文章进一步探讨了使用nohup命令，确保即使关闭终端，程序也能持续运行，并提供了几种不同的nohup命令使用方式，包括重定向输出至指定文件。此外，文章还提供了一个启动、停止和管理多个Java应用的Shell脚本示例，以及如何设置服务开机自启的步骤，最后简要介绍了通过Systemd服务配置实现更高级的服务管理。这些内容对于希望在Linux环境中高效部署和管理Java应用的开发人员非常实用。</summary>
+    <summary type="html">在Linux系统中启动Java应用程序的多种方法。提供了一个启动、停止和管理多个Java应用的Shell脚本示例，以及如何设置服务开机自启的步骤，最后简要介绍了通过Systemd服务配置实现更高级的服务管理。这些内容对于希望在Linux环境中高效部署和管理Java应用的开发人员非常实用。</summary>
     
     
     
@@ -776,10 +776,10 @@
     <link href="https://wangbin-blog.github.io/post/3cdc8223.html"/>
     <id>https://wangbin-blog.github.io/post/3cdc8223.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-27T06:11:20.319Z</updated>
+    <updated>2024-12-19T06:24:39.890Z</updated>
     
     
-    <summary type="html">本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。这些内容对在Linux环境下部署和管理RocketMQ非常有帮助。</summary>
+    <summary type="html">在Linux环境下部署RocketMQ的完整过程。文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。</summary>
     
     
     
@@ -795,10 +795,10 @@
     <link href="https://wangbin-blog.github.io/post/bec8364e.html"/>
     <id>https://wangbin-blog.github.io/post/bec8364e.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-27T06:09:49.146Z</updated>
+    <updated>2024-12-19T06:17:59.384Z</updated>
     
     
-    <summary type="html">本文《【Linux】Vim命令合集》详细总结了Vim编辑器的各种常用命令和技巧。文章首先介绍了Vim的基本启动和文件操作命令，包括打开单个或多个文件、在新窗口中打开文件等。接着，文章详细列出了Vim的导航、插入、查找、替换、移动、撤销与重做、删除、拷贝与粘贴、剪切、退出、窗口管理、录制宏、执行Shell命令、注释、帮助以及其他非编辑命令。每个命令都配有详细的说明和使用示例，非常适合初学者和进阶用户学习和参考。文章最后还提供了Vim教程的启动方法和一些参考文档，帮助读者更好地掌握Vim的使用技巧。</summary>
+    <summary type="html">本文《【Linux】Vim命令合集》详细总结了Vim编辑器的各种常用命令和技巧。每个命令都配有详细的说明和使用示例，适合初学者和进阶用户学习和参考。文章最后还提供了Vim教程的启动方法和一些参考文档。</summary>
     
     
     
@@ -814,10 +814,10 @@
     <link href="https://wangbin-blog.github.io/post/599fe741.html"/>
     <id>https://wangbin-blog.github.io/post/599fe741.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-26T01:35:22.370Z</updated>
+    <updated>2024-12-19T06:22:15.069Z</updated>
     
     
-    <summary type="html">本文《Manjaro 环境配置》详细介绍了在Manjaro Linux系统中进行环境配置的各种方法。文章首先介绍了常用的Pacman包管理命令，包括软件的安装、更新、删除等操作。接着，文章详细讲解了如何设置中国源、时间同步、安装常用软件（如yay、vim、Chrome、输入法、微信、QQ、TIM、Typora、百度网盘、IDEA、网易云音乐、VSCode、Git等）的具体步骤。此外，文章还提供了系统美化的方法，包括安装Latte Dock、配置Oh My Zsh、优化GRUB主题等内容。最后，文章列出了多个参考文档，方便读者深入学习和解决问题。这些内容对于初学者和有一定经验的用户都非常有帮助，能够快速搭建一个高效、美观的Manjaro环境。</summary>
+    <summary type="html">本文《Manjaro 环境配置》详细介绍了在Manjaro Linux系统中进行环境配置的各种方法。文章首先介绍了常用的Pacman包管理命令，包括软件的安装、更新、删除等操作。这些内容对于初学者和有一定经验的用户都非常有帮助，能够快速搭建一个高效、美观的Manjaro环境。</summary>
     
     
     
@@ -833,10 +833,10 @@
     <link href="https://wangbin-blog.github.io/post/4a0c2abb.html"/>
     <id>https://wangbin-blog.github.io/post/4a0c2abb.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-27T08:49:36.170Z</updated>
+    <updated>2024-12-19T06:18:48.146Z</updated>
     
     
-    <summary type="html">本文详细介绍了在Linux系统上安装OpenJDK的方法，包括在线安装和离线安装两种方式。在线安装部分，首先检查系统中是否已存在Java环境，然后使用yum命令安装OpenJDK，并配置环境变量。离线安装部分，适用于无外网的集群环境，需预先下载OpenJDK二进制包，上传至指定目录，解压并配置环境变量。通过本文的指导，读者可以轻松地在Linux系统上安装和配置OpenJDK，确保Java应用程序的正常运行。</summary>
+    <summary type="html">本文详细介绍了在Linux系统上安装OpenJDK的方法，包括在线安装和离线安装两种方式。在线安装部分，首先检查系统中是否已存在Java环境，然后使用yum命令安装OpenJDK，并配置环境变量。离线安装部分，适用于无外网的集群环境，需预先下载OpenJDK二进制包，上传至指定目录，解压并配置环境变量。</summary>
     
     
     
@@ -852,10 +852,10 @@
     <link href="https://wangbin-blog.github.io/post/6632db9d.html"/>
     <id>https://wangbin-blog.github.io/post/6632db9d.html</id>
     <published>2024-05-21T00:31:13.000Z</published>
-    <updated>2024-11-27T06:12:30.753Z</updated>
+    <updated>2024-12-19T06:14:43.425Z</updated>
     
     
-    <summary type="html">本文档详细介绍了在Linux环境下Doris的安装部署流程，包括环境配置、Docker的安装与配置、Doris的编译与部署步骤。首先，文档列出了所需的服务器环境，包括操作系统版本、Docker、Doris及其相关资源链接。接着，逐步指导如何安装Docker，从上传安装包到配置服务，再到启动与卸载Docker。随后，文档深入讲解了Doris的安装过程，分为编译安装和直接部署两种方式，详述了不同版本的依赖安装、源码下载、编译命令以及部署环境的准备。最后，文档提供了详细的单节点部署示例，涵盖FE、BE、Broker的配置与启动，确保读者能够顺利完成Doris的安装与基本配置</summary>
+    <summary type="html">在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到集群的具体操作方法</summary>
     
     
     
@@ -871,29 +871,10 @@
     <link href="https://wangbin-blog.github.io/post/ec0b08ff.html"/>
     <id>https://wangbin-blog.github.io/post/ec0b08ff.html</id>
     <published>2024-05-18T12:31:13.000Z</published>
-    <updated>2024-11-27T08:50:21.146Z</updated>
+    <updated>2024-12-19T06:28:07.267Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;一、Butterfly&quot;&gt;&lt;a href=&quot;#一、Butterfly&quot; class=&quot;headerlink&quot; title=&quot;一、Butterfly&quot;&gt;&lt;/a&gt;一、Butterfly&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102320371.png&quot; alt=&quot;Butterfly&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在线演示：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9jcmF6eXdvbmcuY29tLw==&quot;&gt;CrazyWong&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;魔改标杆：&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ha2lsYXIudG9wLw==&quot;&gt;Akilarの糖果屋 - Akilar.top&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9ibG9nLnpoaGVvLmNvbS8=&quot;&gt;张洪Heo - 分享设计与科技生活 (zhheo.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9zdW5ndW9xaS5jb20v&quot;&gt;小孙同学 (sunguoqi.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;魔改教程：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9idXR0ZXJmbHkuemhoZW8uY29tL2RvY3Mv&quot;&gt;人人都可以去自定义 | Butterfly主题美化教程 (zhheo.com)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2plcnJ5YzEyNy9oZXhvLXRoZW1lLWJ1dHRlcmZseQ==&quot;&gt;https://github.com/jerryc127/hexo-theme-butterfly&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;使用文档：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9idXR0ZXJmbHkuanMub3JnLw==&quot;&gt;Butterfly - A Simple and Card UI Design theme for Hexo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;推荐值：⭐⭐⭐⭐⭐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;二、yun&quot;&gt;&lt;a href=&quot;#二、yun&quot; class=&quot;headerlink&quot; title=&quot;二、yun&quot;&gt;&lt;/a&gt;二、yun&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot;&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/lixiaomuicon/photo_bed@main/blog/202306102311804.png&quot; alt=&quot;yun&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在线演示：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cueXVueW91anVuLmNuLw==&quot;&gt;云游君的小站 (yunyoujun.cn)&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;主题仓库：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4=&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;使用文档：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL1l1bllvdUp1bi92YWxheHkvdHJlZS9tYWluL3BhY2thZ2VzL3ZhbGF4eS10aGVtZS15dW4vZG9jcy96aC1DTg==&quot;&gt;valaxy&amp;#x2F;packages&amp;#x2F;valaxy-theme-yun&amp;#x2F;docs&amp;#x2F;zh-CN at main · YunYouJun&amp;#x2F;valaxy · GitHub&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;推荐值：⭐⭐⭐⭐</summary>
+    <summary type="html">如何在Hexo博客框架中安装和配置多个热门主题，包括Butterfly、yun、Fluid和shoka。以shoka主题为例，详细说明了下载、配置主题的步骤，以及安装必要插件的具体操作。最后，提供了检查主题是否工作正常的步骤，确保读者能够顺利使用这些主题。</summary>
     
     
     
@@ -909,18 +890,10 @@
     <link href="https://wangbin-blog.github.io/post/c3c198d3.html"/>
     <id>https://wangbin-blog.github.io/post/c3c198d3.html</id>
     <published>2024-05-18T12:01:13.000Z</published>
-    <updated>2024-11-27T05:51:30.872Z</updated>
+    <updated>2024-12-19T06:28:37.243Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;什么是-Hexo？&quot;&gt;&lt;a href=&quot;#什么是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo？&quot;&gt;&lt;/a&gt;什么是 Hexo？&lt;/h2&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=&quot;&gt;Markdown&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h2 id=&quot;开始使用&quot;&gt;&lt;a href=&quot;#开始使用&quot; class=&quot;headerlink&quot; title=&quot;开始使用&quot;&gt;&lt;/a&gt;开始使用&lt;/h2&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&quot;&gt;提交问题&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;，我们会尽力解决您的问题。&lt;/p&gt;
-&lt;h4 id=&quot;安装前提&quot;&gt;&lt;a href=&quot;#安装前提&quot; class=&quot;headerlink&quot; title=&quot;安装前提&quot;&gt;&lt;/a&gt;安装前提&lt;/h4&gt;&lt;p&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL25vZGVqcy5vcmcv&quot;&gt;Node.js&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL2dpdC1zY20uY29tLw==&quot;&gt;Git&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvIyVFNSVBRSU4OSVFOCVBMyU4NS1IZXhv&quot;&gt;安装 Hexo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 步骤。&lt;/p&gt;
-&lt;p&gt;如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。&lt;/p&gt;</summary>
+    <summary type="html">Hexo的基本使用方法，Hexo是一个快速、简洁且高效的博客框架。它使用Markdown（或其他标记语言）解析文章，并在几秒内生成静态网页。文章详细讲解了如何安装和配置Hexo，以及如何使用不同的主题和插件来丰富博客的功能和外观。适合初学者快速上手Hexo，搭建自己的个人博客。</summary>
     
     
     

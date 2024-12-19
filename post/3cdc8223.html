@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章">
+    <meta name="description" content="在Linux环境下部署RocketMQ的完整过程。文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Linux】RocketMQ 部署">
 <meta property="og:url" content="https://wangbin-blog.github.io/post/3cdc8223.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章">
+<meta property="og:description" content="在Linux环境下部署RocketMQ的完整过程。文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
-<meta property="article:modified_time" content="2024-11-27T06:11:20.319Z">
+<meta property="article:modified_time" content="2024-12-19T06:24:39.890Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="【Linux】RocketMQ 部署 | 小王的博客">
-      <meta itemprop="description" content="本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。这些内容对在Linux环境下部署和管理RocketMQ非常有帮助。">
+      <meta itemprop="description" content="在Linux环境下部署RocketMQ的完整过程。文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-27 14:11:20" itemprop="dateModified" datetime="2024-11-27T14:11:20+08:00">2024-11-27</time>
+      <time title="修改时间：2024-12-19 14:24:39" itemprop="dateModified" datetime="2024-12-19T14:24:39+08:00">2024-12-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,7 +275,7 @@
     </span>
 </div>
 
-            <div class="post-description">本文《【Linux】RocketMQ 部署》详细介绍了在Linux环境下部署RocketMQ的完整过程。文章首先列出了系统要求，包括64位操作系统和JDK 1.8+。接着，文章详细描述了RocketMQ的下载、解压、启动NameServer和Broker的步骤，并提供了验证启动成功的命令。此外，文章还介绍了如何使用工具测试消息收发，以及如何安装和配置RocketMQ的Dashboard。最后，文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。这些内容对在Linux环境下部署和管理RocketMQ非常有帮助。</div>
+            <div class="post-description">在Linux环境下部署RocketMQ的完整过程。文章详细说明了如何通过Docker部署RocketMQ，包括创建NameServer、Broker和RocketMQ Console的服务，并提供了相应的Docker命令和配置文件示例。</div>
         </div>
       </header>
 

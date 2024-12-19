@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的D">
+    <meta name="description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【工具】GitHub访问设置">
 <meta property="og:url" content="https://wangbin-blog.github.io/post/4fd5a719.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的D">
+<meta property="og:description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-19T12:31:13.000Z">
-<meta property="article:modified_time" content="2024-11-26T01:25:17.343Z">
+<meta property="article:modified_time" content="2024-12-19T06:29:22.545Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="开发工具">
@@ -216,7 +216,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="【工具】GitHub访问设置 | 小王的博客">
-      <meta itemprop="description" content="本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的DNS服务器及其IP地址，包括百度DNS、阿里DNS、DNSPod等，用户可以根据需要选择合适的DNS进行设置。最后，文章提醒用户，即使设置了hosts文件，仍需定期更新IP地址，以确保访问的稳定性和速度。">
+      <meta itemprop="description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-26 09:25:17" itemprop="dateModified" datetime="2024-11-26T09:25:17+08:00">2024-11-26</time>
+      <time title="修改时间：2024-12-19 14:29:22" itemprop="dateModified" datetime="2024-12-19T14:29:22+08:00">2024-12-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -279,7 +279,7 @@
     </span>
 </div>
 
-            <div class="post-description">本文介绍了如何通过修改hosts文件和更换DNS来提高访问GitHub的速度和稳定性。首先，通过在线DNS解析网站获取github.com的IP地址，并将其添加到hosts文件中。此外，还可以将GitHub的特定服务（如avatars.githubusercontent.com和codeload.github.com）的IP地址添加到hosts文件中，以进一步提升访问速度。文章还提供了一些常用的DNS服务器及其IP地址，包括百度DNS、阿里DNS、DNSPod等，用户可以根据需要选择合适的DNS进行设置。最后，文章提醒用户，即使设置了hosts文件，仍需定期更新IP地址，以确保访问的稳定性和速度。</div>
+            <div class="post-description">本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。</div>
         </div>
       </header>
 
