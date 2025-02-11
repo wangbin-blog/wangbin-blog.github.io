@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2024-12-16T06:01:31.181Z</updated>
+  <updated>2025-01-16T06:23:30.584Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows Shell 窗口美化</title>
+    <link href="https://wangbin-blog.github.io/post/82fcda8a.html"/>
+    <id>https://wangbin-blog.github.io/post/82fcda8a.html</id>
+    <published>2025-01-16T02:05:49.825Z</published>
+    <updated>2025-01-16T06:23:30.584Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、工具准备和参考文档&quot;&gt;&lt;a href=&quot;#一、工具准备和参考文档&quot; class=&quot;headerlink&quot; title=&quot;一、工具准备和参考文档&quot;&gt;&lt;/a&gt;一、工具准备和参考文档&lt;/h2&gt;&lt;h3 id=&quot;1-工具准备&quot;&gt;&lt;a href=&quot;#1-工具准备&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="系统美化" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="系统美化" scheme="https://wangbin-blog.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>47k Star：一款开源免费的 Markdown 编辑器</title>
@@ -63,7 +92,7 @@
     <link href="https://wangbin-blog.github.io/post/ba3c9851.html"/>
     <id>https://wangbin-blog.github.io/post/ba3c9851.html</id>
     <published>2024-10-29T14:32:13.000Z</published>
-    <updated>2024-12-19T06:31:14.369Z</updated>
+    <updated>2025-02-11T02:11:26.804Z</updated>
     
     
     <summary type="html">本文介绍了“洛雪音乐助手”，一个基于 Electron + Vue 开发的开源免费音乐软件。该软件聚合了多个音乐平台的功能，支持在 Windows、Mac OS、Linux 和 Android 平台上运行。软件提供搜索、试听、收藏和下载功能（已不支持无损下载）。项目开源发布于 GitHub，旨在为技术学习交流提供资源</summary>
@@ -408,7 +437,7 @@
     <link href="https://wangbin-blog.github.io/post/5f2de2cf.html"/>
     <id>https://wangbin-blog.github.io/post/5f2de2cf.html</id>
     <published>2024-08-01T00:31:13.000Z</published>
-    <updated>2024-11-26T01:29:11.037Z</updated>
+    <updated>2025-01-16T01:45:16.125Z</updated>
     
     
     <summary type="html">本文详细介绍了如何在Docker环境中安装和配置MACCMS视频管理系统。首先，文章指导读者准备Docker环境，包括安装Docker以及创建所需的网络。接着，依次介绍了如何安装和配置MySQL、Nginx和PHP容器，确保这些服务能够正常运行并相互协作。随后，文章提供了MACCMS项目文件的下载和部署步骤，包括文件的解压、权限设置等。此外，还详细描述了Nginx的配置方法，以支持MACCMS的正常访问。最后，文章给出了如何配置视频分类的具体SQL语句，帮助用户快速完成系统的初始化设置。通过本文的指导，读者可以顺利地在Docker环境中搭建一个功能完整的MACCMS视频管理平台。</summary>
