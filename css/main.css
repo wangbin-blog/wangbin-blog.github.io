@@ -295,7 +295,7 @@ dd {
 }
 #live2d-widget {
   left: 100px !important;
-  bottom: 73px !important;
+  /* bottom: 73px !important; */
 }
 .table-container {
   overflow: auto;
