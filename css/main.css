@@ -295,7 +295,6 @@ dd {
 }
 #live2d-widget {
   left: 100px !important;
-  /* bottom: 73px !important; */
 }
 .table-container {
   overflow: auto;
@@ -1331,7 +1330,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #343249;
+    background: #2a4571;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
