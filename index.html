@@ -226,9 +226,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-01-16 10:05:49 / 修改时间：14:23:30" itemprop="dateCreated datePublished" datetime="2025-01-16T10:05:49+08:00">2025-01-16</time>
+      <time title="创建时间：2025-01-16 10:05:49" itemprop="dateCreated datePublished" datetime="2025-01-16T10:05:49+08:00">2025-01-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-04 10:06:38" itemprop="dateModified" datetime="2025-03-04T10:06:38+08:00">2025-03-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,42 +275,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="一、工具准备和参考文档"><a href="#一、工具准备和参考文档" class="headerlink" title="一、工具准备和参考文档"></a>一、工具准备和参考文档</h2><h3 id="1-工具准备"><a href="#1-工具准备" class="headerlink" title="1.工具准备"></a>1.工具准备</h3><ul>
-<li>WindowsTerminal：本次配置的终端工具，当然也可将本文作为参考</li>
-<li>WSL2：Windows Linux子系统</li>
-</ul>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><ul>
-<li>Microsoft官方教程 ：教程：<span class="exturl" data-url="aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL3poLWNuL3dpbmRvd3MvdGVybWluYWwvdHV0b3JpYWxzL2N1c3RvbS1wcm9tcHQtc2V0dXA=">使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符<i class="fa fa-external-link-alt"></i></span></li>
-<li>oh-my-posh官方教程：<span class="exturl" data-url="aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL3poLWNuL3dpbmRvd3MvdGVybWluYWwvdHV0b3JpYWxzL2N1c3RvbS1wcm9tcHQtc2V0dXA=">oh-my-posh<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<h2 id="二、WindowsTerminal的基础设置-必做步骤"><a href="#二、WindowsTerminal的基础设置-必做步骤" class="headerlink" title="二、WindowsTerminal的基础设置(必做步骤)"></a>二、WindowsTerminal的基础设置(必做步骤)</h2><h3 id="1-字体设置"><a href="#1-字体设置" class="headerlink" title="1.字体设置"></a>1.字体设置</h3><p>首先去 Github 下载 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3J5YW5vYXNpcy9uZXJkLWZvbnRz">nerd-fonts<i class="fa fa-external-link-alt"></i></span> 字体。字体设置的目的是为了保证在安装了 oh-my-posh 后不产生特殊字符显示的问题。</p>
-<p>下载releases的FiraCode.zip：<span class="exturl" data-url="aHR0cHM6Ly9naC5hcGkuOTk5ODg4NjYueHl6L2h0dHBzOi8vZ2l0aHViLmNvbS9yeWFub2FzaXMvbmVyZC1mb250cy9yZWxlYXNlcy9kb3dubG9hZC92My4zLjAvRmlyYUNvZGUuemlw">FiraCode3.3.0.zip<i class="fa fa-external-link-alt"></i></span>  其他版本可自行下载。下载完成后解压、安装字体。</p>
-<p>在<code>WindowsTerminal</code> 中设置字体：<br><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/01/20250116105832988.png"></p>
-<h3 id="2-设置WindowsTerminal背景美化-可选"><a href="#2-设置WindowsTerminal背景美化-可选" class="headerlink" title="2.设置WindowsTerminal背景美化(可选)"></a>2.设置WindowsTerminal背景美化(可选)</h3><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/01/20250116111124175.png"></p>
-<h2 id="三、PowerShell命令行美化"><a href="#三、PowerShell命令行美化" class="headerlink" title="三、PowerShell命令行美化"></a>三、PowerShell命令行美化</h2><blockquote>
-<p>提示：请提前以管理员身份运行 PowerShell</p>
-</blockquote>
-<h3 id="1-安装oh-my-posh"><a href="#1-安装oh-my-posh" class="headerlink" title="1.安装oh-my-posh"></a>1.安装oh-my-posh</h3><p><code>bash Install-Module oh-my-posh -Scope CurrentUser</code></p>
-<h3 id="2-查看主题列表，并试用主题"><a href="#2-查看主题列表，并试用主题" class="headerlink" title="2.查看主题列表，并试用主题"></a>2.查看主题列表，并试用主题</h3><p><code>bash Get-PoshThemes</code></p>
-<h3 id="3-编辑配置文件"><a href="#3-编辑配置文件" class="headerlink" title="3.编辑配置文件"></a>3.编辑配置文件</h3><p><code>bash notepad $PROFILE </code></p>
-<p>这时应该会打开记事本，将步骤二里的的代码添加进去并保存，例如保存 wholespace 主题，将如下代码加入记事本：<br><code>bash oh-my-posh init pwsh --config &#39;C:\Users\19878\AppData\Local\Programs\oh-my-posh\themes\wholespace.omp.json&#39; | Invoke-Expression </code></p>
-<p>上述就是关于Windows Terminal 美化 PowerShell 内容了。</p>
-<h2 id="WSL命令行美化"><a href="#WSL命令行美化" class="headerlink" title="WSL命令行美化"></a>WSL命令行美化</h2><p>本次以 wsl-ubuntu22.04 版本进行演示</p>
-<h3 id="1-安装-homebrew-包管理器"><a href="#1-安装-homebrew-包管理器" class="headerlink" title="1.安装 homebrew 包管理器"></a>1.安装 homebrew 包管理器</h3><p>如果不想使用 homebrew ，可以使用oh-my-posh官网提供的 手动安装方式 ,这里我就演示 homebrew 的安装</p>
-<p>下载并安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 Homebrew 所需环境</span></span><br><span class="line"><span class="built_in">sudo</span> apt-get install build-essential procps curl file git</span><br><span class="line"><span class="comment"># Homebrew</span></span><br><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span></span><br><span class="line"><span class="comment"># 重启WSL，输入 brew 查看命令是否能正常运行</span></span><br><span class="line">brew</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-安装-on-my-posh"><a href="#2-安装-on-my-posh" class="headerlink" title="2.安装 on my posh"></a>2.安装 on my posh</h3><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install jandedobbeleer/oh-my-posh/oh-my-posh</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后可以执行 oh-my-posh get shell 查看当前终端类型，如果出现 Segmentation fault 提示，表示安装 on my posh 出现问题，请检查步骤二，重启WSL或者尝试手动安装。</p>
-<h3 id="3-选择主题"><a href="#3-选择主题" class="headerlink" title="3.选择主题"></a>3.选择主题</h3><p>注意哈这里你得灵活一点，找到 oh-my-posh 的安装目录,不要照抄</p>
-<p>查看 on-my-posh 的安装目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过该命令可以跳转到 oh-my-posh 安装目录</span></span><br><span class="line"><span class="built_in">cd</span> $(brew --prefix oh-my-posh)</span><br><span class="line"><span class="comment"># 输入 pwd 查看当前目录的路径</span></span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line"><span class="comment"># 输入 ll 查看当前目录下的内容</span></span><br><span class="line">ll</span><br><span class="line"><span class="comment"># 应该可以看到 themes 目录</span></span><br></pre></td></tr></table></figure>
-<p>拷贝 themes 文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先将 主题文件夹 拷贝至 家目录 /home/&#123;username&#125; </span></span><br><span class="line"><span class="comment"># 注意哈，拷贝的目标文件夹后面会用到的，这里我放在家目录的themes文件夹下</span></span><br><span class="line"><span class="built_in">cp</span> -r /home/linuxbrew/.linuxbrew/opt/oh-my-posh/themes ~/themes</span><br></pre></td></tr></table></figure>
-<p>添加主题，这里可以先看下第五步的说明，将如下代码添加到 ~&#x2F;.bashrc ~&#x2F;.profile ~&#x2F;.bash_profile 三个文件的其中之一的结尾，哪个有效果就是哪个，一个个试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意 ~/ 后面要写你拷贝后 &#123;themes&#125; 的目录，我这里就是~/themes，jandedobbeleer可以换成你喜欢的主题名称例如 wholespace</span></span><br><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config ~/themes/wholespace.omp.json)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+          <p>本文系统讲解Windows终端环境的美化方案，涵盖PowerShell和WSL双平台配置。通过Windows Terminal工具基础设置（强制字体安装+可选背景美化），结合oh-my-posh框架实现个性化终端界面。教程提供：Nerd Fonts字体解决方案、20+条详细终端命令、主题切换技巧及路径配置注意事项，并针对WSL环境特别给出Homebrew安装指导。适用于Windows 10/11系统，最终实现兼具功能性与美观度的Shell工作环境。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/82fcda8a.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1386,7 +1365,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script><script src="/js/comments.js"></script><script src="/js/liyhbk.js"></script><script src="/js/MouseClick.js"></script><script src="/js/mouse.min.js"></script><script src="/js/fish.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -1406,5 +1385,6 @@
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"wangbin-blog/wangbin-blog.github.io","issue_term":"og:title","theme":"github-light"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>
 
+  <div id="jsi-flying-fish-container" class="container"></canvas></div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2025-01-16T06:23:30.584Z</updated>
+  <updated>2025-03-04T02:06:38.579Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://wangbin-blog.github.io/post/82fcda8a.html"/>
     <id>https://wangbin-blog.github.io/post/82fcda8a.html</id>
     <published>2025-01-16T02:05:49.825Z</published>
-    <updated>2025-01-16T06:23:30.584Z</updated>
+    <updated>2025-03-04T02:06:38.579Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、工具准备和参考文档&quot;&gt;&lt;a href=&quot;#一、工具准备和参考文档&quot; class=&quot;headerlink&quot; title=&quot;一、工具准备和参考文档&quot;&gt;&lt;/a&gt;一、工具准备和参考文档&lt;/h2&gt;&lt;h3 id=&quot;1-工具准备&quot;&gt;&lt;a href=&quot;#1-工具准备&quot;</summary>
-        
-      
+    <summary type="html">本文系统讲解Windows终端环境的美化方案，涵盖PowerShell和WSL双平台配置。通过Windows Terminal工具基础设置（强制字体安装+可选背景美化），结合oh-my-posh框架实现个性化终端界面。教程提供：Nerd Fonts字体解决方案、20+条详细终端命令、主题切换技巧及路径配置注意事项，并针对WSL环境特别给出Homebrew安装指导。适用于Windows 10/11系统，最终实现兼具功能性与美观度的Shell工作环境。</summary>
     
     
     
