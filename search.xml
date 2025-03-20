@@ -11094,4 +11094,27 @@ Database changed
         <tag>系统美化</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Visual Studio 修改NuGet 包缓存路径</title>
+    <url>/post/8ddfbcd7.html</url>
+    <content><![CDATA[<h2 id="Visual-Studio-修改NuGet-包缓存路径"><a href="#Visual-Studio-修改NuGet-包缓存路径" class="headerlink" title="Visual Studio 修改NuGet 包缓存路径"></a>Visual Studio 修改NuGet 包缓存路径</h2><p>Visual Studio 下载的NuGet包默认会缓存到 <code>C:\Users&#123;Windows用户名&#125;.nuget\packages</code> 下，时间一长就会导致 C盘空间严重不足。</p>
+<p>那么怎样去设置，让包缓存文件保存到其他盘呢？</p>
+<p>首先我们要找到 <code>Microsoft.VisualStudio.Offline.config</code> 这个文件，它在哪呢？ 在 <code>C:\Program Files (x86)\NuGet\Config</code>。</p>
+<p>再到文件并用记事本打开 如下：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320152927827.png" alt="image-20250320152927827"></p>
+<p>我们在中间增加如下配置内容：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">&quot;globalPackagesFolder&quot;</span> <span class="attr">value</span>=<span class="string">&quot;D:\Nuget\.nuget\packages&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>最终效果如下图：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320153015594.png" alt="image-20250320153015594"></p>
+<p>这样就配置好了，重新打开 Visual Studio 下载 NuGet 包文件后，查看包的引用地址就会发现地址为修改后的地址。</p>
+<p><strong>温馨提示</strong>：在配置好地址后，可将原来已经缓存的包文件全部拷贝到新的目录中。</p>
+]]></content>
+      <categories>
+        <category>DotNet</category>
+      </categories>
+      <tags>
+        <tag>DotNet</tag>
+      </tags>
+  </entry>
 </search>

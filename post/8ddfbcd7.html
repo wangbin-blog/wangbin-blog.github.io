@@ -20,26 +20,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小王的博客">
-<meta property="og:url" content="https://wangbin-blog.github.io/categories/Hexo/index.html">
+    <meta name="description" content="Visual Studio 下载的NuGet包默认会缓存到 C:\Users{Windows用户名}.nuget\packages 下，时间一长就会导致 C盘空间严重不足。 那么怎样去设置，让包缓存文件保存到其他盘呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio 修改NuGet 包缓存路径">
+<meta property="og:url" content="https://wangbin-blog.github.io/post/8ddfbcd7.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
+<meta property="og:description" content="Visual Studio 下载的NuGet包默认会缓存到 C:\Users{Windows用户名}.nuget\packages 下，时间一长就会导致 C盘空间严重不足。 那么怎样去设置，让包缓存文件保存到其他盘呢？">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320152927827.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320153015594.png">
+<meta property="article:published_time" content="2025-03-20T07:26:37.407Z">
+<meta property="article:modified_time" content="2025-03-20T07:30:39.255Z">
 <meta property="article:author" content="Think.Wang">
-<meta property="article:tag" content="技术,编程,前端,后端,开源软件">
+<meta property="article:tag" content="DotNet">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320152927827.png">
 
 
-<link rel="canonical" href="https://wangbin-blog.github.io/categories/Hexo/">
+<link rel="canonical" href="https://wangbin-blog.github.io/post/8ddfbcd7.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/Hexo/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/8ddfbcd7.html","path":"post/8ddfbcd7.html","title":"Visual Studio 修改NuGet 包缓存路径"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: Hexo | 小王的博客</title>
+<title>Visual Studio 修改NuGet 包缓存路径 | 小王的博客</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -129,7 +134,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Visual-Studio-%E4%BF%AE%E6%94%B9NuGet-%E5%8C%85%E7%BC%93%E5%AD%98%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text">Visual Studio 修改NuGet 包缓存路径</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,131 +194,136 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Hexo
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/8ddfbcd7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Visual Studio 修改NuGet 包缓存路径 | 小王的博客">
+      <meta itemprop="description" content="Visual Studio 下载的NuGet包默认会缓存到 C:\Users{Windows用户名}.nuget\packages 下，时间一长就会导致 C盘空间严重不足。 那么怎样去设置，让包缓存文件保存到其他盘呢？">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Visual Studio 修改NuGet 包缓存路径
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
-    </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-22T20:31:13+08:00"
-              content="2024-05-22">
-          05-22
-        </time>
-      </div>
+      <time title="创建时间：2025-03-20 15:26:37 / 修改时间：15:30:39" itemprop="dateCreated datePublished" datetime="2025-03-20T15:26:37+08:00">2025-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DotNet/" itemprop="url" rel="index"><span itemprop="name">DotNet</span></a>
+        </span>
+    </span>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/post/5901b3f7.html" itemprop="url">
-            <span itemprop="name">Github+picGo+Typora搭建图床</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-22T20:31:13+08:00"
-              content="2024-05-22">
-          05-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/6aea9c03.html" itemprop="url">
-            <span itemprop="name">Hexo Shoka 文章加密</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-22T20:31:13+08:00"
-              content="2024-05-22">
-          05-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/e4550ecb.html" itemprop="url">
-            <span itemprop="name">Hexo Shoka 主题本地搜索</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-18T20:31:13+08:00"
-              content="2024-05-18">
-          05-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/ec0b08ff.html" itemprop="url">
-            <span itemprop="name">Hexo主题安装</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-18T20:01:13+08:00"
-              content="2024-05-18">
-          05-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/c3c198d3.html" itemprop="url">
-            <span itemprop="name">Hexo基本使用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
-  </div>
   
-  
-  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>213</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
+
+            <div class="post-description">Visual Studio 下载的NuGet包默认会缓存到 C:\Users{Windows用户名}.nuget\packages 下，时间一长就会导致 C盘空间严重不足。 那么怎样去设置，让包缓存文件保存到其他盘呢？</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Visual-Studio-修改NuGet-包缓存路径"><a href="#Visual-Studio-修改NuGet-包缓存路径" class="headerlink" title="Visual Studio 修改NuGet 包缓存路径"></a>Visual Studio 修改NuGet 包缓存路径</h2><p>Visual Studio 下载的NuGet包默认会缓存到 <code>C:\Users&#123;Windows用户名&#125;.nuget\packages</code> 下，时间一长就会导致 C盘空间严重不足。</p>
+<p>那么怎样去设置，让包缓存文件保存到其他盘呢？</p>
+<p>首先我们要找到 <code>Microsoft.VisualStudio.Offline.config</code> 这个文件，它在哪呢？ 在 <code>C:\Program Files (x86)\NuGet\Config</code>。</p>
+<p>再到文件并用记事本打开 如下：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320152927827.png" alt="image-20250320152927827"></p>
+<p>我们在中间增加如下配置内容：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">&quot;globalPackagesFolder&quot;</span> <span class="attr">value</span>=<span class="string">&quot;D:\Nuget\.nuget\packages&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>最终效果如下图：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250320153015594.png" alt="image-20250320153015594"></p>
+<p>这样就配置好了，重新打开 Visual Studio 下载 NuGet 包文件后，查看包的引用地址就会发现地址为修改后的地址。</p>
+<p><strong>温馨提示</strong>：在配置好地址后，可将原来已经缓存的包文件全部拷贝到新的目录中。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/DotNet/" rel="tag"><i class="fa fa-tag"></i> DotNet</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/82fcda8a.html" rel="prev" title="windows Shell 窗口美化">
+                  <i class="fa fa-angle-left"></i> windows Shell 窗口美化
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div></div>
   </main>
 
     

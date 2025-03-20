@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2025-03-04T02:06:38.579Z</updated>
+  <updated>2025-03-20T07:30:39.255Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio 修改NuGet 包缓存路径</title>
+    <link href="https://wangbin-blog.github.io/post/8ddfbcd7.html"/>
+    <id>https://wangbin-blog.github.io/post/8ddfbcd7.html</id>
+    <published>2025-03-20T07:26:37.407Z</published>
+    <updated>2025-03-20T07:30:39.255Z</updated>
+    
+    
+    <summary type="html">Visual Studio 下载的NuGet包默认会缓存到 C:&#92;Users{Windows用户名}.nuget&#92;packages 下，时间一长就会导致 C盘空间严重不足。 那么怎样去设置，让包缓存文件保存到其他盘呢？</summary>
+    
+    
+    
+    <category term="DotNet" scheme="https://wangbin-blog.github.io/categories/DotNet/"/>
+    
+    
+    <category term="DotNet" scheme="https://wangbin-blog.github.io/tags/DotNet/"/>
+    
+  </entry>
   
   <entry>
     <title>windows Shell 窗口美化</title>
