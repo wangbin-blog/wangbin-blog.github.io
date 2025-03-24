@@ -20,29 +20,34 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
+    <meta name="description" content="如果你将Ubuntu的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 WSL (Windows Subsystem for Linux) 中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【工具】GitHub访问设置">
-<meta property="og:url" content="https://wangbin-blog.github.io/post/4fd5a719.html">
+<meta property="og:title" content="【工具】修改wsl安装包实际安装位置">
+<meta property="og:url" content="https://wangbin-blog.github.io/post/40bd2acb.html">
 <meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
+<meta property="og:description" content="如果你将Ubuntu的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 WSL (Windows Subsystem for Linux) 中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-19T12:31:13.000Z">
-<meta property="article:modified_time" content="2024-12-19T06:29:22.545Z">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142307183.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142945817.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143025509.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143037588.png">
+<meta property="article:published_time" content="2025-03-24T06:11:21.320Z">
+<meta property="article:modified_time" content="2025-03-24T07:13:46.021Z">
 <meta property="article:author" content="Think.Wang">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="开发工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142307183.png">
 
 
-<link rel="canonical" href="https://wangbin-blog.github.io/post/4fd5a719.html">
+<link rel="canonical" href="https://wangbin-blog.github.io/post/40bd2acb.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/4fd5a719.html","path":"post/4fd5a719.html","title":"【工具】GitHub访问设置"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/40bd2acb.html","path":"post/40bd2acb.html","title":"【工具】修改wsl安装包实际安装位置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【工具】GitHub访问设置 | 小王的博客</title>
+<title>【工具】修改wsl安装包实际安装位置 | 小王的博客</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -132,7 +137,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,6 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">一、查看安装路径：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-wsl2%E7%9A%84%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">1. wsl2的安装目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-wsl1%E7%9A%84%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="nav-number">2.2.</span> <span class="nav-text">2. wsl1的安装目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">二、操作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8Bwsl%E7%89%88%E6%9C%AC"><span class="nav-number">3.1.</span> <span class="nav-text">1.查看wsl版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9B%B4%E6%94%B9wsl2%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">2.更改wsl2的安装位置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95"><span class="nav-number">3.2.1.</span> <span class="nav-text">1. 创建目标目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%A1%AE%E8%AE%A4%E8%B7%AF%E5%BE%84%E6%9D%83%E9%99%90"><span class="nav-number">3.2.2.</span> <span class="nav-text">2. 确认路径权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%AF%BC%E5%87%BA%E5%BD%93%E5%89%8D%E7%9A%84-WSL-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">3.2.3.</span> <span class="nav-text">3. 导出当前的 WSL 发行版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%B3%A8%E9%94%80%E5%BD%93%E5%89%8D%E7%9A%84-WSL-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">3.2.4.</span> <span class="nav-text">4. 注销当前的 WSL 发行版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%AF%BC%E5%85%A5-WSL-%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%B0%E6%96%B0%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">3.2.5.</span> <span class="nav-text">5. 导入 WSL 发行版到新的位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.6.</span> <span class="nav-text">6. 验证安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E5%90%AF%E5%8A%A8-WSL"><span class="nav-number">3.2.7.</span> <span class="nav-text">7.  启动 WSL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E7%9A%84%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.2.8.</span> <span class="nav-text">8. 修改默认启动的系统</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +208,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/4fd5a719.html">
+    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/40bd2acb.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
@@ -215,12 +221,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【工具】GitHub访问设置 | 小王的博客">
-      <meta itemprop="description" content="本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。">
+      <meta itemprop="name" content="【工具】修改wsl安装包实际安装位置 | 小王的博客">
+      <meta itemprop="description" content="如果你将Ubuntu的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 WSL (Windows Subsystem for Linux) 中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【工具】GitHub访问设置
+          【工具】修改wsl安装包实际安装位置
         </h1>
 
         <div class="post-meta-container">
@@ -230,15 +236,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-07-19 20:31:13" itemprop="dateCreated datePublished" datetime="2024-07-19T20:31:13+08:00">2024-07-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-19 14:29:22" itemprop="dateModified" datetime="2024-12-19T14:29:22+08:00">2024-12-19</time>
+      <time title="创建时间：2025-03-24 14:11:21 / 修改时间：15:13:46" itemprop="dateCreated datePublished" datetime="2025-03-24T14:11:21+08:00">2025-03-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -268,85 +268,64 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>510</span>
+      <span>754</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
-            <div class="post-description">本文详细介绍了提高GitHub访问速度和稳定性的方法，主要包括修改hosts文件和更换DNS服务器。通过在线DNS解析工具获取GitHub及其子服务的IP地址，并将其添加至hosts文件；推荐了几款高效稳定的DNS服务，如百度DNS、阿里DNS等，帮助用户优化网络环境，确保流畅访问GitHub。</div>
+            <div class="post-description">如果你将Ubuntu的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 WSL (Windows Subsystem for Linux) 中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><strong>访问GitHub的速度和稳定性可以通过修改hosts文件来提高。‌</strong></p>
-<p>首先，‌获取github.com的IP地址是关键的一步。‌</p>
-<p>你可以通过在线DNS解析网站，‌如<span class="exturl" data-url="aHR0cDovL3d3dy5pcDMzLmNvbS9kbnMuaHRtbA==">ip33<i class="fa fa-external-link-alt"></i></span>，‌输入<code>github.com</code>域名，‌获取A记录的IP地址。‌然后将这个IP地址赋值到<code>hosts</code>文件（‌文件路径为<code>C:\Windows\System32\drivers\etc</code>）‌，‌配置好后点击保存即可。‌如果配置后提示保存不了，‌可以尝试将hosts文件copy到桌面重新配置后保存，‌然后再覆盖原路径的文件。‌</p>
-<p>此外，‌还有一些特定的IP地址可以帮助加速访问GitHub的特定服务，‌</p>
-<span id="more"></span>
-<p>例如 <a href="avatars.githubusercontent.com">avatars.githubusercontent.com</a>、‌<a href="codeload.github.com">codeload.github.com</a>等，‌这些服务通常用于加载图片、‌代码等资源。‌通过将这些服务与特定的IP地址关联，‌可以进一步提高访问速度和稳定性。‌</p>
-<p>需要注意的是，‌这种方法虽然可以提高访问速度和稳定性，‌但并不保证能够完全解决所有访问问题，‌因为GitHub的服务可能会在不同的时间和地点使用不同的IP地址。‌因此，‌如果遇到访问问题，‌可能需要重新通过DNS解析获取最新的可用IP地址。‌</p>
-<p>最后，‌还有一些工具和服务提供更新的hosts文件，‌这些文件包含了最新的GitHub域名和IP地址映射，‌使用这些工具和服务可以简化手动更新hosts文件的步骤，‌同时也能保证使用的是最新的、‌有效的IP地址</p>
-<p>如果设置host后依旧不能访问，可以尝试修改dns来试试~</p>
-<table>
-<thead>
-<tr>
-<th align="left">DNS</th>
-<th align="left">IP地址</th>
-<th align="left">官网</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">百度DNS</td>
-<td align="left">180.76.76.76</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL2R1ZG5zLmJhaWR1LmNvbS8=">http://dudns.baidu.com/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">阿里DNS</td>
-<td align="left">223.5.5.5 223.6.6.6</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5hbGlkbnMuY29tLw==">http://www.alidns.com/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">-</td>
-</tr>
-<tr>
-<td align="left">DNSPod</td>
-<td align="left">119.29.29.29</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly93d3cuZG5zcG9kLmNuL1Byb2R1Y3RzL1B1YmxpYy5ETlM=">https://www.dnspod.cn/Products/Public.DNS<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">腾讯旗下</td>
-</tr>
-<tr>
-<td align="left">114 DNS</td>
-<td align="left">114.114.114.114 114.114.115.115</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy4xMTRkbnMuY29tLw==">http://www.114dns.com/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">电信合作商</td>
-</tr>
-<tr>
-<td align="left">Google DNS</td>
-<td align="left">8.8.8.8  8.8.4.4</td>
-<td align="left"><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLmdvb2dsZS5jb20vc3BlZWQvcHVibGljLWRucy8=">https://developers.google.com/speed/public-dns/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">纯净无污染，注意墙</td>
-</tr>
-<tr>
-<td align="left">SDNS</td>
-<td align="left">1.2.4.8 210.2.4.8</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5zZG5zLmNuLw==">http://www.sdns.cn/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">中国互联网络信息中心提供</td>
-</tr>
-<tr>
-<td align="left">OpenDNS</td>
-<td align="left">208.67.220.220 208.67.222.222</td>
-<td align="left"><span class="exturl" data-url="aHR0cDovL3d3dy5vcGVuZG5zLmNvbS8=">http://www.opendns.com/<i class="fa fa-external-link-alt"></i></span></td>
-<td align="left">资深、专业的公众DNS</td>
-</tr>
-</tbody></table>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​	如果你将<code>Ubuntu</code>的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 <code>WSL (Windows Subsystem for Linux) </code>中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。</p>
+<h2 id="一、查看安装路径："><a href="#一、查看安装路径：" class="headerlink" title="一、查看安装路径："></a><strong>一、查看安装路径：</strong></h2><p>这一步完全可以不用操作，因为一般情况下WSL 的 Linux系统文件存储在 Windows 文件系统的特定位置。默认情况下，WSL 2 使用一个虚拟硬盘（VHD）来存储文件，而 WSL 1 则将文件存储在 Windows 文件系统中。</p>
+<h3 id="1-wsl2的安装目录"><a href="#1-wsl2的安装目录" class="headerlink" title="1. wsl2的安装目录"></a>1. wsl2的安装目录</h3><p>WSL 2: WSL 2 使用一个虚拟硬盘（VHD），存储在 Windows 用户目录下，路径类似于：<code>C:\Users\&lt;YourUsername&gt;\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_&lt;version&gt;\LocalState\ext4.vhdx</code></p>
+<h3 id="2-wsl1的安装目录"><a href="#2-wsl1的安装目录" class="headerlink" title="2. wsl1的安装目录"></a>2. wsl1的安装目录</h3><p>WSL 1: WSL 1 的文件存储在 Windows 文件系统的目录下，路径类似于：<code>C:\Users\&lt;YourUsername&gt;\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_&lt;version&gt;\LocalState\rootfs</code></p>
+<h2 id="二、操作步骤"><a href="#二、操作步骤" class="headerlink" title="二、操作步骤"></a>二、操作步骤</h2><h3 id="1-查看wsl版本"><a href="#1-查看wsl版本" class="headerlink" title="1.查看wsl版本"></a>1.查看wsl版本</h3><p>你可以运行以下命令来查看你使用的是 WSL 1 还是 WSL 2：（打开powershell以管理员身份运行）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -l -v</span><br></pre></td></tr></table></figure>
+
+<p>列出所有已安装的 WSL 发行版及其版本信息：（VERSION显示2，说明是wsl2）</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142307183.png" alt="image-20250324142307183"></p>
+<h3 id="2-更改wsl2的安装位置"><a href="#2-更改wsl2的安装位置" class="headerlink" title="2.更改wsl2的安装位置"></a>2.更改wsl2的安装位置</h3><p>为了将 WSL 2 的安装位置从 C 盘移动到 D 盘，你可以按照以下步骤操作：</p>
+<h4 id="1-创建目标目录"><a href="#1-创建目标目录" class="headerlink" title="1. 创建目标目录"></a>1. 创建目标目录</h4><p>打开 PowerShell，并运行（以管理员身份运行）以下命令来创建一个目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">base <span class="built_in">mkdir</span> D:\WSL\backup</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-确认路径权限"><a href="#2-确认路径权限" class="headerlink" title="2. 确认路径权限"></a>2. 确认路径权限</h4><p>确保你有权限在 D 盘上创建和写入文件。通过尝试在目标路径创建一个测试文件来确认权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;test&quot;</span> &gt; D:\WSL\backup\test.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-导出当前的-WSL-发行版"><a href="#3-导出当前的-WSL-发行版" class="headerlink" title="3. 导出当前的 WSL 发行版"></a>3. 导出当前的 WSL 发行版</h4><p>运行以下命令来导出当前的 Ubuntu 发行版：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --<span class="built_in">export</span> openEuler-23.09 E:\WSL\backup\openEuler.tar</span><br></pre></td></tr></table></figure>
+<p>这会将当前的 Ubuntu 发行版导出为一个 tar 文件。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142945817.png"></p>
+<h4 id="4-注销当前的-WSL-发行版"><a href="#4-注销当前的-WSL-发行版" class="headerlink" title="4. 注销当前的 WSL 发行版"></a>4. 注销当前的 WSL 发行版</h4><p>运行以下命令来注销当前的 Ubuntu 发行版：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --unregister openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143025509.png" alt="image-20250324143025509"></p>
+<h4 id="5-导入-WSL-发行版到新的位置"><a href="#5-导入-WSL-发行版到新的位置" class="headerlink" title="5. 导入 WSL 发行版到新的位置"></a>5. 导入 WSL 发行版到新的位置</h4><p>运行以下命令将导出的 Ubuntu 发行版导入到 D 盘的新位置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --import openEuler-23.09 E:\WSL\openEuler E:\WSL\backup\openEuler.tar</span><br></pre></td></tr></table></figure>
+
+<p>这会将 Ubuntu 发行版重新安装到 D 盘的 D:\WSL\Ubuntu 目录中。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143037588.png" alt="image-20250324143037588"></p>
+<h4 id="6-验证安装"><a href="#6-验证安装" class="headerlink" title="6. 验证安装"></a>6. 验证安装</h4><p>导入完成后，运行以下命令来验证安装是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -l -v</span><br></pre></td></tr></table></figure>
+
+<p>你应该会看到类似于之前的输出</p>
+<h4 id="7-启动-WSL"><a href="#7-启动-WSL" class="headerlink" title="7.  启动 WSL"></a>7.  启动 WSL</h4><p>最后，启动 WSL：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -d openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-修改默认启动的系统"><a href="#8-修改默认启动的系统" class="headerlink" title="8. 修改默认启动的系统"></a>8. 修改默认启动的系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wsl --set-default &lt;DistributionName&gt;</span></span><br><span class="line"><span class="comment"># 将&lt;DistributionName&gt;替换为你想设置为默认的发行版的名称。例如，如果你想要将Ubuntu设置为默认，你可以使用：</span></span><br><span class="line">wsl --set-default openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
 
@@ -364,13 +343,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/post/26185413.html" rel="prev" title="【Linux】DotNet运行命令">
-                  <i class="fa fa-angle-left"></i> 【Linux】DotNet运行命令
+                <a href="/post/8ddfbcd7.html" rel="prev" title="Visual Studio 修改NuGet 包缓存路径">
+                  <i class="fa fa-angle-left"></i> Visual Studio 修改NuGet 包缓存路径
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/post/9791b8ea.html" rel="next" title="【MACCMS】2023年最新可采集CMS视频资源站网址合集">
-                  【MACCMS】2023年最新可采集CMS视频资源站网址合集 <i class="fa fa-angle-right"></i>
+                <a href="/post/f80b21bd.html" rel="next" title="【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp">
+                  【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

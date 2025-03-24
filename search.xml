@@ -11117,4 +11117,107 @@ Database changed
         <tag>DotNet</tag>
       </tags>
   </entry>
+  <entry>
+    <title>【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp</title>
+    <url>/post/f80b21bd.html</url>
+    <content><![CDATA[<h2 id="1-更新软件源"><a href="#1-更新软件源" class="headerlink" title="1.更新软件源"></a>1.更新软件源</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dnf update</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装字库</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dnf install dejavu-fonts liberation-fonts gnu-*-fonts google-*-fonts</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装 Xorg</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dnf install xorg-*</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装-xfce"><a href="#2-安装-xfce" class="headerlink" title="2.安装 xfce"></a>2.安装 xfce</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dnf install xfwm4 xfdesktop xfce4-* xfce4-*-plugin network-manager-applet *fonts</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装登录管理器</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dnf install lightdm lightdm-gtk</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143755795.png" alt="image-20250324143755795"></p>
+<p><strong>设置默认桌面为XFCE 通过root权限用户设置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;user-session=xfce&#x27; &gt;&gt; /etc/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf</span><br></pre></td></tr></table></figure>
+
+<p>使用登录管理器登录XFCE</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl start lightdm</span><br></pre></td></tr></table></figure>
+
+<p>登录管理器启动后，在右上角左侧选择”xfce-session” 输入用户名、密码登录</p>
+<p>设置开机自启动图形界面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl enable lightdm</span><br><span class="line">systemctl set-default graphical.target</span><br></pre></td></tr></table></figure>
+
+<p>如果默认安装了gdm，建议停用gdm</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl disable gdm</span><br></pre></td></tr></table></figure>
+
+<p>重启验证</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>登录界面是黑色的是因为lightdm-gtk默认配置文件&#x2F;etc&#x2F;lightdm&#x2F;lightdm-gtk-greeter.conf中没有设置background。 可以在该配置文件最后的[greeter]段中设置 background&#x3D;&#x2F;usr&#x2F;share&#x2F;backgrounds&#x2F;xfce&#x2F;xfce-blue.jpg 然后systemctl restart lightdm 就可以看到背景了。</p>
+</blockquote>
+<h2 id="3-安装远程连接软件-xrdp"><a href="#3-安装远程连接软件-xrdp" class="headerlink" title="3.安装远程连接软件 xrdp"></a>3.安装远程连接软件 xrdp</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/epel/epel-release-latest-8.noarch.rpm</span><br><span class="line">rpm -ivh epel-release-latest-8.noarch.rpm --nodeps</span><br><span class="line">yum -y install xrdp</span><br><span class="line"># sed -i &#x27;s/port=3389/port=3390/g&#x27; /etc/xrdp/xrdp.ini</span><br><span class="line">sed -i &#x27;s/max_bpp=32/max_bpp=24/g&#x27; /etc/xrdp/xrdp.ini</span><br><span class="line">touch .xsession</span><br><span class="line">echo xfce4-session &gt; /root/.xsession</span><br><span class="line">chmod +x /root/.xsession</span><br><span class="line">systemctl restart xrdp &amp;&amp; systemctl enable xrdp</span><br><span class="line">rm -rf /etc/yum.repos.d/epel*</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-防火墙"><a href="#4-防火墙" class="headerlink" title="4.防火墙"></a>4.防火墙</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 可能需要的其他操作:</span><br><span class="line"># 关闭防火墙</span><br><span class="line"></span><br><span class="line">systemctl stop firewalld.service  #临时关闭</span><br><span class="line">systemctl disable firewalld.servie #永久关闭</span><br><span class="line"></span><br><span class="line"># 开放端口</span><br><span class="line"></span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=3389/tcp</span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【工具】修改wsl安装包实际安装位置</title>
+    <url>/post/40bd2acb.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​	如果你将<code>Ubuntu</code>的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 <code>WSL (Windows Subsystem for Linux) </code>中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。</p>
+<h2 id="一、查看安装路径："><a href="#一、查看安装路径：" class="headerlink" title="一、查看安装路径："></a><strong>一、查看安装路径：</strong></h2><p>这一步完全可以不用操作，因为一般情况下WSL 的 Linux系统文件存储在 Windows 文件系统的特定位置。默认情况下，WSL 2 使用一个虚拟硬盘（VHD）来存储文件，而 WSL 1 则将文件存储在 Windows 文件系统中。</p>
+<h3 id="1-wsl2的安装目录"><a href="#1-wsl2的安装目录" class="headerlink" title="1. wsl2的安装目录"></a>1. wsl2的安装目录</h3><p>WSL 2: WSL 2 使用一个虚拟硬盘（VHD），存储在 Windows 用户目录下，路径类似于：<code>C:\Users\&lt;YourUsername&gt;\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_&lt;version&gt;\LocalState\ext4.vhdx</code></p>
+<h3 id="2-wsl1的安装目录"><a href="#2-wsl1的安装目录" class="headerlink" title="2. wsl1的安装目录"></a>2. wsl1的安装目录</h3><p>WSL 1: WSL 1 的文件存储在 Windows 文件系统的目录下，路径类似于：<code>C:\Users\&lt;YourUsername&gt;\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_&lt;version&gt;\LocalState\rootfs</code></p>
+<h2 id="二、操作步骤"><a href="#二、操作步骤" class="headerlink" title="二、操作步骤"></a>二、操作步骤</h2><h3 id="1-查看wsl版本"><a href="#1-查看wsl版本" class="headerlink" title="1.查看wsl版本"></a>1.查看wsl版本</h3><p>你可以运行以下命令来查看你使用的是 WSL 1 还是 WSL 2：（打开powershell以管理员身份运行）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wsl -l -v</span><br></pre></td></tr></table></figure>
+
+<p>列出所有已安装的 WSL 发行版及其版本信息：（VERSION显示2，说明是wsl2）</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142307183.png" alt="image-20250324142307183"></p>
+<h3 id="2-更改wsl2的安装位置"><a href="#2-更改wsl2的安装位置" class="headerlink" title="2.更改wsl2的安装位置"></a>2.更改wsl2的安装位置</h3><p>为了将 WSL 2 的安装位置从 C 盘移动到 D 盘，你可以按照以下步骤操作：</p>
+<h4 id="1-创建目标目录"><a href="#1-创建目标目录" class="headerlink" title="1. 创建目标目录"></a>1. 创建目标目录</h4><p>打开 PowerShell，并运行（以管理员身份运行）以下命令来创建一个目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">base <span class="built_in">mkdir</span> D:\WSL\backup</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-确认路径权限"><a href="#2-确认路径权限" class="headerlink" title="2. 确认路径权限"></a>2. 确认路径权限</h4><p>确保你有权限在 D 盘上创建和写入文件。通过尝试在目标路径创建一个测试文件来确认权限：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;test&quot;</span> &gt; D:\WSL\backup\test.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-导出当前的-WSL-发行版"><a href="#3-导出当前的-WSL-发行版" class="headerlink" title="3. 导出当前的 WSL 发行版"></a>3. 导出当前的 WSL 发行版</h4><p>运行以下命令来导出当前的 Ubuntu 发行版：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --<span class="built_in">export</span> openEuler-23.09 E:\WSL\backup\openEuler.tar</span><br></pre></td></tr></table></figure>
+<p>这会将当前的 Ubuntu 发行版导出为一个 tar 文件。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324142945817.png"></p>
+<h4 id="4-注销当前的-WSL-发行版"><a href="#4-注销当前的-WSL-发行版" class="headerlink" title="4. 注销当前的 WSL 发行版"></a>4. 注销当前的 WSL 发行版</h4><p>运行以下命令来注销当前的 Ubuntu 发行版：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --unregister openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143025509.png" alt="image-20250324143025509"></p>
+<h4 id="5-导入-WSL-发行版到新的位置"><a href="#5-导入-WSL-发行版到新的位置" class="headerlink" title="5. 导入 WSL 发行版到新的位置"></a>5. 导入 WSL 发行版到新的位置</h4><p>运行以下命令将导出的 Ubuntu 发行版导入到 D 盘的新位置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl --import openEuler-23.09 E:\WSL\openEuler E:\WSL\backup\openEuler.tar</span><br></pre></td></tr></table></figure>
+
+<p>这会将 Ubuntu 发行版重新安装到 D 盘的 D:\WSL\Ubuntu 目录中。</p>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/03/image-20250324143037588.png" alt="image-20250324143037588"></p>
+<h4 id="6-验证安装"><a href="#6-验证安装" class="headerlink" title="6. 验证安装"></a>6. 验证安装</h4><p>导入完成后，运行以下命令来验证安装是否成功：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl -l -v</span><br></pre></td></tr></table></figure>
+
+<p>你应该会看到类似于之前的输出</p>
+<h4 id="7-启动-WSL"><a href="#7-启动-WSL" class="headerlink" title="7.  启动 WSL"></a>7.  启动 WSL</h4><p>最后，启动 WSL：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wsl -d openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-修改默认启动的系统"><a href="#8-修改默认启动的系统" class="headerlink" title="8. 修改默认启动的系统"></a>8. 修改默认启动的系统</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># wsl --set-default &lt;DistributionName&gt;</span></span><br><span class="line"><span class="comment"># 将&lt;DistributionName&gt;替换为你想设置为默认的发行版的名称。例如，如果你想要将Ubuntu设置为默认，你可以使用：</span></span><br><span class="line">wsl --set-default openEuler-23.09</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
 </search>

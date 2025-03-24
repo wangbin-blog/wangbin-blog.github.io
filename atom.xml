@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2025-03-20T07:31:57.225Z</updated>
+  <updated>2025-03-24T06:55:11.253Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp</title>
+    <link href="https://wangbin-blog.github.io/post/f80b21bd.html"/>
+    <id>https://wangbin-blog.github.io/post/f80b21bd.html</id>
+    <published>2025-03-24T06:35:09.435Z</published>
+    <updated>2025-03-24T06:55:11.253Z</updated>
+    
+    
+    <summary type="html">OpenEuler安装xfce桌面及远程桌面软件xrdp</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开发工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开发工具" scheme="https://wangbin-blog.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【工具】修改wsl安装包实际安装位置</title>
+    <link href="https://wangbin-blog.github.io/post/40bd2acb.html"/>
+    <id>https://wangbin-blog.github.io/post/40bd2acb.html</id>
+    <published>2025-03-24T06:11:21.320Z</published>
+    <updated>2025-03-24T07:13:46.021Z</updated>
+    
+    
+    <summary type="html">如果你将Ubuntu的文件解压并安装到D盘，但WSL本身仍在C盘，则安装的Ubuntu子系统仍会使用WSL的默认存储路径。在 WSL (Windows Subsystem for Linux) 中，默认情况下安装的 Ubuntu 子系统及其文件存储位置是固定的，但你可以更改 WSL 的安装地址，尤其是对于 WSL 2。下面是如何更改安装地址的步骤。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开发工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开发工具" scheme="https://wangbin-blog.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Visual Studio 修改NuGet 包缓存路径</title>
