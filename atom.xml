@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2025-03-24T07:15:04.866Z</updated>
+  <updated>2025-04-11T02:54:22.224Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,190 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dify应用实战(6) - 图片生成(上)</title>
+    <link href="https://wangbin-blog.github.io/post/a2cb2713.html"/>
+    <id>https://wangbin-blog.github.io/post/a2cb2713.html</id>
+    <published>2025-04-11T02:11:07.928Z</published>
+    <updated>2025-04-11T02:54:22.224Z</updated>
+    
+    
+    <summary type="html">本文演示Dify工作流图片生成能力：1. 通过四组模板节点拼接JSON结构（含字体/坐标/背景图参数）；2. 配置HTTP请求调用第三方渲染服务（imgrender/figma）；3. 代码节点解析返回图片URL。实现将天气数据与设计模板结合生成带动态文本的简报图片，为自动化图文报告场景提供技术实现路径，下篇将详解第三方服务接入细节。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify应用实战(5) - 使用模版</title>
+    <link href="https://wangbin-blog.github.io/post/1d20a76.html"/>
+    <id>https://wangbin-blog.github.io/post/1d20a76.html</id>
+    <published>2025-04-11T02:01:34.238Z</published>
+    <updated>2025-04-11T02:53:15.562Z</updated>
+    
+    
+    <summary type="html">本文演示Dify模板引擎集成：1. 在数据加工流程后新增Jinja模板节点，实现动态数据与预设模板结合；2. 调整代码节点输出为字典格式（含温度/天气等字段）；3. 详解模板语法（变量插值{{}}/循环判断逻辑）。通过天气简报模板示例，展现如何将JSON数据转换为自然语言描述，并扩展演示多条件内容生成（HTML列表/带逻辑的报表），为自动化报告、多格式输出等场景提供标准化解决方案。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify应用实战(4) - 生成语音</title>
+    <link href="https://wangbin-blog.github.io/post/81740974.html"/>
+    <id>https://wangbin-blog.github.io/post/81740974.html</id>
+    <published>2025-04-11T01:57:54.056Z</published>
+    <updated>2025-04-11T02:52:19.375Z</updated>
+    
+    
+    <summary type="html">本文演示Dify工作流语音生成能力：1. 集成SiliconCloud TTS节点实现文本转语音；2. 详解API Key配置流程与声音类型选择（8种人声）；3. 优化Python代码节点输出自然语言播报文案。通过工作流串联天气数据→文本处理→语音生成全流程，实现自动化语音播报功能，为有声内容创作提供标准化解决方案，并提示商用模型计费策略及本地调试方法。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify应用实战(3) - 代码处理</title>
+    <link href="https://wangbin-blog.github.io/post/8053732f.html"/>
+    <id>https://wangbin-blog.github.io/post/8053732f.html</id>
+    <published>2025-04-11T01:53:32.874Z</published>
+    <updated>2025-04-11T02:40:36.732Z</updated>
+    
+    
+    <summary type="html">本文演示Dify工作流数据加工能力：1. 在天气API节点后新增Python代码节点，实现JSON数据解析与当日天气提取；2. 详解代码节点开发规范（main函数参数绑定/字典格式输出）；3. 提供调试技巧建议（本地调试后移植沙箱环境）。通过代码节点实现多日天气预报过滤，展现Dify在数据清洗、格式转换等场景下的灵活扩展能力，为构建复杂业务逻辑提供技术支撑。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify应用实战(2) - 联网工具</title>
+    <link href="https://wangbin-blog.github.io/post/9854d049.html"/>
+    <id>https://wangbin-blog.github.io/post/9854d049.html</id>
+    <published>2025-04-11T01:46:46.324Z</published>
+    <updated>2025-04-11T02:39:47.394Z</updated>
+    
+    
+    <summary type="html">本文演示Dify工作流扩展能力：1. 在知识库检索流程后新增高德天气API节点，实现adcode到实时天气转换；2. 详解工具节点参数配置（输入绑定LLM输出/输出映射最终结果）；3. 介绍自定义工具开发框架（继承BuiltinTool类实现业务逻辑封装）。通过外部API集成突破大模型实时数据局限，为构建天气预报、金融数据等场景应用提供标准范式，展现Dify工作流编排的扩展性与实用性。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify应用实战(1)-知识库检索</title>
+    <link href="https://wangbin-blog.github.io/post/27c2ef8d.html"/>
+    <id>https://wangbin-blog.github.io/post/27c2ef8d.html</id>
+    <published>2025-04-11T01:38:19.111Z</published>
+    <updated>2025-04-11T02:25:52.126Z</updated>
+    
+    
+    <summary type="html">本文通过工作流创建演示Dify知识库应用开发：1. 配置知识检索节点连接输入变量；2. 集成qwen2.5模型并编写精准提示词；3. 输出adcode实现地理编码转换。详解RAG技术四步流程：文档预处理（格式转换/分词清洗）→向量化（Embedding模型）→索引构建（HNSW优化）→查询匹配（相似度排序）。附工作流调试方法与追踪功能使用，适合AI应用开发者入门知识增强型服务搭建。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决</title>
+    <link href="https://wangbin-blog.github.io/post/810251c4.html"/>
+    <id>https://wangbin-blog.github.io/post/810251c4.html</id>
+    <published>2025-04-11T01:20:15.085Z</published>
+    <updated>2025-04-11T01:35:18.021Z</updated>
+    
+    
+    <summary type="html">本文详解ollama离线部署全流程：1. 跨平台安装指南（含Docker部署）及模型存储路径修改；2. DeepSeek全系模型参数对照与硬件需求说明；3. 提供模型下载加速方案（网盘/魔塔社区/HF镜像）及API安全加固策略；4. 集成Open-WebUI可视化界面，配置docker-compose实现聊天机器人及知识库功能；5. 收录下载中断、局域网访问、API鉴权等10+常见问题解决方案，附中文社区资源参考。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dify部署及简单应用</title>
+    <link href="https://wangbin-blog.github.io/post/47d1d509.html"/>
+    <id>https://wangbin-blog.github.io/post/47d1d509.html</id>
+    <published>2025-04-11T00:43:05.315Z</published>
+    <updated>2025-04-11T01:20:32.775Z</updated>
+    
+    
+    <summary type="html">本文详细介绍了Dify的容器化部署流程：1. 准备Docker环境并克隆指定版本代码；2. 配置环境变量启动容器组（含API/Worker/Web等11个服务）；3. 通过初始化页面创建管理员账户。在应用开发环节，演示了如何集成通义千问/DeepSeek等大模型，配置翻译助手提示词，并通过iframe嵌入网页。最后提供版本更新方法和环境变量维护建议，附官方文档参考。</summary>
+    
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/"/>
+    
+    
+    <category term="工具" scheme="https://wangbin-blog.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="AI" scheme="https://wangbin-blog.github.io/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp</title>
@@ -257,7 +441,7 @@
     <link href="https://wangbin-blog.github.io/post/e047a4b0.html"/>
     <id>https://wangbin-blog.github.io/post/e047a4b0.html</id>
     <published>2024-10-29T12:31:13.000Z</published>
-    <updated>2024-12-19T06:31:40.216Z</updated>
+    <updated>2025-03-25T03:23:18.313Z</updated>
     
     
     <summary type="html">“阅读APP”，一个专为安卓平台设计的小说阅读应用。该应用支持自定义书源和规则，用户可以轻松抓取网页数据，方便找书和看书。软件提供高度自定义的阅读界面，包括字体、颜色、背景、行距、段距等设置，并支持替换净化功能，去除广告。此外，还支持本地TXT和EPUB阅读，多种翻页模式供用户选择。</summary>

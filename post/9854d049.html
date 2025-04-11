@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="3B01D613E431869120208BEE26D7B148">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文演示Dify工作流扩展能力：1. 在知识库检索流程后新增高德天气API节点，实现adcode到实时天气转换；2. 详解工具节点参数配置（输入绑定LLM输出&#x2F;输出映射最终结果）；3. 介绍自定义工具开发框架（继承BuiltinTool类实现业务逻辑封装）。通过外部API集成突破大模型实时数据局限，为构建天气预报、金融数据等场景应用提供标准范式，展现Dify工作流编排的扩展性与实用性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dify应用实战(2) - 联网工具">
+<meta property="og:url" content="https://wangbin-blog.github.io/post/9854d049.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="本文演示Dify工作流扩展能力：1. 在知识库检索流程后新增高德天气API节点，实现adcode到实时天气转换；2. 详解工具节点参数配置（输入绑定LLM输出&#x2F;输出映射最终结果）；3. 介绍自定义工具开发框架（继承BuiltinTool类实现业务逻辑封装）。通过外部API集成突破大模型实时数据局限，为构建天气预报、金融数据等场景应用提供标准范式，展现Dify工作流编排的扩展性与实用性。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/f46b7789b8b04d10b9369232d334b5f1640%3Fwx_fmt%3Dpng%26from%3Dappmsg">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/d6243ecb8edf4fc9b78d67b5ce350584640%3Fwx_fmt%3Dpng%26from%3Dappmsg">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/1f6e5a4705524060adf02a26137a6425640%3Fwx_fmt%3Dpng%26from%3Dappmsg">
+<meta property="article:published_time" content="2025-04-11T01:46:46.324Z">
+<meta property="article:modified_time" content="2025-04-11T02:39:47.394Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/f46b7789b8b04d10b9369232d334b5f1640%3Fwx_fmt%3Dpng%26from%3Dappmsg">
+
+
+<link rel="canonical" href="https://wangbin-blog.github.io/post/9854d049.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/9854d049.html","path":"post/9854d049.html","title":"Dify应用实战(2) - 联网工具"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Dify应用实战(2) - 联网工具 | 小王的博客</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?a295ea9fbf5381fcf14b81229366c7b1"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">一个上了年纪的猿人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">14</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">52</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/nav/" rel="section"><i class="fa fa-location-arrow fa-fw"></i>百宝箱</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#01-%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E5%81%9A"><span class="nav-number">2.</span> <span class="nav-text">01. 动手做一做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02-%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%BC%80%E5%8F%91"><span class="nav-number">3.</span> <span class="nav-text">02. 工具使用与开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Think.Wang"
+      src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dhbmdiaW4tYmxvZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangbin-blog"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/9854d049.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Dify应用实战(2) - 联网工具 | 小王的博客">
+      <meta itemprop="description" content="本文演示Dify工作流扩展能力：1. 在知识库检索流程后新增高德天气API节点，实现adcode到实时天气转换；2. 详解工具节点参数配置（输入绑定LLM输出/输出映射最终结果）；3. 介绍自定义工具开发框架（继承BuiltinTool类实现业务逻辑封装）。通过外部API集成突破大模型实时数据局限，为构建天气预报、金融数据等场景应用提供标准范式，展现Dify工作流编排的扩展性与实用性。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Dify应用实战(2) - 联网工具
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-04-11 09:46:46 / 修改时间：10:39:47" itemprop="dateCreated datePublished" datetime="2025-04-11T09:46:46+08:00">2025-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>719</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">本文演示Dify工作流扩展能力：1. 在知识库检索流程后新增高德天气API节点，实现adcode到实时天气转换；2. 详解工具节点参数配置（输入绑定LLM输出/输出映射最终结果）；3. 介绍自定义工具开发框架（继承BuiltinTool类实现业务逻辑封装）。通过外部API集成突破大模型实时数据局限，为构建天气预报、金融数据等场景应用提供标准范式，展现Dify工作流编排的扩展性与实用性。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>让大家知道如何通过知识库的能力，获取指定的结果。这在很多的应用场景是非常有用的能力。</p>
+<p>比如依赖有大量规则文档的行业，就会大大减少查找核对的工作。经常看到律师朋友，医生朋友发朋友圈说，AI不行啊，老是”胡说八道”，出现幻觉。</p>
+<p>这其实是高估了大语言模型的能力，即使是垂直领域做过SFT，也不可能精确的回答准真正匹配规则的内容。并且微调训练成本也不低，不可能随时更新语料（标注数据）。通过RAG的方法，就可以在特定场景下，严格通过给出的文档内的规则，给出结果。</p>
+</blockquote>
+<h3 id="01-动手做一做"><a href="#01-动手做一做" class="headerlink" title="01. 动手做一做"></a>01. 动手做一做</h3><pre><code>基于上一节课的流程，在大模型节点后新增一个工具节点，选择搜索&quot;天气&quot;，点中&quot;高德天气预报&quot;。
+
+选择这个主要是前面知识库的地区名和code对照表，就是高德的。另外这个接口也比较简单，输入就是一个adcode，输出就是今天该地区的天气结果。
+</code></pre>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/f46b7789b8b04d10b9369232d334b5f1640%3Fwx_fmt%3Dpng%26from%3Dappmsg" alt="图片"></p>
+<pre><code>添加之后，连接LLM节点和新增节点，再连接新增节点和结束节点。修改参数(一定要先连接)，&quot;天气预报&quot;的输入，选择&quot;LLM&quot;的text。然后把结束节点的输出也改为&quot;天气预报&quot;的text。
+
+点击&quot;发布&quot;，保存。提示&quot;操作成功&quot;。就可以进行测试了。测试如下：
+</code></pre>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/d6243ecb8edf4fc9b78d67b5ce350584640%3Fwx_fmt%3Dpng%26from%3Dappmsg" alt="图片"></p>
+<h3 id="02-工具使用与开发"><a href="#02-工具使用与开发" class="headerlink" title="02. 工具使用与开发"></a>02. 工具使用与开发</h3><pre><code>一个正常应用的流程，其实都是非常复杂的。都需要经历很多步的操作，才能最终完成一项任务。
+
+对于除大模型以外的工作，都需要工具进行配合。比如，大模型不可能直接得到今天某地的天气结果，需要通过API实时查询才行。那么通过LLM和天气预报工具进行结合，便实现了整个过程。
+
+今天的任务，有现成的工具能使用。但是如果没有现有的工具，或者现有工具无法满足需求，就需要进行定制化开发。
+
+基于Dify良好的设计，真要增加插件功能，还不算太难。不过这不是这一篇的重点，大概介绍一下吧。如果有兴趣，后面可以详谈。
+
+通过扩展BuiltinTool类，将处理逻辑封装进&quot;invoke tools&quot;。最后返回create\_text\_message对象，包含处理后的数据或者异常信息，即可。
+</code></pre>
+<p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/04/1f6e5a4705524060adf02a26137a6425640%3Fwx_fmt%3Dpng%26from%3Dappmsg" alt="图片"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><pre><code>今天在上次的工作流基础上，进一步增加外部工具获取数据的过程。并简单了解，实现类似功能的方法。为今后自己实际业务的开发奠定基础。
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/27c2ef8d.html" rel="prev" title="Dify应用实战(1)-知识库检索">
+                  <i class="fa fa-angle-left"></i> Dify应用实战(1)-知识库检索
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/8053732f.html" rel="next" title="Dify应用实战(3) - 代码处理">
+                  Dify应用实战(3) - 代码处理 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div></div>
+  </main>
+
+    
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">104k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:16</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/jquery-3.3.1.min.js"></script><script src="/js/comments.js"></script><script src="/js/liyhbk.js"></script><script src="/js/MouseClick.js"></script><script src="/js/mouse.min.js"></script><script src="/js/fish.js"></script><script src="/js/back2topAir.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"wangbin-blog/wangbin-blog.github.io","issue_term":"og:title","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+  <p id="back-top" style=""><a href="#top"><span></span></a></p>
+  <div id="jsi-flying-fish-container" class="container" style="width: 100%;height: 280px;position: fixed;z-index: 1;opacity: 0.37;bottom: 0;left: 0;"></canvas></div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

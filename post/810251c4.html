@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="3B01D613E431869120208BEE26D7B148">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文详解ollama离线部署全流程：1. 跨平台安装指南（含Docker部署）及模型存储路径修改；2. DeepSeek全系模型参数对照与硬件需求说明；3. 提供模型下载加速方案（网盘&#x2F;魔塔社区&#x2F;HF镜像）及API安全加固策略；4. 集成Open-WebUI可视化界面，配置docker-compose实现聊天机器人及知识库功能；5. 收录下载中断、局域网访问、API鉴权等10+常见问题解决方案，附">
+<meta property="og:type" content="article">
+<meta property="og:title" content="详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决">
+<meta property="og:url" content="https://wangbin-blog.github.io/post/810251c4.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="本文详解ollama离线部署全流程：1. 跨平台安装指南（含Docker部署）及模型存储路径修改；2. DeepSeek全系模型参数对照与硬件需求说明；3. 提供模型下载加速方案（网盘&#x2F;魔塔社区&#x2F;HF镜像）及API安全加固策略；4. 集成Open-WebUI可视化界面，配置docker-compose实现聊天机器人及知识库功能；5. 收录下载中断、局域网访问、API鉴权等10+常见问题解决方案，附">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-11T01:20:15.085Z">
+<meta property="article:modified_time" content="2025-04-11T01:35:18.021Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wangbin-blog.github.io/post/810251c4.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/810251c4.html","path":"post/810251c4.html","title":"详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决 | 小王的博客</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?a295ea9fbf5381fcf14b81229366c7b1"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">一个上了年纪的猿人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">14</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">52</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/nav/" rel="section"><i class="fa fa-location-arrow fa-fw"></i>百宝箱</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ollama-%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1 ollama 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%A1%AC%E4%BB%B6%E8%A6%81%E6%B1%82"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 硬件要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Windows-macOS-Linux-%E4%B8%8B%E5%AE%89%E8%A3%85-ollama"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Windows \ macOS \ Linux 下安装 ollama</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%9F%BA%E4%BA%8E-Docker-%E5%AE%89%E8%A3%85-ollama"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 基于 Docker 安装 ollama</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E4%BF%AE%E6%94%B9-ollama-%E6%A8%A1%E5%9E%8B%E9%BB%98%E8%AE%A4%E4%BF%9D%E5%AD%98%E4%BD%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 修改 ollama 模型默认保存位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-%E4%BD%BF%E7%94%A8%EF%BC%9A%E5%9F%BA%E4%BA%8E-API-%E5%BD%A2%E5%BC%8F%E8%AE%BF%E9%97%AE-ollama-%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 使用：基于 API 形式访问 ollama 服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-ollama-%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">2 使用 ollama 下载和运行模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%BD%BF%E7%94%A8-ollama-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 使用 ollama 命令行下载和运行模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%BD%BF%E7%94%A8-ollama-create-%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 使用 ollama create 导入本地模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ollama-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">3 ollama 常用命令参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ollama-%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3"><span class="nav-number">4.</span> <span class="nav-text">4 ollama 安装使用常见问题及解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-ollama-%E6%A8%A1%E5%9E%8B%E4%B8%8B%E8%BD%BD%E6%85%A2%EF%BC%9A%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 ollama 模型下载慢：离线下载与安装模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-%E5%BC%80%E5%A7%8B%E5%BF%AB%E5%90%8E%E6%9D%A5%E6%85%A2%EF%BC%9A%E9%97%B4%E9%9A%94%E6%80%A7%E9%87%8D%E5%90%AF%E4%B8%8B%E8%BD%BD"><span class="nav-number">4.1.1.</span> <span class="nav-text">4.1.1 开始快后来慢：间隔性重启下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-%E9%80%9A%E8%BF%87%E7%BD%91%E7%9B%98%E7%AD%89%E7%AC%AC%E4%B8%89%E6%96%B9%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AF%BC%E5%85%A5-ollama-%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.1.2.</span> <span class="nav-text">4.1.2 通过网盘等第三方离线下载并导入 ollama 模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-%E4%BB%8E%E5%9B%BD%E5%86%85%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%8F%90%E4%BE%9B%E7%AB%99%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.1.3.</span> <span class="nav-text">4.1.3 从国内大模型提供站下载模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-ollama-%E6%9C%8D%E5%8A%A1%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AE"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 ollama 服务设置允许局域网访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E4%B8%BA-ollama-API-%E6%9C%8D%E5%8A%A1%E8%AE%BF%E9%97%AE%E5%A2%9E%E5%8A%A0-API-KEY-%E4%BF%9D%E6%8A%A4"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 为 ollama API 服务访问增加 API KEY 保护</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E9%9B%86%E6%88%90%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">5 集成可视化工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E7%A4%BA%E4%BE%8B%EF%BC%9A%E5%9F%BA%E4%BA%8E-docker-%E9%83%A8%E7%BD%B2-open-webui-%E5%B9%B6%E9%85%8D%E7%BD%AE%E9%9B%86%E6%88%90-ollama-%E6%9C%8D%E5%8A%A1"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 示例：基于 docker 部署 open-webui 并配置集成 ollama 服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%8F%82%E8%80%83"><span class="nav-number">6.</span> <span class="nav-text">总结与参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E8%BD%BD"><span class="nav-number">7.</span> <span class="nav-text">转载</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Think.Wang"
+      src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dhbmdiaW4tYmxvZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangbin-blog"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/810251c4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决 | 小王的博客">
+      <meta itemprop="description" content="本文详解ollama离线部署全流程：1. 跨平台安装指南（含Docker部署）及模型存储路径修改；2. DeepSeek全系模型参数对照与硬件需求说明；3. 提供模型下载加速方案（网盘/魔塔社区/HF镜像）及API安全加固策略；4. 集成Open-WebUI可视化界面，配置docker-compose实现聊天机器人及知识库功能；5. 收录下载中断、局域网访问、API鉴权等10+常见问题解决方案，附中文社区资源参考。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-04-11 09:20:15 / 修改时间：09:35:18" itemprop="dateCreated datePublished" datetime="2025-04-11T09:20:15+08:00">2025-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>15 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">本文详解ollama离线部署全流程：1. 跨平台安装指南（含Docker部署）及模型存储路径修改；2. DeepSeek全系模型参数对照与硬件需求说明；3. 提供模型下载加速方案（网盘/魔塔社区/HF镜像）及API安全加固策略；4. 集成Open-WebUI可视化界面，配置docker-compose实现聊天机器人及知识库功能；5. 收录下载中断、局域网访问、API鉴权等10+常见问题解决方案，附中文社区资源参考。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>ollama 是一个开源的本地大语言模型运行框架，它提供了非常简单便捷的使用形式，让用户可以十分方便的在本地机器上部署和运行大型语言模型，从而实现免费离线的方式使用 LLM 能力，并确保私有数据的隐私和安全性。</p>
+<h2 id="1-ollama-安装"><a href="#1-ollama-安装" class="headerlink" title="1 ollama 安装"></a>1 ollama 安装</h2><p>ollama 支持多种操作系统，包括 macOS、Windows、Linux 以及通过 Docker 容器运行。其安装、使用及模型下载非常简单，可以简单概括为以下几步：</p>
+<ul>
+<li><p>• 下载 ollama 安装程序并安装。</p>
+</li>
+<li><p>• 启动 ollama，执行命令下载和运行模型。如：<code>ollama run deepseek-r1:1.5b</code></p>
+</li>
+<li><p>• 以命令行交互、API 调用、第三方应用接入等形式使用其服务。</p>
+</li>
+</ul>
+<h3 id="1-1-硬件要求"><a href="#1-1-硬件要求" class="headerlink" title="1.1 硬件要求"></a>1.1 硬件要求</h3><p>ollama 本身对硬件要求并不高，主要取决于运行模型的要求。基本建议：</p>
+<blockquote>
+<p>你应该至少有 4 GB 的 RAM 来运行 1.5B 模型，至少有 8 GB 的 RAM 来运行 7B 模型，16 GB 的 RAM 来运行 13B 模型，以及 32 GB 的 RAM 来运行 33B 模型。</p>
+</blockquote>
+<p>假若需要本地私有化部署具有实用性的模型，应至少有独立显卡并有 4G 以上显存。纯 CPU 模式虽然也可以运行，但生成速度很慢，仅适用于本地开发调试体验一下。</p>
+<p>本人实测在<code>Mac Studio 2023 版(Apple M2 Max 芯片：12核、32G内存、30核显、1TB SSD)</code>上，运行 <code>deepseek:1.5b</code> 模型响应非常快，可以较为流畅的运行 <code>deepseek-r1:32b</code> 及以下的模型。</p>
+<p><strong>DeepSeek-r1 相关版本及大小参考：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数版本</th>
+<th>模型大小</th>
+<th>建议CPU</th>
+<th>建议内存</th>
+<th>建议显存</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>deepseek-r1:1.5b</td>
+<td>1.1GB</td>
+<td>4核</td>
+<td>4~8G</td>
+<td>4GB</td>
+<td>轻量级，速度快、普通文本处理</td>
+</tr>
+<tr>
+<td>deepseek-r1:7b</td>
+<td>4.7G</td>
+<td>8核</td>
+<td>16G</td>
+<td>14GB</td>
+<td>性能较好，硬件要求适中</td>
+</tr>
+<tr>
+<td>deepseek-r1:8b</td>
+<td>4.9GB</td>
+<td>8核</td>
+<td>16G</td>
+<td>14GB</td>
+<td>略强于 7b，精度更高</td>
+</tr>
+<tr>
+<td>deepseek-r1:14b</td>
+<td>9GB</td>
+<td>12核</td>
+<td>32G</td>
+<td>26GB</td>
+<td>高性能，擅长复杂任务，如数学推理、代码生成</td>
+</tr>
+<tr>
+<td>deepseek-r1:32b</td>
+<td>20GB</td>
+<td>16核</td>
+<td>64G</td>
+<td>48GB</td>
+<td>专业级，适合高精度任务</td>
+</tr>
+<tr>
+<td>deepseek-r1:70b</td>
+<td>43GB</td>
+<td>32核</td>
+<td>128G</td>
+<td>140GB</td>
+<td>顶级模型，适合大规模计算和高复杂度任务</td>
+</tr>
+<tr>
+<td>deepseek-r1:671b</td>
+<td>404GB</td>
+<td>64核</td>
+<td>512G</td>
+<td>1342GB</td>
+<td>超大规模，性能卓越，推理速度快</td>
+</tr>
+</tbody></table>
+<h3 id="1-2-Windows-macOS-Linux-下安装-ollama"><a href="#1-2-Windows-macOS-Linux-下安装-ollama" class="headerlink" title="1.2 Windows \ macOS \ Linux 下安装 ollama"></a>1.2 Windows \ macOS \ Linux 下安装 ollama</h3><p>Windows 和 macOS 用户可访问如下地址下载安装文件并安装：</p>
+<ul>
+<li><p>• 国内中文站下载：<span class="exturl" data-url="aHR0cDovL29sbGFtYS5vcmcuY24vZG93bmxvYWQv">http://ollama.org.cn/download/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• 官方下载：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tL2Rvd25sb2FkLw==">https://ollama.com/download/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• github release 下载：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29sbGFtYS9vbGxhbWEvcmVsZWFzZXMv">https://github.com/ollama/ollama/releases/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<p>Linux 用户可以执行如下命令一键安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://ollama.com/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，可以通过执行 <code>ollama --version</code> 命令查看 ollama 版本信息，以验证是否安装成功。</p>
+<p><strong>ollama 离线安装：</strong></p>
+<p>Windows 和 macOS 下直接复制安装文件到本地本进行安装即可。</p>
+<p>Linux 下的离线安装主要步骤参考如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /home/ollama</span><br><span class="line"><span class="built_in">cd</span> /home/ollama</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看服务器 CPU 信息获取其架构，如：x86_64</span></span><br><span class="line">lscpu</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问如下地址，下载对应架构的 ollama 安装包</span></span><br><span class="line"><span class="comment"># https://github.com/ollama/ollama/releases/</span></span><br><span class="line"><span class="comment"># - x86_64 CPU 选择下载 ollama-linux-amd64</span></span><br><span class="line"><span class="comment"># - aarch64|arm64 CPU 选择下载 ollama-linux-arm64</span></span><br><span class="line"><span class="comment"># 示例：</span></span><br><span class="line">wget https://github.com/ollama/ollama/releases/download/v0.5.11/ollama-linux-amd64.tgz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载 安装脚本，并放到 /home/ollama 目录下</span></span><br><span class="line">wget https://ollama.com/install.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 ollama-linux-amd64.tgz 和 install.sh 拷贝到需要安装的机器上，如放到 /home/ollama 目录下</span></span><br><span class="line"><span class="comment"># 然后执行如下命令：</span></span><br><span class="line">tar -zxvf ollama-linux-amd64.tgz</span><br><span class="line"><span class="built_in">chmod</span> +x install.sh</span><br><span class="line"><span class="comment"># 编辑 install.sh 文件，找到如下内容</span></span><br><span class="line">curl --fail --show-error --location --progress-bar -o <span class="variable">$TEMP_DIR</span>/ollama <span class="string">&quot;https://ollama.com/download/ollama-linux-<span class="variable">$&#123;ARCH&#125;</span><span class="variable">$&#123;VER_PARAM&#125;</span>&quot;</span></span><br><span class="line"><span class="comment"># 注释它，并在其下增加如下内容：</span></span><br><span class="line"><span class="built_in">cp</span> ./ollama-linux-amd64 <span class="variable">$TEMP_DIR</span>/ollama</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行安装脚本</span></span><br><span class="line">./install.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模型的离线下载请参考下文模型导入部分</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-基于-Docker-安装-ollama"><a href="#1-3-基于-Docker-安装-ollama" class="headerlink" title="1.3 基于 Docker 安装 ollama"></a>1.3 基于 Docker 安装 ollama</h3><p>基于 Docker 可以使得 ollama 的安装、更新与启停管理更为便捷。</p>
+<p>首先确保已安装了 docker，然后执行如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 拉取镜像</span><br><span class="line">docker pull ollama/ollama</span><br><span class="line"></span><br><span class="line"># 运行容器：CPU 模式</span><br><span class="line">docker run -d -p 11434:11434 -v /data/ollama:/root/.ollama --name ollama ollama/ollama</span><br><span class="line"># 运行容器：GPU 模式</span><br><span class="line">docker run --gpus=all -d -p 11434:11434 -v /data/ollama:/root/.ollama --name ollama ollama/ollama</span><br><span class="line"></span><br><span class="line"># 进入容器 bash 下并下载模型</span><br><span class="line">docker exec -it ollama /bin/bash</span><br><span class="line"># 下载一个模型</span><br><span class="line">ollama pull deepseek-r1:8b</span><br></pre></td></tr></table></figure>
+
+<p>也可以基于 <code>docker-compose</code> 进行启停管理。<code>docker-compose.yml</code> 参考：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line">  ollama:</span><br><span class="line">    image:ollama/ollama</span><br><span class="line">    container_name:ollama</span><br><span class="line">    restart:unless-stopped</span><br><span class="line">    ports:</span><br><span class="line">      -11434:11434</span><br><span class="line">    volumes:</span><br><span class="line">      -/data/ollama:/root/.ollama</span><br><span class="line">    environment:</span><br><span class="line">        # 允许局域网跨域形式访问API</span><br><span class="line">        OLLAMA_HOST=0.0.0.0:11434</span><br><span class="line">        OLLAMA_ORIGINS=*</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-修改-ollama-模型默认保存位置"><a href="#1-4-修改-ollama-模型默认保存位置" class="headerlink" title="1.4 修改 ollama 模型默认保存位置"></a>1.4 修改 ollama 模型默认保存位置</h3><p><code>ollama</code> 下载的模型默认的存储目录如下：</p>
+<ul>
+<li><p>• macOS: <code>~/.ollama/models</code></p>
+</li>
+<li><p>• Linux: <code>/usr/share/ollama/.ollama/models</code></p>
+</li>
+<li><p>• Windows: <code>C:\Users\&lt;username&gt;\.ollama\models</code></p>
+</li>
+</ul>
+<p>若默认位置存在磁盘空间告急的问题，可以通过设置环境变量 <code>OLLAMA_MODELS</code> 修改模型存储位置。示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># macOS / Linux：写入环境变量配置到 ~/.bashrc 文件中</span><br><span class="line">echo &#x27;export OLLAMA_MODELS=/data/ollama/models&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># Windows：按 `WIN+R` 组合键并输入 cmd 打开命令提示符</span><br><span class="line"># 然后执行如下命令写入到系统环境变量中</span><br><span class="line">setx OLLAMA_MODELS D:\data\ollama\models</span><br></pre></td></tr></table></figure>
+
+<p>如果已经下载过模型，可以从上述默认位置将 models 目录移动到新的位置。</p>
+<p>对于 docker 安装模式，则可以通过挂载卷的方式修改模型存储位置。</p>
+<h3 id="1-5-使用：基于-API-形式访问-ollama-服务"><a href="#1-5-使用：基于-API-形式访问-ollama-服务" class="headerlink" title="1.5 使用：基于 API 形式访问 ollama 服务"></a>1.5 使用：基于 API 形式访问 ollama 服务</h3><p>ollama 安装完成并正常启动后，可以通过命令行形式运行模型（如：<code>ollama run deepseek-r1:1.5b</code>），并通过命令行交互的方式进行测试。</p>
+<p>此外也可以通过访问 <code>http://localhost:11434</code> 以 API 调用的形式调用。示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl http://localhost:11434/api/generate -d &#x27;&#123;</span><br><span class="line">  &quot;model&quot;: &quot;deepseek-r1:8b&quot;,</span><br><span class="line">  &quot;stream&quot;: false,</span><br><span class="line">  &quot;prompt&quot;: &quot;你是谁&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ollama API 文档参考：</p>
+<ul>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vYXBpLw==">https://ollama.readthedocs.io/api/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29sbGFtYS9vbGxhbWEvYmxvYi9tYWluL2RvY3MvYXBpLm1k">https://github.com/ollama/ollama/blob/main/docs/api.md<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<h2 id="2-使用-ollama-下载和运行模型"><a href="#2-使用-ollama-下载和运行模型" class="headerlink" title="2 使用 ollama 下载和运行模型"></a>2 使用 ollama 下载和运行模型</h2><h3 id="2-1-使用-ollama-命令行下载和运行模型"><a href="#2-1-使用-ollama-命令行下载和运行模型" class="headerlink" title="2.1 使用 ollama 命令行下载和运行模型"></a>2.1 使用 ollama 命令行下载和运行模型</h3><p>执行如下命令下载并运行一个模型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 基本格式为：</span><br><span class="line">ollama run &lt;model_name:size&gt;</span><br><span class="line"></span><br><span class="line"># 例如下载并运行 deepseek-r1 的 1.5b 模型</span><br><span class="line"># 如果下载模型速度开始较快后面变慢，可以 kill 当前进程并重新执行</span><br><span class="line">ollama run deepseek-r1:1.5b</span><br></pre></td></tr></table></figure>
+
+<p>运行成功则会进入命令行交互模式，可以直接输入问题并获得应答反馈，也可以通过 API 调用方式测试和使用。</p>
+<p>从如下地址可搜索 ollama 所有支持的模型：</p>
+<ul>
+<li><p>• 中文站：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEub3JnLmNuL3NlYXJjaA==">https://ollama.org.cn/search<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• 官方站：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tL3NlYXJjaA==">https://ollama.com/search<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<p><strong>从 HF 和魔塔社区下载模型</strong></p>
+<p>ollama 还支持从 HF 和魔塔社区下载第三方开源模型。基本格式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 从 HF(https://huggingface.co) 下载模型的格式</span><br><span class="line">ollama run hf.co/&#123;username&#125;/&#123;reponame&#125;:latest</span><br><span class="line"># 示例：</span><br><span class="line">ollama run hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF:Q8_0</span><br><span class="line"></span><br><span class="line"># 从魔塔社区(https://modelscope.cn)下载模型的格式</span><br><span class="line">ollama run modelscope.cn/&#123;username&#125;/&#123;model&#125;</span><br><span class="line"># 示例：</span><br><span class="line">ollama run modelscope.cn/Qwen/Qwen2.5-3B-Instruct-GGUF:Q3_K_M</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-使用-ollama-create-导入本地模型"><a href="#2-2-使用-ollama-create-导入本地模型" class="headerlink" title="2.2 使用 ollama create 导入本地模型"></a>2.2 使用 ollama create 导入本地模型</h3><p>通过 <code>ollama run</code> 和 <code>ollama pull</code> 命令均是从官方地址下载模型，可能会遇到下载速度慢、下载失败等问题。</p>
+<p>ollama 支持从本地导入模型。我们可以从第三方下载模型文件并使用 <code>ollama create</code> 命令导入到 ollama 中。</p>
+<p>例如，假若我们下载了 <code>deepseek-r1:8b</code> 模型文件，并保存在 <code>/data/ollama/gguf/deepseek-r1-8b.gguf</code>，则可执行如下命令进行导入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd /data/ollama/gguf</span><br><span class="line">echo &quot;From ./deepeek-r1-8b.gguf&quot; &gt; modelfile-deepseek-r1-8b</span><br><span class="line">ollama create deepseek-r1:8b -f modelfile-deepseek-r1-8b</span><br><span class="line"></span><br><span class="line"># 查看模型信息</span><br><span class="line">ollama list</span><br><span class="line">ollama show deepseek-r1:8b</span><br><span class="line"></span><br><span class="line"># 运行模型(以命令行交互模式使用)</span><br><span class="line">ollama run deepseek-r1:8b</span><br></pre></td></tr></table></figure>
+
+<p>相关文档参考：</p>
+<ul>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vaW1wb3J0Lw==">https://ollama.readthedocs.io/import/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vbW9kZWxmaWxlLw==">https://ollama.readthedocs.io/modelfile/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<h2 id="3-ollama-常用命令参考"><a href="#3-ollama-常用命令参考" class="headerlink" title="3 ollama 常用命令参考"></a>3 ollama 常用命令参考</h2><p>ollama 提供了丰富的命令行工具，方便用户对模型进行管理。</p>
+<ul>
+<li><p>• <code>ollama --help</code>：查看帮助信息。</p>
+</li>
+<li><p>• <code>ollama serve</code>：启动 ollama 服务。</p>
+</li>
+<li><p>• <code>ollama create &lt;model-name&gt; [-f Modelfile]</code>：根据一个 Modelfile 文件导入模型。</p>
+</li>
+<li><p>• <code>ollama show &lt;model-name:[size]&gt;</code>：显示某个模型的详细信息。</p>
+</li>
+<li><p>• <code>ollama run &lt;model-name:[size]&gt;</code>：运行一个模型。若模型不存在会先拉取它。</p>
+</li>
+<li><p>• <code>ollama stop &lt;model-name:[size]&gt;</code>：停止一个正在运行的模型。</p>
+</li>
+<li><p>• <code>ollama pull &lt;model-name:[size]&gt;</code>：拉取指定的模型。</p>
+</li>
+<li><p>• <code>ollama push &lt;model-name&gt;</code>：将一个模型推送到远程模型仓库。</p>
+</li>
+<li><p>• <code>ollama list</code>：列出所有模型。</p>
+</li>
+<li><p>• <code>ollama ps</code>：列出所有正在运行的模型。</p>
+</li>
+<li><p>• <code>ollama cp &lt;source-model-name&gt; &lt;new-model-name&gt;</code>：复制一个模型。</p>
+</li>
+<li><p>• <code>ollama rm &lt;model-name:[size]&gt;</code>：删除一个模型。</p>
+</li>
+</ul>
+<h2 id="4-ollama-安装使用常见问题及解决"><a href="#4-ollama-安装使用常见问题及解决" class="headerlink" title="4 ollama 安装使用常见问题及解决"></a>4 ollama 安装使用常见问题及解决</h2><h3 id="4-1-ollama-模型下载慢：离线下载与安装模型"><a href="#4-1-ollama-模型下载慢：离线下载与安装模型" class="headerlink" title="4.1 ollama 模型下载慢：离线下载与安装模型"></a>4.1 ollama 模型下载慢：离线下载与安装模型</h3><p>通过 ollama 官方命令拉取模型，可能会遇到网速慢、下载时间过长等问题。</p>
+<h4 id="4-1-1-开始快后来慢：间隔性重启下载"><a href="#4-1-1-开始快后来慢：间隔性重启下载" class="headerlink" title="4.1.1 开始快后来慢：间隔性重启下载"></a>4.1.1 开始快后来慢：间隔性重启下载</h4><p>由于模型文件较大，下载过程中可能会遇到开始网速还可以，后面变慢的情况。许多网友反馈退出然后重试则速度就可以上来了，所以可以尝试通过每隔一段时间退出并重新执行的方式以保持较快的下载速率。</p>
+<p>以下是基于该逻辑实现的下载脚本，注意将其中的 <code>deepseek-r1:7b</code> 替换为你希望下载的模型版本。</p>
+<p>Windows 下在 powershell 中执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">while ($true) &#123;</span><br><span class="line">    $modelExists = ollama list | Select-String &quot;deepseek-r1:7b&quot;</span><br><span class="line"></span><br><span class="line">    if ($modelExists) &#123;</span><br><span class="line">        Write-Host &quot;模型已下载完成！&quot;</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Write-Host &quot;开始下载模型...&quot;</span><br><span class="line">    $process = Start-Process -FilePath &quot;ollama&quot; -ArgumentList &quot;run&quot;, &quot;deepseek-r1:7b&quot; -PassThru -NoNewWindow</span><br><span class="line"></span><br><span class="line">    # 等待60秒</span><br><span class="line">    Start-Sleep -Seconds 60</span><br><span class="line"></span><br><span class="line">    try &#123;</span><br><span class="line">        Stop-Process -Id $process.Id -Force -ErrorAction Stop</span><br><span class="line">        Write-Host &quot;已中断本次下载，准备重新尝试...&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    catch &#123;</span><br><span class="line">        Write-Host &quot;error&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>macOS / Linux</code> 下在终端中执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">whiletrue; do</span><br><span class="line">    # 检查模型是否已下载完成</span><br><span class="line">    modelExists=$(ollama list | grep &quot;deepseek-r1:7b&quot;)</span><br><span class="line"></span><br><span class="line">    if [ -n &quot;$modelExists&quot; ]; then</span><br><span class="line">        echo&quot;模型已下载完成！&quot;</span><br><span class="line">        break</span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">    # 启动ollama进程并记录</span><br><span class="line">    echo&quot;开始下载模型...&quot;</span><br><span class="line">    ollama run deepseek-r1:7b &amp;  # 在后台启动进程</span><br><span class="line">    processId=$!  # 获取最近启动的后台进程的PID</span><br><span class="line"></span><br><span class="line">    # 等待60秒</span><br><span class="line">    sleep 60</span><br><span class="line"></span><br><span class="line">    # 尝试终止进程</span><br><span class="line">    ifkill -0 $processId 2&gt;/dev/null; then</span><br><span class="line">        kill -9 $processId# 强制终止进程</span><br><span class="line">        echo&quot;已中断本次下载，准备重新尝试...&quot;</span><br><span class="line">    else</span><br><span class="line">        echo&quot;进程已结束，无需中断&quot;</span><br><span class="line">    fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-1-2-通过网盘等第三方离线下载并导入-ollama-模型"><a href="#4-1-2-通过网盘等第三方离线下载并导入-ollama-模型" class="headerlink" title="4.1.2 通过网盘等第三方离线下载并导入 ollama 模型"></a>4.1.2 通过网盘等第三方离线下载并导入 ollama 模型</h4><p>可以通过国内的第三方离线下载模型文件，再导入到 ollama 中。详细参考 2.2 章节。</p>
+<p><code>deepseek-r1</code> 相关模型夸克网盘下载：</p>
+<blockquote>
+<p>链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW4ucXVhcmsuY24vcy83ZmEyMzVjYzY0ZWY=">https://pan.quark.cn/s/7fa235cc64ef<i class="fa fa-external-link-alt"></i></span> 提取码：wasX</p>
+</blockquote>
+<p>也可以从 魔塔社区、HuggingFace 等大模型社区搜索并下载 stuff 格式的模型文件。例如：</p>
+<ul>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9tb2RlbHNjb3BlLmNuL21vZGVscy91bnNsb3RoL0RlZXBTZWVrLVIxLURpc3RpbGwtUXdlbi03Qi1HR1VGL2ZpbGVz">https://modelscope.cn/models/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF/files<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• <span class="exturl" data-url="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby91bnNsb3RoL0RlZXBTZWVrLVIxLUdHVUY=">https://huggingface.co/unsloth/DeepSeek-R1-GGUF<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<h4 id="4-1-3-从国内大模型提供站下载模型"><a href="#4-1-3-从国内大模型提供站下载模型" class="headerlink" title="4.1.3 从国内大模型提供站下载模型"></a>4.1.3 从国内大模型提供站下载模型</h4><p>ollama 支持从魔塔社区直接下载模型。其基本格式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`ollama run modelscope.cn/&#123;model-id&#125;`</span><br></pre></td></tr></table></figure>
+
+<p>一个模型仓库可能包含多个模型，可以指定到具体的模型文件名以只下载它。示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ollama run modelscope.cn/Qwen/Qwen2.5-3B-Instruct-GGUF</span><br><span class="line">#</span><br><span class="line">ollama run modelscope.cn/Qwen/Qwen2.5-3B-Instruct-GGUF:qwen2.5-3b-instruct-q3_k_m.gguf</span><br></pre></td></tr></table></figure>
+
+<p>下载 <code>deepseek-r1</code> 模型命令参考：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># deepseek-r1:7b</span><br><span class="line">ollama run modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF:DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf</span><br><span class="line"># deepseek-r1:14b</span><br><span class="line">ollama run modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q4_K_M</span><br><span class="line"># deepseek-r1:32b</span><br><span class="line">ollama run modelscope.cn/unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF:Q4_K_M</span><br></pre></td></tr></table></figure>
+
+<p>此外，也可以从 HF 的国内镜像站（<span class="exturl" data-url="aHR0cHM6Ly9oZi1taXJyb3IuY29t77yJ5p+l5om+5ZKM5ouJ5Y+W5qih5Z6L77yM5pa55rOV5LiO5LiK6L+w57G75Ly877ya">https://hf-mirror.com）查找和拉取模型，方法与上述类似：<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 基本格式</span><br><span class="line">ollama run hf-mirror.com/&#123;username&#125;/&#123;reponame&#125;:&#123;label&#125;</span><br><span class="line"></span><br><span class="line"># 示例 - 拉取 deepseek-r1:7b</span><br><span class="line">ollama run hf-mirror.com/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF:Q4_K_M</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-ollama-服务设置允许局域网访问"><a href="#4-2-ollama-服务设置允许局域网访问" class="headerlink" title="4.2 ollama 服务设置允许局域网访问"></a>4.2 ollama 服务设置允许局域网访问</h3><p>默认情况下 API 服务仅允许本机访问，若需要允许局域网其他设备直接访问，可修改环境变量 <code>OLLAMA_HOST</code> 为 <code>0.0.0.0</code>，并修改 <code>OLLAMA_ORIGINS</code> 为允许的域名或 IP 地址。</p>
+<p>环境变量设置示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># windows 命令提示符下执行：</span><br><span class="line">setx OLLAMA_HOST 0.0.0.0:11434</span><br><span class="line">setx OLLAMA_ORIGINS *</span><br><span class="line"></span><br><span class="line"># macOS 终端下执行：</span><br><span class="line">launchctl setenv OLLAMA_HOST &quot;0.0.0.0:11434&quot;</span><br><span class="line">launchctl setenv OLLAMA_ORIGINS &quot;*&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特别注意：</strong></p>
+<ul>
+<li><p>• <strong>如果你是在云服务器等拥有公网IP的环境上部署，请谨慎做此设置，否则可能导致 API 服务被恶意调用。</strong></p>
+</li>
+<li><p>• 若需要局域网其他设备访问，请确保防火墙等安全设置允许 11434 端口访问。</p>
+</li>
+<li><p>• 若需要自定义访问端口号，可通过环境变量 <code>OLLAMA_HOST</code> 设置，如：<code>OLLAMA_HOST=0.0.0.0:11435</code>。</p>
+</li>
+</ul>
+<h3 id="4-3-为-ollama-API-服务访问增加-API-KEY-保护"><a href="#4-3-为-ollama-API-服务访问增加-API-KEY-保护" class="headerlink" title="4.3 为 ollama API 服务访问增加 API KEY 保护"></a>4.3 为 ollama API 服务访问增加 API KEY 保护</h3><p><strong>为云服务器部署的服务增加 API KEY 以保护服务</strong><br>如果你是通过云服务器部署，那么需要特别注意服务安全，避免被互联网工具扫描而泄露，导致资源被第三方利用。</p>
+<p>可以通过部署 nginx 并设置代理转发，以增加 API KEY 以保护服务，同时需要屏蔽对 11434 端口的互联网直接访问形式。</p>
+<p><code>nginx</code> 配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    # 用于公网访问的端口</span><br><span class="line">    listen 8434;</span><br><span class="line">    # 域名绑定，若无域名可移除</span><br><span class="line">    server_name your_domain.com;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        # 验证 API KEY。这里的 your_api_key 应随便修改为你希望设置的内容</span><br><span class="line">        # 可通过 uuid 生成器工具随机生成一个：https://tool.lzw.me/uuid-generator</span><br><span class="line">        if ($http_authorization != &quot;Bearer your_api_key&quot;) &#123;</span><br><span class="line">            return 403;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        # 代理转发到 ollama 的 11434 端口</span><br><span class="line">        proxy_pass http://localhost:11434;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-集成可视化工具"><a href="#5-集成可视化工具" class="headerlink" title="5 集成可视化工具"></a>5 集成可视化工具</h2><p>在部署了 ollama 并拉取了 deepseek 等模型后，即可通过命令行交互和 API 服务方式使用，但使用起来并不方便。</p>
+<p>开源社区中有许多大模型相关的可视化工具，如 open-webui、chat-ui、cherry-studio、AnythingLLM 等，可以方便地集成 ollama API 服务，提供图形化界面使用，以实现聊天机器人、问答知识库等多元化应用。在官方文档中列举了大量较为流行的工具应用：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vcXVpY2tzdGFydC8jd2Vi">https://ollama.readthedocs.io/quickstart/#web<i class="fa fa-external-link-alt"></i></span></p>
+<p>我们后续会选择其中较为典型的工具进行集成和介绍。</p>
+<h3 id="5-1-示例：基于-docker-部署-open-webui-并配置集成-ollama-服务"><a href="#5-1-示例：基于-docker-部署-open-webui-并配置集成-ollama-服务" class="headerlink" title="5.1 示例：基于 docker 部署 open-webui 并配置集成 ollama 服务"></a>5.1 示例：基于 docker 部署 open-webui 并配置集成 ollama 服务</h3><p>Open WebUI 是一个开源的大语言模型项目，通过部署它可以得到一个纯本地运行的基于浏览器访问的 Web 服务。它提供了可扩展、功能丰富、用户友好的自托管 AI Web 界面，支持各种大型语言模型（LLM）运行器，可以通过配置形式便捷的集成 ollama、OpenAI 等提供的 API。</p>
+<p>通过 Open WebUI 可以实现聊天机器人、本地知识库、图像生成等丰富的大模型应用功能。</p>
+<p>在开始之前，请确保你的系统已经安装了 docker。</p>
+<p>接着拉取大语言模型 <code>deepseek-r1:8b</code> 和用于 RAG 构建本地知识库的嵌入模型 <code>bge-m3</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`ollama pull deepseek-r1:8b ollama pull bge-m3`</span><br></pre></td></tr></table></figure>
+
+<p>然后新建文件 <code>docker-compose.yml</code>，内容参考：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line">  open-webui:</span><br><span class="line">    image:ghcr.io/open-webui/open-webui:main</span><br><span class="line">    environment:</span><br><span class="line">      -OLLAMA_API_BASE_URL=http://ollama:11434/api</span><br><span class="line">      -HF_ENDPOINT=https://hf-mirror.com</span><br><span class="line">      -WEBUI_NAME=&quot;LZW的LLM服务&quot;</span><br><span class="line">      # 禁用 OPENAI API 的请求。若你的网络环境无法访问 openai，请务必设置该项为 false</span><br><span class="line">      # 否则在登录成功时，会因为同时请求了 openai 接口而导致白屏时间过长</span><br><span class="line">      -ENABLE_OPENAI_API=false</span><br><span class="line">      # 设置允许跨域请求服务的域名。* 表示允许所有域名</span><br><span class="line">      -CORS_ALLOW_ORIGIN=*</span><br><span class="line">      # 开启图片生成</span><br><span class="line">      -ENABLE_IMAGE_GENERATION=true</span><br><span class="line">      # 默认模型</span><br><span class="line">      -DEFAULT_MODELS=deepseek-r1:8b</span><br><span class="line">      # RAG 构建本地知识库使用的默认嵌入域名</span><br><span class="line">      -RAG_EMBEDDING_MODEL=bge-m3</span><br><span class="line">    ports:</span><br><span class="line">      -8080:8080</span><br><span class="line">    volumes:</span><br><span class="line">      -./open_webui_data:/app/backend/data</span><br><span class="line">    extra_hosts:</span><br><span class="line">      # - host.docker.internal:host-gateway</span><br></pre></td></tr></table></figure>
+
+<p>这里需注意 <code>environment</code> 环境变量部分的自定义设置。许多设置也可以通过登录后在 web 界面进行修改。</p>
+<p>在该目录下执行该命令以启动服务：<code>docker-compose up -d</code>。成功后即可通过浏览器访问：<code>http://localhost:8080</code>。</p>
+<p>服务镜像更新参考：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 拉取新镜像</span><br><span class="line">docker-compose pull</span><br><span class="line"># 重启服务</span><br><span class="line">docker-compose up -d --remove-orphans</span><br><span class="line"># 清理镜像</span><br><span class="line">docker image prune</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>• open-webui 详细文档参考：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9wZW53ZWJ1aS5jb20vZ2V0dGluZy1zdGFydGVkL2Vudi1jb25maWd1cmF0aW9u">https://docs.openwebui.com/getting-started/env-configuration<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p><strong>可选：开启“联网搜索”功能</strong></p>
+<p>操作路径：<code>设置 - 联网搜索 - 启用联网搜索</code></p>
+<p>当前已支持接入的联网搜索引擎中，在不需要魔法上网的情况下，有 bing 和 bocha 可以选择接入。基本只需要前往注册并获取 API KEY 回填到这里即可。如果需要保护隐私数据，请不要开启并配置该功能。</p>
+<ul>
+<li>• 博查文档：<span class="exturl" data-url="aHR0cHM6Ly9hcTZreTJiOG5xbC5mZWlzaHUuY24vd2lraS9YZ2VYd3NuN29pREVDMGtINk8zY1VLdGtuU1I=">https://aq6ky2b8nql.feishu.cn/wiki/XgeXwsn7oiDEC0kH6O3cUKtknSR<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="总结与参考"><a href="#总结与参考" class="headerlink" title="总结与参考"></a>总结与参考</h2><p>通过以上内容，我们了解了 ollama 在国内环境下的安装使用方法，并介绍了因为国内网络特色导致安装过程可能会遇到的常见问题及解决办法。希望这些内容对你有所帮助，如果你有任何问题或建议，欢迎在评论区留言交流。</p>
+<ul>
+<li><p>• ollama 官方站：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tLw==">https://ollama.com<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• ollama 中文站：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEub3JnLmNuLw==">https://ollama.org.cn<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• ollama 入门：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vcXVpY2tzdGFydC8=">https://ollama.readthedocs.io/quickstart/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• ollama 常见问题：<span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEucmVhZHRoZWRvY3MuaW8vZmFxLw==">https://ollama.readthedocs.io/faq/<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• 魔塔社区：<span class="exturl" data-url="aHR0cHM6Ly9tb2RlbHNjb3BlLmNuLw==">https://modelscope.cn<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• HF Mirror：<span class="exturl" data-url="aHR0cHM6Ly9oZi1taXJyb3IuY29tLw==">https://hf-mirror.com<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>• open-webui 文档：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9wZW53ZWJ1aS5jb20v">https://docs.openwebui.com<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<h2 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h2><p> 本文转载自<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvMWNicGY5SWxMZ2c5TkFwazUzMjJHQQ==">志文工作室<i class="fa fa-external-link-alt"></i></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/47d1d509.html" rel="prev" title="Dify部署及简单应用">
+                  <i class="fa fa-angle-left"></i> Dify部署及简单应用
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/27c2ef8d.html" rel="next" title="Dify应用实战(1)-知识库检索">
+                  Dify应用实战(1)-知识库检索 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div></div>
+  </main>
+
+    
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">104k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:16</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/jquery-3.3.1.min.js"></script><script src="/js/comments.js"></script><script src="/js/liyhbk.js"></script><script src="/js/MouseClick.js"></script><script src="/js/mouse.min.js"></script><script src="/js/fish.js"></script><script src="/js/back2topAir.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"wangbin-blog/wangbin-blog.github.io","issue_term":"og:title","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+  <p id="back-top" style=""><a href="#top"><span></span></a></p>
+  <div id="jsi-flying-fish-container" class="container" style="width: 100%;height: 280px;position: fixed;z-index: 1;opacity: 0.37;bottom: 0;left: 0;"></canvas></div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
