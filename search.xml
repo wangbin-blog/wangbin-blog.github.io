@@ -11987,4 +11987,60 @@ Database changed
         <tag>AI</tag>
       </tags>
   </entry>
+  <entry>
+    <title>docker 离线安装（分步法&amp;一键法）</title>
+    <url>/post/f5278042.html</url>
+    <content><![CDATA[<p>原文：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vNTA1ZG9ua2V5L3AvMTgxNTE3MDU=">https://www.cnblogs.com/505donkey/p/18151705<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h3><p>操作系统：Centos7.99<br>内核版本：3.10.0-1160.el7.x86_64<br>安装用户：root</p>
+<h3 id="二、docker-离线安装"><a href="#二、docker-离线安装" class="headerlink" title="二、docker 离线安装"></a>二、docker 离线安装</h3><h4 id="1-下载压缩包"><a href="#1-下载压缩包" class="headerlink" title="1. 下载压缩包"></a>1. 下载压缩包</h4><p>官网下载地址：<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==">https://download.docker.com/linux/static/stable/x86_64&#x2F;<i class="fa fa-external-link-alt"></i></span></p>
+<p>这里默认选择最新版本（28.1.1）</p>
+<h4 id="2-上传压缩包并解压"><a href="#2-上传压缩包并解压" class="headerlink" title="2. 上传压缩包并解压"></a>2. 上传压缩包并解压</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar zxvf docker-28.1.1.tgz </span><br></pre></td></tr></table></figure>
+
+<h4 id="3-配置docker命令"><a href="#3-配置docker命令" class="headerlink" title="3. 配置docker命令"></a>3. 配置docker命令</h4><p>将解压后的docker命令拷贝到 &#x2F;usr&#x2F;bin&#x2F; 下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cp docker/\* /usr/bin/</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-创建启动单元配置"><a href="#4-创建启动单元配置" class="headerlink" title="4. 创建启动单元配置"></a>4. 创建启动单元配置</h4><p>创建启动单元配置 <code>/etc/systemd/system/docker.service</code>，配置示例如下。</p>
+<p>如果有需要，也可以在<code>ExecStart=/usr/bin/dockerd</code>后面加命令行参数，比如我想指定<code>--data-root=/data/docker</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line">ExecStart=/usr/bin/dockerd</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line">Delegate=yes</span><br><span class="line">KillMode=process</span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-给启动配置赋权"><a href="#5-给启动配置赋权" class="headerlink" title="5. 给启动配置赋权"></a>5. 给启动配置赋权</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 给启动配置添加执行权限</span><br><span class="line">chmod +x /etc/systemd/system/docker.service</span><br><span class="line"># 重载单元服务配置</span><br><span class="line">systemctl daemon -reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-启动docker"><a href="#6-启动docker" class="headerlink" title="6. 启动docker"></a>6. 启动docker</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 添加 docker 开机自启</span><br><span class="line">systemctl enable docker</span><br><span class="line"># 启动 docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-安装验证"><a href="#7-安装验证" class="headerlink" title="7. 安装验证"></a>7. 安装验证</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、一键安装法"><a href="#三、一键安装法" class="headerlink" title="三、一键安装法"></a>三、一键安装法</h3><p>如果您觉得上边的步骤繁琐，也可以用下边的办法，一键安装docker。</p>
+<h4 id="3-1-制作docker-service文件"><a href="#3-1-制作docker-service文件" class="headerlink" title="3.1 制作docker.service文件"></a>3.1 制作docker.service文件</h4><p>在docker-18.06.3-ce.tgz同目录下，创建docker.service，打开编辑文件，文件内容与2.4节完全一样，此处不再赘述。</p>
+<h4 id="3-2-制作一键安装脚本"><a href="#3-2-制作一键安装脚本" class="headerlink" title="3.2 制作一键安装脚本"></a>3.2 制作一键安装脚本</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">touch install.sh</span><br></pre></td></tr></table></figure>
+
+<p>打开编辑install.sh，将以下内容复制到install.sh，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">echo &#x27;解压tar包&#x27;</span><br><span class="line">tar -xvf $1</span><br><span class="line">echo &#x27;将docker目录下所有文件复制到/usr/bin目录&#x27;</span><br><span class="line">cp docker/* /usr/bin</span><br><span class="line">echo &#x27;将docker.service 复制到/etc/systemd/system/目录&#x27;</span><br><span class="line">cp docker.service /etc/systemd/system/</span><br><span class="line">echo &#x27;添加文件可执行权限&#x27;</span><br><span class="line">chmod +x /etc/systemd/system/docker.service</span><br><span class="line">echo &#x27;重新加载配置文件&#x27;</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">echo &#x27;启动docker&#x27;</span><br><span class="line">systemctl start docker</span><br><span class="line">echo &#x27;设置开机自启&#x27;</span><br><span class="line">systemctl enable docker.service</span><br><span class="line">echo &#x27;docker安装成功&#x27;</span><br><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-制作一键卸载脚本"><a href="#3-3-制作一键卸载脚本" class="headerlink" title="3.3 制作一键卸载脚本"></a>3.3 制作一键卸载脚本</h4><p>Touch uninstall.sh，将以下内容复制到uninstall.sh，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">echo &#x27;停止docker&#x27;</span><br><span class="line">systemctl stop docker</span><br><span class="line">echo &#x27;删除docker.service&#x27;</span><br><span class="line">rm -f /etc/systemd/system/docker.service</span><br><span class="line">echo &#x27;删除docker文件&#x27;</span><br><span class="line">rm -rf /usr/bin/docker*</span><br><span class="line">echo &#x27;重新加载配置文件&#x27;</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">echo &#x27;卸载成功&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4-安装docker"><a href="#3-4-安装docker" class="headerlink" title="3.4 安装docker"></a>3.4 安装docker</h4><p>此时docker-18.06.3-ce.tgz同目录下，还有上边创建的docker.service，install.sh，uninstall.sh这3个文件：</p>
+<p>分别给install.sh和uninstall.sh赋予可执行权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod +x install.sh</span><br><span class="line">chmod +x uninstall.sh</span><br></pre></td></tr></table></figure>
+
+<p> 开始安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh install.sh docker-18.06.3-ce.tgz</span><br></pre></td></tr></table></figure>
+
+<p>验证安装</p>
+<figure class="highlight docker"><figcaption><span>-v</span></figcaption><table><tr><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、docker-compose-离线安装"><a href="#四、docker-compose-离线安装" class="headerlink" title="四、docker-compose 离线安装"></a>四、docker-compose 离线安装</h3><h4 id="1-下载压缩包-1"><a href="#1-下载压缩包-1" class="headerlink" title="1. 下载压缩包"></a>1. 下载压缩包</h4><p>官方下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvY2tlci9jb21wb3NlL3JlbGVhc2Vz">https://github.com/docker/compose/releases<i class="fa fa-external-link-alt"></i></span></p>
+<p>根据实际部署系统版本选择，例如 docker-compose-linux-x86_64，这里下载下来就是一个可执行文件。</p>
+<h4 id="2-将下载文件移动到docker命令所在目录下"><a href="#2-将下载文件移动到docker命令所在目录下" class="headerlink" title="2. 将下载文件移动到docker命令所在目录下"></a>2. 将下载文件移动到docker命令所在目录下</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\# 查看 docker 命令位置，这里为 /usr/bin</span><br><span class="line">which docker</span><br><span class="line"></span><br><span class="line"># 移动并重命名</span><br><span class="line">mv docker-compose-Linux-x86_64 /usr/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-赋予执行权限"><a href="#3-赋予执行权限" class="headerlink" title="3. 赋予执行权限"></a>3. 赋予执行权限</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod +x /usr/bin/docker-compose </span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装验证"><a href="#4-安装验证" class="headerlink" title="4. 安装验证"></a>4. 安装验证</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
 </search>

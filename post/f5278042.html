@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="msvalidate.01" content="3B01D613E431869120208BEE26D7B148">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文介绍在无法连接外网的服务器上通过离线方式安装Docker的方法，包括分步安装和一键安装两种方案，并提供了详细的步骤说明。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker 离线安装（分步法&amp;一键法）">
+<meta property="og:url" content="https://wangbin-blog.github.io/post/f5278042.html">
+<meta property="og:site_name" content="小王的博客">
+<meta property="og:description" content="本文介绍在无法连接外网的服务器上通过离线方式安装Docker的方法，包括分步安装和一键安装两种方案，并提供了详细的步骤说明。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-06T03:19:05.446Z">
+<meta property="article:modified_time" content="2025-05-06T06:20:08.876Z">
+<meta property="article:author" content="Think.Wang">
+<meta property="article:tag" content="docker">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wangbin-blog.github.io/post/f5278042.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/f5278042.html","path":"post/f5278042.html","title":"docker 离线安装（分步法&一键法）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>docker 离线安装（分步法&一键法） | 小王的博客</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?a295ea9fbf5381fcf14b81229366c7b1"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="小王的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">一个上了年纪的猿人</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">53</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/nav/" rel="section"><i class="fa fa-location-arrow fa-fw"></i>百宝箱</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">一、安装环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81docker-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">二、docker 离线安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">1. 下载压缩包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%B8%8A%E4%BC%A0%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%B9%B6%E8%A7%A3%E5%8E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2. 上传压缩包并解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AEdocker%E5%91%BD%E4%BB%A4"><span class="nav-number">2.3.</span> <span class="nav-text">3. 配置docker命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E5%8D%95%E5%85%83%E9%85%8D%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">4. 创建启动单元配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%BB%99%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE%E8%B5%8B%E6%9D%83"><span class="nav-number">2.5.</span> <span class="nav-text">5. 给启动配置赋权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%90%AF%E5%8A%A8docker"><span class="nav-number">2.6.</span> <span class="nav-text">6. 启动docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E5%AE%89%E8%A3%85%E9%AA%8C%E8%AF%81"><span class="nav-number">2.7.</span> <span class="nav-text">7. 安装验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">三、一键安装法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E5%88%B6%E4%BD%9Cdocker-service%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 制作docker.service文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E5%88%B6%E4%BD%9C%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 制作一键安装脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E5%88%B6%E4%BD%9C%E4%B8%80%E9%94%AE%E5%8D%B8%E8%BD%BD%E8%84%9A%E6%9C%AC"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 制作一键卸载脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E5%AE%89%E8%A3%85docker"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 安装docker</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81docker-compose-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">四、docker-compose 离线安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%8E%8B%E7%BC%A9%E5%8C%85-1"><span class="nav-number">4.1.</span> <span class="nav-text">1. 下载压缩包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%B0%86%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E7%A7%BB%E5%8A%A8%E5%88%B0docker%E5%91%BD%E4%BB%A4%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="nav-number">4.2.</span> <span class="nav-text">2. 将下载文件移动到docker命令所在目录下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%B5%8B%E4%BA%88%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">4.3.</span> <span class="nav-text">3. 赋予执行权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%AE%89%E8%A3%85%E9%AA%8C%E8%AF%81"><span class="nav-number">4.4.</span> <span class="nav-text">4. 安装验证</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Think.Wang"
+      src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Think.Wang</p>
+  <div class="site-description" itemprop="description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dhbmdiaW4tYmxvZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangbin-blog"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/f5278042.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
+      <meta itemprop="name" content="Think.Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王的博客">
+      <meta itemprop="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="docker 离线安装（分步法&一键法） | 小王的博客">
+      <meta itemprop="description" content="本文介绍在无法连接外网的服务器上通过离线方式安装Docker的方法，包括分步安装和一键安装两种方案，并提供了详细的步骤说明。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          docker 离线安装（分步法&一键法）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-05-06 11:19:05 / 修改时间：14:20:08" itemprop="dateCreated datePublished" datetime="2025-05-06T11:19:05+08:00">2025-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>738</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">本文介绍在无法连接外网的服务器上通过离线方式安装Docker的方法，包括分步安装和一键安装两种方案，并提供了详细的步骤说明。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>原文：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vNTA1ZG9ua2V5L3AvMTgxNTE3MDU=">https://www.cnblogs.com/505donkey/p/18151705<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h3><p>操作系统：Centos7.99<br>内核版本：3.10.0-1160.el7.x86_64<br>安装用户：root</p>
+<h3 id="二、docker-离线安装"><a href="#二、docker-离线安装" class="headerlink" title="二、docker 离线安装"></a>二、docker 离线安装</h3><h4 id="1-下载压缩包"><a href="#1-下载压缩包" class="headerlink" title="1. 下载压缩包"></a>1. 下载压缩包</h4><p>官网下载地址：<span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==">https://download.docker.com/linux/static/stable/x86_64&#x2F;<i class="fa fa-external-link-alt"></i></span></p>
+<p>这里默认选择最新版本（28.1.1）</p>
+<h4 id="2-上传压缩包并解压"><a href="#2-上传压缩包并解压" class="headerlink" title="2. 上传压缩包并解压"></a>2. 上传压缩包并解压</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf docker-28.1.1.tgz </span><br></pre></td></tr></table></figure>
+
+<h4 id="3-配置docker命令"><a href="#3-配置docker命令" class="headerlink" title="3. 配置docker命令"></a>3. 配置docker命令</h4><p>将解压后的docker命令拷贝到 &#x2F;usr&#x2F;bin&#x2F; 下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp docker/\* /usr/bin/</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-创建启动单元配置"><a href="#4-创建启动单元配置" class="headerlink" title="4. 创建启动单元配置"></a>4. 创建启动单元配置</h4><p>创建启动单元配置 <code>/etc/systemd/system/docker.service</code>，配置示例如下。</p>
+<p>如果有需要，也可以在<code>ExecStart=/usr/bin/dockerd</code>后面加命令行参数，比如我想指定<code>--data-root=/data/docker</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line">ExecStart=/usr/bin/dockerd</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line">Delegate=yes</span><br><span class="line">KillMode=process</span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-给启动配置赋权"><a href="#5-给启动配置赋权" class="headerlink" title="5. 给启动配置赋权"></a>5. 给启动配置赋权</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 给启动配置添加执行权限</span><br><span class="line">chmod +x /etc/systemd/system/docker.service</span><br><span class="line"># 重载单元服务配置</span><br><span class="line">systemctl daemon -reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-启动docker"><a href="#6-启动docker" class="headerlink" title="6. 启动docker"></a>6. 启动docker</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 添加 docker 开机自启</span><br><span class="line">systemctl enable docker</span><br><span class="line"># 启动 docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-安装验证"><a href="#7-安装验证" class="headerlink" title="7. 安装验证"></a>7. 安装验证</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、一键安装法"><a href="#三、一键安装法" class="headerlink" title="三、一键安装法"></a>三、一键安装法</h3><p>如果您觉得上边的步骤繁琐，也可以用下边的办法，一键安装docker。</p>
+<h4 id="3-1-制作docker-service文件"><a href="#3-1-制作docker-service文件" class="headerlink" title="3.1 制作docker.service文件"></a>3.1 制作docker.service文件</h4><p>在docker-18.06.3-ce.tgz同目录下，创建docker.service，打开编辑文件，文件内容与2.4节完全一样，此处不再赘述。</p>
+<h4 id="3-2-制作一键安装脚本"><a href="#3-2-制作一键安装脚本" class="headerlink" title="3.2 制作一键安装脚本"></a>3.2 制作一键安装脚本</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch install.sh</span><br></pre></td></tr></table></figure>
+
+<p>打开编辑install.sh，将以下内容复制到install.sh，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">echo &#x27;解压tar包&#x27;</span><br><span class="line">tar -xvf $1</span><br><span class="line">echo &#x27;将docker目录下所有文件复制到/usr/bin目录&#x27;</span><br><span class="line">cp docker/* /usr/bin</span><br><span class="line">echo &#x27;将docker.service 复制到/etc/systemd/system/目录&#x27;</span><br><span class="line">cp docker.service /etc/systemd/system/</span><br><span class="line">echo &#x27;添加文件可执行权限&#x27;</span><br><span class="line">chmod +x /etc/systemd/system/docker.service</span><br><span class="line">echo &#x27;重新加载配置文件&#x27;</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">echo &#x27;启动docker&#x27;</span><br><span class="line">systemctl start docker</span><br><span class="line">echo &#x27;设置开机自启&#x27;</span><br><span class="line">systemctl enable docker.service</span><br><span class="line">echo &#x27;docker安装成功&#x27;</span><br><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-制作一键卸载脚本"><a href="#3-3-制作一键卸载脚本" class="headerlink" title="3.3 制作一键卸载脚本"></a>3.3 制作一键卸载脚本</h4><p>Touch uninstall.sh，将以下内容复制到uninstall.sh，保存退出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">echo &#x27;停止docker&#x27;</span><br><span class="line">systemctl stop docker</span><br><span class="line">echo &#x27;删除docker.service&#x27;</span><br><span class="line">rm -f /etc/systemd/system/docker.service</span><br><span class="line">echo &#x27;删除docker文件&#x27;</span><br><span class="line">rm -rf /usr/bin/docker*</span><br><span class="line">echo &#x27;重新加载配置文件&#x27;</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">echo &#x27;卸载成功&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4-安装docker"><a href="#3-4-安装docker" class="headerlink" title="3.4 安装docker"></a>3.4 安装docker</h4><p>此时docker-18.06.3-ce.tgz同目录下，还有上边创建的docker.service，install.sh，uninstall.sh这3个文件：</p>
+<p>分别给install.sh和uninstall.sh赋予可执行权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x install.sh</span><br><span class="line">chmod +x uninstall.sh</span><br></pre></td></tr></table></figure>
+
+<p> 开始安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh install.sh docker-18.06.3-ce.tgz</span><br></pre></td></tr></table></figure>
+
+<p>验证安装</p>
+<figure class="highlight docker"><figcaption><span>-v</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、docker-compose-离线安装"><a href="#四、docker-compose-离线安装" class="headerlink" title="四、docker-compose 离线安装"></a>四、docker-compose 离线安装</h3><h4 id="1-下载压缩包-1"><a href="#1-下载压缩包-1" class="headerlink" title="1. 下载压缩包"></a>1. 下载压缩包</h4><p>官方下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RvY2tlci9jb21wb3NlL3JlbGVhc2Vz">https://github.com/docker/compose/releases<i class="fa fa-external-link-alt"></i></span></p>
+<p>根据实际部署系统版本选择，例如 docker-compose-linux-x86_64，这里下载下来就是一个可执行文件。</p>
+<h4 id="2-将下载文件移动到docker命令所在目录下"><a href="#2-将下载文件移动到docker命令所在目录下" class="headerlink" title="2. 将下载文件移动到docker命令所在目录下"></a>2. 将下载文件移动到docker命令所在目录下</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\# 查看 docker 命令位置，这里为 /usr/bin</span><br><span class="line">which docker</span><br><span class="line"></span><br><span class="line"># 移动并重命名</span><br><span class="line">mv docker-compose-Linux-x86_64 /usr/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-赋予执行权限"><a href="#3-赋予执行权限" class="headerlink" title="3. 赋予执行权限"></a>3. 赋予执行权限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/bin/docker-compose </span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装验证"><a href="#4-安装验证" class="headerlink" title="4. 安装验证"></a>4. 安装验证</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"><i class="fa fa-tag"></i> docker</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/a2cb2713.html" rel="prev" title="Dify应用实战(6) - 图片生成(上)">
+                  <i class="fa fa-angle-left"></i> Dify应用实战(6) - 图片生成(上)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div></div>
+  </main>
+
+    
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">104k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:19</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/jquery-3.3.1.min.js"></script><script src="/js/comments.js"></script><script src="/js/liyhbk.js"></script><script src="/js/MouseClick.js"></script><script src="/js/mouse.min.js"></script><script src="/js/fish.js"></script><script src="/js/back2topAir.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"wangbin-blog/wangbin-blog.github.io","issue_term":"og:title","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+  <p id="back-top" style=""><a href="#top"><span></span></a></p>
+  <div id="jsi-flying-fish-container" class="container" style="width: 100%;height: 280px;position: fixed;z-index: 1;opacity: 0.37;bottom: 0;left: 0;"></canvas></div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

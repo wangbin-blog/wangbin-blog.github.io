@@ -6,7 +6,7 @@
   <link href="https://wangbin-blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangbin-blog.github.io/"/>
-  <updated>2025-04-11T02:54:50.806Z</updated>
+  <updated>2025-05-06T06:20:08.876Z</updated>
   <id>https://wangbin-blog.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker 离线安装（分步法&amp;一键法）</title>
+    <link href="https://wangbin-blog.github.io/post/f5278042.html"/>
+    <id>https://wangbin-blog.github.io/post/f5278042.html</id>
+    <published>2025-05-06T03:19:05.446Z</published>
+    <updated>2025-05-06T06:20:08.876Z</updated>
+    
+    
+    <summary type="html">本文介绍在无法连接外网的服务器上通过离线方式安装Docker的方法，包括分步安装和一键安装两种方案，并提供了详细的步骤说明。</summary>
+    
+    
+    
+    <category term="docker" scheme="https://wangbin-blog.github.io/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://wangbin-blog.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Dify应用实战(6) - 图片生成(上)</title>
