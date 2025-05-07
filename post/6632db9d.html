@@ -1,295 +1,240 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【Linux】Doris 安装部署 | 小王的博客</title><meta name="keywords" content="Linux"><meta name="author" content="Think.Wang"><meta name="copyright" content="Think.Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【Linux】Doris 安装部署"><meta name="application-name" content="【Linux】Doris 安装部署"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【Linux】Doris 安装部署"><meta property="og:url" content="https://wangbin-blog.github.io/post/6632db9d.html"><meta property="og:site_name" content="小王的博客"><meta property="og:description" content="在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg"><meta property="article:author" content="Think.Wang"><meta property="article:tag" content="技术,编程,前端,后端,开源软件"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg"><meta name="description" content="在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://wangbin-blog.github.io/post/6632db9d.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🔍 分享与热心帮助","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"已经","messageNext":"天没有更新了，这篇文章可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Think.Wang","link":"链接: ","source":"来源: 小王的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2.1.2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '小王的博客',
+  title: '【Linux】Doris 安装部署',
+  postAI: '',
+  pageFillDescription: 'doris 安装部署, 一、环境配置, 1. 服务器环境, 二、安装docker, 1. 使用xftp 等工具上传docker 安装包到linux服务器, 2. 解压, 3. 复制压缩后的文件到指定文件夹, 4. 注册编辑docker服务, 5. 添加可执行权限, 6. 一键三连, 7. docker卸载, 三、安装Doris, 1、编译, 1). 使用【doris】源码需要编译这里直接使用物理机编译, 2)、使用【starrocks】无需编译直接部署即可但CPU需支持【avx2】指令集, 2、部署环境准备, 3、安装部署, 1. 下载二进制包, 2. 解压, 3. 分发部署文件, 4. 部署fe, 5. 部署BE实例, 6. 部署Broker, 4、简单使用, 1. 修改root账户密码, 2. 建库建表安装部署一环境配置服务器环境下载地址下载地址官方文档官方文档学习地址二安装使用等工具上传安装包到服务器解压复制压缩后的文件到指定文件夹注册编辑服务如果无法使用可以在上编辑好文件后上传至服务器的此目录内参考添加可执行权限一键三连启动服务设置开机自启动卸载停掉服务查看安装的文件包删除所有安装的文件包查看包是否还有删除镜像放置的位置三安装编译使用源码需要编译这里直接使用物理机编译版本之前版本依赖如下如果使用及以上系统可以执行以下命令来安装依赖如果是可以执行以下命令在之后版本依赖如下如果使用及以上系统可以执行以下命令来安装依赖如果是可以执行以下命令安装完成后自行设置环境变量等可以通过命令找到的安装目录注意的版本仍然使用的依赖编译之后的代码将使用的依赖下载源码官网地址编译上传源码到服务器后解压文件进入文件夹后执行编译支持则使用下面命令进行编译如不支持需要加编译完成后产出文件在目录中使用无需编译直接部署即可但需支持指令集下载官方镜像文档部署环境准备操作系统版本需求系统版本及以上及以上软件需求软件版本及以上操作系统安装要求在末尾加入配置表示所有用户所有组软限制和硬限制对文件打开数设为修改后需要断开远程工具如等后重新连接方可生效或者直接再临时修改一次使用确认生效检查使用编译的可以跳过此检查使用下载部署的需要检查是否支持指令集有结果输出即表明支持如果无输出则需要更换支持的机器部分情况下我们会在系统下使用虚拟机安装作为测试环境此时我们可以使用等工具在下检查宿主机的指令集支持情况操作系统检查要求系统为及以上版本下文演示使用内核版本建议在以上查看系统及内核信息时钟同步的元数据要求时间精度要小于所以所有集群所有机器要进行时钟同步避免因为时钟问题引发的元数据不一致导致服务出现异常网络需求各个实例直接通过网络进行通讯以下表格展示了所有需要的端口实例名端口名称默认端口通信方向说明上的端口用于接收来自的请求上的的端口上心跳服务端口用于接收来自的心跳上的端口用于之间通讯用户上的端口上的端口每个的配置需要保持一致用户上的端口上的之间通信用的端口上的用于接收请求注当部署多个实例时要保证的配置相同部署前请确保各个端口在应有方向上的访问权限若上述端口不与服务器中其他服务的端口冲突通常不建议修改以为例部署前若需修改端口可在配置文件中修改为需要使用的端口再次注意集群中的端口需要一致默认为配置防火墙开放端口防火墙开放集群实例默认端口命令查看开放的端口安装依赖环境或均可以使用下文演示使用的安装操作见文档安装安装采用协议进行通信用户可通过连接到集群选择版本时要求采用之后的版本因为之前不能支持长度超过个字符的用户名下文演示使用为方便集群部署和运维我们通常建议在集群服务器中选择一个节点安装当然我们也可以不安装通过外部的等图形化工具直接访问安装操作文档见安装安装部署严格来说并没有所谓的运行模式生产环境下更是不建议进行单实例部署这里将单机部署整理出来主要是考虑当用户测试环境受限于机器数量或仅希望验证功能那么也可以在一台机器上简易部署把跑起来以服务器为例在进行完部署环境的准备工作后我们开始进行单节点的部署单节点架构设计如下机器节点部署服务部署目录及数据目录设计如下后续的部署操作严格按照部署设计进行服务说明部署目录日志目录默认元数据目录部署目录日志目录默认数据目录部署目录下载二进制包的二进制部署包可在官网下载获取下载地址使用编译到文件中的文件这儿是用为例将下载好的部署包上传至目录下解压目录结构目录启动脚本关闭脚本配置文件依赖的包实例目录版本查看启动脚本关闭脚本配置文件元数据离线管理工具版本已合并入可执行文件小版本升级时替换即可页面文件实例目录版本查看启动脚本关闭脚本配置文件包小版本升级时替换即可依赖的包页面文件用户自定义函数目录重构中目前不建议使用框架头文件框架静态库文件分发部署文件重命名移动文件到目录下部署修改配置文件各服务配置文件的默认配置已经足以启动集群不建议初尝用户修改较多配置的配置文件在测试环境中我们通常只需要关注以下三点注意默认端口避免端口冲突正常情况下不需要修改绑定避免多网卡情况下服务无法自动匹配到正确的特别注意绑定时如果不清楚表示法可以直接填写完整的不支持别名例如配置为该地址可以使用的方式查询设置元数据目录默认目录为我们建议新建目录并修改配置文件根据部署设计创建元数据存储目录针对和修改配置文件带的为注释红色字体为新增配置修改此处修改此处配置环境变量配置环境变量根目录例如保存并启动后台运行补充关闭的脚本是命令使用语言编写使用命令查看进程若发现有进程即为启动成功如果进程状态异常可在日志目录中查看日志追踪原因的主要日志在中所有查询的审计日志在中由于是初次启动如果在操作过程中遇到比较耗时的问题可以清空的元数据目录再从头开始操作访问使用访问查询端口默认为自带用户默认密码为空确认状态若能够正常访问已说明状态正常查询命令为即说明节点状态正常校验启动是否成功检查是否启动成功命令下有没有进程进程启动后会先加载元数据根据的不同在志中会看到最终会看到志并且可以通过客户端连接到则表示启动成功也可以通过如下连接查看是否启动成功如果返回则表示启动成功其余情况则可能存在问题外环境访问查看是否可以访问界登录账号默认为密码为空注如果在中查看不到启动失败的信息也许在中可以看到添加实例进入集群我们先将添加与实例添加入集群这里需要说明一下启动服务和将服务添加入集群并没有严格的先后顺序但若先启动服务在实例未加入集群前的日志中会打印一些提示未加入集群的信息例如所以我们可以在全部部署完成后使用将集群中其他实例通过添加入集群然后再逐个部署启动添加进入集群端口使用的默认为若添加实例进入集群时信息输入有误或出现其他异常我们可以将其删除后重新添加删除示例从集群中删除当前仅有一个实例故删除时可以直接使用命令删除删除为高风险操作所以这里的删除命令设计为了添加进入集群时需要给设定名称比如命名为端口使用的默认为从集群中删除暂时退出部署实例修改配置文件的配置文件在测试环境通常也是关注如下三点注意默认端口避免端口冲突正常情况下不需要修改绑定避免多网卡情况下无法自动找到正确的同样不清楚就可以直接填写完整的设置数据存储目录默认目录为我们建议新建目录并修改配置文件新建数据存储目录针对和修改配置文件带的为注释红色字体为新增配置修改此处修改此处启动补充关闭脚本为命令使用编写使用命令查看进程若发现有进程即为启动成功如果进程状态异常可在日志目录中查看日志追踪原因的主要日志在中其他的日志在中查看状态一般为即为状态正常若为可根据日志排查问题同样的因为当前为初次启动如果出现无法快速定位的问题可以清空数据目录重新启动服务部署在部署完与后主要服务已经部署完成是与外部对象存储等外部数据对接的中转服务若不需要可以不部署本身是无状态的进程可以随意启停不影响集群修改配置文件的配置文件通常不需要修改与实例和实例不同当前没有也不需要这个选项的服务默认绑定在上我们只需在前面节时输入正确可访问的即可启动补充关闭脚本为命令查看进程若发现有即为启动成功日志在中如果进程状态异常可查看日志追踪原因查看状态为即为状态正常如果状态异常可以根据日志定位问题简单使用修改账户密码例如修改密码也为建库建表的副本数是不能大于节点数的由于当前仅有一个节点我们建表时务必注意指定数据为单副本示例如下新建一个数据库',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-19 14:14:43',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="msvalidate.01" content="3B01D613E431869120208BEE26D7B148">
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-<link rel="stylesheet" href="/css/main.css">
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wangbin-blog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.21.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":200},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到集群的具体操作方法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【Linux】Doris 安装部署">
-<meta property="og:url" content="https://wangbin-blog.github.io/post/6632db9d.html">
-<meta property="og:site_name" content="小王的博客">
-<meta property="og:description" content="在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到集群的具体操作方法">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-21T00:31:13.000Z">
-<meta property="article:modified_time" content="2024-12-19T06:14:43.425Z">
-<meta property="article:author" content="Think.Wang">
-<meta property="article:tag" content="Linux">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="https://wangbin-blog.github.io/post/6632db9d.html">
-
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wangbin-blog.github.io/post/6632db9d.html","path":"post/6632db9d.html","title":"【Linux】Doris 安装部署"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【Linux】Doris 安装部署 | 小王的博客</title>
-  
-
-  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
-  <script async src="https://hm.baidu.com/hm.js?a295ea9fbf5381fcf14b81229366c7b1"></script>
-
-
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-<link rel="alternate" href="/atom.xml" title="小王的博客" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">小王的博客</p>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">一个上了年纪的猿人</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">15</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">53</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-navigation"><a href="/nav/" rel="section"><i class="fa fa-location-arrow fa-fw"></i>百宝箱</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="搜索..." spellcheck="false"
-                type="search" class="search-input">
-        </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fa fa-spinner fa-pulse fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</header>
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#doris-%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text">doris 安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">一、环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 服务器环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85docker"><span class="nav-number">1.2.</span> <span class="nav-text">二、安装docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8xftp-%E7%AD%89%E5%B7%A5%E5%85%B7%E4%B8%8A%E4%BC%A0docker-%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%B0linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 使用xftp 等工具上传docker 安装包到linux服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%A7%A3%E5%8E%8B"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%A4%8D%E5%88%B6%E5%8E%8B%E7%BC%A9%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 复制压缩后的文件到指定文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%B3%A8%E5%86%8C%E7%BC%96%E8%BE%91docker%E6%9C%8D%E5%8A%A1"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 注册编辑docker服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%B7%BB%E5%8A%A0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. 添加可执行权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E4%B8%80%E9%94%AE%E4%B8%89%E8%BF%9E"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. 一键三连</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-docker%E5%8D%B8%E8%BD%BD"><span class="nav-number">1.2.7.</span> <span class="nav-text">7. docker卸载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85Doris"><span class="nav-number">1.3.</span> <span class="nav-text">三、安装Doris</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E7%BC%96%E8%AF%91"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、编译</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E3%80%90doris%E3%80%91%E6%BA%90%E7%A0%81%EF%BC%8C%E9%9C%80%E8%A6%81%E7%BC%96%E8%AF%91%EF%BC%8C%E8%BF%99%E9%87%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%89%A9%E7%90%86%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">1). 使用【doris】源码，需要编译，这里直接使用物理机编译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E3%80%81%E4%BD%BF%E7%94%A8%E3%80%90starrocks%E3%80%91%E6%97%A0%E9%9C%80%E7%BC%96%E8%AF%91%EF%BC%8C%E7%9B%B4%E6%8E%A5%E9%83%A8%E7%BD%B2%E5%8D%B3%E5%8F%AF%EF%BC%8C%E4%BD%86CPU%E9%9C%80%E6%94%AF%E6%8C%81%E3%80%90avx2%E3%80%91%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.3.2.</span> <span class="nav-text">2、部署环境准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="nav-number">1.3.3.</span> <span class="nav-text">3、安装部署</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8C%85"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">1. 下载二进制包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E8%A7%A3%E5%8E%8B-1"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">2. 解压</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%88%86%E5%8F%91%E9%83%A8%E7%BD%B2%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3. 分发部署文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E9%83%A8%E7%BD%B2fe"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">4. 部署fe</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E9%83%A8%E7%BD%B2BE%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">5. 部署BE实例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%E9%83%A8%E7%BD%B2Broker"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">6. 部署Broker</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4%E3%80%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.4.</span> <span class="nav-text">4、简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%BF%AE%E6%94%B9root%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">1. 修改root账户密码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%BB%BA%E5%BA%93%E5%BB%BA%E8%A1%A8"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">2. 建库建表</span></a></li></ol></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Think.Wang"
-      src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Think.Wang</p>
-  <div class="site-description" itemprop="description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">53</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dhbmdiaW4tYmxvZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wangbin-blog"><i class="fab fa-github fa-fw"></i>GitHub</span>
-      </span>
-  </div>
-
-        </div>
-      </div>
-    </div>
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </aside>
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
 
-
-    </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wangbin-blog.github.io/post/6632db9d.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg">
-      <meta itemprop="name" content="Think.Wang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小王的博客">
-      <meta itemprop="description" content="欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【Linux】Doris 安装部署 | 小王的博客">
-      <meta itemprop="description" content="在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到集群的具体操作方法">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          【Linux】Doris 安装部署
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-05-21 08:31:13" itemprop="dateCreated datePublished" datetime="2024-05-21T08:31:13+08:00">2024-05-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-19 14:14:43" itemprop="dateModified" datetime="2024-12-19T14:14:43+08:00">2024-12-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>18 分钟</span>
-    </span>
-</div>
-
-            <div class="post-description">在Linux环境下Doris和StarRocks的安装部署流程。首先，文档涵盖了环境配置，包括服务器环境、Docker的安装与卸载步骤，重点描述了Doris的编译安装过程，以及StarRocks的部署准备、环境配置、服务启动等步骤，提供了如何通过MySQL客户端访问FE、添加BE与Broker实例到集群的具体操作方法</div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><h2 id="doris-安装部署"><a href="#doris-安装部署" class="headerlink" title="doris 安装部署"></a><strong>doris 安装部署</strong></h2><h3 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h3><h4 id="1-服务器环境"><a href="#1-服务器环境" class="headerlink" title="1. 服务器环境"></a>1. 服务器环境</h4><blockquote>
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.min.css"/><script async="async" src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://wangbin-blog.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" href="https://wangbin-blog.github.io/nav/" title="导航"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="导航"/><span class="back-menu-item-text">导航</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">小王的博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>8</sup></a><a href="/tags/DotNet/" style="font-size: 1.05rem;">DotNet<sup>5</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>5</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>13</sup></a><a href="/tags/MACCMS/" style="font-size: 1.05rem;">MACCMS<sup>2</sup></a><a href="/tags/docker/" style="font-size: 1.05rem;">docker<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>5</sup></a><a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 1.05rem;">娱乐<sup>5</sup></a><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">实用工具<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.05rem;">小说<sup>2</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>23</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">开发工具<sup>4</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.05rem;">影视<sup>2</sup></a><a href="/tags/%E6%BC%AB%E7%94%BB/" style="font-size: 1.05rem;">漫画<sup>2</sup></a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">系统美化<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.05rem;">音乐<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">15</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/" itemprop="url">Linux</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Linux/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Linux</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【Linux】Doris 安装部署</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-05-21T00:31:13.000Z" title="发表于 2024-05-21 08:31:13">2024-05-21</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-12-19T06:14:43.425Z" title="更新于 2024-12-19 14:14:43">2024-12-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为北京"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>北京</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="https://wangbin-blog.github.io/post/6632db9d.html"><header><a class="post-meta-categories" href="/categories/Linux/" itemprop="url">Linux</a><a href="/tags/Linux/" tabindex="-1" itemprop="url">Linux</a><h1 id="CrawlerTitle" itemprop="name headline">【Linux】Doris 安装部署</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Think.Wang</span><time itemprop="dateCreated datePublished" datetime="2024-05-21T00:31:13.000Z" title="发表于 2024-05-21 08:31:13">2024-05-21</time><time itemprop="dateCreated datePublished" datetime="2024-12-19T06:14:43.425Z" title="更新于 2024-12-19 14:14:43">2024-12-19</time></header><h2 id="doris-安装部署"><a href="#doris-安装部署" class="headerlink" title="doris 安装部署"></a><strong>doris 安装部署</strong></h2><h3 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h3><h4 id="1-服务器环境"><a href="#1-服务器环境" class="headerlink" title="1. 服务器环境"></a>1. 服务器环境</h4><blockquote>
 <ul>
 <li>centos 7</li>
-<li>docker <span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3N0YXRpYy9zdGFibGUveDg2XzY0Lw==">下载地址<i class="fa fa-external-link-alt"></i></span></li>
-<li>doris 1.0.0 <span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbCNkb3Jpcy0lRTQlQjglQkIlRTQlQkIlQTMlRTclQTAlODE=">下载地址<i class="fa fa-external-link-alt"></i></span></li>
-<li>doris <span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2luc3RhbGxpbmcvY29tcGlsYXRpb24uaHRtbA==">官方文档<i class="fa fa-external-link-alt"></i></span></li>
-<li>storrocks <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9xdWlja19zdGFydC9EZXBsb3k=">官方文档<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VsdF9tZT90eXBlPWJsb2c=">学习地址<i class="fa fa-external-link-alt"></i></span></li>
+<li>docker <a target="_blank" rel="noopener" href="https://download.docker.com/linux/static/stable/x86_64/">下载地址</a></li>
+<li>doris 1.0.0 <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html#doris-%E4%B8%BB%E4%BB%A3%E7%A0%81">下载地址</a></li>
+<li>doris <a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/installing/compilation.html">官方文档</a></li>
+<li>storrocks <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/quick_start/Deploy">官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ult_me?type=blog">学习地址</a></li>
 </ul>
 </blockquote>
 <span id="more"></span>
@@ -368,7 +313,7 @@
 <p>**安装完成后，自行设置环境变量 PATH, JAVA_HOME 等。(可以通过alternatives –list命令找到jdk的安装目录) 注意： Doris 0.14.0 的版本仍然使用gcc7 的依赖编译，之后的代码将使用gcc10 的依赖 **</p>
 </li>
 <li><p>c). 下载源码</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kb3Jpcy5hcGFjaGUub3JnL3poLUNOL2Rvd25sb2Fkcy9kb3dubG9hZHMuaHRtbA==">官网地址<i class="fa fa-external-link-alt"></i></span></p>
+<p><a target="_blank" rel="noopener" href="https://doris.apache.org/zh-CN/downloads/downloads.html">官网地址</a></p>
 </li>
 <li><p>d) 编译</p>
 <p>上传源码到服务器后，解压文件，进入文件夹后，执行编译</p>
@@ -379,7 +324,7 @@
 </ul>
 <h5 id="2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"><a href="#2-、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集" class="headerlink" title="2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集"></a>2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</h5><blockquote>
 <ol>
-<li>下载官方镜像 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnN0YXJyb2Nrcy5jb20vemgtY24vbWFpbi9hZG1pbmlzdHJhdGlvbi9CdWlsZF9pbl9kb2NrZXI=">文档<i class="fa fa-external-link-alt"></i></span></li>
+<li>下载官方镜像 <a target="_blank" rel="noopener" href="https://docs.starrocks.com/zh-cn/main/administration/Build_in_docker">文档</a></li>
 </ol>
 </blockquote>
 <h4 id="2、部署环境准备"><a href="#2、部署环境准备" class="headerlink" title="2、部署环境准备"></a>2、部署环境准备</h4><ul>
@@ -566,7 +511,7 @@ firewall-cmd --reload
 <blockquote>
 <p>StarRocks依赖JDK 1.8+环境，Oracle JDK 1.8+或OpenJDK8+均可以使用（下文演示使用OpenJDK 1.8.0_41）：</p>
 <p> [root@node01 ~]# java -version<br> openjdk version “1.8.0_41”<br> OpenJDK Runtime Environment (build 1.8.0_41-b04)<br> OpenJDK 64-Bit Server VM (build 25.40-b25, mixed mode)</p>
-<p>OpenJDK 8的安装操作见:文档：<span class="exturl" data-url="aHR0cDovL25vdGUueW91ZGFvLmNvbS9ub3Rlc2hhcmU/aWQ9NmE5MTA1MmZhZjhkOTJjOGJiNTU5ZDAzMGFmNTAxNzMmc3ViPTA2NjYwRjJDMDRBQzREMjU5RTcxMkMzNzE4NEFGM0JB">【Linux】安装OpenJDK.md<i class="fa fa-external-link-alt"></i></span></p>
+<p>OpenJDK 8的安装操作见:文档：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=6a91052faf8d92c8bb559d030af50173&sub=06660F2C04AC4D259E712C37184AF3BA">【Linux】安装OpenJDK.md</a></p>
 </blockquote>
 </li>
 <li><p>安装Mysql</p>
@@ -577,7 +522,7 @@ firewall-cmd --reload
 <p>为方便集群部署和运维，我们通常建议在集群服务器中选择一个节点安装mysql-client。当然，我们也可以不安装mysql-client，通过外部的SQLyog、DBeaver、Navicat等图形化工具直接访问StarRocks。</p>
 </blockquote>
 <blockquote>
-<p>mysql 安装操作文档见：<span class="exturl" data-url="aHR0cDovL25vdGUueW91ZGFvLmNvbS9ub3Rlc2hhcmU/aWQ9ZDVhMWZiY2NkNzI3Y2VmZWEzMTdmOWNmMTZmZTVmY2Qmc3ViPTdDQTcyN0NCNjM3RDQ0QUU4Q0U4QzU5QzAxMDFGMzFF">【Linux】CentOS7安装mysql5.7<i class="fa fa-external-link-alt"></i></span></p>
+<p>mysql 安装操作文档见：<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=d5a1fbccd727cefea317f9cf16fe5fcd&sub=7CA727CB637D44AE8CE8C59C0101F31E">【Linux】CentOS7安装mysql5.7</a></p>
 </blockquote>
 </li>
 </ul>
@@ -625,7 +570,7 @@ firewall-cmd --reload
 <td>部署目录：&#x2F;opt&#x2F;module&#x2F;starrocks&#x2F;apache_hdfs_broker</td>
 </tr>
 </tbody></table>
-<h5 id="1-下载二进制包"><a href="#1-下载二进制包" class="headerlink" title="1. 下载二进制包"></a>1. 下载二进制包</h5><p>StarRocks的二进制部署包可在官网下载获取：<span class="exturl" data-url="aHR0cHM6Ly93d3cuc3RhcnJvY2tzLmNvbS96aC1DTi9kb3dubG9hZC9jb21tdW5pdHk=">下载地址<i class="fa fa-external-link-alt"></i></span></p>
+<h5 id="1-下载二进制包"><a href="#1-下载二进制包" class="headerlink" title="1. 下载二进制包"></a>1. 下载二进制包</h5><p>StarRocks的二进制部署包可在官网下载获取：<a target="_blank" rel="noopener" href="https://www.starrocks.com/zh-CN/download/community">下载地址</a></p>
 <p>doris 使用编译到output文件中的文件<br>这儿是用storrocks 为例,将下载好的部署包上传至 <code>/opt/software</code> 目录下</p>
 <blockquote>
 <pre><code>[root@starrocks ~]# mkdir /opt/software
@@ -993,132 +938,282 @@ mysql&gt; use starrocks;
 
 Database changed
 </code></pre>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Think.Wang</div><div class="post-copyright__author_desc">一个上了年纪的猿人</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://wangbin-blog.github.io/post/6632db9d.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://wangbin-blog.github.io/post/6632db9d.html')">【Linux】Doris 安装部署</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://wangbin-blog.github.io/post/6632db9d.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wangbin-blog.github.io" target="_blank">小王的博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Linux/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Linux<span class="tagsPageCount">13</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/ec0b08ff.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo主题安装</div></div></a></div><div class="next-post pull-right"><a href="/post/4a0c2abb.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【Linux】安装OpenJDK</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/post/6508e70d.html" title="Linux系统Tomcat启动指定JDK版本"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-12-09</div><div class="title">Linux系统Tomcat启动指定JDK版本</div></div></a></div><div><a href="/post/26185413.html" title="【Linux】DotNet运行命令"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-01</div><div class="title">【Linux】DotNet运行命令</div></div></a></div><div><a href="/post/5711187a.html" title="【Linux】Libgdiplus安装"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-01</div><div class="title">【Linux】Libgdiplus安装</div></div></a></div><div><a href="/post/bf223232.html" title="【Linux】Linux环境下运行jar包的几种方式"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-21</div><div class="title">【Linux】Linux环境下运行jar包的几种方式</div></div></a></div><div><a href="/post/dfef5267.html" title="【Linux】Nacos 问题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-16</div><div class="title">【Linux】Nacos 问题</div></div></a></div><div><a href="/post/3cdc8223.html" title="【Linux】RocketMQ 部署"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-21</div><div class="title">【Linux】RocketMQ 部署</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Think.Wang</h1><div class="author-info__desc">一个上了年纪的猿人</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/wangbin-blog" target="_blank" title="GitHub"><i class="fab fa-github faa-tada"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#doris-%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">doris 安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">一、环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 服务器环境</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85docker"><span class="toc-number">1.2.</span> <span class="toc-text">二、安装docker</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8xftp-%E7%AD%89%E5%B7%A5%E5%85%B7%E4%B8%8A%E4%BC%A0docker-%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%B0linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 使用xftp 等工具上传docker 安装包到linux服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%A7%A3%E5%8E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A4%8D%E5%88%B6%E5%8E%8B%E7%BC%A9%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 复制压缩后的文件到指定文件夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%B3%A8%E5%86%8C%E7%BC%96%E8%BE%91docker%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 注册编辑docker服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%B7%BB%E5%8A%A0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 添加可执行权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E4%B8%80%E9%94%AE%E4%B8%89%E8%BF%9E"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 一键三连</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-docker%E5%8D%B8%E8%BD%BD"><span class="toc-number">1.2.7.</span> <span class="toc-text">7. docker卸载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%89%E8%A3%85Doris"><span class="toc-number">1.3.</span> <span class="toc-text">三、安装Doris</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E7%BC%96%E8%AF%91"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、编译</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E3%80%90doris%E3%80%91%E6%BA%90%E7%A0%81%EF%BC%8C%E9%9C%80%E8%A6%81%E7%BC%96%E8%AF%91%EF%BC%8C%E8%BF%99%E9%87%8C%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%89%A9%E7%90%86%E6%9C%BA%E7%BC%96%E8%AF%91"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1). 使用【doris】源码，需要编译，这里直接使用物理机编译</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E3%80%81%E4%BD%BF%E7%94%A8%E3%80%90starrocks%E3%80%91%E6%97%A0%E9%9C%80%E7%BC%96%E8%AF%91%EF%BC%8C%E7%9B%B4%E6%8E%A5%E9%83%A8%E7%BD%B2%E5%8D%B3%E5%8F%AF%EF%BC%8C%E4%BD%86CPU%E9%9C%80%E6%94%AF%E6%8C%81%E3%80%90avx2%E3%80%91%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2)、使用【starrocks】无需编译，直接部署即可，但CPU需支持【avx2】指令集</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、部署环境准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8C%85"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">1. 下载二进制包</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%A7%A3%E5%8E%8B-1"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">2. 解压</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%88%86%E5%8F%91%E9%83%A8%E7%BD%B2%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">3. 分发部署文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E9%83%A8%E7%BD%B2fe"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">4. 部署fe</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E9%83%A8%E7%BD%B2BE%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.3.3.5.</span> <span class="toc-text">5. 部署BE实例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E9%83%A8%E7%BD%B2Broker"><span class="toc-number">1.3.3.6.</span> <span class="toc-text">6. 部署Broker</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、简单使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9root%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">1. 修改root账户密码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%BB%BA%E5%BA%93%E5%BB%BA%E8%A1%A8"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">2. 建库建表</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/82fcda8a.html" title="windows Shell 窗口美化">windows Shell 窗口美化</a><time datetime="2025-05-07T02:18:45.887Z" title="发表于 2025-05-07 10:18:45">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/40bd2acb.html" title="【工具】修改wsl安装包实际安装位置">【工具】修改wsl安装包实际安装位置</a><time datetime="2025-05-07T02:18:45.865Z" title="发表于 2025-05-07 10:18:45">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/68f42c42.html" title="【工具】三步实现【DeepSeek】本地部署,构建自己的AI智能体">【工具】三步实现【DeepSeek】本地部署,构建自己的AI智能体</a><time datetime="2025-05-07T02:18:45.864Z" title="发表于 2025-05-07 10:18:45">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/f80b21bd.html" title="【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp">【工具】OpenEuler安装xfce桌面及远程桌面软件xrdp</a><time datetime="2025-05-07T02:18:45.861Z" title="发表于 2025-05-07 10:18:45">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/810251c4.html" title="详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决">详细！离线部署大模型：ollama+deepseek+open-webui安装使用方法及常见问题解决</a><time datetime="2025-05-07T02:18:45.847Z" title="发表于 2025-05-07 10:18:45">2025-05-07</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Think.Wang</div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">12</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://wangbin-blog.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" href="https://wangbin-blog.github.io/nav/" title="导航"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="导航"/><span class="back-menu-item-text">导航</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>8</sup></a><a href="/tags/DotNet/" style="font-size: 0.88rem;">DotNet<sup>5</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>5</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>13</sup></a><a href="/tags/MACCMS/" style="font-size: 0.88rem;">MACCMS<sup>2</sup></a><a href="/tags/docker/" style="font-size: 0.88rem;">docker<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>5</sup></a><a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 0.88rem;">娱乐<sup>5</sup></a><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">实用工具<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 0.88rem;">小说<sup>2</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>23</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">开发工具<sup>4</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 0.88rem;">影视<sup>2</sup></a><a href="/tags/%E6%BC%AB%E7%94%BB/" style="font-size: 0.88rem;">漫画<sup>2</sup></a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">系统美化<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 0.88rem;">音乐<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
 
-    </div>
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
 
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
-          </div>
-
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
         
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/post/ec0b08ff.html" rel="prev" title="Hexo主题安装">
-                  <i class="fa fa-angle-left"></i> Hexo主题安装
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/post/4a0c2abb.html" rel="next" title="【Linux】安装OpenJDK">
-                  【Linux】安装OpenJDK <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
 
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
 
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Think.Wang 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
 
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
 
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
 
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://blog-waline-m9oa0dc1f-wangbins-projects.vercel.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+      imageUploader: true,
+    }, null))
 
-    <div class="comments utterances-container"></div></div>
-  </main>
+    const destroyWaline = () => {
+      waline.destroy()
+    }
 
-    
-  <footer class="footer">
-    <div class="footer-inner">
+    anzhiyu.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
 
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2025</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">Think.Wang</span>
-  </div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-      <span>站点总字数：</span>
-    <span title="站点总字数">104k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">6:19</span>
-  </span>
-</div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.3/dist/waline.min.css')
+      if (false) await getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.1.3/dist/waline-meta.min.css')
+      const { init } = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.1.3/dist/waline.min.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
 
-    </div>
-  </footer>
+  if ('Waline' === 'Waline' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
 
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://blog-waline-m9oa0dc1f-wangbins-projects.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.0.0/waterfall/waterfall.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="reading-progress-bar"></div>
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+  typeof typed === 'object' && typed.destroy()
 
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
 
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="/js/jquery-3.3.1.min.js"></script><script src="/js/comments.js"></script><script src="/js/liyhbk.js"></script><script src="/js/MouseClick.js"></script><script src="/js/mouse.min.js"></script><script src="/js/fish.js"></script><script src="/js/back2topAir.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
 
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
+  typeof panguInit === 'function' && panguInit()
 
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
 
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
 
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"wangbin-blog/wangbin-blog.github.io","issue_term":"og:title","theme":"github-light"}</script>
-<script src="/js/third-party/comments/utterances.js"></script>
-
-  <p id="back-top" style=""><a href="#top"><span></span></a></p>
-  <div id="jsi-flying-fish-container" class="container" style="width: 100%;height: 280px;position: fixed;z-index: 1;opacity: 0.37;bottom: 0;left: 0;"></canvas></div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.jsdelivr.net/npm/anzhiyu-theme-static@1.1.5/accesskey/accesskey.min.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
