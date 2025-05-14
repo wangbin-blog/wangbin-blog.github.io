@@ -756,14 +756,14 @@
   </url>
   
   <url>
-    <loc>https://wangbin-blog.github.io/tags/Hexo/</loc>
+    <loc>https://wangbin-blog.github.io/tags/DotNet/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wangbin-blog.github.io/tags/DotNet/</loc>
+    <loc>https://wangbin-blog.github.io/tags/Hexo/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -798,7 +798,28 @@
   </url>
   
   <url>
+    <loc>https://wangbin-blog.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wangbin-blog.github.io/tags/AI/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangbin-blog.github.io/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangbin-blog.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -839,27 +860,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://wangbin-blog.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangbin-blog.github.io/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangbin-blog.github.io/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
-    <lastmod>2025-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -870,14 +870,14 @@
   </url>
   
   <url>
-    <loc>https://wangbin-blog.github.io/categories/Hexo/</loc>
+    <loc>https://wangbin-blog.github.io/categories/DotNet/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wangbin-blog.github.io/categories/DotNet/</loc>
+    <loc>https://wangbin-blog.github.io/categories/Hexo/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -912,13 +912,6 @@
   </url>
   
   <url>
-    <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2025-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/AI/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -941,6 +934,13 @@
   
   <url>
     <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangbin-blog.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
