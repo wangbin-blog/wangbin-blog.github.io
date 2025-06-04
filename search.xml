@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>斩获1.3K star！！超好用的图片处理项目，隐私优先、浏览器端、开源免费，太6了！</title>
+      <link href="/post/6e688d73.html"/>
+      <url>/post/6e688d73.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p><code>Mazanoke</code>是一款开源的图片优化工具，它可以在用户的浏览器中运行，无需上传图片至服务器，从而确保了图片的私密性。支持多种图片格式的压缩和转换，比如 JPG、PNG、WebP，甚至还支持 HEIC 和 AVIF 这样的新兴格式。不仅如此，它还能作为渐进式 Web 应用（PWA）安装到桌面或手机上，离线也能用，简直是“随身图片处理厂”！</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/7e5b979ea7724459b12a9e149cd57428featured-desktop-solo-dark.webp" alt="111"></p><p>Mazanoke 的界面简洁友好，无论是技术小白还是资深开发者，都能快速上手。你可以调整图片质量、设置目标文件大小、限制最大尺寸，甚至批量处理一堆图片。更贴心的是，它支持从剪贴板直接粘贴图片，省去繁琐的上传步骤。</p><p>目前在Github上收获了1.3K star，非常受开发者的欢迎！</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/5a8754352f9b415a9b8b2d4a2b92e990image-20250604092518891.webp" alt="image-20250604092518891"></p><h2 id="性能特色"><a href="#性能特色" class="headerlink" title="性能特色"></a>性能特色</h2><ul><li>灵活优化参数：支持手动调节画质压缩率或指定目标文件大小，系统自动匹配最优压缩方案；可限制图片最大宽高并保持比例缩放，避免画面变形。</li></ul><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/7623f5b616214f09a5582c994689c8d5capture-desktop-solo-settings-dark.webp"></p><ul><li><p>全格式转换支持：覆盖 JPG&#x2F;PNG&#x2F;WebP 主流格式互转，特别支持 HEIC&#x2F;AVIF&#x2F;GIF&#x2F;SVG 转换为通用格式，轻松适配多设备场景。</p></li><li><p>三重隐私防护：完全离线运行 + 本地处理无痕迹，自动剥离 EXIF 元数据（含位置、设备信息），杜绝数据上传风险与行为追踪。</p></li><li><p>极简交互体验：支持拖拽 &#x2F; 剪贴板粘贴快速上传，参数调整实时预览；可一键安装为桌面应用，离线使用更便捷。</p></li><li><p>开源自托管优势：遵循 GNU 协议开源，支持 Docker 一键部署私有实例，数据完全自主可控，适配企业与隐私敏感场景。</p></li></ul><h2 id="快速安装使用"><a href="#快速安装使用" class="headerlink" title="快速安装使用"></a>快速安装使用</h2><p>Mazanoke的安装和使用非常简单，用户可以通过以下几种方式快速上手：</p><p>1、直接访问官方，网址如下，即可立即体验。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mazanoke.com</span><br></pre></td></tr></table></figure><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/c98511715c994f76a341f90248a63e41image-20250604092749368.webp" alt="image-20250604092749368"></p><p>点击右上角的“Install”按钮，就能将 Mazanoke 安装为 PWA，桌面和手机都能用。安装后，它会自动缓存，离线也能正常工作。</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/56c009fa0eea48c081a6f897ebcde8faimage-20250604093727716.webp" alt="image-20250604093727716"></p><p>2、自托管部署。如果你想完全掌控，推荐自托管！步骤如下：</p><ul><li><p>克隆仓库：<code>git clone https://github.com/civilblur/mazanoke.git</code></p></li><li><p>进入目录，打开 <code>index.html</code> 文件，浏览器会直接运行应用。</p></li></ul><p>要是想通过 Docker 部署，可以直接用以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3474:80 ghcr.io/civilblur/mazanoke:latest</span><br></pre></td></tr></table></figure><p>然后访问 <code>http://localhost:3474</code> 即可。</p><p>MAZANOKE 的界面非常简洁明了。在主界面中，你可以通过拖拽或点击上传图片，然后在下方的设置面板中调整图片的质量、大小和格式等参数。下载按钮清晰可见，方便你保存优化后的图片。</p><ul><li>深色模式</li></ul><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/1c7912de4d3f4a029dfe3319cd42b950image-20250604093836936.webp" alt="image-20250604093836936"></p><ul><li>浅色模式</li></ul><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/85fcdd9f43c24a26839ba000e372fd4cimage-20250604093911266.webp" alt="image-20250604093911266"></p><p>设置</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/06/35d804230eac4f7fbdc1f899da1d6c6eimage-20250604093946831.webp" alt="image-20250604093946831"></p><p>图片下载</p><p>它的操作简单直观，即使是初次使用的用户也能迅速上手。而且，由于所有处理都在本地完成，你无需担心隐私泄露的问题，可以放心地处理个人照片。</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><code>Mazanoke</code>是一款非常出色的图片优化工具，它以其独特的“本地优先”设计理念，为用户提供了一个既方便又安全的图片处理解决方案。无论是普通用户还是专业人士，都可以通过Mazanoke轻松处理图片，满足各种需求。</p><p>更多细节功能，感兴趣的可以到项目地址查看：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/civilblur/mazanoke</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 实用工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 实用工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>.NET 开发者必备：全面整理常用 dotnet 命令</title>
       <link href="/post/ee64e7e7.html"/>
       <url>/post/ee64e7e7.html</url>
