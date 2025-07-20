@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>如何把大文件（100M以上）上传到github</title>
+      <link href="/post/5655a99e.html"/>
+      <url>/post/5655a99e.html</url>
+      
+        <content type="html"><![CDATA[<p>GitHub 对文件大小有严格限制，普通存储库中单个文件不能超过 <strong>100MB</strong>，整个存储库建议小于 <strong>1GB</strong>，强烈建议小于 <strong>5GB</strong>。以下是处理大文件的常见方法和步骤：</p><h2 id="使用-Git-LFS-管理大文件"><a href="#使用-Git-LFS-管理大文件" class="headerlink" title="使用 Git LFS 管理大文件"></a>使用 Git LFS 管理大文件</h2><p><strong>Git LFS (Large File Storage)</strong> 是 Git 的扩展工具，用于管理超出 GitHub 限制的大文件。它通过将大文件存储在仓库外部，仅在仓库中保留引用，从而提高性能和效率。</p><h3 id="配置-Git-LFS"><a href="#配置-Git-LFS" class="headerlink" title="配置 Git LFS"></a>配置 Git LFS</h3><ul><li>安装 Git LFS：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git lfs install</span><br></pre></td></tr></table></figure><ul><li>跟踪大文件类型：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git lfs track <span class="string">&quot;*.ext&quot;</span></span><br></pre></td></tr></table></figure><ul><li>提交 <em>.gitattributes</em> 文件：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .gitattributes</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;Track large files with Git LFS&quot;</span></span><br></pre></td></tr></table></figure><ul><li>添加并提交大文件：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add large_file.ext</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;Add large file using Git LFS&quot;</span></span><br></pre></td></tr></table></figure><ul><li>推送到远程仓库：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin main</span><br></pre></td></tr></table></figure><h3 id="拉取含大文件的仓库"><a href="#拉取含大文件的仓库" class="headerlink" title="拉取含大文件的仓库"></a>拉取含大文件的仓库</h3><p>如果克隆的仓库中没有大文件本体，而是指针文件，可以运行以下命令下载完整文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git lfs pull</span><br></pre></td></tr></table></figure><h3 id="转换历史数据到-LFS"><a href="#转换历史数据到-LFS" class="headerlink" title="转换历史数据到 LFS"></a>转换历史数据到 LFS</h3><p>对于已经提交到仓库中的大文件，可以使用以下命令迁移到 LFS：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git lfs migrate import --include=<span class="string">&quot;*.ext&quot;</span></span><br><span class="line"></span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure><p>完成后，清理 <em>.git</em> 文件夹：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reflog expire --expire-unreachable=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br></pre></td></tr></table></figure><h3 id="使用-GitHub-Releases-分发大文件"><a href="#使用-GitHub-Releases-分发大文件" class="headerlink" title="使用 GitHub Releases 分发大文件"></a>使用 GitHub Releases 分发大文件</h3><p>如果文件超过 Git LFS 的限制（如单文件超过 2GB），可以通过 <strong>GitHub Releases</strong> 分发大文件。创建发行版时，可以上传大文件并生成下载链接。</p><blockquote><p>[!IMPORTANT]</p><p><strong>注意事项</strong></p><ul><li><strong>Git 不是备份工具</strong>。对于超大文件或数据库，建议使用云存储服务（如 Amazon S3、Google Cloud Storage）。</li><li><strong>避免外部依赖项膨胀仓库</strong>。使用包管理器（如 npm、Maven）管理依赖项。</li><li><strong>定期优化仓库大小</strong>。使用工具如 <em>git-sizer</em> 分析和管理存储库。</li></ul></blockquote><p>通过以上方法，可以有效管理和分发大文件，避免 GitHub 文件大小限制带来的问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 实用工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 实用工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Nginx性能优化全方案：打造一个高效服务器</title>
       <link href="/post/e152db4d.html"/>
       <url>/post/e152db4d.html</url>
