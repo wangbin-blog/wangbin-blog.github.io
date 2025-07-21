@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>免费！免服务器！前端新手也能用的部署神器 —— PinMe</title>
+      <link href="/post/d901ac44.html"/>
+      <url>/post/d901ac44.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="PinMe-是什么？"><a href="#PinMe-是什么？" class="headerlink" title="PinMe 是什么？"></a><strong>PinMe 是什么？</strong></h3><p>PinMe 是一个开源命令行工具，可以帮你一键部署网页。</p><ul><li><p>不需要服务器</p></li><li><p>不需要域名</p></li><li><p>不需要注册账号</p></li></ul><p>只需要两行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pinme</span><br><span class="line">pinme upload &lt;folder/file-path&gt;</span><br></pre></td></tr></table></figure><p>几秒后，你就能获得一个专属链接。</p><p>这就是你的网站 —— 随时访问，不限速，不会下线。</p><h3 id="PinMe适合谁用？"><a href="#PinMe适合谁用？" class="headerlink" title="PinMe适合谁用？"></a><strong>PinMe适合谁用？</strong></h3><p>PinMe 适合所有想快速上线页面的人：</p><ul><li><p>前端学习者 &#x2F; 学生党：做完项目，马上分享成果</p></li><li><p>设计师 &#x2F; 内容创作者：轻松发布个人主页、作品集</p></li><li><p>自由职业者 &#x2F; 小团队：省时省力，快速搭建简单站点</p></li><li><p>独立开发者：追求简单稳定、不被限流的上线方式</p></li></ul><p>PinMe 会自动帮你搞定部署，</p><p>你只需专注于“写完页面，直接上线”。</p><h3 id="相比传统服务，PinMe-能为你带来什么？"><a href="#相比传统服务，PinMe-能为你带来什么？" class="headerlink" title="相比传统服务，PinMe 能为你带来什么？"></a><strong>相比传统服务，PinMe 能为你带来什么？</strong></h3><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/de79ef50f07b47ff893ae6e523c0351a640%3Fwx_fmt%3Dpng%26from%3Dappmsg%26randomid%3Dotu2ibp6" alt="图片"></p><p>总结一句话：</p><p>PinMe &#x3D; 免费GitHub Pages + Netlify + 永久 ENS 域名版！</p><p>给每个想快速上线的前端人</p><p>你可能刚学完 Vue &#x2F; React，做了第一个作品；</p><p>你可能是自由职业者，想展示自己的介绍页；</p><p>你可能只是想有一个属于自己的网页空间。</p><p>别再被部署拦住，从 PinMe 开始，一行命令，永久免费上线。</p><h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a><strong>快速开始</strong></h3><p>📌PinMe 官网：</p><p><a href="https://pinme.eth.limo/">https://pinme.eth.limo/</a></p><p>📌戳这里收藏项目：</p><p><a href="https://github.com/glitternetwork/pinme">https://github.com/glitternetwork/pinme</a></p><p>⭐别忘了去GitHub 点个Star! 支持每一个为开发者省事的开源项目！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 实用工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 实用工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何把大文件（100M以上）上传到github</title>
       <link href="/post/5655a99e.html"/>
       <url>/post/5655a99e.html</url>
