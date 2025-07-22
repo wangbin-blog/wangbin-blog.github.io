@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>设置 WSL 开机启动并在后台运行</title>
+      <link href="/post/9ac8b74a.html"/>
+      <url>/post/9ac8b74a.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h3><p>在命令行下使用 <code>wsl -l -v</code> 得到想要启动的 <code>WSL</code> 版本，比如我的机器上是 <code>Ubuntu-24.04</code>，后面命令中使用 <code>Ubuntu-24.04</code> 来代表目标 <code>WSL</code> 版本。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Administrator <span class="keyword">in</span> ~ λ wsl -l -v</span><br><span class="line">  NAME            STATE           VERSION</span><br><span class="line">* Ubuntu-24.04    Running         2</span><br></pre></td></tr></table></figure><p>新建一个 <code>wsl-d.vbs</code> 文件（文件命名随意）作为启动脚本，里面内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> ws=wscript.CreateObject(<span class="string">&quot;wscript.shell&quot;</span>)</span><br><span class="line">ws.run <span class="string">&quot;wsl -d Ubuntu-24.04&quot;</span>, 0</span><br></pre></td></tr></table></figure><p>后续启动 <code>WSL</code> 时直接运行这个启动脚本就会让 <code>WSL</code> 在后台运行了。</p><h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p>退出还是正常的就可以了：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接退出默认 wsl</span></span><br><span class="line">wsl --shutdown</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定 wsl 退出</span></span><br><span class="line">wsl -t Ubuntu-24.04</span><br></pre></td></tr></table></figure><h3 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h3><p>如果想要在 <code>windows</code> 启动时就直接后台运行 <code>WSL</code>。</p><p>快捷键 <code>WIN + R</code> 运行，输入 <code>shell:startup</code> 打开启动目录后，把上面哪个 <code>wsl-d.vbs</code> 脚本文件复制进去就就可以了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 开发工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 开发工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>免费！免服务器！前端新手也能用的部署神器 —— PinMe</title>
       <link href="/post/d901ac44.html"/>
       <url>/post/d901ac44.html</url>
