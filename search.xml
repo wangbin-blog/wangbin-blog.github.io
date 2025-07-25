@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>跟我一起学docker(一)--认识</title>
+      <link href="/post/d016c480.html"/>
+      <url>/post/d016c480.html</url>
+      
+        <content type="html"><![CDATA[<p>最近开始自学docker，决定把自己的学习进度分享给大家，每天一篇希望能帮助docker的初学者。大家积极留言哦，输出决定输入！预计20次完成docker的讲解。</p><h3 id="什么是docker"><a href="#什么是docker" class="headerlink" title="什么是docker"></a>什么是docker</h3><p>​Docker 是一个开源项目，诞生于 2013 年初，最初是 dotCloud 公司内部的一个业余项目。它基于 Google 公司推出的 Go 语言实现。 项目后来加入了 Linux 基金会， 遵从了 Apache 2.0 协议，项目代码在 GitHub 上进行维护。 Docker 自开源后受到广泛的关注和讨论，以至于dotCloud 公司后来都改名为 Docker Inc。Redhat已经在其 RHEL6.5 中集中支持 Docker；Google 也在其 PaaS 产 品中广泛应用。 </p><h4 id="Docker的主要目标："><a href="#Docker的主要目标：" class="headerlink" title="Docker的主要目标："></a><strong>Docker的主要目标：</strong></h4><p>​通过对应用组件的封装、分发、部署、运行等生命周期的管理，达到应用级别的一次封装，到处运行。 小贴士：这里的应用组件，可以是WEB应用，也可以是一套数据库服务，甚至可以是一个操作系统编译器</p><h3 id="为什么使用docker"><a href="#为什么使用docker" class="headerlink" title="为什么使用docker"></a>为什么使用docker</h3><p>Docker容器虚拟化的优点  </p><h4 id="环境隔离"><a href="#环境隔离" class="headerlink" title="环境隔离"></a>环境隔离</h4><p>​通过cgroups和namesapce进行实现资源隔离，实现一台机器运行多个容器互不影响。 </p><h4 id="更快速的交付部署"><a href="#更快速的交付部署" class="headerlink" title="更快速的交付部署"></a>更快速的交付部署</h4><p>​使用docker，开发人员可以利用镜像快速构建一套标准的研发环境；开发完成后，测试和运维人员可以直接通过使用相同的环境来部署代码。Docker可以快速创建和删 除容器，实现快速迭代，大量节约开发、测试、部署的时间。并且，各个步骤都有明确的配置和操作，整个过程全程课件，使团队里更容易理解应用创建和工作的过程。</p><h4 id="更高效的资源利用"><a href="#更高效的资源利用" class="headerlink" title="更高效的资源利用"></a>更高效的资源利用</h4><p>​docker容器的运行不需要额外的虚拟化管理程序的支持，它是内核级的虚拟化，可以实现更高的性能，同时对资源的额外需求很低。 </p><h4 id="更易迁移扩展"><a href="#更易迁移扩展" class="headerlink" title="更易迁移扩展"></a>更易迁移扩展</h4><p>​docker容器几乎可以在任意的平台上运行，包括乌力吉、虚拟机、公有云、私有云、个人电脑、服务器等，这种兼容性让用户可以在不同平台之间轻松的迁移应用。 </p><h4 id="更简单的更新管理"><a href="#更简单的更新管理" class="headerlink" title="更简单的更新管理"></a>更简单的更新管理</h4><p>​使用Dockerfile，只需要小小的配置修改，就可以替代以往的大量的更新工作。并且所有修改都是以增量的方式进行分发和更新，从而实现自动化和高效的容器管理。</p><h3 id="虚拟化与docker"><a href="#虚拟化与docker" class="headerlink" title="虚拟化与docker"></a>虚拟化与docker</h3><h4 id="虚拟化定义："><a href="#虚拟化定义：" class="headerlink" title="虚拟化定义："></a>虚拟化定义：</h4><p>​虚拟化是一种资源管理技术，是将计算机的各种实体资源，如服务器、网络、内存及存储等，予以抽象、转换后呈现出来，打破实体结构间的不可切割的障 碍，使用户可以比原本的配置更好的方式来应用这些资源。这些资源的新虚拟部分是不受现有资源的架设方式，地域或物理配置所限制。一般所指的虚拟化资源包括计算 能力和数据存储。</p><h5 id="系统虚拟化"><a href="#系统虚拟化" class="headerlink" title="系统虚拟化"></a>系统虚拟化</h5><p>​Hypervisor Virtualization，全虚拟化。在 Host 中通过 Hypervisor 层实现安装多个 GuestOS，每个 GuestOS 都有自己的内核，和主机的内核不同， GuestOS 之间完全隔离。</p><h5 id="容器虚拟化"><a href="#容器虚拟化" class="headerlink" title="容器虚拟化"></a>容器虚拟化</h5><p>​Operating System Virtualization ，使用 Linux 内核中的 namespaces 和 cgroups 实现进程组之间的隔离。是用内核技术实现的隔离，所以它是一个共 享内核的虚拟化技术。</p><p>​容器虚拟化没有 GuestOS，使用 Docker 时下载的镜像，只是为运行 App 提供的一个依赖的环境，是一个删减版本的系统镜像。一般情况下系统虚拟化没有容器虚拟化 的运行效率高，但是系统安全性高很多。</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/books@main/covers/2025/07/2e25296b208a4ad18f321ec29c0d417aimage-20250725143520375.png" alt="image-20250725143520375"></p><h4 id="优越性"><a href="#优越性" class="headerlink" title="优越性"></a>优越性</h4><p>你在一台机器可以开10个虚拟机，如果用docker可以开100个容器，就是这么霸气</p><h3 id="docker官网注册"><a href="#docker官网注册" class="headerlink" title="docker官网注册"></a>docker官网注册</h3><p>注册一个docker账号：<a href="https://hub.docker.com/">https://hub.docker.com/</a></p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/books@main/covers/2025/07/95c85bac2c6f4aeda2e9404211600621image-20250725144422226.png" alt="image-20250725144422226"></p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/books@main/covers/2025/07/ead1dc156b9a4c8bb2ba00fc8339ea27image-20250725144524600.png" alt="image-20250725144524600"></p><p>使用邮箱或github进行注册登录即可。国内邮箱收验证码比较慢。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows设置exe或者bat文件开机启动的几种方法</title>
+      <link href="/post/2f692bcc.html"/>
+      <url>/post/2f692bcc.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>Windows设置开机启动的办法有很多种，这里简单总结一下，方便备查。</p><h2 id="2-启动路径方式"><a href="#2-启动路径方式" class="headerlink" title="2 启动路径方式"></a>2 启动路径方式</h2><h3 id="2-1-将快捷方式放入系统启动路径"><a href="#2-1-将快捷方式放入系统启动路径" class="headerlink" title="2.1 将快捷方式放入系统启动路径"></a>2.1 将快捷方式放入系统启动路径</h3><p>首先 Windows+R 打开 运行窗口</p><blockquote><p>Windows+R</p></blockquote><p>然后输入 shell:common startup</p><blockquote><p>shell:common startup</p></blockquote><p>打开的路径是：C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup</p><blockquote><p>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/fc0ed3fd787741d98103f60bbfdc3980image-20250725091045714.png" alt="image-20250725091045714"></p><h3 id="2-2-将快捷方式放入用户启动路径"><a href="#2-2-将快捷方式放入用户启动路径" class="headerlink" title="2.2 将快捷方式放入用户启动路径"></a>2.2 将快捷方式放入用户启动路径</h3><p>首先 Windows+R 打开 运行窗口</p><blockquote><p>Windows+R</p></blockquote><p>然后输入 shell:startup</p><blockquote><p>shell:startup</p></blockquote><p>打开的路径是：C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p><blockquote><p>C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/a5c5f7f0d389424b916c69c0cc3bdb2eimage-20250725091142389.png" alt="image-20250725091142389"></p><h2 id="2-任务计划程序方式"><a href="#2-任务计划程序方式" class="headerlink" title="2 任务计划程序方式"></a>2 任务计划程序方式</h2><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/9028aca0adcf4b1caf8c736b5f07029aimage-20250725091329980.png" alt="image-20250725091329980"><br><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/d582e89b3e1e4c539f3f640372d8c62aimage-20250725091408644.png" alt="image-20250725091408644"></p><h2 id="3-组策略方式"><a href="#3-组策略方式" class="headerlink" title="3 组策略方式"></a>3 组策略方式</h2><blockquote><p>gpedit.msc</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/70448c28b5b04da3bc91f57f98adcca9image-20250725091536118.png" alt="image-20250725091536118"><br><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/f2a62b73bb4046f59ecdccea0df1c325image-20250725091515309.png" alt="image-20250725091515309"></p><h2 id="4-注册表方式"><a href="#4-注册表方式" class="headerlink" title="4 注册表方式"></a>4 注册表方式</h2><blockquote><p>regedit</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/04228caa1f3a4c5ea012fec606d2165aimage-20250725091607407.png" alt="image-20250725091607407"></p><h3 id="4-1-用户启动项路径"><a href="#4-1-用户启动项路径" class="headerlink" title="4.1 用户启动项路径"></a>4.1 用户启动项路径</h3><blockquote><p>计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</p></blockquote><h3 id="4-2-系统启动项路径1"><a href="#4-2-系统启动项路径1" class="headerlink" title="4.2 系统启动项路径1"></a>4.2 系统启动项路径1</h3><blockquote><p>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</p></blockquote><h3 id="4-3-系统启动项路径2"><a href="#4-3-系统启动项路径2" class="headerlink" title="4.3 系统启动项路径2"></a>4.3 系统启动项路径2</h3><blockquote><p>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run</p></blockquote><h3 id="4-4-设置exe或者bat的路径"><a href="#4-4-设置exe或者bat的路径" class="headerlink" title="4.4 设置exe或者bat的路径"></a>4.4 设置exe或者bat的路径</h3><p><img src="https://i-blog.csdnimg.cn/blog_migrate/052fb900cfd500f9ea2a026782d4de2a.png" alt="在这里插入图片描述"></p><h2 id="5-创建Windows服务方式"><a href="#5-创建Windows服务方式" class="headerlink" title="5 创建Windows服务方式"></a>5 创建Windows服务方式</h2><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/b7ac69b1cf6749cda51aebffa65dbadcimage-20250725091643721.png" alt="image-20250725091643721"></p><h3 id="5-1-创建服务"><a href="#5-1-创建服务" class="headerlink" title="5.1 创建服务"></a>5.1 创建服务</h3><blockquote><p>sc create ServiceName binPath&#x3D; D:\Debug\authSender.exe start&#x3D; auto</p></blockquote><h3 id="5-2-删除服务"><a href="#5-2-删除服务" class="headerlink" title="5.2 删除服务"></a>5.2 删除服务</h3><blockquote><p>sc delete ServiceName</p></blockquote><blockquote><p>部分机器使用这两个命令并不生效，本人就遇到过，读者可以使用其他几种方式进行设置，不能再一棵树上吊死。</p></blockquote><h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6 总结"></a>6 总结</h2><p>都是些没有什么技术含量的操作，也没什么好总结的，哈哈，都是常规操作，每种方式操作都很简单，不懂的话百度一下，都有说明。回见~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 小技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>设置 WSL 开机启动并在后台运行</title>
       <link href="/post/9ac8b74a.html"/>
       <url>/post/9ac8b74a.html</url>
