@@ -4,6 +4,68 @@
   
     
     <entry>
+      <title>开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台</title>
+      <link href="/post/6954e087.html"/>
+      <url>/post/6954e087.html</url>
+      
+        <content type="html"><![CDATA[<p>最近发现了一个超赞的开源项目——LibreTV，这是一款轻量级、免费的在线视频搜索与观看平台。无需注册登录，打开就能用，还支持多设备访问。今天就来给大家详细介绍下这个项目，以及如何快速部署属于自己的私人观影实例。</p><h2 id="🌟-LibreTV-是什么？"><a href="#🌟-LibreTV-是什么？" class="headerlink" title="🌟 LibreTV 是什么？"></a>🌟 LibreTV 是什么？</h2><p>LibreTV 是一个基于 Web 技术的视频搜索与播放平台，它聚合了多个视频源，让你能轻松找到想看的内容。项目基于 bestK&#x2F;tv 重构增强，保留了核心功能并优化了用户体验。</p><p>最吸引人的是，它完全开源免费，没有广告干扰，还支持自行部署，打造专属的无广告观影环境。</p><details>  <summary>点击查看项目截图</summary>  <img src="https://github.com/user-attachments/assets/df485345-e83b-4564-adf7-0680be92d3c7" alt="LibreTV 项目截图" style="max-width:600px"></details><h2 id="🚀-技术栈解析"><a href="#🚀-技术栈解析" class="headerlink" title="🚀 技术栈解析"></a>🚀 技术栈解析</h2><p>作为技术爱好者，不得不提一下它的技术栈：</p><ul><li>前端：HTML5 + CSS3 + JavaScript (ES6+)、Tailwind CSS</li><li>视频播放：HLS.js 处理流媒体、DPlayer 作为播放器核心</li><li>后端：支持 Cloudflare&#x2F;Vercel&#x2F;Netlify 等 Serverless 环境</li><li>存储：使用 localStorage 保存播放记录</li></ul><p>这种技术组合让它既能保证良好的用户体验，又能灵活部署在各种平台上。</p><h2 id="🔧-多种部署方式任选"><a href="#🔧-多种部署方式任选" class="headerlink" title="🔧 多种部署方式任选"></a>🔧 多种部署方式任选</h2><p>LibreTV 支持多种部署方式，无论你是技术小白还是资深开发者，都能找到适合自己的方案。</p><h3 id="1-一键部署（推荐新手）"><a href="#1-一键部署（推荐新手）" class="headerlink" title="1. 一键部署（推荐新手）"></a>1. 一键部署（推荐新手）</h3><p>几个主流平台都支持一键部署，点击按钮即可：</p><ul><li><a href="https://vercel.com/new/clone?repository-url=https://github.com/LibreSpark/LibreTV"><img src="https://vercel.com/button" alt="Deploy with Vercel"></a></li><li><a href="https://app.netlify.com/start/deploy?repository=https://github.com/LibreSpark/LibreTV"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a></li><li><a href="https://render.com/deploy?repo=https://github.com/LibreSpark/LibreTV"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"></a></li></ul><h3 id="2-Docker-部署（推荐有服务器用户）"><a href="#2-Docker-部署（推荐有服务器用户）" class="headerlink" title="2. Docker 部署（推荐有服务器用户）"></a>2. Docker 部署（推荐有服务器用户）</h3><p>如果你有自己的服务器，Docker 部署是个好选择：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name libretv \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  -p 8899:8080 \</span><br><span class="line">  -e PASSWORD=你的密码 \</span><br><span class="line">  -e ADMINPASSWORD=管理员密码 \</span><br><span class="line">  bestzwei/libretv:latest</span><br></pre></td></tr></table></figure><p>启动后访问 <code>http://服务器IP:8899</code> 即可。</p><p>或者使用 Docker Compose：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">libretv:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">bestzwei/libretv:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">libretv</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8899:8080&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PASSWORD=你的密码</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ADMINPASSWORD=管理员密码</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure><p>启动命令：<code>docker compose up -d</code></p><h3 id="3-本地开发环境（适合开发者）"><a href="#3-本地开发环境（适合开发者）" class="headerlink" title="3. 本地开发环境（适合开发者）"></a>3. 本地开发环境（适合开发者）</h3><p>如果你想研究源码或参与开发，可以搭建本地环境：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/LibreSpark/LibreTV.git</span><br><span class="line"><span class="built_in">cd</span> LibreTV</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置环境变量（可选）</span></span><br><span class="line"><span class="built_in">cp</span> .env.example .<span class="built_in">env</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动开发服务器</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure><p>访问 <code>http://localhost:8080</code> 即可使用。</p><h2 id="🔒-安全设置建议"><a href="#🔒-安全设置建议" class="headerlink" title="🔒 安全设置建议"></a>🔒 安全设置建议</h2><p>为了避免不必要的麻烦，强烈建议进行以下安全设置：</p><ol><li><strong>设置密码保护</strong>：在部署时添加 <code>PASSWORD</code> 环境变量，设置访问密码</li><li><strong>限制访问范围</strong>：尽量只在个人或小范围使用，不要公开分享</li><li><strong>遵守法律法规</strong>：确保你的使用行为符合当地法律要求</li></ol><p>各平台设置环境变量的位置：</p><ul><li>Cloudflare Pages：项目设置 &gt; 环境变量</li><li>Vercel：项目 Settings &gt; Environment Variables</li><li>Netlify：项目 Site settings &gt; Build &amp; deploy &gt; Environment</li></ul><h2 id="🎁-为什么选择-LibreTV？"><a href="#🎁-为什么选择-LibreTV？" class="headerlink" title="🎁 为什么选择 LibreTV？"></a>🎁 为什么选择 LibreTV？</h2><ul><li><strong>开源免费</strong>：完全开源，无任何隐藏收费</li><li><strong>无需注册</strong>：打开就能用，保护隐私</li><li><strong>多源聚合</strong>：聚合多个视频源，内容更丰富</li><li><strong>轻量高效</strong>：界面简洁，加载快速</li><li><strong>自定义强</strong>：支持自行部署和个性化配置</li></ul><h2 id="📝-最后声明"><a href="#📝-最后声明" class="headerlink" title="📝 最后声明"></a>📝 最后声明</h2><p>LibreTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方 API 接口提供的搜索结果。使用时请遵守当地法律法规，支持正版内容。</p><p>如果你觉得这个项目不错，不妨去 GitHub 给个 Star 支持一下：<a href="https://github.com/LibreSpark/LibreTV">https://github.com/LibreSpark/LibreTV</a></p><p>希望这篇介绍对你有帮助，祝大家观影愉快！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 娱乐 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 娱乐 </tag>
+            
+            <tag> 影视 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>挖到宝了！这款免费影视神器，聚合全网资源还能多端同步，错过亏大了！</title>
+      <link href="/post/6649970a.html"/>
+      <url>/post/6649970a.html</url>
+      
+        <content type="html"><![CDATA[<p>你是不是也遇到过这些问题？想看的剧分散在 N 个平台，充值会员看到手软；换个设备追剧，进度总是要重新找；网页端广告弹窗比剧情还精彩…</p><p>今天给大家安利一款开源宝藏工具 ——<strong>MoonTV</strong>，一个能把这些烦恼一次性解决的影视聚合播放器。亲测好用到飞起，必须分享给你们！</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/cd3b7bec70704b20a284b6b2b8991516image-20250726090117801.png" alt="image-20250726090117801"></p><h2 id="✨-它到底有多能打？"><a href="#✨-它到底有多能打？" class="headerlink" title="✨ 它到底有多能打？"></a>✨ 它到底有多能打？</h2><p>作为一款基于 Next.js 构建的跨平台工具，MoonTV 的功能简直是为追剧党量身定做：</p><p>✅ <strong>全网资源一键搜</strong>：内置数十个免费影视站点，不用再逐个平台切换，一次搜索就能 get 所有结果</p><p>✅ <strong>追剧进度不丢失</strong>：不管在手机、电脑还是平板上看，收藏和播放记录自动同步，再也不用记住看到第几集</p><p>✅ <strong>无广告纯净体验</strong>：实验性的智能去广告功能，自动跳过视频切片广告，追剧更沉浸</p><p>✅ <strong>能装到桌面 &#x2F; 手机</strong>：支持 PWA 安装，像原生 App 一样使用，离线也能缓存内容</p><p>✅ <strong>完全免费开源</strong>：代码透明可查，没有隐藏收费，还能自己部署到服务器</p><p><img src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/07/8870ee3dbb134a04872c368dd4963ed3image-20250726094152924.png" alt="image-20250726094152924"></p><h2 id="🚀-小白也能轻松上手"><a href="#🚀-小白也能轻松上手" class="headerlink" title="🚀 小白也能轻松上手"></a>🚀 小白也能轻松上手</h2><p>最让人惊喜的是，它的部署门槛低到离谱，几种方式任你选：</p><p>👉 Docker 部署（懒人首选）</p><p>这种方式操作简单，30 秒就能搞定部署，适合对技术不太熟悉的小白。</p><ol><li><p>首先确保你的电脑或服务器已经安装了 Docker，如果没有，可以去 Docker 官网下载并安装对应版本的 Docker Desktop。</p></li><li><p>打开终端或命令提示符，输入以下命令：docker run -d -p 3000:3000 –name moontv senshinya&#x2F;moontv</p></li><li><p>等待命令执行完成，然后在浏览器中输入<a href="http://localhost:3000/">http://localhost:3000</a>，就可以访问 MoonTV 了。</p></li></ol><p>👉 部署到 Vercel（免费方案）</p><p>Vercel 提供了免费的部署服务，适合不想自己搭建服务器的用户。</p><ol><li><p>首先你需要有一个 GitHub 账号，并且将 MoonTV 仓库 Fork 到自己的账号下。</p></li><li><p>访问 Vercel 官网，使用 GitHub 账号登录。</p></li><li><p>在 Vercel dashboard 中，点击 “New Project”，然后选择你 Fork 的 MoonTV 仓库。</p></li><li><p>点击 “Deploy” 按钮，Vercel 会自动进行部署，等待部署完成后，会生成一个访问链接，通过该链接即可访问你的 MoonTV。</p></li></ol><p>👉 部署到 Cloudflare（免费方案）</p><p>Cloudflare 的 Pages 服务也是免费的，部署步骤如下。</p><ol><li><p>同样需要先将 MoonTV 仓库 Fork 到自己的 GitHub 账号。</p></li><li><p>登录 Cloudflare 账号，进入 Pages 服务页面。</p></li><li><p>点击 “Create a project”，选择 “Connect to Git”，然后选择你 Fork 的 MoonTV 仓库。</p></li><li><p>在配置页面，框架预设选择 “Next.js”，然后点击 “Deploy site”。</p></li><li><p>等待部署完成，Cloudflare 会生成一个访问域名，通过该域名就能使用 MoonTV 了。</p></li></ol><p>部署后还能自定义站点名称、公告，甚至添加自己常用的资源站，完全按你的喜好来定制。而且搭配 Redis 还能实现多设备同步，支持多账户管理，家庭共用也方便。</p><p>部署后还能自定义站点名称、公告，甚至添加自己常用的资源站，完全按你的喜好来定制。</p><h2 id="🛡️-安全提示要记牢"><a href="#🛡️-安全提示要记牢" class="headerlink" title="🛡️ 安全提示要记牢"></a>🛡️ 安全提示要记牢</h2><p>虽然好用，但也要提醒大家：</p><ol><li>部署时一定要设置密码，避免被陌生人滥用</li><li>仅供个人学习使用，不要公开分享你的站点</li><li>遵守当地法律法规，合理使用网络资源</li></ol><h2 id="🌟-最后说两句"><a href="#🌟-最后说两句" class="headerlink" title="🌟 最后说两句"></a>🌟 最后说两句</h2><p>现在市面上的影视工具要么广告泛滥，要么收费高昂，MoonTV 这种开源免费还好用的实属难得。</p><p>如果你也是个追剧爱好者，或者想搭一个私人影视库，这个项目绝对值得试试。项目地址我放下面了，记得给开发者点个星哦～</p><p>👉 <a href="https://github.com/senshinya/MoonTV">MoonTV 项目地址</a></p><p>（注：请支持正版影视内容，合理使用工具，遵守相关规定）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 娱乐 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 娱乐 </tag>
+            
+            <tag> 影视 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从“小白”到“大神”，Docker安装使用全攻略</title>
       <link href="/post/83b6163.html"/>
       <url>/post/83b6163.html</url>
