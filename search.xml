@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>SSL证书转换：cer转jks，pfx转jks</title>
+      <link href="/post/7ef7b195.html"/>
+      <url>/post/7ef7b195.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h3><p>进入jdk相应的目录使用keytool工具：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Program Files\Java\jdk1.8.0_101\bin</span><br></pre></td></tr></table></figure><p>pfx转换为jks命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -importkeystore -srckeystore <span class="string">&quot;D:\aaa\test\client.pfx&quot;</span> -srcstoretype pkcs12 -destkeystore <span class="string">&quot;D:\aaa\test\client.jks&quot;</span> -deststoretype JKS</span><br></pre></td></tr></table></figure><p>cer转jks命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -<span class="built_in">alias</span> mycert1 -file <span class="string">&quot;D:\aaa\test\root.cer&quot;</span> -keystore <span class="string">&quot;D:\aaa\test\root.jks&quot;</span></span><br></pre></td></tr></table></figure><h3 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h3><p>在 Java 环境中，将 <strong>.cer 文件转换为 .jks</strong> 是配置 SSL 和安全通信的重要步骤。以下是使用 <em>keytool</em> 工具完成此任务的具体方法。</p><h4 id="步骤-1-确保环境准备"><a href="#步骤-1-确保环境准备" class="headerlink" title="步骤 1: 确保环境准备"></a>步骤 1: 确保环境准备</h4><ul><li>确保已安装 JDK，并将其 <em>bin</em> 目录添加到系统路径中。</li><li>确保 <em>.cer</em> 文件已正确下载并可用。</li></ul><h4 id="步骤-2-使用-keytool-导入证书"><a href="#步骤-2-使用-keytool-导入证书" class="headerlink" title="步骤 2: 使用 keytool 导入证书"></a>步骤 2: 使用 keytool 导入证书</h4><p>运行以下命令将 <em>.cer</em> 文件导入到 <em>.jks</em> 密钥库中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -<span class="built_in">alias</span> &lt;别名&gt; -file &lt;路径/证书名.cer&gt; -keystore &lt;路径/密钥库名.jks&gt;</span><br></pre></td></tr></table></figure><p>示例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -<span class="built_in">alias</span> mycert -file <span class="string">&quot;D:\certificates\root.cer&quot;</span> -keystore <span class="string">&quot;D:\certificates\root.jks&quot;</span></span><br></pre></td></tr></table></figure><ul><li><strong>-alias</strong>：为证书指定一个唯一别名（如 <em>mycert</em>）。</li><li><strong>-file</strong>：指定 <em>.cer</em> 文件的路径。</li><li><strong>-keystore</strong>：指定目标 <em>.jks</em> 文件的路径。如果文件不存在，命令会自动创建。</li></ul><h4 id="步骤-3-验证转换结果"><a href="#步骤-3-验证转换结果" class="headerlink" title="步骤 3: 验证转换结果"></a>步骤 3: 验证转换结果</h4><ul><li><p>输入密钥库密码（如果是新建密钥库，则设置一个新密码）。</p></li><li><p>成功导入后，运行以下命令查看密钥库内容：</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -keystore &lt;路径/密钥库名.jks&gt;</span><br></pre></td></tr></table></figure><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul><li>如果需要将多个 <em>.cer</em> 文件导入同一个 <em>.jks</em>，请确保每个证书使用不同的别名。</li><li>密钥库密码应妥善保存，以便后续使用。</li></ul><p>通过以上步骤，您可以轻松将 <em>.cer</em> 文件转换为 <em>.jks</em> 格式，用于 Java 应用程序的 SSL 配置。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+          <category> 小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 小技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台</title>
       <link href="/post/6954e087.html"/>
       <url>/post/6954e087.html</url>
