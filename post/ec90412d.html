@@ -1,0 +1,973 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【Linux】常用命令 | 小王的博客</title><meta name="keywords" content="Linux"><meta name="author" content="Think.Wang"><meta name="copyright" content="Think.Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【Linux】常用命令"><meta name="application-name" content="【Linux】常用命令"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【Linux】常用命令"><meta property="og:url" content="https://www.huhaha.vip/post/ec90412d.html"><meta property="og:site_name" content="小王的博客"><meta property="og:description" content="本文档《【Linux】常用命令》详细列出了Linux系统中常用的命令及其用法，涵盖了从基本命令、关机操作、文件和目录管理、文件搜索、文件系统的挂载与卸载、磁盘空间管理、文件权限设置、文件的特殊属性、打包和压缩文件、RPM包管理、YUM软件包升级器、DEB包管理、查看文件内容、文本处理、字符设置和文件"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/a7ab6c7a592a4d2b998c8b4d71c0fc2420250520112511766.webp?_r_=e4e00d73-7e38-f413-1b0c-468ab0b77620"><meta property="article:author" content="Think.Wang"><meta property="article:tag" content="技术,编程,前端,后端,开源软件"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/a7ab6c7a592a4d2b998c8b4d71c0fc2420250520112511766.webp?_r_=e4e00d73-7e38-f413-1b0c-468ab0b77620"><meta name="description" content="本文档《【Linux】常用命令》详细列出了Linux系统中常用的命令及其用法，涵盖了从基本命令、关机操作、文件和目录管理、文件搜索、文件系统的挂载与卸载、磁盘空间管理、文件权限设置、文件的特殊属性、打包和压缩文件、RPM包管理、YUM软件包升级器、DEB包管理、查看文件内容、文本处理、字符设置和文件"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.huhaha.vip/post/ec90412d.html"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//www.clarity.ms"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="codeva-PE2Ce8iJe7"/><meta name="sogou_site_verification" content="Xa4uoZjWGi"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/./css/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/./css/fancybox.css" media="print" onload="this.media='all'"><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "riq0f27slc");</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":true,"ck":"3NLZ7d4xp5SMAE6r","LingQueMonitorID":"3NLZFMPTG4leu2da"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://lucent-taiyaki-b3a4e7.netlify.app/.netlify/functions/twikoo',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🔍 分享与热心帮助","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"已经","messageNext":"天没有更新了，这篇文章可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Think.Wang","link":"链接: ","source":"来源: 小王的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '小王的博客',
+  title: '【Linux】常用命令',
+  postAI: '',
+  pageFillDescription: '基本命令, 关机, 文件和目录, 文件搜索, 挂载一个文件系统, 磁盘空间, 用户和群组, 文件的权限, 文件的特殊属性, 打包和压缩文件, RPM 包, YUM 软件包升级器, DEB 包, 查看文件内容, 文本处理, 字符设置和文件格式转换, 文件系统分析, 初始化一个文件系统, SWAP文件系统, 备份, 光盘, 网络, 列出目录内容, 查看文件的类型, 复制文件目录等操作, 系统常用命令, 显示命令, 输出查看命令, 查看硬件信息, 归档、压缩, 查找, VIM, 命令模式（常规模式）, 插入模式, ex模式, 软件包管理命令(RPM), 软件包的安装, 软件包的删除, 软件包升级, 软件包更新, 软件包查询, 示例操作, tar 压缩x2F解压, MV 移动文件x2F更名, 开放端口, 配置防火墙, 访问端口, 创建用户, 配置环境变量基本命令显示机器的处理器架构显示正在使用的内核版本显示硬件系统部件罗列一个磁盘的架构特性在磁盘上执行测试性读取操作系统信息显示机器的处理器架构显示机器的处理器架构显示正在使用的内核版本显示硬件系统部件罗列一个磁盘的架构特性在磁盘上执行测试性读取操作显示的信息显示中断校验内存使用显示哪些被使用显示内核的版本显示网络适配器及统计显示已加载的文件系统罗列设备显示设备显示系统日期显示年的日历表设置日期和时间月日时分年秒将时间修改保存到关机关闭系统关闭系统关闭系统按预定时间关闭系统取消按预定时间关闭系统重启重启注销文件和目录进入目录返回上一级目录返回上两级目录进入个人的主目录进入个人的主目录返回上次所在的目录显示工作路径查看目录中的文件查看目录中的文件显示文件和目录的详细资料显示隐藏文件显示包含数字的文件名和目录名显示文件和目录由根目录开始的树形结构显示文件和目录由根目录开始的树形结构创建一个叫做的目录同时创建两个目录创建一个目录树删除一个叫做的文件删除一个叫做的目录删除一个叫做的目录并同时删除其内容同时删除两个目录及它们的内容重命名移动一个目录复制一个文件复制一个目录下的所有文件到当前工作目录复制一个目录到当前工作目录复制一个目录创建一个指向文件或目录的软链接创建一个指向文件或目录的物理链接修改一个文件或目录的时间戳列出已知的编码文件搜索从开始进入根文件系统搜索文件和目录搜索属于用户的文件和目录在目录中搜索带有结尾的文件搜索在过去天内未被使用过的执行文件搜索在天内被创建或者修改过的文件搜索以结尾的文件并定义其权限搜索以结尾的文件忽略光驱捷盘等可移动设备寻找以结尾的文件先运行命令显示一个二进制文件源码或的位置显示一个二进制文件或可执行文件的完整路径挂载一个文件系统挂载一个叫做的盘确定目录已经存在卸载一个叫做的盘先从挂载点退出当设备繁忙时强制卸载运行卸载操作而不写入文件当文件为只读或当磁盘写满时非常有用挂载一个软盘挂载一个或挂载一个或挂载一个或挂载一个文件或镜像文件挂载一个文件系统挂载一个捷盘或闪存设备挂载一个网络共享磁盘空间显示已经挂载的分区列表以尺寸大小排列文件和目录估算目录已经使用的磁盘空间以容量大小为依据依次显示文件和目录的大小以大小为依据依次显示已安装的包所使用的空间类系统以大小为依据显示已安装的包所使用的空间类系统用户和群组创建一个新用户组删除一个用户组重命名一个用户组创建一个属于用户组的用户创建一个新用户删除一个用户排除主目录修改用户属性修改口令修改一个用户的口令只允许执行设置用户口令的失效期限检查的文件格式和语法修正以及存在的用户检查的文件格式和语法修正以及存在的群组登陆进一个新的群组以改变新创建文件的预设群组文件的权限显示权限将终端划分成栏显示设置目录的所有人群组以及其他人以读写和执行的权限删除群组与其他人对目录的读写执行权限改变一个文件的所有人属性改变一个目录的所有人属性并同时改变改目录下所有文件的属性改变文件的群组改变一个文件的所有人和群组属性罗列一个系统中所有使用了控制的文件设置一个二进制文件的位运行该文件的用户也被赋予和所有者同样的权限禁用一个二进制文件的位设置一个目录的位类似不过这是针对目录的禁用一个目录的位设置一个文件的位只允许合法所有人删除文件禁用一个目录的位文件路径为所有者所属组和其他用户添加执行的权限文件路径为所有者所属组和其他用户删除执行的权限文件路径为所有者添加执行的权限文件路径为所属组添加执行的权限文件路径为其他用户添加执行的权限文件路径为所有者所属组添加执行的权限文件路径为所有者所属组和其他用户添加写执行的权限取消读权限文件路径为所有者所属组添加写执行的权限取消读权限文件的特殊属性使用设置权限使用用于取消只允许以追加方式读写文件允许这个文件能被内核自动压缩解压在进行文件系统备份时程序将忽略这个文件设置成不可变的文件不能被删除修改重命名或者链接允许一个文件被安全地删除一旦应用程序对这个文件执行了写操作使系统立刻把修改的结果写到磁盘若文件被删除系统会允许你在以后恢复这个被删除的文件显示特殊的属性打包和压缩文件解压一个叫做的文件压缩一个叫做的文件解压一个叫做的文件压缩一个叫做的文件最大程度压缩创建一个叫做的包同时压缩以及目录解压包解压包创建一个非压缩的创建一个包含了以及的档案文件显示一个包中的内容释放一个包将压缩包释放到目录下创建一个格式的压缩包解压一个格式的压缩包创建一个格式的压缩包解压一个格式的压缩包创建一个格式的压缩包将几个文件和目录同时压缩成一个格式的压缩包解压一个格式压缩包包及类似系统安装一个包安装一个包而忽略依赖关系警告更新一个包但不改变其配置文件更新一个确定已经安装的包删除一个包显示系统中所有已经安装的包显示所有名称中包含字样的包获取一个已安装包的特殊信息显示一个组件的包显示一个已经安装的包提供的文件列表显示一个已经安装的包提供的配置文件列表显示与一个包存在依赖关系的列表显示一个包所占的体积显示在安装删除期间所执行的脚本显示一个包的修改历史确认所给的文件由哪个包所提供显示由一个尚未安装的包提供的文件列表导入公钥数字证书确认一个包的完整性确认已安装的所有包的完整性检查文件尺寸许可类型所有者群组检查以及最后修改时间检查系统中所有已安装的包小心使用确认一个包还未安装从一个包运行可执行文件从一个源码安装一个构建好的包从一个源码构建一个包软件包升级器及类似系统下载并安装一个包将安装一个包使用你自己的软件仓库为你解决所有依赖关系更新当前系统中所有安装的包更新一个包删除一个包列出当前系统中安装的所有包在仓库中搜寻软件包清理缓存删除下载的包删除所有头文件删除所有缓存的包和头文件包以及类似系统安装更新一个包从系统删除一个包显示系统中所有已经安装的包显示所有名称中包含字样的包获得已经安装在系统中一个特殊包的信息显示系统中已经安装的一个包所提供的文件列表显示尚未安装的一个包所提供的文件列表确认所给的文件由哪个包提供软件工具以及类似系统安装更新一个包从光盘安装更新一个包升级列表中的软件包升级所有已安装的软件从系统删除一个包确认依赖的软件仓库正确从下载的软件包中清理缓存返回包含所要搜索字符串的软件包名称查看文件内容从第一个字节开始正向查看文件的内容从最后一行开始反向查看一个文件的内容查看一个长文件的内容类似于命令但是它允许在文件中和正向操作一样的反向操作查看一个文件的前两行查看一个文件的最后两行实时查看被添加到一个文件中的内容文本处理合并一个文件的详细说明文本并将简介写入一个新文件中合并一个文件的详细说明文本并将简介写入一个已有的文件中在文件中查找关键词在文件中查找以开始的词汇选择文件中所有包含数字的行在目录及随后的目录中搜索字符串将文件中的替换成从文件中删除所有空白行从文件中删除所有注释和空白行合并上下单元格内容从文件中排除第一行查看只包含词汇的行删除每一行最后的空白字符从文档中只删除词汇并保留剩余全部查看从第一行到第行内容查看第行用单个零替换多个零标示文件的行数删除文件中的所有偶数行查看一行第一栏查看一行的第一和第三栏合并两个文件或两栏的内容合并两个文件或两栏的内容中间用区分排序两个文件的内容取出两个文件的并集重复的行只保留一份删除交集留下其他的行取出两个文件的交集只留下同时存在于两个文件中的文件比较两个文件的内容只删除所包含的内容比较两个文件的内容只删除所包含的内容比较两个文件的内容只删除两个文件共有的部分字符设置和文件格式转换将一个文本文件的格式从转换成将一个文本文件的格式从转换成将一个文本文件转换成显示所有允许的转换格式文件系统分析检查磁盘上的坏磁块修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性修复检查磁盘上文件系统的完整性初始化一个文件系统在分区创建一个文件系统在分区创建一个的文件系统在分区创建一个日志型的文件系统创建一个文件系统格式化一个软盘创建一个文件系统文件系统创建一个文件系统启用一个新的文件系统启用两个分区备份制作一个目录的完整备份制作一个目录的交互式备份还原一个交互式备份同步两边的目录通过通道通过和压缩将一个远程目录同步到本地目录通过和压缩将本地目录同步到远程目录通过在远程主机上执行一次备份本地磁盘的操作备份磁盘内容到一个文件执行一次对目录的交互式备份操作通过在远程目录中复制一个目录内容通过在远程目录中复制一个本地目录本地将一个目录复制到另一个地方保留原有权限及链接从一个目录查找并复制所有以结尾的文件到另一个目录查找所有以结尾的文件并做成一个包做一个将内容复制到软盘的动作从已经保存到软盘的备份中恢复内容光盘清空一个可复写的光盘内容在磁盘上创建一个光盘的镜像文件在磁盘上创建一个压缩了的光盘镜像文件创建一个目录的镜像文件刻录一个镜像文件刻录一个压缩了的镜像文件挂载一个镜像文件从一个光盘转录音轨到文件中从一个光盘转录音轨到文件中参数扫描总线以识别通道校验一个设备的编码例如一张网络以太网和无线显示一个以太网卡的配置启用一个网络设备禁用一个网络设备控制地址设置成混杂模式以嗅探数据包以模式启用列出目录内容显示所有文件包括隐藏文件显示详细信息递归显示子目录结构显示目录和链接信息历史记录中所搜命令输入命令中的任意一个字符中以开头的文件是隐藏文件显示当前目录查看文件的类型查看文件的类型复制文件目录等操作复制文件和目录源文件文件夹目标文件文件夹常用参数递归复制整个目录树显示详细信息复制文件夹时要在命令后面加一个参数如源文件夹目标文件夹文件名当文件不存在的时候创建相应的文件当文件存在的时候修改文件的创建时间欢迎关注我们公号终码一生功能生成一个空文件或修改文件的存取修改的时间记录值将当前下的文件时间修改为系统的当前时间将文件的日期改为若文件存在则修改为系统的当前时间若不存在则生成一个为当前时间的空文件文件目标目录移动或重命名文件或目录如果指定文件名则可以重命名文件可以将文件及目录移到另一目录下或更改文件及目录的名称格式为参数源文件或目录目标文件或目录将文件移动上层目录将改名为将目录上移一层删除文件常用参数交互式递归的删除包括目录中的所有内容文件夹名称创建文件夹文件夹名称删除文件夹空文件夹和非空文件夹都可删除文件夹名称删除文件夹只能删除空文件夹在当前目录下创建目录并在目录下创建目录也就是连续创建两个目录和删除下的目录若目录为空也删除它删除当前目录下的所有文件参数强迫删除文件强迫删除所有以后缀名为文件参数删除文件时询问删除当前目录下的所有文件会有如下提示遇到目录会略过删除文件时会询问可按或键表示允许或拒绝删除文件参数递归删除连子目录一同删除这是一个相当常用的参数删除目录含目录下所有文件和子目录删除所有文件含当前目录所有文件所有子目录和子目录下的文件一般在删除目录时和一起用避免麻烦强行删除不加询问功能在文件中搜索匹配的字符并进行输出格式参数要找的字串要寻找字串的源文件搜索文件中字符串并输出命令功能在文件和目录之间建立链接格式参数源文件或目录目标文件或目录链接分软链接和硬链接软链接创建一个链接文件并指向目录硬链接创建一个硬链接文件这时对于文件对应的存储区域来说又多了一个文件指向它系统常用命令显示命令查看或设置当前系统的时间格式化显示时间设置当前系统的时间显示硬件时钟时间需要管理员权限查看日历格式参数月年显示当月的日历显示年月的日历显示年的日历查看系统运行时间输出查看命令显示输入的内容追加文件显示文件内容也可以将数个文件合并成一个文件格式格式参数文件名显示文件内容逐页显示文件中的内容将的内容附加到文件之后将和文件合并成文件显示文件的头几行默认行指定显示的行数格式文件名显示文件的末尾几行默认行指定显示的行数追踪显示文件更新一般用于查看日志命令不会退出而是持续显示新加入的内容格式格式参数文件名显示文件的倒数行内容显示文件从第行开始到末尾的内容用于翻页显示文件内容只能向下翻页命令是一般用于要显示的内容会超过一个画面长度的情况为了避免画面显示时瞬间就闪过去用户可以使用命令让画面在显示满一页时暂停此时可按空格健继续显示下一个画面或按键停止显示以长格形式显示目录下的文件列表显示满一个画面便暂停可按空格键继续显示下一画面或按键跳离翻页显示文件内容带上下翻页按下上键分页按退出命令的用法与命令类似也可以用来浏览超过一页的文件所不同的是命令除了可以按空格键向下显示文件外还可以利用上下键来卷动文件当要结束浏览时只要在命令的提示符下按键即可以长格形式列出目录中所有的内容用户可按上下键浏览或按键跳离查看硬件信息查看设备查看详细信息查看设备查看详细信息查看加载的模块驱动归档压缩压缩文件格式为压缩后的文件文件名解压文件压缩文件文件名归档文件打包一个归档将文件打包成一个归档释放一个归档释放归档参数将归档后的归档文件进行压缩以减少大小创建一个新文件显示运行过程的信息指定文件名调用压缩命令进行压缩查看压缩文件的内容解开文件将所有文件打包成扩展名需自行加上将所有文件打包成再用命令压缩查看文件中包括了哪些文件将解开解压缩各命令压缩文件时不需要任何参数显示压缩率查找快速查找文件文件夹此命令需要预先建立数据库数据库默认每天更新一次可用命令手工建立更新数据库欢迎关注我们公号终码一生查找位置查找参数如查找当前目录下名称中含有的文件查找根目录下整个硬盘下后缀为的文件查找所有权限是的文件返回根目录下所有的目录功能用来寻找文件或目录格式路径匹配条件搜索系统根目录下名为的文件终止当前的命令或命令功能查看当前系统中有哪些用户登录格式参数命令功能显示系统诊断信息操作系统版本号物理内存的大小以及其它信息命令功能用于查看文件系统的各个分区的占用情况命令功能查看某个目录中各级子目录所使用的硬盘空间数格式参数目录名命令功能用于查看系统内存虚拟内存交换空间的大小占用情况是一款功能强大的命令行文本编辑器在中通过命令可以启动编辑器一般使用目标文件路径的形式使用如果目标文件存在则打开目标文件如果目标文件不存在则新建并打开该文件退出编辑器拥有三种模式命令模式常规模式启动后默认进入命令模式任何模式都可以通过键回到命令模式可以多按几次命令模式下可以键入不同的命令完成选择复制粘贴撤销等操作命名模式常用命令如下在光标前插入文本在当前行的下面插入新行删除整行将当前行的内容放入缓冲区复制当前行将行的内容放入缓冲区复制行将缓冲区中的文本放入光标后粘贴撤销上一个操作替换当前字符查找关键字插入模式在命令模式下按键即可进入插入模式在插入模式可以输入编辑文本内容使用键可以返回命令模式模式在命令模式中按键可以进入模式光标会移动到底部在这里可以保存修改或退出模式常用命令如下保存当前的修改退出强制退出保存修改保存并退出相当于显示行号系统命令执行一个系统命令并显示结果切换到命令行使用切换回软件包管理命令软件包的安装使用命令的安装模式可以将软件包内所有的组件放到系统中的正确路径安装软件包的命令是作用的安装模式校验文件信息以号显示安装进度软件包的删除删除模式会将指定软件包的内容全部删除但并不包括已更改过的配置文件删除软件包的命令如下注意这里必须使用软件名或而不是使用当初安装时的软件包名软件包升级升级模式会安装用户所指定的更新版本并删除已安装在系统中的相同软件包升级软件包命令如下升级参数软件包更新更新模式下命令会检查在命令行中所指定的软件包是否比系统中原有的软件包更新如果情况属实命令会自动更新指定的软件包反之若系统中并没有指定软件包的较旧版本命令并不会安装此软件包而在升级模式下不管系统中是否有较旧的版本命令都会安装指定的软件包更新参数软件包查询若要获取软件包的相关信息可以使用查询模式使用参数可查询一个已安装的软件包的内容查询软件包所安装的位置参数显示文件列表示例操作压缩解压建立压缩档案解压查看内容向压缩归档文件末尾追加文件更新原压缩包中的文件这五个是独立的命令压缩解压都要用到其中一个可以和别的命令连用但只能用其中一个下面的参数是根据需要在压缩或解压档案时可选的有属性的有属性的有属性的显示所有过程将文件解开到标准输出下面的参数是必须的使用档案名字切记这个参数是最后一个参数后面只能接档案名这条命令是将所有的文件打成一个名为的包是表示产生新的包指定包的文件名这条命令是将所有的文件增加到的包里面去是表示增加文件的意思这条命令是更新原来包中文件是表示更新文件的意思这条命令是列出包中所有文件是列出文件的意思这条命令是解出包中所有文件是解开的意思压缩将目录里所有文件打包成将目录里所有文件打包成后并且将其用压缩生成一个压缩过的包命名为将目录里所有文件打包成后并且将其用压缩生成一个压缩过的包命名为将目录里所有文件打包成后并且将其用压缩生成一个压缩过的包命名为格式的压缩需要先下载格式的压缩需要先下载解压解压包解压解压解压解压把文件解压到当前目录下解压如果要把文件解压到指定的目录下需要用到参数解压的时候有时候不想覆盖已经存在的文件那么可以加上参数只看一下压缩包中包含哪些文件不进行解压缩查看显示的文件列表还包含压缩比率检查文件是否损坏将压缩文件在指定目录下解压缩如果已有相同的文件存在要求命令覆盖原先的文件总结用解压用或者解压和用解压用或者用解压用解压用解压用解压用解压用解压移动文件更名参数说明若指定目录已有同名文件则先询问是否覆盖旧文件在操作要覆盖某已有的目标文件时不给任何指示命令格式运行结果文件名文件名将源文件名改为目标文件名文件名目录名将文件移动到目标目录目录名目录名目标目录已存在将源目录移动到目标目录目标目录不存在则改名目录名文件名出错实例将文件更名为将目录放入目录中注意如果目录不存在则该命令将改名为再如将下的所有文件和目录移到当前目录下命令行为开放端口开启防火墙开放指定端口命令含义作用域添加端口格式为端口通讯协议永久生效没有此参数重启后失效重启防火墙关闭防火墙查看防火墙状态查看端口号查看当前所有端口查看所有端口使用情况根据进程号查看路径进程号查看开放的端口配置防火墙关闭防火墙确认防火墙状态已关闭再关闭其开机自启访问端口授权当前账户执行权限添加用户组将登陆用户加入到用户组中更新用户组创建用户创建用户和密码创建用户名为的用户自动建立用户的登入目录是允许系统管理员让普通用户执行命令的一个工具获取权限这里会需要输入管理员的密码不是你想给新用户设置的密码输入用户的密码设置给予的权限找到这一行加入删除用户配置环境变量进入配置文件环境变量环境变量例保存退出后刷新使环境变量生效',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-19 14:19:59',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="/./css/progress_bar.css"/><script async="async" src="/./js/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://www.huhaha.vip/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nav.huhaha.vip/" title="导航"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="导航"/><span class="back-menu-item-text">导航</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://mov.huhaha.vip/" title="观影"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="观影"/><span class="back-menu-item-text">观影</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tools.huhaha.vip/" title="工具箱"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="工具箱"/><span class="back-menu-item-text">工具箱</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://docs.anheyu.com/" title="安知鱼主题"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼主题"/><span class="back-menu-item-text">安知鱼主题</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">小王的博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>28</sup></a><a href="/tags/DotNet/" style="font-size: 1.05rem;">DotNet<sup>7</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>5</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>14</sup></a><a href="/tags/MACCMS/" style="font-size: 1.05rem;">MACCMS<sup>2</sup></a><a href="/tags/docker/" style="font-size: 1.05rem;">docker<sup>2</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>5</sup></a><a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 1.05rem;">娱乐<sup>8</sup></a><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">实用工具<sup>5</sup></a><a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">小技巧<sup>2</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.05rem;">小说<sup>2</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>53</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">开发工具<sup>5</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.05rem;">影视<sup>5</sup></a><a href="/tags/%E6%BC%AB%E7%94%BB/" style="font-size: 1.05rem;">漫画<sup>2</sup></a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">系统美化<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.05rem;">音乐<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/10/"><span class="card-archive-list-date">十月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">36</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/" itemprop="url">Linux</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Linux/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Linux</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【Linux】常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-05-25T00:31:13.000Z" title="发表于 2024-05-25 08:31:13">2024-05-25</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-12-19T06:19:59.829Z" title="更新于 2024-12-19 14:19:59">2024-12-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">10.5k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>39分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="【Linux】常用命令"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为北京"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>北京</span></div></div></div><article class="post-content" id="article-container" itemscope itemtype="https://www.huhaha.vip/post/ec90412d.html"><header><a class="post-meta-categories" href="/categories/Linux/" itemprop="url">Linux</a><a href="/tags/Linux/" tabindex="-1" itemprop="url">Linux</a><h1 id="CrawlerTitle" itemprop="name headline">【Linux】常用命令</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Think.Wang</span><time itemprop="dateCreated datePublished" datetime="2024-05-25T00:31:13.000Z" title="发表于 2024-05-25 08:31:13">2024-05-25</time><time itemprop="dateCreated datePublished" datetime="2024-12-19T06:19:59.829Z" title="更新于 2024-12-19 14:19:59">2024-12-19</time></header><ol>
+<li><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2></li>
+</ol>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uname</span> -m 显示机器的处理器架构</span><br><span class="line"><span class="built_in">uname</span> -r 显示正在使用的内核版本</span><br><span class="line">dmidecode -q 显示硬件系统部件</span><br><span class="line">(SMBIOS / DMI) hdparm -i /dev/hda 罗列一个磁盘的架构特性</span><br><span class="line">hdparm -tT /dev/sda 在磁盘上执行测试性读取操作系统信息</span><br><span class="line"><span class="built_in">arch</span> 显示机器的处理器架构</span><br><span class="line"><span class="built_in">uname</span> -m 显示机器的处理器架构</span><br><span class="line"><span class="built_in">uname</span> -r 显示正在使用的内核版本</span><br><span class="line">dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)</span><br><span class="line">hdparm -i /dev/hda 罗列一个磁盘的架构特性</span><br><span class="line">hdparm -tT /dev/sda 在磁盘上执行测试性读取操作</span><br><span class="line"><span class="built_in">cat</span> /proc/cpuinfo 显示CPU info的信息</span><br><span class="line"><span class="built_in">cat</span> /proc/interrupts 显示中断</span><br><span class="line"><span class="built_in">cat</span> /proc/meminfo 校验内存使用</span><br><span class="line"><span class="built_in">cat</span> /proc/swaps 显示哪些swap被使用</span><br><span class="line"><span class="built_in">cat</span> /proc/version 显示内核的版本</span><br><span class="line"><span class="built_in">cat</span> /proc/net/dev 显示网络适配器及统计</span><br><span class="line"><span class="built_in">cat</span> /proc/mounts 显示已加载的文件系统</span><br><span class="line">lspci -tv 罗列 PCI 设备</span><br><span class="line">lsusb -tv 显示 USB 设备</span><br><span class="line"><span class="built_in">date</span> 显示系统日期</span><br><span class="line">cal 2007 显示2007年的日历表</span><br><span class="line"><span class="built_in">date</span> 041217002007.00 设置日期和时间 - 月日时分年.秒</span><br><span class="line">clock -w 将时间修改保存到 BIOS</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<ol start="2">
+<li><h2 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">shutdown -h now 关闭系统(1)</span><br><span class="line">init 0 关闭系统(2)</span><br><span class="line">telinit 0 关闭系统(3)</span><br><span class="line">shutdown -h hours:minutes &amp; 按预定时间关闭系统</span><br><span class="line">shutdown -c 取消按预定时间关闭系统</span><br><span class="line">shutdown -r now 重启(1)</span><br><span class="line">reboot 重启(2)</span><br><span class="line"><span class="built_in">logout</span> 注销</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><h2 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home 进入 <span class="string">&#x27;/ home&#x27;</span> 目录<span class="string">&#x27;</span></span><br><span class="line"><span class="string">cd .. 返回上一级目录</span></span><br><span class="line"><span class="string">cd ../.. 返回上两级目录</span></span><br><span class="line"><span class="string">cd 进入个人的主目录</span></span><br><span class="line"><span class="string">cd ~user1 进入个人的主目录</span></span><br><span class="line"><span class="string">cd - 返回上次所在的目录</span></span><br><span class="line"><span class="string">pwd 显示工作路径</span></span><br><span class="line"><span class="string">ls 查看目录中的文件</span></span><br><span class="line"><span class="string">ls -F 查看目录中的文件</span></span><br><span class="line"><span class="string">ls -l 显示文件和目录的详细资料</span></span><br><span class="line"><span class="string">ls -a 显示隐藏文件</span></span><br><span class="line"><span class="string">ls *[0-9]* 显示包含数字的文件名和目录名</span></span><br><span class="line"><span class="string">tree 显示文件和目录由根目录开始的树形结构(1)</span></span><br><span class="line"><span class="string">lstree 显示文件和目录由根目录开始的树形结构(2)</span></span><br><span class="line"><span class="string">mkdir dir1 创建一个叫做 &#x27;</span>dir1<span class="string">&#x27; 的目录&#x27;</span></span><br><span class="line"><span class="built_in">mkdir</span> dir1 dir2 同时创建两个目录</span><br><span class="line"><span class="built_in">mkdir</span> -p /tmp/dir1/dir2 创建一个目录树</span><br><span class="line"><span class="built_in">rm</span> -f file1 删除一个叫做 <span class="string">&#x27;file1&#x27;</span> 的文件<span class="string">&#x27;</span></span><br><span class="line"><span class="string">rmdir dir1 删除一个叫做 &#x27;</span>dir1<span class="string">&#x27; 的目录&#x27;</span></span><br><span class="line"><span class="built_in">rm</span> -rf dir1 删除一个叫做 <span class="string">&#x27;dir1&#x27;</span> 的目录并同时删除其内容</span><br><span class="line"><span class="built_in">rm</span> -rf dir1 dir2 同时删除两个目录及它们的内容</span><br><span class="line"><span class="built_in">mv</span> dir1 new_dir 重命名/移动 一个目录</span><br><span class="line"><span class="built_in">cp</span> file1 file2 复制一个文件</span><br><span class="line"><span class="built_in">cp</span> <span class="built_in">dir</span>/* . 复制一个目录下的所有文件到当前工作目录</span><br><span class="line"><span class="built_in">cp</span> -a /tmp/dir1 . 复制一个目录到当前工作目录</span><br><span class="line"><span class="built_in">cp</span> -a dir1 dir2 复制一个目录</span><br><span class="line"><span class="built_in">ln</span> -s file1 lnk1 创建一个指向文件或目录的软链接</span><br><span class="line"><span class="built_in">ln</span> file1 lnk1 创建一个指向文件或目录的物理链接</span><br><span class="line"><span class="built_in">touch</span> -t 0712250000 file1 修改一个文件或目录的时间戳 - (YYMMDDhhmm)</span><br><span class="line">file file1 outputs the mime <span class="built_in">type</span> of the file as text</span><br><span class="line">iconv -l 列出已知的编码</span><br><span class="line">iconv -f fromEncoding -t toEncoding inputFile &gt; outputFile creates a new from the given input file by assuming it is encoded <span class="keyword">in</span> fromEncoding and converting it to toEncoding.</span><br><span class="line">find . -maxdepth 1 -name *.jpg -<span class="built_in">print</span> -<span class="built_in">exec</span> convert <span class="string">&quot;&#123;&#125;&quot;</span> -resize 80x60 <span class="string">&quot;thumbs/&#123;&#125;&quot;</span> \; batch resize files <span class="keyword">in</span> the current directory and send them to a thumbnails directory (requires convert from Imagemagick)</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><h2 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a>文件搜索</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">find / -name file1 从 <span class="string">&#x27;/&#x27;</span> 开始进入根文件系统搜索文件和目录</span><br><span class="line">find / -user user1 搜索属于用户 <span class="string">&#x27;user1&#x27;</span> 的文件和目录</span><br><span class="line">find /home/user1 -name \*.bin 在目录 <span class="string">&#x27;/ home/user1&#x27;</span> 中搜索带有<span class="string">&#x27;.bin&#x27;</span> 结尾的文件</span><br><span class="line">find /usr/bin -<span class="built_in">type</span> f -atime +100 搜索在过去100天内未被使用过的执行文件</span><br><span class="line">find /usr/bin -<span class="built_in">type</span> f -mtime -10 搜索在10天内被创建或者修改过的文件</span><br><span class="line">find / -name \*.rpm -<span class="built_in">exec</span> <span class="built_in">chmod</span> 755 <span class="string">&#x27;&#123;&#125;&#x27;</span> \; 搜索以 <span class="string">&#x27;.rpm&#x27;</span> 结尾的文件并定义其权限</span><br><span class="line">find / -xdev -name \*.rpm 搜索以 <span class="string">&#x27;.rpm&#x27;</span> 结尾的文件，忽略光驱、捷盘等可移动设备</span><br><span class="line">locate \*.ps 寻找以 <span class="string">&#x27;.ps&#x27;</span> 结尾的文件 - 先运行 <span class="string">&#x27;updatedb&#x27;</span> 命令</span><br><span class="line">whereis halt 显示一个二进制文件、源码或man的位置</span><br><span class="line"><span class="built_in">which</span> halt 显示一个二进制文件或可执行文件的完整路径</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><h2 id="挂载一个文件系统"><a href="#挂载一个文件系统" class="headerlink" title="挂载一个文件系统"></a>挂载一个文件系统</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/hda2 /mnt/hda2 挂载一个叫做hda2的盘 - 确定目录 <span class="string">&#x27;/ mnt/hda2&#x27;</span> 已经存在</span><br><span class="line">umount /dev/hda2 卸载一个叫做hda2的盘 - 先从挂载点 <span class="string">&#x27;/ mnt/hda2&#x27;</span> 退出</span><br><span class="line">fuser -km /mnt/hda2 当设备繁忙时强制卸载</span><br><span class="line">umount -n /mnt/hda2 运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用</span><br><span class="line">mount /dev/fd0 /mnt/floppy 挂载一个软盘</span><br><span class="line">mount /dev/cdrom /mnt/cdrom 挂载一个cdrom或dvdrom</span><br><span class="line">mount /dev/hdc /mnt/cdrecorder 挂载一个cdrw或dvdrom</span><br><span class="line">mount /dev/hdb /mnt/cdrecorder 挂载一个cdrw或dvdrom</span><br><span class="line">mount -o loop file.iso /mnt/cdrom 挂载一个文件或ISO镜像文件</span><br><span class="line">mount -t vfat /dev/hda5 /mnt/hda5 挂载一个Windows FAT32文件系统</span><br><span class="line">mount /dev/sda1 /mnt/usbdisk 挂载一个usb 捷盘或闪存设备</span><br><span class="line">mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 挂载一个windows网络共享</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><h2 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a>磁盘空间</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h 显示已经挂载的分区列表</span><br><span class="line"><span class="built_in">ls</span> -lSr |more 以尺寸大小排列文件和目录</span><br><span class="line"><span class="built_in">du</span> -sh dir1 估算目录 <span class="string">&#x27;dir1&#x27;</span> 已经使用的磁盘空间<span class="string">&#x27;</span></span><br><span class="line"><span class="string">du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小</span></span><br><span class="line"><span class="string">rpm -q -a --qf &#x27;</span>%10&#123;SIZE&#125;t%&#123;NAME&#125;n<span class="string">&#x27; | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)</span></span><br><span class="line"><span class="string">dpkg-query -W -f=&#x27;</span><span class="variable">$&#123;Installed-Size;10&#125;</span>t<span class="variable">$&#123;Package&#125;</span>n<span class="string">&#x27; | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<ol start="7">
+<li><h2 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a>用户和群组</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">groupadd group_name 创建一个新用户组</span><br><span class="line">groupdel group_name 删除一个用户组</span><br><span class="line">groupmod -n new_group_name old_group_name 重命名一个用户组</span><br><span class="line">useradd -c <span class="string">&quot;Name Surname &quot;</span> -g admin -d /home/user1 -s /bin/bash user1 创建一个属于 <span class="string">&quot;admin&quot;</span> 用户组的用户</span><br><span class="line">useradd user1 创建一个新用户</span><br><span class="line">userdel -r user1 删除一个用户 ( <span class="string">&#x27;-r&#x27;</span> 排除主目录)</span><br><span class="line">usermod -c <span class="string">&quot;User FTP&quot;</span> -g system -d /ftp/user1 -s /bin/nologin user1 修改用户属性</span><br><span class="line">passwd 修改口令</span><br><span class="line">passwd user1 修改一个用户的口令 (只允许root执行)</span><br><span class="line">chage -E 2005-12-31 user1 设置用户口令的失效期限</span><br><span class="line">pwck 检查 <span class="string">&#x27;/etc/passwd&#x27;</span> 的文件格式和语法修正以及存在的用户</span><br><span class="line">grpck 检查 <span class="string">&#x27;/etc/passwd&#x27;</span> 的文件格式和语法修正以及存在的群组</span><br><span class="line">newgrp group_name 登陆进一个新的群组以改变新创建文件的预设群组</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><h2 id="文件的权限"><a href="#文件的权限" class="headerlink" title="文件的权限"></a>文件的权限</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -lh 显示权限</span><br><span class="line"><span class="built_in">ls</span> /tmp | <span class="built_in">pr</span> -T5 -W<span class="variable">$COLUMNS</span> 将终端划分成5栏显示</span><br><span class="line"><span class="built_in">chmod</span> ugo+rwx directory1 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限</span><br><span class="line"><span class="built_in">chmod</span> go-rwx directory1 删除群组(g)与其他人(o)对目录的读写执行权限</span><br><span class="line"><span class="built_in">chown</span> user1 file1 改变一个文件的所有人属性</span><br><span class="line"><span class="built_in">chown</span> -R user1 directory1 改变一个目录的所有人属性并同时改变改目录下所有文件的属性</span><br><span class="line"><span class="built_in">chgrp</span> group1 file1 改变文件的群组</span><br><span class="line"><span class="built_in">chown</span> user1:group1 file1 改变一个文件的所有人和群组属性</span><br><span class="line">find / -perm -u+s 罗列一个系统中所有使用了SUID控制的文件</span><br><span class="line"><span class="built_in">chmod</span> u+s /bin/file1 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限</span><br><span class="line"><span class="built_in">chmod</span> u-s /bin/file1 禁用一个二进制文件的 SUID位</span><br><span class="line"><span class="built_in">chmod</span> g+s /home/public 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的</span><br><span class="line"><span class="built_in">chmod</span> g-s /home/public 禁用一个目录的 SGID 位</span><br><span class="line"><span class="built_in">chmod</span> o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件</span><br><span class="line"><span class="built_in">chmod</span> o-t /home/public 禁用一个目录的 STIKY 位</span><br><span class="line"><span class="built_in">chmod</span> +x 文件路径 为所有者、所属组和其他用户添加执行的权限</span><br><span class="line"><span class="built_in">chmod</span> -x 文件路径 为所有者、所属组和其他用户删除执行的权限</span><br><span class="line"><span class="built_in">chmod</span> u+x 文件路径 为所有者添加执行的权限</span><br><span class="line"><span class="built_in">chmod</span> g+x 文件路径 为所属组添加执行的权限</span><br><span class="line"><span class="built_in">chmod</span> o+x 文件路径 为其他用户添加执行的权限</span><br><span class="line"><span class="built_in">chmod</span> ug+x 文件路径 为所有者、所属组添加执行的权限</span><br><span class="line"><span class="built_in">chmod</span> =wx 文件路径 为所有者、所属组和其他用户添加写、执行的权限，取消读权限</span><br><span class="line"><span class="built_in">chmod</span> ug=wx 文件路径 为所有者、所属组添加写、执行的权限，取消读权限</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li><h2 id="文件的特殊属性"><a href="#文件的特殊属性" class="headerlink" title="文件的特殊属性"></a>文件的特殊属性</h2></li>
+</ol>
+<blockquote>
+<p>使用 “+” 设置权限，使用 “-” 用于取消</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">chattr +a file1 只允许以追加方式读写文件</span><br><span class="line">chattr +c file1 允许这个文件能被内核自动压缩/解压</span><br><span class="line">chattr +d file1 在进行文件系统备份时，dump程序将忽略这个文件</span><br><span class="line">chattr +i file1 设置成不可变的文件，不能被删除、修改、重命名或者链接</span><br><span class="line">chattr +s file1 允许一个文件被安全地删除</span><br><span class="line">chattr +S file1 一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘</span><br><span class="line">chattr +u file1 若文件被删除，系统会允许你在以后恢复这个被删除的文件</span><br><span class="line">lsattr 显示特殊的属性</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li><h2 id="打包和压缩文件"><a href="#打包和压缩文件" class="headerlink" title="打包和压缩文件"></a>打包和压缩文件</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">bunzip2 file1.bz2 解压一个叫做 <span class="string">&#x27;file1.bz2&#x27;</span>的文件</span><br><span class="line">bzip2 file1 压缩一个叫做 <span class="string">&#x27;file1&#x27;</span> 的文件</span><br><span class="line">gunzip file1.gz 解压一个叫做 <span class="string">&#x27;file1.gz&#x27;</span>的文件</span><br><span class="line">gzip file1 压缩一个叫做 <span class="string">&#x27;file1&#x27;</span>的文件</span><br><span class="line">gzip -9 file1 最大程度压缩</span><br><span class="line">rar a file1.rar test_file 创建一个叫做 <span class="string">&#x27;file1.rar&#x27;</span> 的包</span><br><span class="line">rar a file1.rar file1 file2 dir1 同时压缩 <span class="string">&#x27;file1&#x27;</span>, <span class="string">&#x27;file2&#x27;</span> 以及目录 <span class="string">&#x27;dir1&#x27;</span></span><br><span class="line">rar x file1.rar 解压rar包</span><br><span class="line">unrar x file1.rar 解压rar包</span><br><span class="line">tar -cvf archive.tar file1 创建一个非压缩的 tarball</span><br><span class="line">tar -cvf archive.tar file1 file2 dir1 创建一个包含了 <span class="string">&#x27;file1&#x27;</span>, <span class="string">&#x27;file2&#x27;</span> 以及 <span class="string">&#x27;dir1&#x27;</span>的档案文件</span><br><span class="line">tar -tf archive.tar 显示一个包中的内容</span><br><span class="line">tar -xvf archive.tar 释放一个包</span><br><span class="line">tar -xvf archive.tar -C /tmp 将压缩包释放到 /tmp目录下</span><br><span class="line">tar -cvfj archive.tar.bz2 dir1 创建一个bzip2格式的压缩包</span><br><span class="line">tar -xvfj archive.tar.bz2 解压一个bzip2格式的压缩包</span><br><span class="line">tar -cvfz archive.tar.gz dir1 创建一个gzip格式的压缩包</span><br><span class="line">tar -xvfz archive.tar.gz 解压一个gzip格式的压缩包</span><br><span class="line">zip file1.zip file1 创建一个zip格式的压缩包</span><br><span class="line">zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包</span><br><span class="line">unzip file1.zip 解压一个zip格式压缩包</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li><h2 id="RPM-包"><a href="#RPM-包" class="headerlink" title="RPM 包"></a>RPM 包</h2></li>
+</ol>
+<ul>
+<li>（Fedora, Redhat及类似系统）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh package.rpm 安装一个rpm包</span><br><span class="line">rpm -ivh --nodeeps package.rpm 安装一个rpm包而忽略依赖关系警告</span><br><span class="line">rpm -U package.rpm 更新一个rpm包但不改变其配置文件</span><br><span class="line">rpm -F package.rpm 更新一个确定已经安装的rpm包</span><br><span class="line">rpm -e package_name.rpm 删除一个rpm包</span><br><span class="line">rpm -qa 显示系统中所有已经安装的rpm包</span><br><span class="line">rpm -qa | grep httpd 显示所有名称中包含 <span class="string">&quot;httpd&quot;</span> 字样的rpm包</span><br><span class="line">rpm -qi package_name 获取一个已安装包的特殊信息</span><br><span class="line">rpm -qg <span class="string">&quot;System Environment/Daemons&quot;</span> 显示一个组件的rpm包</span><br><span class="line">rpm -ql package_name 显示一个已经安装的rpm包提供的文件列表</span><br><span class="line">rpm -qc package_name 显示一个已经安装的rpm包提供的配置文件列表</span><br><span class="line">rpm -q package_name --whatrequires 显示与一个rpm包存在依赖关系的列表</span><br><span class="line">rpm -q package_name --whatprovides 显示一个rpm包所占的体积</span><br><span class="line">rpm -q package_name --scripts 显示在安装/删除期间所执行的脚本l</span><br><span class="line">rpm -q package_name --changelog 显示一个rpm包的修改历史</span><br><span class="line">rpm -qf /etc/httpd/conf/httpd.conf 确认所给的文件由哪个rpm包所提供</span><br><span class="line">rpm -qp package.rpm -l 显示由一个尚未安装的rpm包提供的文件列表</span><br><span class="line">rpm --import /media/cdrom/RPM-GPG-KEY 导入公钥数字证书</span><br><span class="line">rpm --checksig package.rpm 确认一个rpm包的完整性</span><br><span class="line">rpm -qa gpg-pubkey 确认已安装的所有rpm包的完整性</span><br><span class="line">rpm -V package_name 检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间</span><br><span class="line">rpm -Va 检查系统中所有已安装的rpm包- 小心使用</span><br><span class="line">rpm -Vp package.rpm 确认一个rpm包还未安装</span><br><span class="line">rpm2cpio package.rpm | cpio --extract --make-directories *bin* 从一个rpm包运行可执行文件</span><br><span class="line">rpm -ivh /usr/src/redhat/RPMS/`<span class="built_in">arch</span>`/package.rpm 从一个rpm源码安装一个构建好的包</span><br><span class="line">rpmbuild --rebuild package_name.src.rpm 从一个rpm源码构建一个 rpm 包</span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li><h2 id="YUM-软件包升级器"><a href="#YUM-软件包升级器" class="headerlink" title="YUM 软件包升级器"></a>YUM 软件包升级器</h2></li>
+</ol>
+<ul>
+<li>（Fedora, RedHat及类似系统）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yum install package_name 下载并安装一个rpm包</span><br><span class="line">yum localinstall package_name.rpm 将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系</span><br><span class="line">yum update package_name.rpm 更新当前系统中所有安装的rpm包</span><br><span class="line">yum update package_name 更新一个rpm包</span><br><span class="line">yum remove package_name 删除一个rpm包</span><br><span class="line">yum list 列出当前系统中安装的所有包</span><br><span class="line">yum search package_name 在rpm仓库中搜寻软件包</span><br><span class="line">yum clean packages 清理rpm缓存删除下载的包</span><br><span class="line">yum clean headers 删除所有头文件</span><br><span class="line">yum clean all 删除所有缓存的包和头文件</span><br></pre></td></tr></table></figure>
+
+<ol start="13">
+<li><h2 id="DEB-包"><a href="#DEB-包" class="headerlink" title="DEB 包"></a>DEB 包</h2></li>
+</ol>
+<p>(Debian, Ubuntu 以及类似系统)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i package.deb 安装/更新一个 deb 包</span><br><span class="line">dpkg -r package_name 从系统删除一个 deb 包</span><br><span class="line">dpkg -l 显示系统中所有已经安装的 deb 包</span><br><span class="line">dpkg -l | grep httpd 显示所有名称中包含 <span class="string">&quot;httpd&quot;</span> 字样的deb包</span><br><span class="line">dpkg -s package_name 获得已经安装在系统中一个特殊包的信息</span><br><span class="line">dpkg -L package_name 显示系统中已经安装的一个deb包所提供的文件列表</span><br><span class="line">dpkg --contents package.deb 显示尚未安装的一个包所提供的文件列表</span><br><span class="line">dpkg -S /bin/ping 确认所给的文件由哪个deb包提供</span><br><span class="line">APT 软件工具 (Debian, Ubuntu 以及类似系统)</span><br><span class="line">apt-get install package_name 安装/更新一个 deb 包</span><br><span class="line">apt-cdrom install package_name 从光盘安装/更新一个 deb 包</span><br><span class="line">apt-get update 升级列表中的软件包</span><br><span class="line">apt-get upgrade 升级所有已安装的软件</span><br><span class="line">apt-get remove package_name 从系统删除一个deb包</span><br><span class="line">apt-get check 确认依赖的软件仓库正确</span><br><span class="line">apt-get clean 从下载的软件包中清理缓存</span><br><span class="line">apt-cache search searched-package 返回包含所要搜索字符串的软件包名称</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li><h2 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h2></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat file1 从第一个字节开始正向查看文件的内容</span><br><span class="line">tac file1 从最后一行开始反向查看一个文件的内容</span><br><span class="line">more file1 查看一个长文件的内容</span><br><span class="line">less file1 类似于 &#x27;more&#x27; 命令，但是它允许在文件中和正向操作一样的反向操作</span><br><span class="line">head -2 file1 查看一个文件的前两行</span><br><span class="line">tail -2 file1 查看一个文件的最后两行</span><br><span class="line">tail -f /var/log/messages 实时查看被添加到一个文件中的内容</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ol start="15">
+<li><h2 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">cat</span> file1 file2 ... | <span class="built_in">command</span> &lt;&gt; file1_in.txt_or_file1_out.txt general syntax <span class="keyword">for</span> text manipulation using PIPE, STDIN and STDOUT</span><br><span class="line"><span class="built_in">cat</span> file1 | <span class="built_in">command</span>( sed, grep, awk, grep, etc...) &gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个新文件中</span><br><span class="line"><span class="built_in">cat</span> file1 | <span class="built_in">command</span>( sed, grep, awk, grep, etc...) &gt;&gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个已有的文件中</span><br><span class="line">grep Aug /var/log/messages 在文件 <span class="string">&#x27;/var/log/messages&#x27;</span>中查找关键词<span class="string">&quot;Aug&quot;</span></span><br><span class="line">grep ^Aug /var/log/messages 在文件 <span class="string">&#x27;/var/log/messages&#x27;</span>中查找以<span class="string">&quot;Aug&quot;</span>开始的词汇</span><br><span class="line">grep [0-9] /var/log/messages 选择 <span class="string">&#x27;/var/log/messages&#x27;</span> 文件中所有包含数字的行</span><br><span class="line">grep Aug -R /var/log/* 在目录 <span class="string">&#x27;/var/log&#x27;</span> 及随后的目录中搜索字符串<span class="string">&quot;Aug&quot;</span></span><br><span class="line">sed <span class="string">&#x27;s/stringa1/stringa2/g&#x27;</span> example.txt 将example.txt文件中的 <span class="string">&quot;string1&quot;</span> 替换成 <span class="string">&quot;string2&quot;</span></span><br><span class="line">sed <span class="string">&#x27;/^$/d&#x27;</span> example.txt 从example.txt文件中删除所有空白行</span><br><span class="line">sed <span class="string">&#x27;/ *#/d; /^$/d&#x27;</span> example.txt 从example.txt文件中删除所有注释和空白行</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;esempio&#x27;</span> | <span class="built_in">tr</span> <span class="string">&#x27;[:lower:]&#x27;</span> <span class="string">&#x27;[:upper:]&#x27;</span> 合并上下单元格内容</span><br><span class="line">sed -e <span class="string">&#x27;1d&#x27;</span> result.txt 从文件example.txt 中排除第一行</span><br><span class="line">sed -n <span class="string">&#x27;/stringa1/p&#x27;</span> 查看只包含词汇 <span class="string">&quot;string1&quot;</span>的行</span><br><span class="line">sed -e <span class="string">&#x27;s/ *$//&#x27;</span> example.txt 删除每一行最后的空白字符</span><br><span class="line">sed -e <span class="string">&#x27;s/stringa1//g&#x27;</span> example.txt 从文档中只删除词汇 <span class="string">&quot;string1&quot;</span> 并保留剩余全部</span><br><span class="line">sed -n <span class="string">&#x27;1,5p;5q&#x27;</span> example.txt 查看从第一行到第5行内容</span><br><span class="line">sed -n <span class="string">&#x27;5p;5q&#x27;</span> example.txt 查看第5行</span><br><span class="line">sed -e <span class="string">&#x27;s/00*/0/g&#x27;</span> example.txt 用单个零替换多个零</span><br><span class="line"><span class="built_in">cat</span> -n file1 标示文件的行数</span><br><span class="line"><span class="built_in">cat</span> example.txt | awk <span class="string">&#x27;NR%2==1&#x27;</span> 删除example.txt文件中的所有偶数行</span><br><span class="line"><span class="built_in">echo</span> a b c | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> 查看一行第一栏</span><br><span class="line"><span class="built_in">echo</span> a b c | awk <span class="string">&#x27;&#123;print $1,$3&#125;&#x27;</span> 查看一行的第一和第三栏</span><br><span class="line"><span class="built_in">paste</span> file1 file2 合并两个文件或两栏的内容</span><br><span class="line"><span class="built_in">paste</span> -d <span class="string">&#x27;+&#x27;</span> file1 file2 合并两个文件或两栏的内容，中间用<span class="string">&quot;+&quot;</span>区分</span><br><span class="line"><span class="built_in">sort</span> file1 file2 排序两个文件的内容</span><br><span class="line"><span class="built_in">sort</span> file1 file2 | <span class="built_in">uniq</span> 取出两个文件的并集(重复的行只保留一份)</span><br><span class="line"><span class="built_in">sort</span> file1 file2 | <span class="built_in">uniq</span> -u 删除交集，留下其他的行</span><br><span class="line"><span class="built_in">sort</span> file1 file2 | <span class="built_in">uniq</span> -d 取出两个文件的交集(只留下同时存在于两个文件中的文件)</span><br><span class="line"><span class="built_in">comm</span> -1 file1 file2 比较两个文件的内容只删除 <span class="string">&#x27;file1&#x27;</span> 所包含的内容</span><br><span class="line"><span class="built_in">comm</span> -2 file1 file2 比较两个文件的内容只删除 <span class="string">&#x27;file2&#x27;</span> 所包含的内容</span><br><span class="line"><span class="built_in">comm</span> -3 file1 file2 比较两个文件的内容只删除两个文件共有的部分</span><br></pre></td></tr></table></figure>
+
+<ol start="16">
+<li><h2 id="字符设置和文件格式转换"><a href="#字符设置和文件格式转换" class="headerlink" title="字符设置和文件格式转换"></a>字符设置和文件格式转换</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dos2unix filedos.txt fileunix.txt 将一个文本文件的格式从MSDOS转换成UNIX</span><br><span class="line">unix2dos fileunix.txt filedos.txt 将一个文本文件的格式从UNIX转换成MSDOS</span><br><span class="line">recode ..HTML &lt; page.txt &gt; page.html 将一个文本文件转换成html</span><br><span class="line">recode -l | more 显示所有允许的转换格式</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ol start="17">
+<li><h2 id="文件系统分析"><a href="#文件系统分析" class="headerlink" title="文件系统分析"></a>文件系统分析</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">badblocks -v /dev/hda1 检查磁盘hda1上的坏磁块</span><br><span class="line">fsck /dev/hda1 修复/检查hda1磁盘上linux文件系统的完整性</span><br><span class="line">fsck.ext2 /dev/hda1 修复/检查hda1磁盘上ext2文件系统的完整性</span><br><span class="line">e2fsck /dev/hda1 修复/检查hda1磁盘上ext2文件系统的完整性</span><br><span class="line">e2fsck -j /dev/hda1 修复/检查hda1磁盘上ext3文件系统的完整性</span><br><span class="line">fsck.ext3 /dev/hda1 修复/检查hda1磁盘上ext3文件系统的完整性</span><br><span class="line">fsck.vfat /dev/hda1 修复/检查hda1磁盘上fat文件系统的完整性</span><br><span class="line">fsck.msdos /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性</span><br><span class="line">dosfsck /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性</span><br></pre></td></tr></table></figure>
+
+<ol start="18">
+<li><h2 id="初始化一个文件系统"><a href="#初始化一个文件系统" class="headerlink" title="初始化一个文件系统"></a>初始化一个文件系统</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkfs /dev/hda1 在hda1分区创建一个文件系统</span><br><span class="line">mke2fs /dev/hda1 在hda1分区创建一个linux ext2的文件系统</span><br><span class="line">mke2fs -j /dev/hda1 在hda1分区创建一个linux ext3(日志型)的文件系统</span><br><span class="line">mkfs -t vfat 32 -F /dev/hda1 创建一个 FAT32 文件系统</span><br><span class="line">fdformat -n /dev/fd0 格式化一个软盘</span><br><span class="line">mkswap /dev/hda3 创建一个swap文件系统</span><br></pre></td></tr></table></figure>
+
+<ol start="19">
+<li><h2 id="SWAP文件系统"><a href="#SWAP文件系统" class="headerlink" title="SWAP文件系统"></a>SWAP文件系统</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkswap /dev/hda3 创建一个swap文件系统</span><br><span class="line">swapon /dev/hda3 启用一个新的swap文件系统</span><br><span class="line">swapon /dev/hda2 /dev/hdb3 启用两个swap分区</span><br></pre></td></tr></table></figure>
+
+<ol start="20">
+<li><h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">dump -0aj -f /tmp/home0.bak /home 制作一个 <span class="string">&#x27;/home&#x27;</span> 目录的完整备份</span><br><span class="line">dump -1aj -f /tmp/home0.bak /home 制作一个 <span class="string">&#x27;/home&#x27;</span> 目录的交互式备份</span><br><span class="line">restore -<span class="keyword">if</span> /tmp/home0.bak 还原一个交互式备份</span><br><span class="line">rsync -rogpav --delete /home /tmp 同步两边的目录</span><br><span class="line">rsync -rogpav -e ssh --delete /home ip_address:/tmp 通过SSH通道rsync</span><br><span class="line">rsync -az -e ssh --delete ip_addr:/home/public /home/local 通过ssh和压缩将一个远程目录同步到本地目录</span><br><span class="line">rsync -az -e ssh --delete /home/local ip_addr:/home/public 通过ssh和压缩将本地目录同步到远程目录</span><br><span class="line"><span class="built_in">dd</span> bs=1M <span class="keyword">if</span>=/dev/hda | gzip | ssh user@ip_addr <span class="string">&#x27;dd of=hda.gz&#x27;</span> 通过ssh在远程主机上执行一次备份本地磁盘的操作</span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/sda of=/tmp/file1 备份磁盘内容到一个文件</span><br><span class="line">tar -Puf backup.tar /home/user 执行一次对 <span class="string">&#x27;/home/user&#x27;</span> 目录的交互式备份操作</span><br><span class="line">( <span class="built_in">cd</span> /tmp/local/ &amp;&amp; tar c . ) | ssh -C user@ip_addr <span class="string">&#x27;cd /home/share/ &amp;&amp; tar x -p&#x27;</span> 通过ssh在远程目录中复制一个目录内容</span><br><span class="line">( tar c /home ) | ssh -C user@ip_addr <span class="string">&#x27;cd /home/backup-home &amp;&amp; tar x -p&#x27;</span> 通过ssh在远程目录中复制一个本地目录</span><br><span class="line">tar cf - . | (<span class="built_in">cd</span> /tmp/backup ; tar xf - ) 本地将一个目录复制到另一个地方，保留原有权限及链接</span><br><span class="line">find /home/user1 -name <span class="string">&#x27;*.txt&#x27;</span> | xargs <span class="built_in">cp</span> -av --target-directory=/home/backup/ --parents 从一个目录查找并复制所有以 <span class="string">&#x27;.txt&#x27;</span> 结尾的文件到另一个目录</span><br><span class="line">find /var/log -name <span class="string">&#x27;*.log&#x27;</span> | tar cv --files-from=- | bzip2 &gt; log.tar.bz2 查找所有以 <span class="string">&#x27;.log&#x27;</span> 结尾的文件并做成一个bzip包</span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/hda of=/dev/fd0 bs=512 count=1 做一个将 MBR (Master Boot Record)内容复制到软盘的动作</span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/fd0 of=/dev/hda bs=512 count=1 从已经保存到软盘的备份中恢复MBR内容</span><br></pre></td></tr></table></figure>
+
+<ol start="21">
+<li><h2 id="光盘"><a href="#光盘" class="headerlink" title="光盘"></a>光盘</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force 清空一个可复写的光盘内容</span><br><span class="line">mkisofs /dev/cdrom &gt; cd.iso 在磁盘上创建一个光盘的iso镜像文件</span><br><span class="line">mkisofs /dev/cdrom | gzip &gt; cd_iso.gz 在磁盘上创建一个压缩了的光盘iso镜像文件</span><br><span class="line">mkisofs -J -allow-leading-dots -R -V <span class="string">&quot;Label CD&quot;</span> -iso-level 4 -o ./cd.iso data_cd 创建一个目录的iso镜像文件</span><br><span class="line">cdrecord -v dev=/dev/cdrom cd.iso 刻录一个ISO镜像文件</span><br><span class="line">gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom - 刻录一个压缩了的ISO镜像文件</span><br><span class="line">mount -o loop cd.iso /mnt/iso 挂载一个ISO镜像文件</span><br><span class="line">cd-paranoia -B 从一个CD光盘转录音轨到 wav 文件中</span><br><span class="line">cd-paranoia -- <span class="string">&quot;-3&quot;</span> 从一个CD光盘转录音轨到 wav 文件中（参数-3）</span><br><span class="line">cdrecord --scanbus 扫描总线以识别scsi通道</span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/hdc | <span class="built_in">md5sum</span> 校验一个设备的<span class="built_in">md5sum</span>编码，例如一张 CD</span><br></pre></td></tr></table></figure>
+
+<ol start="22">
+<li><h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2>（以太网和WIFI无线）</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 显示一个以太网卡的配置</span><br><span class="line">ifup eth0 启用一个 <span class="string">&#x27;eth0&#x27;</span> 网络设备</span><br><span class="line">ifdown eth0 禁用一个 <span class="string">&#x27;eth0&#x27;</span> 网络设备</span><br><span class="line">ifconfig eth0 192.168.1.1 netmask 255.255.255.0 控制IP地址</span><br><span class="line">ifconfig eth0 promisc 设置 <span class="string">&#x27;eth0&#x27;</span> 成混杂模式以嗅探数据包 (sniffing)</span><br><span class="line">dhclient eth0 以dhcp模式启用 <span class="string">&#x27;eth0&#x27;</span></span><br><span class="line">route -n show routing table</span><br><span class="line">route add -net 0/0 gw IP_Gateway configura default gateway</span><br><span class="line">route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1 configure static route to reach network <span class="string">&#x27;192.168.0.0/16&#x27;</span></span><br><span class="line">route del 0/0 gw IP_gateway remove static route</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt; /proc/sys/net/ipv4/ip_forward activate ip routing</span><br><span class="line">hostname show hostname of system</span><br><span class="line">host www.example.com lookup hostname to resolve name to ip address and viceversa(1)</span><br><span class="line">nslookup www.example.com lookup hostname to resolve name to ip address and viceversa(2)</span><br><span class="line">ip <span class="built_in">link</span> show show <span class="built_in">link</span> status of all interfaces</span><br><span class="line">mii-tool eth0 show <span class="built_in">link</span> status of <span class="string">&#x27;eth0&#x27;</span></span><br><span class="line">ethtool eth0 show statistics of network card <span class="string">&#x27;eth0&#x27;</span></span><br><span class="line">netstat -tup show all active network connections and their PID</span><br><span class="line">netstat -tupl show all network services listening on the system and their PID</span><br><span class="line">tcpdump tcp port 80 show all HTTP traffic</span><br><span class="line">iwlist scan show wireless networks</span><br><span class="line">iwconfig eth1 show configuration of a wireless network card</span><br><span class="line">hostname show hostname</span><br><span class="line">host www.example.com lookup hostname to resolve name to ip address and viceversa</span><br><span class="line">nslookup www.example.com lookup hostname to resolve name to ip address and viceversa</span><br><span class="line">whois www.example.com lookup on Whois database</span><br></pre></td></tr></table></figure>
+
+<ol start="23">
+<li><h2 id="列出目录内容"><a href="#列出目录内容" class="headerlink" title="列出目录内容"></a>列出目录内容</h2></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -a：显示所有文件（包括隐藏文件）；</span><br><span class="line"><span class="built_in">ls</span> -l：显示详细信息；</span><br><span class="line"><span class="built_in">ls</span> -R：递归显示子目录结构；</span><br><span class="line"><span class="built_in">ls</span> -ld：显示目录和链接信息；</span><br><span class="line">ctrl+r：历史记录中所搜命令（输入命令中的任意一个字符）；</span><br><span class="line">Linux中以.开头的文件是隐藏文件；</span><br><span class="line"><span class="built_in">pwd</span>:显示当前目录</span><br></pre></td></tr></table></figure>
+
+<ol start="24">
+<li><h2 id="查看文件的类型"><a href="#查看文件的类型" class="headerlink" title="查看文件的类型"></a>查看文件的类型</h2></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file:查看文件的类型</span><br></pre></td></tr></table></figure>
+
+<ol start="25">
+<li><h2 id="复制文件目录等操作"><a href="#复制文件目录等操作" class="headerlink" title="复制文件目录等操作"></a>复制文件目录等操作</h2></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">1、cp：复制文件和目录 cp源文件（文件夹）目标文件（文件夹）</span><br><span class="line">常用参数：-r:递归复制整个目录树；-v：显示详细信息；复制文件夹时要在cp命令后面加一个-r参数：如：cp -r 源文件夹 目标文件夹</span><br><span class="line">2、touch+文件名：当文件不存在的时候，创建相应的文件；当文件存在的时候，修改文件的创建时间。欢迎关注我们，公号终码一生。功能：生成一个空文件或修改文件的存取/修改的时间记录值。touch * ：将当前下的文件时间修改为系统的当前时间</span><br><span class="line">touch –d 20040210 test：将test文件的日期改为20040210</span><br><span class="line">touch abc ：若abc文件存在，则修改为系统的当前时间；若不存在，则生成一个为当前时间的空文件</span><br><span class="line">3、mv 文件 目标目录：移动或重命名文件或目录（如果指定文件名，则可以重命名文件）。可以将文件及目录移到另一目录下，或更改文件及目录的名称。格式为：mv [参数]&lt;源文件或目录&gt; &lt;目标文件或目录&gt;</span><br><span class="line">mva.txt ../：将a.txt文件移动上层目录</span><br><span class="line">mv a.txt b.txt：将a.txt改名为b.txt</span><br><span class="line">mvdir2 ../：将dir2目录上移一层</span><br><span class="line">4、rm：删除文件；常用参数：-i：交互式 -r：递归的删除包括目录中的所有内容</span><br><span class="line">5、mkdir +文件夹名称：创建文件夹；6、rm -r +文件夹名称：删除文件夹（空文件夹和非空文件夹都可删除）</span><br><span class="line">rmdir 文件夹名称：删除文件夹（只能删除空文件夹）</span><br><span class="line">7、mkdir -p dir1/dir2 ：在当前目录下创建dir1目录，并在dir1目录下创建dir2目录， 也就是连续创建两个目录（dir1/和dir1/dir2）</span><br><span class="line">8、rmdir –p dir1/dir2：删除dir1下的dir2目录，若dir1目录为空也删除它</span><br><span class="line">9、rm * ：删除当前目录下的所有文件</span><br><span class="line">10、-f参数：强迫删除文件 rm –f *.txt：强迫删除所有以后缀名为txt文件</span><br><span class="line">11、-i参数：删除文件时询问</span><br><span class="line">rm –i * ：删除当前目录下的所有文件会有如下提示：rm:backup:is a directory 遇到目录会略过</span><br><span class="line">rm: remove ‘myfiles.txt’ ? Y</span><br><span class="line">删除文件时会询问,可按Y或N键表示允许或拒绝删除文件 </span><br><span class="line">12、-r参数：递归删除（连子目录一同删除，这是一个相当常用的参数）</span><br><span class="line">rm -r test ：删除test目录（含test目录下所有文件和子目录）</span><br><span class="line">rm -r *：删除所有文件（含当前目录所有文件、所有子目录和子目录下的文件） 一般在删除目录时r和f一起用，避免麻烦</span><br><span class="line">rm -rf test ：强行删除、不加询问</span><br><span class="line">13、grep：功能：在文件中搜索匹配的字符并进行输出</span><br><span class="line">格式：grep[参数] &lt;要找的字串&gt; &lt;要寻找字 串的源文件&gt;</span><br><span class="line">greplinux test.txt：搜索test.txt文件中字符串linux并输出</span><br><span class="line">14、ln命令</span><br><span class="line">功能：在文件和目录之间建立链接</span><br><span class="line">格式：ln [参数] &lt;源文件或目录&gt; &lt;目标文件或目录&gt;</span><br><span class="line">链接分“软链接”和“硬链接”</span><br><span class="line">1.软链接:</span><br><span class="line">ln–s /usr/share/do doc ：创建一个链接文件doc,并指向目录/usr/share/do</span><br><span class="line">2.硬链接:</span><br><span class="line">ln /usr/share/test hard：创建一个硬链接文件hard，这时对于test文件对应 的存储区域来说，又多了一个文件指向它</span><br></pre></td></tr></table></figure>
+
+<ol start="26">
+<li><h2 id="系统常用命令"><a href="#系统常用命令" class="headerlink" title="系统常用命令"></a>系统常用命令</h2></li>
+</ol>
+<ul>
+<li><h3 id="显示命令"><a href="#显示命令" class="headerlink" title="显示命令"></a>显示命令</h3></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">date</span>:查看或设置当前系统的时间：格式化显示时间：+%Y--%m--%d；<span class="built_in">date</span> -s:设置当前系统的时间</span><br><span class="line">hwclock(clock)：显示硬件时钟时间(需要管理员权限)；cal：查看日历</span><br><span class="line">格式cal [参数] 月年</span><br><span class="line">cal：显示当月的日历 cal4 2004 ：显示2004年4月的日历</span><br><span class="line">cal- y 2003：显示2003年的日历</span><br><span class="line"><span class="built_in">uptime</span>：查看系统运行时间</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="输出查看命令"><a href="#输出查看命令" class="headerlink" title="输出查看命令"></a>输出查看命令</h3></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>：显示输入的内容 追加文件<span class="built_in">echo</span> <span class="string">&quot;liuyazhuang&quot;</span> &gt;&gt; liuyazhuang.txt</span><br><span class="line"><span class="built_in">cat</span>：显示文件内容,也可以将数个文件合并成一个文件。格式：格式：<span class="built_in">cat</span>[参数]&lt;文件名&gt;</span><br><span class="line"><span class="built_in">cat</span> test.txt：显示test.txt文件内容</span><br><span class="line"><span class="built_in">cat</span> test.txt | more ：逐页显示test.txt文件中的内容</span><br><span class="line"><span class="built_in">cat</span> test.txt &gt;&gt; test1.txt ：将test.txt的内容附加到test1.txt文件之后</span><br><span class="line"><span class="built_in">cat</span> test.txt test2.txt &gt;readme.txt : 将test.txt和test2.txt文件合并成readme.txt 文件</span><br><span class="line"><span class="built_in">head</span>:显示文件的头几行（默认10行） -n:指定显示的行数格式：<span class="built_in">head</span> -n 文件名</span><br><span class="line"><span class="built_in">tail</span>：显示文件的末尾几行（默认10行）-n：指定显示的行数 -f：追踪显示文件更新 （一般用于查看日志，命令不会退出，而是持续显示新加入的内容）</span><br><span class="line">格式：格式：<span class="built_in">tail</span>[参数]&lt;文件名&gt;</span><br><span class="line">tail-10 /etc/passwd ：显示/etc/passwd/文件的倒数10行内容</span><br><span class="line"><span class="built_in">tail</span>+10 /etc/passwd ：显示/etc/passwd/文件从第10行开始到末尾的内容</span><br><span class="line">more：用于翻页显示文件内容（只能向下翻页）</span><br><span class="line">more命令是一般用于要显示的内容会超过一个画面长度的情况。为了避免画 面显示时瞬间就闪过去，用户可以使用more命令，让画面在显示满一页时暂停，此时可按空格健继续显示下一个画面，或按Q键停止显示。<span class="built_in">ls</span> -al |more：以长格形式显示etc目录下的文件列表，显示满一个画面便暂停，可 按空格键继续显示下一画面，或按Q键跳离</span><br><span class="line">less：翻页显示文件内容（带上下翻页）按下上键分页，按q退出、‘</span><br><span class="line">less命令的用法与more命令类似，也可以用来浏览超过一页的文件。所不同 的是less 命令除了可以按空格键向下显示文件外，还可以利用上下键来卷动文件。当要结束浏览时，只要在less命令的提示符“：”下按Q键即可。<span class="built_in">ls</span> -al | less：以长格形式列出/etc目录中所有的内容。用户可按上下键浏览或按Q键跳离</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="查看硬件信息"><a href="#查看硬件信息" class="headerlink" title="查看硬件信息"></a>查看硬件信息</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ispci：查看PCI设备 -v：查看详细信息</span><br><span class="line">Isusb：查看USB设备 -v：查看详细信息</span><br><span class="line">Ismod：查看加载的模块(驱动)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="归档、压缩"><a href="#归档、压缩" class="headerlink" title="归档、压缩"></a>归档、压缩</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">zip:压缩文件 zip liuyazhuang.zip myfile 格式为：“zip 压缩后的zip文件文件名”</span><br><span class="line">unzip：解压文件 unzip liuyazhuang.zip</span><br><span class="line">gzip：压缩文件 gzip 文件名</span><br><span class="line">tar：归档文件</span><br><span class="line">tar -cvf out.tar liuyazhuang 打包一个归档（将文件&quot;liuyazhuang&quot;打包成一个归档）</span><br><span class="line">tar -xvf liuyazhuang.tar 释放一个归档（释放liuyazhuang.tar归档）</span><br><span class="line">tar -cvzf backup.tar.gz/etc </span><br><span class="line">-z参数将归档后的归档文件进行gzip压缩以减少大小。-c：创建一个新tar文件</span><br><span class="line">-v：显示运行过程的信息</span><br><span class="line">-f：指定文件名</span><br><span class="line">-z：调用gzip压缩命令进行压缩</span><br><span class="line">-t：查看压缩文件的内容</span><br><span class="line">-x：解开tar文件</span><br><span class="line">tar -cvf test.tar *：将所有文件打包成test.tar,扩展名.tar需自行加上</span><br><span class="line">tar -zcvf test.tar.gz *：将所有文件打包成test.tar,再用gzip命令压缩</span><br><span class="line">tar -tf test.tar ：查看test.tar文件中包括了哪些文件</span><br><span class="line">tar -xvf test.tar 将test.tar解开</span><br><span class="line">tar -zxvf foo.tar.gz 解压缩</span><br><span class="line">gzip各gunzip命令</span><br><span class="line">gziptest.txt ：压缩文件时，不需要任何参数</span><br><span class="line">gizp–l test.txt.gz：显示压缩率</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">locate：快速查找文件、文件夹：locate keyword</span><br><span class="line">此命令需要预先建立数据库，数据库默认每天更新一次，可用updatedb命令手工建立、更新数据库。欢迎关注我们，公号终码一生。find查找位置查找参数</span><br><span class="line">如：find . -name *liuyazhuang* 查找当前目录下名称中含有&quot;liuyazhuang&quot;的文件</span><br><span class="line">find / -name *.conf 查找根目录下（整个硬盘）下后缀为.conf的文件</span><br><span class="line">find / -perm 777 查找所有权限是777的文件</span><br><span class="line">find / -type d 返回根目录下所有的目录</span><br><span class="line">find . -name &quot;a*&quot;-exec ls -l &#123;&#125; \;</span><br><span class="line">find功能：用来寻找文件或目录。格式：find [&lt;路径&gt;] [匹配条件]</span><br><span class="line">find / -name httpd.conf 搜索系统根目录下名为httpd.conf的文件</span><br><span class="line">7、ctrl+c :终止当前的命令</span><br><span class="line">8、who或w命令</span><br><span class="line">功能：查看当前系统中有哪些用户登录</span><br><span class="line">格式：who/w[参数]</span><br><span class="line">9、dmesg命令 功能：显示系统诊断信息、操作系统版本号、物理内存的大小以及其它信息</span><br><span class="line">10、df命令 功能：用于查看文件系统的各个分区的占用情况</span><br><span class="line">11、du命令</span><br><span class="line">功能：查看某个目录中各级子目录所使用的硬盘空间数</span><br><span class="line">格式：du [参数] &lt;目录名&gt;</span><br><span class="line">12、free命令</span><br><span class="line">功能：用于查看系统内存，虚拟内存（交换空间）的大小占用情况</span><br></pre></td></tr></table></figure>
+
+<ol start="27">
+<li><h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2></li>
+</ol>
+<p>VIM 是一款功能强大的命令行文本编辑器，在 Linux 中通过 vim 命令可以启动 vim编辑器。</p>
+<p>一般使用 vim + 目标文件路径的形式使用vim。</p>
+<p>如果目标文件存在，则 vim 打开目标文件，如果目标文件不存在，则 vim 新建并打开该文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:q：退出vim编辑器</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>vim拥有三种模式</p>
+<ul>
+<li><h3 id="命令模式（常规模式）"><a href="#命令模式（常规模式）" class="headerlink" title="命令模式（常规模式）"></a>命令模式（常规模式）</h3><blockquote>
+<p> vim启动后，默认进入命令模式，任何模式都可以通过esc键回到命令模式（可以多按几次），命令模式下可以键入不同的命令完成选择、复制、粘贴、撤销等操作。</p>
+</blockquote>
+<blockquote>
+<p> 命名模式常用命令如下：</p>
+</blockquote>
+<ul>
+<li>i：在光标前插入文本；</li>
+</ul>
+<ul>
+<li><p>o：在当前行的下面插入新行；</p>
+</li>
+<li><p>dd：删除整行；</p>
+</li>
+<li><p>yy：将当前行的内容放入缓冲区（复制当前行）</p>
+</li>
+<li><p>n+yy：将n行的内容放入缓冲区（复制n行）</p>
+</li>
+<li><p>p：将缓冲区中的文本放入光标后（粘贴）</p>
+</li>
+<li><p>u：撤销上一个操作</p>
+</li>
+<li><p>r：替换当前字符</p>
+</li>
+<li><p>&#x2F;：查找关键字</p>
+</li>
+</ul>
+</li>
+<li><h3 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h3><blockquote>
+<p>在命令模式下按 “ i “键，即可进入插入模式，在插入模式可以输入编辑文本内容，使用esc键可以返回命令模式。	</p>
+</blockquote>
+</li>
+<li><h3 id="ex模式"><a href="#ex模式" class="headerlink" title="ex模式"></a>ex模式</h3><blockquote>
+<p>在命令模式中按” : “键可以进入ex模式，光标会移动到底部，在这里可以保存修改或退出vim。</p>
+</blockquote>
+<p>ex模式常用命令如下：</p>
+<ul>
+<li><p>:w 保存当前的修改</p>
+</li>
+<li><p>:q 退出</p>
+</li>
+<li><p>:q! 强制退出，保存修改</p>
+</li>
+<li><p>:x 保存并退出，相当于:wq</p>
+</li>
+<li><p>:set number 显示行号</p>
+</li>
+<li><p>:! 系统命令 执行一个系统命令并显示结果</p>
+</li>
+<li><p>:sh 切换到命令行，使用ctrl+d切换回vim</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="28">
+<li><h2 id="软件包管理命令-RPM"><a href="#软件包管理命令-RPM" class="headerlink" title="软件包管理命令(RPM)"></a>软件包管理命令(RPM)</h2></li>
+</ol>
+<ul>
+<li><h3 id="软件包的安装"><a href="#软件包的安装" class="headerlink" title="软件包的安装"></a>软件包的安装</h3></li>
+</ul>
+<p>​	使用RPM命令的安装模式可以将软件包内所有的组件放到系统中的正确路径，安装软件包的命令是：<code>rpm –ivh wu-ftpd-2.6.2-8.i386.rpm</code></p>
+<p>​	i：作用rpm的安装模式，v: 校验文件信息，h: 以＃号显示安装进度。</p>
+<ul>
+<li><h3 id="软件包的删除"><a href="#软件包的删除" class="headerlink" title="软件包的删除"></a>软件包的删除</h3></li>
+</ul>
+<p>​	删除模式会将指定软件包的内容全部删除，但并不包括已更改过的配置文件，删除RPM软件包的命令如下：<code>rpm -e wu-ftpd</code></p>
+<p><strong>注意：这里必须使用软件名“<code>wu-ftpd</code>”或”<code>wu-ftpd-2.6.2-8</code>而不是使用当初安装时的软件包名<code>.wu-ftpd-2.6.2-8.i386.rpm</code></strong></p>
+<ul>
+<li><h3 id="软件包升级"><a href="#软件包升级" class="headerlink" title="软件包升级"></a>软件包升级</h3></li>
+</ul>
+<p>​	升级模式会安装用户所指定的更新版本，并删除已安装在系统中的相同软件包，升级软件包命令如下：<code>rpm -Uvh wu-ftpd-2.6.2-8.i386.rpm -Uvh：升级参数</code></p>
+<ul>
+<li><h3 id="软件包更新"><a href="#软件包更新" class="headerlink" title="软件包更新"></a>软件包更新</h3></li>
+</ul>
+<p>​	更新模式下，rpm命令会检查在命令行中所指定的软件包是否比系统中原有的软件 包更新。如果情况属实，rpm命令会自动更新指定的软件包；反之，若系统中并没有指定软件包的较旧版本，rpm命令并不会安装此软件包。而在升级模式下，不管系统中是否有较旧的版本，rpm命令都会安装指定的软件包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –Fvhwu-ftpd-2.6.2-8.i386.rpm -Fvh：更新参数</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="软件包查询"><a href="#软件包查询" class="headerlink" title="软件包查询"></a>软件包查询</h3></li>
+</ul>
+<p>​	若要获取RPM软件包的相关信息，可以使用查询模式。使用-q参数可查询一个已 安装的软件包的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –q wu-ftpd</span><br></pre></td></tr></table></figure>
+
+<p>查询软件包所安装的位置：<code>rpm –ql package-name</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –ql xv (l参数：显示文件列表)</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="28">
+<li><h2 id="示例操作"><a href="#示例操作" class="headerlink" title="示例操作"></a>示例操作</h2><ol>
+<li><h3 id="tar-压缩-解压"><a href="#tar-压缩-解压" class="headerlink" title="tar 压缩&#x2F;解压"></a>tar 压缩&#x2F;解压</h3><ul>
+<li>-c: 建立压缩档案</li>
+<li>-x：解压</li>
+<li>-t：查看内容</li>
+<li>-r：向压缩归档文件末尾追加文件</li>
+<li>-u：更新原压缩包中的文件</li>
+</ul>
+<blockquote>
+<p> 这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
+</blockquote>
+<ul>
+<li>-z：有gzip属性的</li>
+<li>-j：有bz2属性的</li>
+<li>-Z：有compress属性的</li>
+<li>-v：显示所有过程</li>
+<li>-O：将文件解开到标准输出</li>
+</ul>
+<blockquote>
+<p>下面的参数-f是必须的</p>
+</blockquote>
+<ul>
+<li>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tar -cf all.tar *.jpg</span></span><br><span class="line">这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</span><br><span class="line"></span><br><span class="line"><span class="comment"># tar -rf all.tar *.gif</span></span><br><span class="line">这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</span><br><span class="line"></span><br><span class="line"><span class="comment"># tar -uf all.tar logo.gif</span></span><br><span class="line">这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</span><br><span class="line"></span><br><span class="line"><span class="comment"># tar -tf all.tar</span></span><br><span class="line">这条命令是列出all.tar包中所有文件，-t是列出文件的意思</span><br><span class="line"></span><br><span class="line"><span class="comment"># tar -xf all.tar</span></span><br><span class="line">这条命令是解出all.tar包中所有文件，-t是解开的意思</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">压缩</span><br><span class="line">tar -cvf jpg.tar *.jpg //将目录里所有jpg文件打包成tar.jpg </span><br><span class="line">tar -czf jpg.tar.gz *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz</span><br><span class="line"> tar -cjf jpg.tar.bz2 *.jpg //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2</span><br><span class="line">tar -cZf jpg.tar.Z *.jpg   //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z</span><br><span class="line">rar a jpg.rar *.jpg //rar格式的压缩，需要先下载rar <span class="keyword">for</span> linux</span><br><span class="line">zip jpg.zip *.jpg //zip格式的压缩，需要先下载zip <span class="keyword">for</span> linux</span><br><span class="line"></span><br><span class="line">解压</span><br><span class="line">tar -xvf file.tar //解压 tar包</span><br><span class="line">tar -xzvf file.tar.gz //解压tar.gz</span><br><span class="line">tar -xjvf file.tar.bz2   //解压 tar.bz2</span><br><span class="line">tar -xZvf file.tar.Z   //解压tar.Z</span><br><span class="line">unrar e file.rar //解压rar</span><br><span class="line">1、把文件解压到当前目录下</span><br><span class="line">unzip file.zip //解压zip</span><br><span class="line">2、如果要把文件解压到指定的目录下，需要用到-d参数。</span><br><span class="line">unzip -d /temp test.zip</span><br><span class="line">3、解压的时候，有时候不想覆盖已经存在的文件，那么可以加上-n参数</span><br><span class="line">unzip -n test.zip</span><br><span class="line">unzip -n -d /temp test.zip</span><br><span class="line">4、只看一下zip压缩包中包含哪些文件，不进行解压缩</span><br><span class="line">unzip -l test.zip</span><br><span class="line">5、查看显示的文件列表还包含压缩比率</span><br><span class="line">unzip -v test.zip</span><br><span class="line">6、检查zip文件是否损坏</span><br><span class="line">unzip -t test.zip</span><br><span class="line">7、将压缩文件test.zip在指定目录tmp下解压缩，如果已有相同的文件存在，要求unzip命令覆盖原先的文件</span><br><span class="line">unzip -o test.zip -d /tmp/</span><br><span class="line"></span><br><span class="line">总结</span><br><span class="line">1、*.tar 用 tar -xvf 解压</span><br><span class="line">2、*.gz 用 gzip -d或者gunzip 解压</span><br><span class="line">3、*.tar.gz和*.tgz 用 tar -xzf 解压</span><br><span class="line">4、*.bz2 用 bzip2 -d或者用bunzip2 解压</span><br><span class="line">5、*.tar.bz2用tar -xjf 解压</span><br><span class="line">6、*.Z 用 uncompress 解压</span><br><span class="line">7、*.tar.Z 用tar -xZf 解压</span><br><span class="line">8、*.rar 用 unrar e解压</span><br><span class="line">9、*.zip 用 unzip 解压</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="MV-移动文件-更名"><a href="#MV-移动文件-更名" class="headerlink" title="MV 移动文件&#x2F;更名"></a>MV 移动文件&#x2F;更名</h3><p><code>mv [options] source dest</code> </p>
+<p><code>mv [options] source... directory</code></p>
+<p><strong>参数说明</strong>：</p>
+<ul>
+<li>-i: 若指定目录已有同名文件，则先询问是否覆盖旧文件;</li>
+<li>-f: 在mv操作要覆盖某已有的目标文件时不给任何指示;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令格式</th>
+<th>运行结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mv 文件名 文件名</td>
+<td>将源文件名改为目标文件名</td>
+</tr>
+<tr>
+<td>mv 文件名 目录名</td>
+<td>将文件移动到目标目录</td>
+</tr>
+<tr>
+<td>mv 目录名 目录名</td>
+<td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td>
+</tr>
+<tr>
+<td>mv 目录名 文件名</td>
+<td>出错</td>
+</tr>
+</tbody></table>
+<p><strong>实例</strong></p>
+<p>将文件 aaa 更名为 bbb :</p>
+<p><code>mv aaa bbb</code></p>
+<p>将info目录放入logs目录中。注意，如果logs目录不存在，则该命令将info改名为logs。</p>
+<p><code>mv info/ logs</code> </p>
+<p>再如将&#x2F;usr&#x2F;student下的所有文件和目录移到当前目录下，命令行为：</p>
+<p><code>$ mv /usr/student/*  .</code> </p>
+</li>
+<li><h3 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h3></li>
+</ol>
+<ul>
+<li><p>开启防火墙</p>
+<p><code>systemctl start firewalld</code></p>
+</li>
+<li><p>开放指定端口</p>
+<p><code>firewall-cmd --zone=public --add-port=1935/tcp --permanent</code></p>
+<blockquote>
+<p>命令含义：</p>
+<p>–zone #作用域</p>
+<p>–add-port&#x3D;1935&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议</p>
+<p>–permanent #永久生效，没有此参数重启后失效</p>
+</blockquote>
+</li>
+<li><p>重启防火墙</p>
+<p><code>firewall-cmd --reload</code></p>
+</li>
+<li><p>关闭防火墙</p>
+<p><code>systemctl stop firewalld</code></p>
+</li>
+<li><p>查看防火墙状态</p>
+<p><code>systemctl status firewalld</code></p>
+<p><code>firewall-cmd --state</code></p>
+</li>
+<li><p>查看端口号</p>
+<p><code>netstat -ntlp</code> &#x2F;&#x2F;查看当前所有tcp端口·</p>
+<p><code>netstat -ntulp |grep 1935</code> &#x2F;&#x2F;查看所有1935端口使用情况·</p>
+</li>
+<li><p>根据进程号查看路径</p>
+<p>ll &#x2F;proc&#x2F;进程号&#x2F;cwd</p>
+<p>ll &#x2F;proc&#x2F;16980&#x2F;cwd</p>
+</li>
+<li><p>查看开放的端口</p>
+<p>firewall-cmd –list-port</p>
+</li>
+</ul>
+<ol start="4">
+<li><h3 id="配置防火墙"><a href="#配置防火墙" class="headerlink" title="配置防火墙"></a>配置防火墙</h3></li>
+</ol>
+<ul>
+<li><p>关闭防火墙</p>
+<p><code>systemctl stop firewalld</code></p>
+</li>
+<li><p>确认防火墙状态已关闭：</p>
+<p><code>systemctl status firewalld</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">○ firewalld.service - firewalld - dynamic firewall daemon</span><br><span class="line"></span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)</span><br><span class="line"></span><br><span class="line">   Active: inactive (dead)</span><br><span class="line"></span><br><span class="line">​     Docs: man:firewalld(1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再关闭其开机自启：</p>
+<p><code>systemctl disable firewalld</code></p>
+</li>
+</ul>
+<ol start="5">
+<li><h3 id="访问端口"><a href="#访问端口" class="headerlink" title="访问端口"></a>访问端口</h3></li>
+</ol>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl ip:port</span><br><span class="line">docker 授权当前账户执行docker权限</span><br><span class="line"><span class="built_in">sudo</span> groupadd docker     <span class="comment">#添加docker用户组</span></span><br><span class="line"><span class="built_in">sudo</span> gpasswd -a <span class="variable">$USER</span> docker     <span class="comment">#将登陆用户加入到docker用户组中</span></span><br><span class="line">newgrp docker     <span class="comment">#更新用户组</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3></li>
+</ol>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">创建用户和密码</span><br><span class="line"><span class="built_in">sudo</span> useradd -m aaa</span><br><span class="line">创建用户名为aaa的用户</span><br><span class="line">-m：自动建立用户的登入目录</span><br><span class="line"><span class="built_in">sudo</span>是允许系统管理员让普通用户执行root命令的一个工具（获取权限）</span><br><span class="line">这里会需要输入管理员的密码（不是你想给新用户设置的密码！！！）</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> passwd aaa</span><br><span class="line">输入用户aaa的密码</span><br><span class="line"></span><br><span class="line">设置给予的权限</span><br><span class="line"><span class="built_in">sudo</span> vi /etc/sudoers</span><br><span class="line">找到user privilege这一行，加入</span><br><span class="line">aaa  ALL=(ALL:ALL) ALL</span><br><span class="line">删除用户</span><br><span class="line"><span class="built_in">sudo</span> userdel -r aaa</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3></li>
+</ol>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile 进入配置文件</span><br><span class="line"><span class="built_in">export</span> 环境变量key = 环境变量value</span><br><span class="line">例：<span class="built_in">export</span> DOTNET_ROOT=<span class="variable">$HOME</span>/dotnet</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/dotnet</span><br><span class="line">保存退出后 刷新 <span class="built_in">source</span> /etc/profile 使环境变量生效</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>​	</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Think.Wang</div><div class="post-copyright__author_desc">一个上了年纪的猿人</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.huhaha.vip/post/ec90412d.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.huhaha.vip/post/ec90412d.html')">【Linux】常用命令</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.huhaha.vip/post/ec90412d.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.huhaha.vip" target="_blank">小王的博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Linux/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Linux<span class="tagsPageCount">14</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/d53c365ee6d64927a89a29126d5a90c320250520141615101.webp?_r_=0be815c3-46d0-e0a0-d436-3ed8045350e0" data-sites="wechat,qq"></div><link rel="stylesheet" href="/./css/share.min.css" media="print" onload="this.media='all'"/><script src="/./js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/5901b3f7.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/07dba742131648e2a3943965e267966a20250520141727574.webp?_r_=9469ac37-40c4-750a-5e22-bd09d132d636" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Github+picGo+Typora搭建图床</div></div></a></div><div class="next-post pull-right"><a href="/post/9beaa6c0.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/c685236d802c471dac8d2b5c12508ae220250520141251842.webp?_r_=01364abe-543c-e28b-d310-a0e0d2a1b250" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">NET Core 优秀项目和框架精选</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/post/6508e70d.html" title="Linux系统Tomcat启动指定JDK版本"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/d53c365ee6d64927a89a29126d5a90c320250520141615101.webp?_r_=df29a2c8-1d31-92e8-f8f3-4b455dccdd09" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-12-09</div><div class="title">Linux系统Tomcat启动指定JDK版本</div></div></a></div><div><a href="/post/26185413.html" title="【Linux】DotNet运行命令"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/07dba742131648e2a3943965e267966a20250520141727574.webp?_r_=e015a8f5-967f-d7fa-9d5f-3eacccaf52ab" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-01</div><div class="title">【Linux】DotNet运行命令</div></div></a></div><div><a href="/post/5711187a.html" title="【Linux】Libgdiplus安装"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/a46fa683984846f482034d04dfab203520250520112607639.webp?_r_=9495e452-2984-5377-423b-23d37162ec9f" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-01</div><div class="title">【Linux】Libgdiplus安装</div></div></a></div><div><a href="/post/bf223232.html" title="【Linux】Linux环境下运行jar包的几种方式"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/e1600fcbb388445e81bb66906c43a4c320250520112050987.webp?_r_=60dd81d7-e88a-38d7-69e4-be332a169b5d" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-21</div><div class="title">【Linux】Linux环境下运行jar包的几种方式</div></div></a></div><div><a href="/post/7a6abf49.html" title="【Linux】Redis 离线安装"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/c685236d802c471dac8d2b5c12508ae220250520141251842.webp?_r_=6e208a5b-caf2-eef2-b68c-ca250572037e" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-06-16</div><div class="title">【Linux】Redis 离线安装</div></div></a></div><div><a href="/post/3cdc8223.html" title="【Linux】RocketMQ 部署"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/09ed8b99fcad4fc5ab9052c1abec78ce20250520141809442.webp?_r_=5959d39d-f5fc-cf35-20b5-3a0ab53bf01c" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-05-21</div><div class="title">【Linux】RocketMQ 部署</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Waline</span></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">欢迎来到小王的博客，这是一个专注于技术分享和个人成长的平台。在这里，你可以找到关于编程、操作系统、前端开发等方面的实用文章和教程。无论是初学者还是有一定经验的技术人员，都能从中受益。让我们一起探索技术的世界，共同进步！</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Think.Wang</h1><div class="author-info__desc">一个上了年纪的猿人</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/wangbin-blog" target="_blank" title="GitHub"><i class="fab fa-github faa-tada"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">关机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">文件和目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2"><span class="toc-number">4.</span> <span class="toc-text">文件搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%82%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.</span> <span class="toc-text">挂载一个文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4"><span class="toc-number">6.</span> <span class="toc-text">磁盘空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BE%A4%E7%BB%84"><span class="toc-number">7.</span> <span class="toc-text">用户和群组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-number">8.</span> <span class="toc-text">文件的权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7"><span class="toc-number">9.</span> <span class="toc-text">文件的特殊属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6"><span class="toc-number">10.</span> <span class="toc-text">打包和压缩文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RPM-%E5%8C%85"><span class="toc-number">11.</span> <span class="toc-text">RPM 包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YUM-%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%8D%87%E7%BA%A7%E5%99%A8"><span class="toc-number">12.</span> <span class="toc-text">YUM 软件包升级器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DEB-%E5%8C%85"><span class="toc-number">13.</span> <span class="toc-text">DEB 包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-number">14.</span> <span class="toc-text">查看文件内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">15.</span> <span class="toc-text">文本处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%AE%BE%E7%BD%AE%E5%92%8C%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">16.</span> <span class="toc-text">字符设置和文件格式转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90"><span class="toc-number">17.</span> <span class="toc-text">文件系统分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">18.</span> <span class="toc-text">初始化一个文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SWAP%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">19.</span> <span class="toc-text">SWAP文件系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD"><span class="toc-number">20.</span> <span class="toc-text">备份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%9B%98"><span class="toc-number">21.</span> <span class="toc-text">光盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-number">22.</span> <span class="toc-text">网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E7%9B%AE%E5%BD%95%E5%86%85%E5%AE%B9"><span class="toc-number">23.</span> <span class="toc-text">列出目录内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">24.</span> <span class="toc-text">查看文件的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AD%89%E6%93%8D%E4%BD%9C"><span class="toc-number">25.</span> <span class="toc-text">复制文件目录等操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">26.</span> <span class="toc-text">系统常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">26.1.</span> <span class="toc-text">显示命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%9F%A5%E7%9C%8B%E5%91%BD%E4%BB%A4"><span class="toc-number">26.2.</span> <span class="toc-text">输出查看命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-number">26.3.</span> <span class="toc-text">查看硬件信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E3%80%81%E5%8E%8B%E7%BC%A9"><span class="toc-number">26.4.</span> <span class="toc-text">归档、压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-number">26.5.</span> <span class="toc-text">查找</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VIM"><span class="toc-number">27.</span> <span class="toc-text">VIM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%B8%B8%E8%A7%84%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-number">27.1.</span> <span class="toc-text">命令模式（常规模式）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">27.2.</span> <span class="toc-text">插入模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ex%E6%A8%A1%E5%BC%8F"><span class="toc-number">27.3.</span> <span class="toc-text">ex模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4-RPM"><span class="toc-number">28.</span> <span class="toc-text">软件包管理命令(RPM)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">28.1.</span> <span class="toc-text">软件包的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%9A%84%E5%88%A0%E9%99%A4"><span class="toc-number">28.2.</span> <span class="toc-text">软件包的删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%8D%87%E7%BA%A7"><span class="toc-number">28.3.</span> <span class="toc-text">软件包升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%9B%B4%E6%96%B0"><span class="toc-number">28.4.</span> <span class="toc-text">软件包更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%9F%A5%E8%AF%A2"><span class="toc-number">28.5.</span> <span class="toc-text">软件包查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E6%93%8D%E4%BD%9C"><span class="toc-number">29.</span> <span class="toc-text">示例操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar-%E5%8E%8B%E7%BC%A9-%E8%A7%A3%E5%8E%8B"><span class="toc-number">29.1.</span> <span class="toc-text">tar 压缩&#x2F;解压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MV-%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6-%E6%9B%B4%E5%90%8D"><span class="toc-number">29.2.</span> <span class="toc-text">MV 移动文件&#x2F;更名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3"><span class="toc-number">29.3.</span> <span class="toc-text">开放端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-number">29.4.</span> <span class="toc-text">配置防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E7%AB%AF%E5%8F%A3"><span class="toc-number">29.5.</span> <span class="toc-text">访问端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="toc-number">29.6.</span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">29.7.</span> <span class="toc-text">配置环境变量</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/90a28841.html" title="搜集安卓端、TV 端、苹果端、Windows 端、Mac 端各种版本的影视盒子下载地址"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/d53c365ee6d64927a89a29126d5a90c320250520141615101.webp?_r_=0be815c3-46d0-e0a0-d436-3ed8045350e0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搜集安卓端、TV 端、苹果端、Windows 端、Mac 端各种版本的影视盒子下载地址"/></a><div class="content"><a class="title" href="/post/90a28841.html" title="搜集安卓端、TV 端、苹果端、Windows 端、Mac 端各种版本的影视盒子下载地址">搜集安卓端、TV 端、苹果端、Windows 端、Mac 端各种版本的影视盒子下载地址</a><time datetime="2025-10-16T06:58:37.813Z" title="发表于 2025-10-16 14:58:37">2025-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/0.html" title="无题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/b08d4d13c94a4125a31fc400a7a80f5a20250520141550881.webp?_r_=2af8fb98-f95c-0197-980a-2925eeab2104" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/post/0.html" title="无题">无题</a><time datetime="2025-10-09T06:09:01.363Z" title="发表于 2025-10-09 14:09:01">2025-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/4cff4505.html" title="网页克隆神器出世！一键11复制任何网站，前端开发效率翻倍--Same.New"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/b08d4d13c94a4125a31fc400a7a80f5a20250520141550881.webp?_r_=20b2ee6d-af82-1d03-c82b-77c1004cb597" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页克隆神器出世！一键11复制任何网站，前端开发效率翻倍--Same.New"/></a><div class="content"><a class="title" href="/post/4cff4505.html" title="网页克隆神器出世！一键11复制任何网站，前端开发效率翻倍--Same.New">网页克隆神器出世！一键11复制任何网站，前端开发效率翻倍--Same.New</a><time datetime="2025-09-23T02:45:45.516Z" title="发表于 2025-09-23 10:45:45">2025-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/7ef7b195.html" title="SSL证书转换：cer转jks，pfx转jks"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/09ed8b99fcad4fc5ab9052c1abec78ce20250520141809442.webp?_r_=e4166e32-555e-f50f-5f6e-6d8aba0cf419" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSL证书转换：cer转jks，pfx转jks"/></a><div class="content"><a class="title" href="/post/7ef7b195.html" title="SSL证书转换：cer转jks，pfx转jks">SSL证书转换：cer转jks，pfx转jks</a><time datetime="2025-08-29T02:49:40.859Z" title="发表于 2025-08-29 10:49:40">2025-08-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/6954e087.html" title="开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gcore.jsdelivr.net/gh/wangbin-blog/pic-resources@main/2025/05/e1600fcbb388445e81bb66906c43a4c320250520112050987.webp?_r_=5d86183d-b452-ad8c-1952-aa5e272bd2b0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台"/></a><div class="content"><a class="title" href="/post/6954e087.html" title="开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台">开源 LibreTV：一款开源免费的在线视频搜索神器，一键部署私人观影平台</a><time datetime="2025-07-26T01:11:43.528Z" title="发表于 2025-07-26 09:11:43">2025-07-26</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Think.Wang</div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">89</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">13</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://www.huhaha.vip/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nav.huhaha.vip/" title="导航"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="导航"/><span class="back-menu-item-text">导航</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://mov.huhaha.vip/" title="观影"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="观影"/><span class="back-menu-item-text">观影</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tools.huhaha.vip/" title="工具箱"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.gitmirror.com/wangbin-blog/pic-resources/main/2024/10/avatar.jpg" alt="工具箱"/><span class="back-menu-item-text">工具箱</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://docs.anheyu.com/" title="安知鱼主题"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼主题"/><span class="back-menu-item-text">安知鱼主题</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>28</sup></a><a href="/tags/DotNet/" style="font-size: 0.88rem;">DotNet<sup>7</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>5</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>14</sup></a><a href="/tags/MACCMS/" style="font-size: 0.88rem;">MACCMS<sup>2</sup></a><a href="/tags/docker/" style="font-size: 0.88rem;">docker<sup>2</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>5</sup></a><a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 0.88rem;">娱乐<sup>8</sup></a><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">实用工具<sup>5</sup></a><a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/" style="font-size: 0.88rem;">小技巧<sup>2</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 0.88rem;">小说<sup>2</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>53</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">开发工具<sup>5</sup></a><a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 0.88rem;">影视<sup>5</sup></a><a href="/tags/%E6%BC%AB%E7%94%BB/" style="font-size: 0.88rem;">漫画<sup>2</sup></a><a href="/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">系统美化<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 0.88rem;">音乐<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/./js/fancybox.umd.js"></script><script src="/./js/instantpage.js" type="module"></script><script src="/./js/lazyload.iife.min.js"></script><script src="/./js/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('/./js/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Think.Wang 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://lucent-taiyaki-b3a4e7.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('/./js/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://lucent-taiyaki-b3a4e7.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://blog-waline-m9oa0dc1f-wangbins-projects.vercel.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+      imageUploader: true,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    anzhiyu.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('/./css/waline.css')
+      if (false) await getCSS('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline-meta.css')
+      const { init } = await import('/./js/waline.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Twikoo' === 'Waline' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://lucent-taiyaki-b3a4e7.netlify.app/.netlify/functions/twikoo',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('/./js/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="/./js/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="/./css/ali_iconfont_css.css"><link rel="stylesheet" href="/./css/APlayer.min.css" media="print" onload="this.media='all'"><script src="/./js/APlayer.min.js"></script><script src="/./js/Meting2.min.js"></script><script src="/./js/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="/./js/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
