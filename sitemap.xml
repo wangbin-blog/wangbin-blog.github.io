@@ -2,6 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/sub/Blixs.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/index2.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/my/index2.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/my/index1.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/junge/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/qiaoer/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/sub/%E5%A5%87%E4%BC%98.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/sub/%E5%86%9C%E6%B0%91%E5%BD%B1%E8%A7%86.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/sub/Blixq.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/tvbox/xhz/sub/Bili.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_gao/js/live2mv_data.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_gao/js/alist.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_gao/js.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_dzlive/json/%E5%B0%8F%E5%AD%A6%E6%95%99%E8%82%B2.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_dzlive/json/%E7%99%BD%E5%AB%96%E7%AD%9B%E9%80%89.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_dzlive/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/drpy_dz/js.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/zyfun/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/musicfree/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/musicfree/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/lxmusic/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/legado/sy.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/legado/manhua.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/legado/index.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/legado/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/iptv/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/cimoc/README.html</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/cimoc/apk.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/cimoc/ios.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/static/cimoc/ios_back.json</loc>
+    
+    <lastmod>2026-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.huhaha.vip/post/4130e003.html</loc>
     
     <lastmod>2026-04-01</lastmod>
@@ -101,6 +398,15 @@
   </url>
   
   <url>
+    <loc>https://www.huhaha.vip/post/e4550ecb.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.huhaha.vip/post/7a6abf49.html</loc>
     
     <lastmod>2026-03-20</lastmod>
@@ -110,7 +416,25 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/a6b86d8c.html</loc>
+    <loc>https://www.huhaha.vip/post/9beaa6c0.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/post/5f2de2cf.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/post/f2b42afb.html</loc>
     
     <lastmod>2026-03-20</lastmod>
     
@@ -120,6 +444,15 @@
   
   <url>
     <loc>https://www.huhaha.vip/post/fc344f65.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/post/a6b86d8c.html</loc>
     
     <lastmod>2026-03-20</lastmod>
     
@@ -155,24 +488,6 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/1b4d6191.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/ba3c9851.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.huhaha.vip/post/3a1c4628.html</loc>
     
     <lastmod>2026-03-20</lastmod>
@@ -191,6 +506,24 @@
   </url>
   
   <url>
+    <loc>https://www.huhaha.vip/post/1b4d6191.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/post/ba3c9851.html</loc>
+    
+    <lastmod>2026-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.huhaha.vip/post/46bd4ea2.html</loc>
     
     <lastmod>2026-03-20</lastmod>
@@ -201,42 +534,6 @@
   
   <url>
     <loc>https://www.huhaha.vip/post/e64ca3b2.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/e4550ecb.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/f2b42afb.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/5f2de2cf.html</loc>
-    
-    <lastmod>2026-03-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/9beaa6c0.html</loc>
     
     <lastmod>2026-03-20</lastmod>
     
@@ -650,15 +947,6 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/e4ba3209.html</loc>
-    
-    <lastmod>2025-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.huhaha.vip/post/877dcb03.html</loc>
     
     <lastmod>2025-05-14</lastmod>
@@ -668,7 +956,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/1552f0a3.html</loc>
+    <loc>https://www.huhaha.vip/post/e4ba3209.html</loc>
     
     <lastmod>2025-05-14</lastmod>
     
@@ -686,7 +974,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/4883a79e.html</loc>
+    <loc>https://www.huhaha.vip/post/1552f0a3.html</loc>
     
     <lastmod>2025-05-14</lastmod>
     
@@ -714,15 +1002,6 @@
   
   <url>
     <loc>https://www.huhaha.vip/post/ac80f20e.html</loc>
-    
-    <lastmod>2025-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/post/9854d049.html</loc>
     
     <lastmod>2025-05-14</lastmod>
     
@@ -776,6 +1055,24 @@
   </url>
   
   <url>
+    <loc>https://www.huhaha.vip/post/9854d049.html</loc>
+    
+    <lastmod>2025-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/post/4883a79e.html</loc>
+    
+    <lastmod>2025-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.huhaha.vip/post/bec72e7f.html</loc>
     
     <lastmod>2025-05-14</lastmod>
@@ -794,7 +1091,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/9b437a3f.html</loc>
+    <loc>https://www.huhaha.vip/post/a97518bd.html</loc>
     
     <lastmod>2025-05-14</lastmod>
     
@@ -803,7 +1100,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/post/a97518bd.html</loc>
+    <loc>https://www.huhaha.vip/post/9b437a3f.html</loc>
     
     <lastmod>2025-05-14</lastmod>
     
@@ -1257,6 +1554,13 @@
   </url>
   
   <url>
+    <loc>https://www.huhaha.vip/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.huhaha.vip/tags/AI/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1278,14 +1582,14 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/tags/%E6%BC%AB%E7%94%BB/</loc>
+    <loc>https://www.huhaha.vip/tags/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/tags/%E9%9F%B3%E4%B9%90/</loc>
+    <loc>https://www.huhaha.vip/tags/%E6%BC%AB%E7%94%BB/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1299,7 +1603,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
+    <loc>https://www.huhaha.vip/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1313,14 +1617,7 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.huhaha.vip/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://www.huhaha.vip/tags/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1385,13 +1682,6 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/AI/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1399,14 +1689,14 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
+    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%A8%B1%E4%B9%90/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1420,7 +1710,14 @@
   </url>
   
   <url>
-    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.huhaha.vip/categories/%E5%B7%A5%E5%85%B7/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
