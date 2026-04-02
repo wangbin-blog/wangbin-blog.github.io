@@ -4,6 +4,7 @@
  * @version 1.0.1
  * @author 大鱼吃小鱼
  * @repository https://github.com/lxmusics/lx-music-api-server
+ * 2026年4月2日 可用
  */
 
 // 是否开启开发模式

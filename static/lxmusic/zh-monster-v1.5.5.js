@@ -3,7 +3,7 @@
  * @description 哥斯拉vs大金刚
  * @version v1.5.5
  * @author 哥总
- *
+ * 2026年4月2日 可用 *
  *
  */
 (() => {

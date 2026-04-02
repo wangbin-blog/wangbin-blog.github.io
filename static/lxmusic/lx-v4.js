@@ -4,6 +4,7 @@
  * @version 4
  * @author 洛雪科技
  * @repository https://github.com/lxmusics/lx-music-api-server
+ * 2026年4月2日 可用
  */
 /**
  * [js-sha256]{@link https://github.com/emn178/js-sha256}
